@@ -1,0 +1,118 @@
+/* scoped-for-clone v2 */
+
+	.interactiveInfographic:is(.captured-body, .captured-body *) {
+		min-height: initial !important;
+		position: absolute;
+		width: 100%;
+	}	
+	/* moving cutout image in front of gradient */
+	[data-component="HeroFixedHeight"]:is(.captured-body, .captured-body *) picture img {
+		z-index: 9;
+	}
+	/* hero grid */ 
+	#hero-bkgd:is(.captured-body, .captured-body *) {
+		position:relative;
+		height:450px;
+		overflow: hidden;
+		max-width: 1920px;
+		margin: 0 auto;
+	}
+	.col:is(.captured-body, .captured-body *) {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 0 3rem;
+		max-width: 89.5rem;
+		width: 100%;
+		height: 100%;
+	}
+	.hero:is(.captured-body, .captured-body *) {
+		justify-items: center;
+	}
+	.hero:is(.captured-body, .captured-body *) .col {
+		align-items: center;
+		position:relative;
+	}
+	.span12:is(.captured-body, .captured-body *) {
+		grid-column: span 12;
+	}
+	.container:is(.captured-body, .captured-body *) {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 1fr auto;
+		height: 100vh;
+		margin: 0 auto;
+	}
+	@media screen and (min-width: 360px) {
+		.column:is(.captured-body, .captured-body *) {
+			padding: 0 1.5rem;
+		}
+	}
+	@media screen and (min-width: 640px) {
+		.column:is(.captured-body, .captured-body *) {
+			padding: 0 3rem;
+		}
+	}
+	@media screen and (min-width: 980px) {
+		.column:is(.captured-body, .captured-body *) {
+			padding: 0 4.5rem;
+		}
+	}
+	@media screen and (min-width: 1280px) {
+		.column:is(.captured-body, .captured-body *) {
+			padding: 0 4.5rem;
+		}
+	}
+	@media screen and (min-width: 1600px) {
+		.column:is(.captured-body, .captured-body *) {
+			padding: 0 5.25rem;
+		}
+	}
+	@media screen and (min-width: 1920px) {
+		.column:is(.captured-body, .captured-body *) {
+			display: grid;
+			justify-items: center;
+			padding: 0 14.875rem;
+		}
+	}
+	/* images and svg elements ----------------------------- */
+    .hero:is(.captured-body, .captured-body *) .col {
+        align-items: start;
+    }
+	/* gradient - blurred jewel image */
+	.gradient-wrapper-jewel:is(.captured-body, .captured-body *) {
+		position: absolute;
+		top: 0;
+		right: 0;
+		filter: blur(90px);
+		width: 50%;
+		height: 627px;
+		background-image: url('https://www.sap.com/content/dam/site/sapcom/infographics/visual-uplift/finance/finance-l2-gradient/jewel-whole.webp');
+		background-position: 6rem 10rem;
+		background-size: contain;
+		background-repeat: no-repeat;
+		z-index: 1;
+	}
+	/* for RTL languages */
+	html.rtl .gradient-wrapper-jewel {
+		transform: scaleX(-1);
+		right: unset;
+		left: 0;
+	}
+    /* media queries */
+	@media screen and (max-width: 979px) {
+		.col:is(.captured-body, .captured-body *) {
+			grid-template-columns: 1fr;
+			gap: 2rem 0;
+		}
+		#hero-bkgd:is(.captured-body, .captured-body *) {
+			display: none;
+		}
+	}
+	@media screen and (max-width: 639px) {
+		.column.hero:is(.captured-body, .captured-body *) .col {
+			padding: 2.5rem 0;
+		}
+		.col:is(.captured-body, .captured-body *) {
+			gap: 1rem 0;
+		}
+	}

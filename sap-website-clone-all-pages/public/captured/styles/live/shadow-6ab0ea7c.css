@@ -1,0 +1,34 @@
+:host { --udex-review-color: var(--udexColorGrey9, #223548); --udex-review-rating-color: var(--udexColorNeutralBlack, #000000); --udex-review-container-inline-padding: 0; --udex-review-container-vertical-padding: var(--udexSpacer32); --udex-review-container-vertical-padding-xs: var(--udexSpacer24); --udex-review-xs-gutter: var(--udexSpacer40); color: var(--udex-review-color); }
+.udex-review__container { width: 100%; display: flex; flex-direction: row; align-items: center; padding: var(--udex-review-container-vertical-padding) var(--udex-review-container-inline-padding); font-family: var(--sapFontFamily, sans-serif); box-sizing: border-box; }
+.udex-review__container-without-breakdown { width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: space-between; padding: var(--udex-review-container-vertical-padding) var(--udex-review-container-inline-padding); font-family: var(--sapFontFamily, sans-serif); box-sizing: border-box; }
+.udex-review__empty-container { width: 100%; display: flex; flex-direction: column; align-items: center; gap: var(--udexSpacer12); padding: var(--udex-review-container-vertical-padding) 0; font-family: var(--sapFontFamily, sans-serif); box-sizing: border-box; }
+.udex-review__rating { font-size: var(--udexTypographyDisplayBoldMFontSize); font-weight: var(--udexTypographyFontWeightBold); color: var(--udex-review-rating-color); }
+.udex-review__content { font-size: var(--udexTypographyDisplayBoldMFontSize); font-weight: var(--udexTypographyFontWeightBold); display: flex; flex-direction: column; justify-content: center; align-items: center; margin-inline-end: var(--udexGridXLGutters); }
+.udex-review__content-without-breakdown { font-size: var(--udexTypographyDisplayBoldMFontSize); font-weight: var(--udexTypographyFontWeightBold); display: flex; flex-direction: row; align-items: center; margin-bottom: 0px; }
+.udex-review__additional-content { display: flex; flex-direction: column; gap: var(--udexSpacer8); width: 100%; }
+.udex-review__additional-content-without-breakdown { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: var(--udexSpacer12); margin-bottom: 0px; }
+.udex-review__rating-info { display: flex; flex-direction: row; align-items: center; gap: var(--udexSpacer8); }
+.udex-review__rating-info-without-breakdown {
+  display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding-inline-start: var(--udexSpacer16);
+  & .udex-review__reviews-text { margin-bottom: 0px; }
+}
+.udex-review__default-text { font-size: var(--udexTypographyBodySFontSize); font-weight: var(--udexTypographyFontWeightRegular); line-height: var(--udexTypographyBodyLineHeight); margin-bottom: var(--udexSpacer12); text-align: center; }
+.udex-review__reviews-text { font-size: var(--udexTypographyBodyXSFontSize); font-weight: var(--udexTypographyFontWeightRegular); line-height: var(--udexTypographyBodyLineHeight); color: var(--udexColorGrey7); margin-top: var(--udexSpacer8); margin-bottom: var(--udexSpacer12); }
+@media (width < 980px) {
+  .udex-review__rating { font-size: var(--udexTypographyDisplayBoldSFontSize); }
+  .udex-review__container-without-breakdown { flex-direction: column; align-items: center; }
+  .udex-review__container { padding: var(--udex-review-container-vertical-padding) var(--udex-review-container-inline-padding); }
+  .udex-review__content { margin-inline-end: var(--udexGridSGutters); }
+  .udex-review__default-text { font-size: var(--udexTypographyBodyXSFontSize); }
+  .udex-review__content-without-breakdown { margin-bottom: var(--udexSpacer16); }
+  .udex-review__additional-content-without-breakdown { justify-content: space-between; gap: var(--udexSpacer16); }
+}
+@media (width < 640px) {
+  .udex-review__rating { font-size: var(--udexTypographyDisplayBoldXSFontSize); }
+  .udex-review__container, .udex-review__container-without-breakdown { padding: var(--udex-review-container-vertical-padding-xs) var(--udex-review-container-inline-padding); }
+  .udex-review__container { flex-direction: column; align-items: center; }
+  .udex-review__empty-container { padding: var(--udex-review-container-vertical-padding-xs) 0; }
+  .udex-review__content { margin-bottom: var(--udex-review-xs-gutter); margin-inline-end: 0px; }
+}
+.udex-review__icon { height: 1.5rem; width: 1.5rem; color: var(--udexColorMango6); }
+.hidden-text { display: none; }

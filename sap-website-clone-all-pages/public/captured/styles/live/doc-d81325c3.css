@@ -1,0 +1,2 @@
+/* scoped-for-clone v2 */
+.btn-container.sc-ds-btn-container:is(.captured-body, .captured-body *){display:none}@media (min-width: 980px){.btn-container.sc-ds-btn-container:is(.captured-body, .captured-body *){display:flex;margin-inline-start:var(--cxs-spacer-xxl);margin-block:15px 1px;-moz-column-gap:var(--cxs-spacer-s);column-gap:var(--cxs-spacer-s)}}

@@ -1,0 +1,14 @@
+/* scoped-for-clone v2 */
+.footnote-wrapper:is(.captured-body, .captured-body *){box-sizing:border-box}
+.footnote-wrapper:is(.captured-body, .captured-body *) .row{display:flex}
+.footnote-wrapper:is(.captured-body, .captured-body *) .row>div{box-sizing:border-box;min-height:0}
+.footnote-wrapper:is(.captured-body, .captured-body *) .section{max-width:100%;box-sizing:border-box;font-weight:var(--fontWeightBook);font-size:.76923077rem;line-height:1.5}
+@media only screen and (max-width:767px){.footnote-wrapper:is(.captured-body, .captured-body *) .section{font-size:.83333333rem}
+}
+.footnote-wrapper:is(.captured-body, .captured-body *) .section .rte-footnote{font-size:inherit}
+.footnote-wrapper:is(.captured-body, .captured-body *) .section .text{max-width:100%;font-size:inherit;line-height:inherit}
+.footnote-editable-wrapper:is(.captured-body, .captured-body *){padding:var(--udexSpacer40) 0 var(--udexSpacer56)}
+@media(min-width:640px){.footnote-editable-wrapper:is(.captured-body, .captured-body *){padding:var(--udexSpacer48) 0 var(--udexSpacer64)}
+}
+@media(min-width:1280px){.footnote-editable-wrapper:is(.captured-body, .captured-body *){padding:var(--udexSpacer56) 0 var(--udexSpacer84)}
+}

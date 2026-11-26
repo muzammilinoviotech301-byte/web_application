@@ -1,0 +1,31 @@
+/* scoped-for-clone v2 */
+.option-search:is(.captured-body, .captured-body *){position:relative;height:42px;color:#727272;border:1px solid #727272;display:flex;align-items:center;background:#fff}
+.mobile:is(.captured-body, .captured-body *)+.filter-bar .option-search{display:none}
+.option-search:is(.captured-body, .captured-body *) button,.option-search:is(.captured-body, .captured-body *) input{-webkit-appearance:none;background:0;border:0;outline:0;padding:0}
+.option-search:is(.captured-body, .captured-body *) button::-ms-clear,.option-search:is(.captured-body, .captured-body *) input::-ms-clear{display:none}
+.option-search:is(.captured-body, .captured-body *) button::-webkit-search-decoration,.option-search:is(.captured-body, .captured-body *) input::-webkit-search-decoration,.option-search:is(.captured-body, .captured-body *) button::-webkit-search-cancel-button,.option-search:is(.captured-body, .captured-body *) input::-webkit-search-cancel-button,.option-search:is(.captured-body, .captured-body *) button::-webkit-search-results-button,.option-search:is(.captured-body, .captured-body *) input::-webkit-search-results-button,.option-search:is(.captured-body, .captured-body *) button::-webkit-search-results-decoration,.option-search:is(.captured-body, .captured-body *) input::-webkit-search-results-decoration{display:none}
+.option-search.active:is(.captured-body, .captured-body *){border:1px solid #007db8}
+.option-search__input:is(.captured-body, .captured-body *){color:#727272;padding:0;width:100%;height:100%}
+.option-search:is(.captured-body, .captured-body *) input.option-search__input,.option-search:is(.captured-body, .captured-body *) .input-placeholder-text{font-size:1rem;line-height:1.5}
+@media only screen and (max-width:767px){.option-search:is(.captured-body, .captured-body *) input.option-search__input,.option-search:is(.captured-body, .captured-body *) .input-placeholder-text{font-size:1rem}
+}
+.option-search:is(.captured-body, .captured-body *) .input-placeholder-text{display:flex;top:0;bottom:0;right:0;left:0;flex-direction:column;justify-content:center;color:#727272;font-style:italic}
+.option-search__placeholder-wrapper:is(.captured-body, .captured-body *){flex:1;position:relative;height:100%}
+.option-search__submit:is(.captured-body, .captured-body *) span,.option-search__clear:is(.captured-body, .captured-body *) span{display:flex}
+.option-search__submit:is(.captured-body, .captured-body *){color:#727272}
+.option-search__submit:is(.captured-body, .captured-body *),.option-search__submit:is(.captured-body, .captured-body *) span[class^='icon-']::before{font-size:24px;line-height:40px}
+.option-search__submit:is(.captured-body, .captured-body *),.option-search__clear:is(.captured-body, .captured-body *){flex:0 1 auto}
+.option-search__clear:is(.captured-body, .captured-body *){color:#727272}
+.option-search__clear:hover:is(.captured-body, .captured-body *){color:#727272}
+.option-search__clear:is(.captured-body, .captured-body *),.option-search__clear:is(.captured-body, .captured-body *) span[class^='icon-']::before{font-size:16px;line-height:40px}
+.sreen-reader-only:is(.captured-body, .captured-body *){position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.image-gradient:is(.captured-body, .captured-body *){position:absolute;top:0;left:50%;width:100%;height:100%;max-width:100vw;transform:translateX(-50%)}
+.image-gradient-wrapper:not(.industriesComponent__bgImg):is(.captured-body, .captured-body *){height:100%;position:relative}
+.image-gradient.__desktop:is(.captured-body, .captured-body *){display:none}
+@media only screen and (min-width:1280px){.image-gradient.__desktop:is(.captured-body, .captured-body *){display:block}
+}
+@media only screen and (min-width:640px){.image-gradient.__mobile:is(.captured-body, .captured-body *){display:none}
+}
+.image-gradient.__tablet:is(.captured-body, .captured-body *){display:none}
+@media only screen and (min-width:640px) and (max-width:1279px){.image-gradient.__tablet:is(.captured-body, .captured-body *){display:block}
+}

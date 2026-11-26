@@ -1,0 +1,2 @@
+/* scoped-for-clone v2 */
+.rte-content-wrapper:is(.captured-body, .captured-body *) p a{font-weight:bold}

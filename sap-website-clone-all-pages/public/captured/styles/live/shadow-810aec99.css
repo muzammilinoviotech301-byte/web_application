@@ -1,0 +1,36 @@
+:host(:not([hidden])) { display: inline-block; }
+:host([_is-busy]) { color: var(--_ui5_busy_indicator_color); }
+:host([size="S"]) .ui5-busy-indicator-root { min-width: 1.625rem; min-height: 0.5rem; }
+:host([size="S"][text]:not([text=""])) .ui5-busy-indicator-root { min-height: 1.75rem; }
+:host([size="S"]) .ui5-busy-indicator-circle { width: 0.5rem; height: 0.5rem; }
+:host([size="S"]) .ui5-busy-indicator-circle:first-child, :host([size="S"]) .ui5-busy-indicator-circle:nth-child(2) { margin-inline-end: 0.0625rem; }
+:host(:not([size])) .ui5-busy-indicator-root, :host([size="M"]) .ui5-busy-indicator-root { min-width: 3.375rem; min-height: 1rem; }
+:host([size="M"]) .ui5-busy-indicator-circle:first-child, :host([size="M"]) .ui5-busy-indicator-circle:nth-child(2) { margin-inline-end: 0.1875rem; }
+:host(:not([size])[text]:not([text=""])) .ui5-busy-indicator-root, :host([size="M"][text]:not([text=""])) .ui5-busy-indicator-root { min-height: 2.25rem; }
+:host(:not([size])) .ui5-busy-indicator-circle, :host([size="M"]) .ui5-busy-indicator-circle { width: 1rem; height: 1rem; }
+:host([size="L"]) .ui5-busy-indicator-root { min-width: 6.5rem; min-height: 2rem; }
+:host([size="L"]) .ui5-busy-indicator-circle:first-child, :host([size="L"]) .ui5-busy-indicator-circle:nth-child(2) { margin-inline-end: 0.25rem; }
+:host([size="L"][text]:not([text=""])) .ui5-busy-indicator-root { min-height: 3.25rem; }
+:host([size="L"]) .ui5-busy-indicator-circle { width: 2rem; height: 2rem; }
+.ui5-busy-indicator-root { display: flex; justify-content: center; align-items: center; position: relative; background-color: inherit; height: inherit; border-radius: inherit; }
+.ui5-busy-indicator-busy-area.ui5-busy-indicator-busy-area-over-content { position: absolute; inset: 0px; z-index: 99; }
+.ui5-busy-indicator-busy-area { display: flex; justify-content: center; align-items: center; background-color: inherit; flex-direction: column; border-radius: inherit; }
+:host([active]) ::slotted(*) { opacity: var(--sapContent_DisabledOpacity); }
+:host([desktop]) .ui5-busy-indicator-busy-area:focus, .ui5-busy-indicator-busy-area:focus-visible { outline: var(--_ui5_busy_indicator_focus_outline); outline-offset: -2px; }
+.ui5-busy-indicator-circles-wrapper { line-height: 0; }
+.ui5-busy-indicator-circle { display: inline-block; background-color: currentcolor; border-radius: 50%; }
+.ui5-busy-indicator-circle::before { content: ""; width: 100%; height: 100%; border-radius: 100%; }
+.circle-animation-0 { animation: 1.6s cubic-bezier(0.32, 0.06, 0.85, 1.11) 0s infinite normal none running grow; }
+.circle-animation-1 { animation: 1.6s cubic-bezier(0.32, 0.06, 0.85, 1.11) 0.2s infinite normal none running grow; }
+.circle-animation-2 { animation: 1.6s cubic-bezier(0.32, 0.06, 0.85, 1.11) 0.4s infinite normal none running grow; }
+.ui5-busy-indicator-text { width: 100%; text-align: center; }
+:host([text-placement="Top"]) .ui5-busy-indicator-text { margin-bottom: 0.5rem; }
+:host(:not([text-placement])) .ui5-busy-indicator-text, :host([text-placement="Bottom"]) .ui5-busy-indicator-text { margin-top: 0.5rem; }
+@keyframes grow { 
+  0%, 50%, 100% { transform: scale(0.5); }
+  25% { transform: scale(1); }
+}
+:host([surface-container]) { --udex-busy-indicator-backdrop-background: color-mix(in oklch, transparent, var(--sapBlockLayer_Background) 60%); --udex-busy-indicator-container-background: var(--sapBaseColor, #fff); --udex-busy-indicator-container-border-radius: var(--udexRadiusXL, 16px); --udex-busy-indicator-container-padding-vertical: var(--udexSpacer24, 24px); --udex-busy-indicator-container-padding-horizontal: var(--udexSpacer48, 48px); }
+:host([surface-container]) .ui5-busy-indicator-busy-area { background: transparent; }
+:host([surface-container]) .ui5-busy-indicator-busy-area.ui5-busy-indicator-busy-area-over-content { background: var(--udex-busy-indicator-backdrop-background); }
+:host([surface-container]) .ui5-busy-indicator-circles-wrapper { background: var(--udex-busy-indicator-container-background); border-radius: var(--udex-busy-indicator-container-border-radius); padding: var(--udex-busy-indicator-container-padding-vertical) var(--udex-busy-indicator-container-padding-horizontal); box-shadow: var(--sapContent_Shadow3); }

@@ -1,0 +1,29 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "prod",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "start", "--", "-p", "3100"],
+      "port": 3100
+    },
+    {
+      "name": "reference",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "3200", "--bind", "127.0.0.1", "--directory", "C:/Users/muzam/AppData/Local/Temp/claude/bf376f9ad776c1da/72a4ffb2-e98e-4937-8ebd-f929df9b3bf7/scratchpad/ref"],
+      "port": 3200
+    },
+    {
+      "name": "api",
+      "runtimeExecutable": "C:/Users/muzam/Desktop/sap-website-clone-all-pages/backend/.venv/Scripts/python.exe",
+      "runtimeArgs": ["-m", "uvicorn", "app.main:app", "--app-dir", "C:/Users/muzam/Desktop/sap-website-clone-all-pages/backend", "--host", "127.0.0.1", "--port", "8000"],
+      "port": 8000
+    },
+    {
+      "name": "dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 3000
+    }
+  ]
+}

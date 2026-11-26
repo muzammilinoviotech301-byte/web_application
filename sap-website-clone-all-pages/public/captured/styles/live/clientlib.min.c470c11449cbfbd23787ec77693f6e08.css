@@ -1,0 +1,19 @@
+/* scoped-for-clone v2 */
+.eventsRootLayoutContainer:is(.captured-body, .captured-body *){width:100%;padding-right:24px;padding-left:24px;margin-right:auto;margin-left:auto;max-width:639px}
+@media only screen and (min-width:980px){.eventsRootLayoutContainer.stickySideNavigation:is(.captured-body, .captured-body *)>div{display:flex;flex-wrap:wrap;align-items:stretch}
+}
+@media only screen and (min-width:640px){.eventsRootLayoutContainer:is(.captured-body, .captured-body *){max-width:979px;padding-right:48px;padding-left:48px}
+}
+@media only screen and (min-width:980px){.eventsRootLayoutContainer:is(.captured-body, .captured-body *){max-width:1599px;padding-right:72px;padding-left:72px}
+}
+@media only screen and (min-width:980px){.eventsRootLayoutContainer:is(.captured-body, .captured-body *) .eventsContentLayoutContainer{padding-left:48px}
+}
+@media only screen and (min-width:1600px){.eventsRootLayoutContainer:is(.captured-body, .captured-body *){max-width:1599px;padding-right:84px;padding-left:84px}
+}
+@media only screen and (max-width:979px){.containerSideNavigation:is(.captured-body, .captured-body *){width:100% !important}
+}
+@media only screen and (min-width:980px){.containerSideNavigation:is(.captured-body, .captured-body *){padding-bottom:80px;padding-top:40px}
+}
+.container-side-navigation_wrapper:is(.captured-body, .captured-body *){height:100%}
+@media only screen and (max-width:979px){.container-side-navigation_wrapper:is(.captured-body, .captured-body *){min-height:68px}
+}

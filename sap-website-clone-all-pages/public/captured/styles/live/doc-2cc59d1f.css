@@ -1,0 +1,414 @@
+/* scoped-for-clone v2 */
+
+	.interactiveInfographic:is(.captured-body, .captured-body *) {
+		position: relative;
+		display: block;
+		width: 100%;
+		min-height: 520px!important;
+	}
+    /* center align content in hero fixed and hero flex */
+    [data-component="HeroFixedHeight"]:is(.captured-body, .captured-body *) * {
+        justify-content: center;
+        text-align: center;
+        display: inline-flex;
+        flex-wrap: wrap;
+        margin-top:0;
+    }
+    [data-component="HeroFlex"]:is(.captured-body, .captured-body *) > div > div > div > div > div > div {
+        display: flex;
+        justify-content: center;
+        margin-top:1rem;
+    }   
+    [data-component="HeroFlex"]:is(.captured-body, .captured-body *) > div > div > div > div {
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        width:100%;
+        margin-top:0;
+    } 
+    /* spacing adjustments */
+    [data-component="HeroFixedHeight"]:is(.captured-body, .captured-body *) h1,
+    [data-component="HeroFlex"]:is(.captured-body, .captured-body *) h1 {
+        margin-block-end: 1rem;
+    }
+    /* hide hero image on smaller screens */
+    @media screen and (max-width: 979px) {
+        #hero-bkgd:is(.captured-body, .captured-body *)  {
+            display:none!important;
+        }
+		.interactiveInfographic:is(.captured-body, .captured-body *) {
+			min-height: 0!important;
+			height: 0!important;;
+		}
+		/* left align text and buttons */
+        [data-component="HeroFlex"]:is(.captured-body, .captured-body *) > div > div > div > div {
+            justify-content: left;
+            text-align: left;
+        }
+		[data-component="HeroFlex"]:is(.captured-body, .captured-body *) > div > div > div > div > div > div {
+            justify-content: left;
+		}     
+	}
+	
+	/* space between promo tile (above) and section w/gray background (below) -------------- */
+	[data-component="Section"]:has(> section.Section__gray--iHg7w):is(.captured-body, .captured-body *) {
+		margin-block-start: 4rem;
+	} 
+	/* ------------------------------ */ 
+
+    /* ------------------------------ */    
+	#hero-bkgd:is(.captured-body, .captured-body *) {
+		position:relative;
+		display: block;
+		height:520px;
+		overflow: hidden;
+		background: var(--udexColor-NeutralWhite, #FFF);
+		margin-block-end: 3rem;
+	}
+	.col:is(.captured-body, .captured-body *) {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 0 3rem;
+		max-width: 89.5rem;
+		width: 100%;
+		height: 100%;
+	}
+	.hero:is(.captured-body, .captured-body *) {
+		justify-items: center;
+	}
+	.hero:is(.captured-body, .captured-body *) .col {
+		align-items: center;
+		position:relative;
+	}
+	.span12:is(.captured-body, .captured-body *) {
+		grid-column: span 12;
+	}
+	.span10:is(.captured-body, .captured-body *) {
+		grid-column: span 10;
+	}
+	.span8:is(.captured-body, .captured-body *) {
+		grid-column: span 8;
+	}
+	.span7:is(.captured-body, .captured-body *) {
+		grid-column: span 7;
+	}
+	.span6:is(.captured-body, .captured-body *) {
+		grid-column: span 6;
+	}
+	.span5:is(.captured-body, .captured-body *) {
+		grid-column: span 5;
+	}
+	.span4:is(.captured-body, .captured-body *) {
+		grid-column: span 4;
+	}
+	.span3:is(.captured-body, .captured-body *) {
+		grid-column: span 3;
+	}
+	.right:is(.captured-body, .captured-body *) {
+		grid-column-start: 7;
+		grid-column-end: 13;
+	}
+	.span4.center:is(.captured-body, .captured-body *) {
+		grid-area: 1 / 4 / 1 / 10;
+		justify-self: center;
+	}
+	.center:is(.captured-body, .captured-body *) {
+		place-content: center;
+		text-align: center;
+	}
+	.container:is(.captured-body, .captured-body *) {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 1fr auto;
+		height: 100vh;
+		margin: 0 auto;
+	}
+	@media screen and (min-width: 360px) {
+		.column:is(.captured-body, .captured-body *) {
+			padding: 0 1.5rem;
+		}
+	}
+	@media screen and (min-width: 640px) {
+		.column:is(.captured-body, .captured-body *) {
+			padding: 0 3rem;
+		}
+	}
+	@media screen and (min-width: 980px) {
+		.column:is(.captured-body, .captured-body *) {
+			padding: 0 4.5rem;
+		}
+	}
+	@media screen and (min-width: 1280px) {
+		.column:is(.captured-body, .captured-body *) {
+			padding: 0 4.5rem;
+		}
+	}
+	@media screen and (min-width: 1600px) {
+		.column:is(.captured-body, .captured-body *) {
+			padding: 0 5.25rem;
+		}
+	}
+	@media screen and (min-width: 1920px) {
+		.column:is(.captured-body, .captured-body *) {
+			display: grid;
+			justify-items: center;
+			padding: 0 14.875rem;
+		}
+	}
+	/* shadows from udex */
+	:root {
+		--sapContent-Shadow3: 0px 20px 80px 0px rgba(34, 54, 73, 0.25);
+		--sapContent-Shadow2: 0px 10px 30px 0px rgba(34, 54, 73, 0.25);
+		--sapContent-Shadow1: 0px 2px 8px 0px rgba(34, 54, 73, 0.3);
+		--sapContent-Shadow0: 0px 2px 4px 0px rgba(34, 54, 73, 0.2);
+	}
+	/* images and svg elements ----------------------------- */
+	.photo-frame:is(.captured-body, .captured-body *) {
+		position: relative;
+		display: grid;
+		place-content: center center;
+		min-height:480px;
+
+		background-image: url("data:image/svg+xml,%3Csvg fill='none' viewBox='0 0 754 471' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='%23a9b4be' stroke-dasharray='5.39 5.39' stroke-width='2.2191'%3E%3Crect height='157.464' rx='13.0845' width='166.335' x='586.11' y='1.10955'/%3E%3Crect height='15.5234' rx='7.76172' width='104.236' x='603.852' y='18.8517'/%3E%3Crect height='167.781' rx='13.0845' width='370.781' x='1.10955' y='302.11'/%3E%3Crect height='15.5234' rx='7.76172' width='216.014' x='18.8522' y='320.003'/%3E%3C/g%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position:center;	
+	}
+	.photo-frame:is(.captured-body, .captured-body *) > * {
+		/* row-start / column-start / row-end / column-end */
+		grid-area: 1 / 1 / 2 / 2;
+	}
+	/* fixes weird svg position bug in Firefox */
+	/* used to contain svg elements in a div */
+	.svg-container:is(.captured-body, .captured-body *) {
+		position:relative;
+		width: 100%;
+		align-self: center;
+	}
+	/* -------------------------------------- */
+	.photo-frame:is(.captured-body, .captured-body *) img:first-of-type {
+		border-radius:var(--udexRadiusL, 12px);
+		box-shadow: var(--sapContent-Shadow2);
+		justify-self: center;
+	}
+	.photo-frame:is(.captured-body, .captured-body *) svg:first-of-type {
+		border-radius: 28px;
+		box-shadow: var(--sapContent-Shadow2); 
+		width: 564px;
+		z-index: 9;
+	}
+	.photo-frame:is(.captured-body, .captured-body *) svg:nth-of-type(2) {
+		position:absolute;
+		top: -12rem;
+    	left: -16rem;
+		width: 322px;
+		height: 166px;
+		background-color:var(--udexColor-NeutralWhite, #FFF);
+		border: 2px solid var(--udexColor-Indigo4, #B894FF);
+		border-radius: var(--udexRadiusL, 12px);
+		box-shadow: var(--sapContent-Shadow2); 
+	}
+	.photo-frame:is(.captured-body, .captured-body *) svg:nth-of-type(3) {
+		position:absolute;
+		top: -1.5rem;
+    	left: -3.5rem;
+		width: 58px;
+		height: 59px;
+	}
+	.photo-frame:is(.captured-body, .captured-body *) svg:nth-of-type(4) {
+		position:absolute;
+		top: 0;
+    	left: 35.5rem;
+		width: 110px;
+		height: 34px;
+	}
+	.photo-frame:is(.captured-body, .captured-body *) svg:nth-of-type(5) {
+		position:absolute;
+		top: -9.5rem;
+    	left: 38rem;
+		width: 288px;
+		height: 146px;
+		border-radius: var(--udexRadiusL, 12px);
+		box-shadow: var(--sapContent-Shadow2); 
+		z-index: 9;
+	}
+	.photo-frame:is(.captured-body, .captured-body *) svg:nth-of-type(6) {
+		position:absolute;
+		top: -5rem;
+    	left: 46rem;
+		width: 16px;
+		height: 153px;
+	}
+	.photo-frame:is(.captured-body, .captured-body *) svg:nth-of-type(7) {
+		position:absolute;
+		top: 5rem;
+		left: 37rem;
+		width: 297px;
+		height: 91px;
+		border: 2px solid var(--udexColor-Indigo4, #B894FF);
+		border-radius: var(--udexRadiusL, 12px);
+		box-shadow: var(--sapContent-Shadow2); 
+	}
+	/* animations */
+	@keyframes fade-scale-rotate {
+		0% {
+			opacity:0;
+			transform:rotate(0) scale(1);
+		}
+		50% {
+			opacity:1;
+			transform:rotate(360deg) scale(1.3);
+		}
+		100% {
+			opacity:1;
+			transform:rotate(0) scale(1);
+		}
+	}
+	@keyframes fadein {
+		0% {
+			opacity:0;
+		}
+		100% {
+			opacity:1;
+		}
+	}
+	@keyframes slide-up {
+		0% { /* slide up from bottom */
+			transform: translateY(650px);
+		}
+		100% {
+			transform: translateY(0px);
+		}
+	}
+	@keyframes slide-left {
+		0% { /* slide fade from left */
+			opacity:0;
+			transform: translateX(-100%);
+		}
+		100% {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+	}
+	@keyframes slide-right {
+		0% { /* slide fade from right */
+			opacity:0;
+			transform: translateX(100%);
+		}
+		100% {
+			opacity:1;
+			transform: translateX(0);
+		}
+	}
+	@keyframes reveal-up {
+		0% {
+			transform-origin: top center;
+			opacity:0;
+			clip-path: inset(100% 0 0 0); /* top right bottom left */
+		}
+		100% {
+			opacity:1;
+			clip-path: inset(0 0 0 0); /* top right bottom left */
+		}
+	}
+	@keyframes reveal-down {
+		0% {
+			transform-origin: bottom center;
+			opacity:0;
+			clip-path: inset(0 0 100% 0); /* top right bottom left */
+		}
+		100% {
+			opacity:1;
+			clip-path: inset(0 0 0 0); /* top right bottom left */
+		}
+	}
+	@keyframes reveal-right {
+		0% {
+			transform-origin: left center;
+			opacity:0;
+			clip-path: inset(0 100% 0 0); /* top right bottom left */
+		}
+		100% {
+			opacity:1;
+			clip-path: inset(0 0 0 0); /* top right bottom left */
+		}
+	}
+
+	/* media queries */
+	@media screen and (max-width: 979px) {
+		.col:is(.captured-body, .captured-body *) {
+			grid-template-columns: 1fr;
+			gap: 2rem 0;
+		}
+	}
+	@media screen and (max-width: 639px) {
+		.column.hero:is(.captured-body, .captured-body *) .col {
+			padding: 2.5rem 0;
+		}
+		.col:is(.captured-body, .captured-body *) {
+			gap: 1rem 0;
+		}
+	}
+	
+	/* accessibility - only animates if visitor allows motion */
+	@media (prefers-reduced-motion: no-preference) {
+		.photo-frame:is(.captured-body, .captured-body *) {
+			animation: fadein 0.5s 0s 1 cubic-bezier(0, 0, 0.22, 0.99) backwards;
+		}
+		.photo-frame:is(.captured-body, .captured-body *) img:first-of-type {
+			animation: slide-up 1s 0.25s 1 cubic-bezier(0, 0, 0.22, 0.99) backwards;
+		}
+		.photo-frame:is(.captured-body, .captured-body *) svg:first-of-type {
+			animation: slide-up 1s 0.75s 1 cubic-bezier(0, 0, 0.22, 0.99) backwards;
+		}
+		.photo-frame:is(.captured-body, .captured-body *) svg:nth-of-type(2) {
+			animation: slide-left 1s 1.5s 1 cubic-bezier(0, 0, 0.22, 0.99) backwards;
+		}
+		.photo-frame:is(.captured-body, .captured-body *) svg:nth-of-type(3) {
+			animation: reveal-up 1s 2s 1 cubic-bezier(0, 0, 0.22, 0.99) backwards;
+		}
+		#ai-icon:is(.captured-body, .captured-body *) {
+			transform-origin: 8px 35px;
+			animation: fade-scale-rotate 3s 2.25s 1 cubic-bezier(0, 0, 0.22, 0.99);
+		}
+		.photo-frame:is(.captured-body, .captured-body *) svg:nth-of-type(4) {
+			animation: reveal-right 1s 2.5s 1 cubic-bezier(0, 0, 0.22, 0.99) backwards;
+		}
+		.photo-frame:is(.captured-body, .captured-body *) svg:nth-of-type(5) {
+			animation: slide-right 1s 2.75s 1 cubic-bezier(0, 0, 0.22, 0.99) backwards;
+		}
+		.photo-frame:is(.captured-body, .captured-body *) svg:nth-of-type(6) {
+			animation: reveal-down 1s 3.25s 1 cubic-bezier(0, 0, 0.22, 0.99) backwards;
+		}
+		#ai-icon-2:is(.captured-body, .captured-body *) {
+			transform-origin: 8px 118px;
+			animation: fade-scale-rotate 3s 3.5s 1 cubic-bezier(0, 0, 0.22, 0.99);
+		}
+		.photo-frame:is(.captured-body, .captured-body *) svg:nth-of-type(7) {
+			animation: fadein 1s 4s 1 cubic-bezier(0, 0, 0.22, 0.99) backwards;
+		}
+	}
+	/* replacing box shadows on Safari only */
+	/* applying CSS box-shadow to SVG elements is a known limitation and performance issue in Safari */
+	@supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
+		.photo-frame:is(.captured-body, .captured-body *) img:first-of-type,  
+		.photo-frame:is(.captured-body, .captured-body *) svg:first-of-type,  
+		.photo-frame:is(.captured-body, .captured-body *) svg:nth-of-type(2),  
+		.photo-frame:is(.captured-body, .captured-body *) svg:nth-of-type(5),  
+		.photo-frame:is(.captured-body, .captured-body *) svg:nth-of-type(7) {
+			box-shadow: none; 
+		}
+		.photo-frame:is(.captured-body, .captured-body *) img:first-of-type,  
+		.photo-frame:is(.captured-body, .captured-body *) svg:first-of-type,  
+		.photo-frame:is(.captured-body, .captured-body *) svg:nth-of-type(2),  
+		.photo-frame:is(.captured-body, .captured-body *) svg:nth-of-type(5),  
+		.photo-frame:is(.captured-body, .captured-body *) svg:nth-of-type(7) {
+			/* try and force the browser to use GPU acceleration */
+			transform: translate3d(0, 0, 0);
+
+			/* offset-x offset-y blur-radius color */
+			filter: drop-shadow(0px 10px 30px rgba(34, 54, 73, 0.25)); 
+		}
+	}	
+    /* -------------------------------------------------- */

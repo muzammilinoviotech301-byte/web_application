@@ -1,0 +1,1267 @@
+/* SAP.com local clone — design system */
+@font-face {
+  font-family: "72 Brand Variable";
+  src: url("/assets/72-Brand-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --blue: #0a6ed1;
+  --blue-hover: #0854a0;
+  --blue-active: #064483;
+  --blue-soft: #e5f3ff;
+  --blue-subtle: #cfe8ff;
+  --navy: #1d2d3e;
+  --navy-deep: #12212f;
+  --ink: #223548;
+  --muted: #5b6b7b;
+  --bg: #ffffff;
+  --bg-soft: #f5f6f7;
+  --bg-section: #eaecee;
+  --line: #d5dadd;
+  --success: #18864b;
+  --radius: 4px;
+  --font: "72 Brand Variable", "72", "Segoe UI", Arial, Helvetica, sans-serif;
+  --shadow: 0 2px 10px rgba(29, 45, 62, .10);
+  --shadow-lg: 0 12px 34px rgba(29, 45, 62, .16);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--blue); text-decoration: none; }
+a:hover { color: var(--blue-hover); text-decoration: underline; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--blue); outline-offset: 2px; border-radius: 2px;
+}
+.skip-link { position: fixed; left: 12px; top: -60px; z-index: 300; background: var(--blue); color: #fff; padding: 10px 16px; border-radius: var(--radius); transition: top .15s; }
+.skip-link:focus { top: 12px; color: #fff; text-decoration: none; }
+h1, h2, h3, h4, h5 { color: var(--navy); font-weight: 700; line-height: 1.18; letter-spacing: -.02em; margin: 0 0 .5em; }
+h1 { font-size: clamp(2.1rem, 4vw, 3.5rem); }
+h2 { font-size: clamp(1.6rem, 3vw, 2.25rem); }
+h3 { font-size: 1.25rem; }
+p { margin: 0 0 1rem; }
+ul, ol { margin: 0 0 1rem; padding-left: 1.2rem; }
+
+.container:not(.captured-page *) { width: min(1280px, calc(100% - 48px)); margin: 0 auto; }
+.container-narrow:not(.captured-page *) { width: min(880px, calc(100% - 48px)); margin: 0 auto; }
+.section:not(.captured-page *) { padding: 64px 0; }
+.section-soft:not(.captured-page *) { background: var(--bg-soft); }
+.section-navy:not(.captured-page *) { background: var(--navy); color: #fff; }
+.section-navy:not(.captured-page *) h1, .section-navy:not(.captured-page *) h2, .section-navy:not(.captured-page *) h3, .section-navy:not(.captured-page *) h4 { color: #fff; }
+.section-blue:not(.captured-page *) { background: linear-gradient(120deg, #0a2f66 0%, #0a6ed1 100%); color: #fff; }
+.section-blue:not(.captured-page *) h1, .section-blue:not(.captured-page *) h2, .section-blue:not(.captured-page *) h3 { color: #fff; }
+.eyebrow:not(.captured-page *) { font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; font-weight: 700; color: var(--blue); margin-bottom: 12px; }
+.section-navy:not(.captured-page *) .eyebrow, .section-blue:not(.captured-page *) .eyebrow { color: #9fd0ff; }
+.lead:not(.captured-page *) { font-size: 1.15rem; color: var(--muted); max-width: 760px; }
+.section-navy:not(.captured-page *) .lead, .section-blue:not(.captured-page *) .lead { color: #d6e4f0; }
+.center:not(.captured-page *) { text-align: center; }
+.mt-0:not(.captured-page *) { margin-top: 0; } .mb-0:not(.captured-page *) { margin-bottom: 0; }
+.mt-1:not(.captured-page *) { margin-top: 8px; } .mt-2:not(.captured-page *) { margin-top: 16px; } .mt-3:not(.captured-page *) { margin-top: 24px; } .mt-4:not(.captured-page *) { margin-top: 32px; }
+.text-muted:not(.captured-page *) { color: var(--muted); }
+
+/* Buttons */
+.btn:not(.captured-page *) {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 44px; padding: 10px 22px; border-radius: var(--radius);
+  font: inherit; font-weight: 600; border: 1px solid transparent; cursor: pointer;
+  transition: background .15s, color .15s, border-color .15s, transform .1s;
+  text-align: center;
+}
+.btn:not(.captured-page *):hover { text-decoration: none; }
+.btn:not(.captured-page *):active { transform: translateY(1px); }
+.btn-primary:not(.captured-page *) { background: var(--blue); color: #fff; border-color: var(--blue); }
+.btn-primary:not(.captured-page *):hover { background: var(--blue-hover); border-color: var(--blue-hover); color: #fff; }
+.btn-secondary:not(.captured-page *) { background: #fff; color: var(--blue); border-color: var(--blue); }
+.btn-secondary:not(.captured-page *):hover { background: var(--blue-soft); color: var(--blue-hover); }
+.btn-ghost:not(.captured-page *) { background: transparent; color: #fff; border-color: rgba(255,255,255,.65); }
+.btn-ghost:not(.captured-page *):hover { background: rgba(255,255,255,.12); color: #fff; }
+.btn-link:not(.captured-page *) { background: none; border: 0; color: var(--blue); padding: 0; min-height: 0; font-weight: 600; }
+.btn-link:not(.captured-page *):hover { text-decoration: underline; }
+.btn:not(.captured-page *) svg { width: 16px; height: 16px; fill: currentColor; }
+
+/* Header — matches the live sap.com UDEX masthead (measured at 1440px):
+   60px bar on #f5f6f7, 72px side padding, 64x32 logo, 14px/400 nav items
+   24px apart, then "Explore SAP", search, avatar and country icons. */
+.site-header:not(.captured-page *) { position: relative; z-index: 100; background: #f5f6f7; }
+.masthead:not(.captured-page *) {
+  width: auto; max-width: none; margin: 0; padding: 0 72px;
+  height: 60px; display: flex; align-items: center;
+  font-size: 14px; line-height: normal;
+}
+@media (min-width: 1600px) {
+  .masthead:not(.captured-page *) { max-width: 1431px; margin: 0 auto; padding: 0; }
+}
+.masthead:not(.captured-page *) a { color: #223548; }
+.brand:not(.captured-page *) { display: flex; align-items: center; flex: 0 0 auto; margin-right: 4px; }
+.brand:not(.captured-page *) img { width: 64px; height: 32px; }
+.desktop-nav:not(.captured-page *) { display: flex; align-items: stretch; height: 60px; flex: 1 1 auto; }
+.nav-item:not(.captured-page *) { position: relative; display: flex; align-items: center; }
+.nav-item:not(.captured-page *) > button, .nav-item:not(.captured-page *) > a {
+  appearance: none; background: none; border: 0; font: inherit; font-size: 14px; font-weight: 400;
+  color: #223548; padding: 0 12px; height: 60px; cursor: pointer; display: flex;
+  align-items: center; white-space: nowrap; position: relative; transition: color .15s;
+}
+.nav-item:not(.captured-page *) > button:hover, .nav-item:not(.captured-page *) > a:hover, .nav-item:not(.captured-page *).open > button { color: #0057d2; text-decoration: none; }
+/* Open item: blue label inside a rounded outline, as on sap.com. */
+.nav-item:not(.captured-page *).open > button::after {
+  content: ""; position: absolute; inset: 17px 8px;
+  border: 1.5px solid #0057d2; border-radius: 4px; pointer-events: none;
+}
+.masthead-actions:not(.captured-page *) { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; margin-left: auto; }
+.masthead-actions:not(.captured-page *) .masthead-text {
+  display: flex; align-items: center; height: 60px; margin-right: 12px;
+  font-size: 14px; font-weight: 400; color: #223548; white-space: nowrap; text-decoration: none;
+}
+.masthead-actions:not(.captured-page *) .masthead-text:hover { color: #0057d2; text-decoration: none; }
+.explore-wrap:not(.captured-page *) { position: relative; }
+.masthead-actions:not(.captured-page *) .explore-btn {
+  appearance: none; background: none; border: 0; cursor: pointer;
+}
+.explore-wrap:not(.captured-page *) .masthead-menu-dropdown {
+  left: auto; right: 0; top: 60px; padding: 24px 24px 32px;
+}
+.masthead-menu-heading:not(.captured-page *) {
+  grid-column: 1 / -1; margin: 0 0 16px 8px;
+  font-size: 14px; font-weight: 500; color: #000;
+}
+.masthead-icon:not(.captured-page *) {
+  appearance: none; display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; padding: 0; border: 0; border-radius: 50%;
+  background: transparent; color: #223548; cursor: pointer;
+}
+.masthead-icon:not(.captured-page *):hover { background: #e5e9ec; color: #223548; text-decoration: none; }
+.masthead-icon:not(.captured-page *) svg { width: 18px; height: 18px; fill: currentColor; display: block; }
+.masthead-avatar:not(.captured-page *) { position: relative; background: #fff; border: 1px solid #d5dadd; color: #0070f2; }
+.masthead-avatar:not(.captured-page *):hover { background: #fff; color: #0057d2; }
+.masthead-avatar:not(.captured-page *) svg { width: 16px; height: 16px; }
+.masthead-avatar:not(.captured-page *)::after {
+  content: ""; position: absolute; top: -1px; right: -1px;
+  width: 7px; height: 7px; border-radius: 50%; background: #e90b0b;
+}
+/* Country selector: mirrors sap.com's UDEX masthead dropdown. */
+.region-switcher:not(.captured-page *) { position: relative; }
+.region-switcher-flag:not(.captured-page *) {
+  display: block; width: 20px; height: auto; max-height: 18px;
+}
+.region-switcher-panel:not(.captured-page *) {
+  position: absolute; top: 46px; right: 0; z-index: 140;
+  width: 344px; max-width: 400px; background: #fff;
+  box-shadow: 0 10px 30px 0 rgba(34, 54, 73, .25);
+  color: #000; font-family: var(--sapFontFamily, Arial, sans-serif);
+}
+.region-switcher-head:not(.captured-page *) {
+  padding: 16px 0; text-align: center;
+}
+.region-switcher-head-bordered:not(.captured-page *) {
+  border-bottom: 1px solid #eaecee;
+}
+.region-switcher-title:not(.captured-page *) {
+  font-size: 12px; font-weight: 500; line-height: 1.4; color: #000;
+}
+.region-switcher-list:not(.captured-page *) {
+  list-style: none; margin: 0; padding: 0;
+}
+.region-switcher-region:not(.captured-page *) {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; padding: 16px 12px; appearance: none;
+  border: 0; border-bottom: 1px solid #eaecee; background: transparent;
+  font: inherit; font-size: 14px; line-height: 1.4;
+  color: #223548; text-align: left; cursor: pointer;
+}
+.region-switcher-region:hover:not(.captured-page *),
+.region-switcher-back:hover:not(.captured-page *),
+.region-switcher-country:hover:not(.captured-page *) {
+  background: transparent; text-decoration: underline;
+}
+.region-switcher-chevron:not(.captured-page *) {
+  width: 7px; height: 7px; flex: 0 0 7px;
+  border: solid #223548; border-width: 0 1px 1px 0;
+  transform: rotate(-45deg);
+}
+.region-switcher-back:not(.captured-page *) {
+  display: flex; align-items: center; gap: 8px;
+  width: 100%; padding: 16px 12px; appearance: none;
+  border: 0; background: transparent;
+  font: inherit; font-size: 14px; font-weight: 500;
+  color: #000; text-align: left; cursor: pointer;
+}
+.region-switcher-back-icon:not(.captured-page *) {
+  width: 7px; height: 7px; flex: 0 0 7px;
+  border: solid #000; border-width: 0 0 1px 1px;
+  transform: rotate(45deg);
+}
+.region-switcher-search:not(.captured-page *) {
+  position: relative; margin: 2px 12px 16px;
+}
+.region-switcher-search input:not(.captured-page *) {
+  box-sizing: border-box; width: 100%; height: 36px;
+  padding: 0 36px 0 14px; border: 1px solid #5b738b; border-radius: 24px;
+  background: #f5f6f7; color: #223548;
+  font: inherit; font-size: 14px;
+  -webkit-appearance: none; appearance: none;
+}
+.region-switcher-search input:not(.captured-page *)::placeholder {
+  color: #5b738b; opacity: 1;
+}
+.region-switcher-search input:not(.captured-page *):focus {
+  outline: 2px solid #0057d2; outline-offset: 1px;
+  border-color: #0057d2; background: #fff;
+}
+.region-switcher-search-clear:not(.captured-page *) {
+  position: absolute; top: 50%; right: 7px;
+  width: 22px; height: 22px; padding: 0;
+  transform: translateY(-50%); appearance: none;
+  border: 0; border-radius: 50%; background: #d5dadd; cursor: pointer;
+}
+.region-switcher-search-clear:not(.captured-page *)::before,
+.region-switcher-search-clear:not(.captured-page *)::after {
+  content: ""; position: absolute; top: 10px; left: 6px;
+  width: 10px; height: 1px; background: #223548;
+}
+.region-switcher-search-clear:not(.captured-page *)::before { transform: rotate(45deg); }
+.region-switcher-search-clear:not(.captured-page *)::after { transform: rotate(-45deg); }
+.region-switcher-sr-only:not(.captured-page *) {
+  position: absolute; width: 0; height: 0; margin: -1px;
+  padding: 0; overflow: hidden; clip: rect(0 0 0 0); border: 0;
+}
+.region-switcher-list-wrap:not(.captured-page *) {
+  position: relative; max-height: 375px; overflow-y: auto;
+}
+.region-switcher-list-wrap-scrollable:not(.captured-page *)::after {
+  content: ""; position: sticky; display: block; bottom: 0;
+  height: 40px; margin-top: -40px; z-index: 1;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), #fff 100%);
+  pointer-events: none;
+}
+.region-switcher-country:not(.captured-page *) {
+  display: block; width: 100%; padding: 8px 12px;
+  appearance: none; border: 0; background: transparent;
+  font: inherit; font-size: 14px; line-height: 1.4;
+  color: #223548; text-align: left; cursor: pointer;
+}
+.region-switcher-country.active:not(.captured-page *) {
+  font-weight: 500; color: #223548;
+}
+@media (max-width: 1279px) {
+  .region-switcher-list-wrap:not(.captured-page *) { max-height: none; }
+  .region-switcher-country:not(.captured-page *) {
+    padding: 16px 12px; border-bottom: 1px solid #eaecee;
+  }
+}
+.menu-toggle:not(.captured-page *) { display: none; }
+@media (max-width: 1279px) {
+  .desktop-nav:not(.captured-page *) { display: none; }
+  .menu-toggle:not(.captured-page *) { display: inline-flex; }
+  .masthead-actions:not(.captured-page *) .hide-md { display: none; }
+}
+@media (max-width: 979px) { .masthead:not(.captured-page *) { padding: 0 48px; } }
+@media (max-width: 639px) { .masthead:not(.captured-page *) { padding: 0 24px; } }
+
+/* Masthead menus (live UDEX masthead, measured at 1440px).
+   mega: full-width white panel, 4 x 281px columns, 52px gaps.
+   dropdown: panel 52px left of its label, 281px columns, 11px gaps. */
+.nav-item-mega:not(.captured-page *) { position: static; }
+.masthead-menu:not(.captured-page *) {
+  position: absolute; top: 59px; z-index: 110;
+  background: #fff; box-shadow: 0 10px 30px rgba(34, 54, 73, .25);
+}
+.masthead-menu-mega:not(.captured-page *) { left: 0; right: 0; top: 60px; padding: 32px 72px 40px; }
+.masthead-menu-mega:not(.captured-page *) .masthead-menu-grid {
+  display: grid; grid-template-columns: repeat(var(--menu-cols), minmax(0, 1fr));
+  column-gap: 52px; row-gap: 28px;
+}
+@media (min-width: 1600px) {
+  .masthead-menu-mega:not(.captured-page *) .masthead-menu-grid { max-width: 1431px; margin: 0 auto; }
+}
+/* Panel left edge sits 52px before the item label (button has 12px padding). */
+.masthead-menu-dropdown:not(.captured-page *) { left: -40px; padding: 33px 11px 48px 52px; }
+.masthead-menu-dropdown:not(.captured-page *) .masthead-menu-grid {
+  display: grid; grid-template-columns: repeat(var(--menu-cols), 281px); column-gap: 11px;
+}
+.masthead-menu-title:not(.captured-page *) {
+  display: flex; align-items: center; justify-content: space-between; box-sizing: border-box;
+  height: 37px; padding: 8px 12px 12px 8px; border-bottom: 1px solid #eaecee;
+  font-size: 14px; font-weight: 500; line-height: 16px; color: #000; text-decoration: none;
+}
+.masthead-menu-title-plain:not(.captured-page *) { align-items: flex-start; padding: 1px 12px 12px 0; }
+a.masthead-menu-title:hover { color: #0057d2; text-decoration: none; }
+.masthead-menu-chevron:not(.captured-page *) {
+  width: 16px; height: 16px; flex: 0 0 auto; background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M5.8 13a.8.8 0 0 1-.55-1.38L8.98 8 5.25 4.38a.8.8 0 1 1 1.1-1.16l4.33 4.2a.8.8 0 0 1 0 1.16l-4.33 4.2A.8.8 0 0 1 5.8 13Z'/%3E%3C/svg%3E") center / 16px no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M5.8 13a.8.8 0 0 1-.55-1.38L8.98 8 5.25 4.38a.8.8 0 1 1 1.1-1.16l4.33 4.2a.8.8 0 0 1 0 1.16l-4.33 4.2A.8.8 0 0 1 5.8 13Z'/%3E%3C/svg%3E") center / 16px no-repeat;
+}
+.masthead-menu-list:not(.captured-page *), .masthead-menu-list:not(.captured-page *) ul { list-style: none; margin: 0; padding: 0; }
+.masthead-menu-list:not(.captured-page *) { margin-top: 12px; }
+.masthead-menu-list:not(.captured-page *) > li + li { margin-top: -1px; }
+.masthead-menu-group:not(.captured-page *) {
+  display: block; padding: 8px 12px 8px 0; font-size: 12px; font-weight: 500; line-height: 17px;
+  text-transform: uppercase; color: #5b738b;
+}
+.masthead-menu-grouped:not(.captured-page *) { padding-left: 16px !important; }
+.masthead-menu-link:not(.captured-page *) {
+  display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px 8px 8px; margin-bottom: 4.5px;
+  font-size: 14px; font-weight: 400; line-height: 15px; color: #223548; text-decoration: none;
+}
+.masthead-menu-link:not(.captured-page *):hover { color: #0057d2; text-decoration: underline; }
+.masthead-menu-external:not(.captured-page *) {
+  width: 12px; height: 12px; background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M13.25 9a.75.75 0 0 1 .75.75v3.5A1.75 1.75 0 0 1 12.25 15h-9.5A1.75 1.75 0 0 1 1 13.25v-9.5C1 2.78 1.78 2 2.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v9.5c0 .14.11.25.25.25h9.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 .75-.75ZM14.25 1c.41 0 .75.34.75.75v4.5a.75.75 0 0 1-1.5 0V3.56L8.78 8.28a.75.75 0 0 1-1.06-1.06L12.44 2.5H9.75a.75.75 0 0 1 0-1.5h4.5Z'/%3E%3C/svg%3E") center / 12px no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M13.25 9a.75.75 0 0 1 .75.75v3.5A1.75 1.75 0 0 1 12.25 15h-9.5A1.75 1.75 0 0 1 1 13.25v-9.5C1 2.78 1.78 2 2.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v9.5c0 .14.11.25.25.25h9.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 .75-.75ZM14.25 1c.41 0 .75.34.75.75v4.5a.75.75 0 0 1-1.5 0V3.56L8.78 8.28a.75.75 0 0 1-1.06-1.06L12.44 2.5H9.75a.75.75 0 0 1 0-1.5h4.5Z'/%3E%3C/svg%3E") center / 12px no-repeat;
+}
+
+/* Search overlay */
+.search-overlay:not(.captured-page *) { position: fixed; inset: 0; z-index: 200; background: rgba(18,33,47,.55); display: none; align-items: flex-start; justify-content: center; padding-top: 90px; }
+.search-overlay:not(.captured-page *).show { display: flex; }
+.search-panel:not(.captured-page *) { width: min(760px, calc(100% - 32px)); background: #fff; border-radius: 8px; box-shadow: var(--shadow-lg); padding: 24px; }
+.search-panel:not(.captured-page *) form { display: flex; gap: 10px; }
+.search-panel:not(.captured-page *) input { flex: 1; height: 48px; padding: 0 16px; border: 1px solid var(--line); border-radius: var(--radius); font: inherit; font-size: 1.05rem; }
+.search-results:not(.captured-page *) { margin-top: 18px; max-height: 50vh; overflow: auto; }
+.search-results:not(.captured-page *) a { display: block; padding: 12px 10px; border-bottom: 1px solid var(--line); color: var(--navy); }
+.search-results:not(.captured-page *) a:hover { background: var(--bg-soft); text-decoration: none; }
+.search-results:not(.captured-page *) small { display: block; color: var(--muted); }
+
+/* Mobile nav */
+.mobile-panel:not(.captured-page *) { display: none; position: fixed; inset: 60px 0 0; background: #fff; z-index: 90; overflow-y: auto; padding: 18px 24px 40px; }
+.mobile-panel:not(.captured-page *).show { display: block; }
+.mobile-panel:not(.captured-page *) a, .mobile-panel:not(.captured-page *) button { display: block; width: 100%; text-align: left; padding: 13px 0; border: 0; border-bottom: 1px solid var(--line); background: none; font: inherit; font-weight: 600; color: var(--navy); }
+
+/* Hero */
+.hero:not(.captured-page *) { position: relative; background: var(--navy); color: #fff; overflow: hidden; }
+.hero:not(.captured-page *):before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 82% 20%, rgba(0,177,235,.28), transparent 45%), linear-gradient(120deg, #12212f, #1d2d3e 60%, #123a5e); }
+.hero:not(.captured-page *) .container { position: relative; z-index: 1; display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; padding: 88px 0 96px; }
+.hero:not(.captured-page *) h1 { color: #fff; font-size: clamp(2.4rem, 5vw, 4rem); letter-spacing: -.035em; }
+.hero:not(.captured-page *) p { color: #d6e4f0; font-size: 1.15rem; max-width: 600px; }
+.hero-media:not(.captured-page *) { position: relative; }
+.hero-media:not(.captured-page *) img { border-radius: 8px; box-shadow: 0 22px 60px rgba(0,0,0,.35); width: 100%; }
+.hero-badge:not(.captured-page *) { position: absolute; left: -18px; bottom: -18px; background: var(--blue); padding: 14px 20px; border-radius: 6px; font-weight: 700; box-shadow: var(--shadow-lg); }
+.hero-actions:not(.captured-page *) { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+
+/* Cards / grids */
+.grid:not(.captured-page *) { display: grid; gap: 24px; }
+.grid-2:not(.captured-page *) { grid-template-columns: repeat(2, minmax(0,1fr)); }
+.grid-3:not(.captured-page *) { grid-template-columns: repeat(3, minmax(0,1fr)); }
+.grid-4:not(.captured-page *) { grid-template-columns: repeat(4, minmax(0,1fr)); }
+.card:not(.captured-page *) { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 26px; transition: box-shadow .18s, transform .18s, border-color .18s; }
+.card:not(.captured-page *):hover { box-shadow: var(--shadow-lg); border-color: #b9c4cf; transform: translateY(-2px); }
+.card:not(.captured-page *) h3 { margin-bottom: 10px; }
+.card:not(.captured-page *) p { color: var(--muted); margin-bottom: 16px; }
+.card-img:not(.captured-page *) { width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 18px; background: var(--bg-soft); }
+.card-icon:not(.captured-page *) { width: 42px; height: 42px; border-radius: 8px; background: var(--blue-soft); color: var(--blue); display: flex; align-items: center; justify-content: center; font-weight: 800; margin-bottom: 16px; }
+.section-head:not(.captured-page *) { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 34px; }
+.section-head:not(.captured-page *) p { margin: 0; }
+
+/* Stat band */
+.stats:not(.captured-page *) { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.stat:not(.captured-page *) { border-left: 3px solid var(--blue); padding-left: 18px; }
+.stat:not(.captured-page *) strong { display: block; font-size: 2rem; color: var(--navy); line-height: 1.1; }
+.stat:not(.captured-page *) span { color: var(--muted); font-size: .9rem; }
+
+/* Logo strip */
+.logo-strip:not(.captured-page *) { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; align-items: center; }
+.logo-strip:not(.captured-page *) img { max-height: 46px; object-fit: contain; filter: grayscale(1); opacity: .78; margin: 0 auto; }
+
+/* Feature list */
+.feature-row:not(.captured-page *) { display: grid; grid-template-columns: 200px 1fr; gap: 40px; padding: 30px 0; border-top: 1px solid var(--line); }
+.feature-row:not(.captured-page *):last-child { border-bottom: 1px solid var(--line); }
+.feature-row:not(.captured-page *) h3 { font-size: 1.35rem; }
+.tag:not(.captured-page *) { display: inline-block; background: var(--blue-soft); color: var(--blue-hover); font-size: .72rem; font-weight: 700; padding: 4px 9px; border-radius: 3px; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 10px; }
+
+/* Page banner */
+.page-banner:not(.captured-page *) { background: var(--bg-soft); border-bottom: 1px solid var(--line); padding: 56px 0 46px; }
+.page-banner:not(.captured-page *) h1 { margin-bottom: 10px; }
+.breadcrumb:not(.captured-page *) { font-size: .84rem; color: var(--muted); margin-bottom: 20px; }
+.breadcrumb:not(.captured-page *) a { color: var(--muted); }
+.breadcrumb:not(.captured-page *) span { margin: 0 8px; }
+
+/* Forms */
+.form-card:not(.captured-page *) { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 32px; box-shadow: var(--shadow); }
+.field:not(.captured-page *) { margin-bottom: 18px; }
+.field:not(.captured-page *) label { display: block; font-weight: 600; color: var(--navy); margin-bottom: 6px; font-size: .9rem; }
+.field:not(.captured-page *) input, .field:not(.captured-page *) select, .field:not(.captured-page *) textarea {
+  width: 100%; padding: 11px 13px; border: 1px solid var(--line); border-radius: var(--radius);
+  font: inherit; background: #fff; color: var(--ink);
+}
+.field:not(.captured-page *) textarea { min-height: 110px; resize: vertical; }
+.checkrow:not(.captured-page *) { display: flex; gap: 10px; align-items: flex-start; font-size: .9rem; color: var(--muted); }
+.checkrow:not(.captured-page *) input { margin-top: 4px; }
+.form-note:not(.captured-page *) { font-size: .8rem; color: var(--muted); }
+.form-success:not(.captured-page *) { display: none; background: #e7f6ed; border: 1px solid #9ed3b4; color: #12633a; padding: 14px 16px; border-radius: var(--radius); margin-bottom: 18px; }
+
+/* Filter bar */
+.filter-bar:not(.captured-page *) { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; background: var(--bg-soft); padding: 18px; border-radius: 6px; margin-bottom: 28px; }
+.filter-bar:not(.captured-page *) input, .filter-bar:not(.captured-page *) select { padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--radius); font: inherit; background: #fff; }
+.filter-bar:not(.captured-page *) input { flex: 1; min-width: 220px; }
+.result-count:not(.captured-page *) { color: var(--muted); font-size: .9rem; }
+
+/* Job list */
+.job:not(.captured-page *) { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; border-bottom: 1px solid var(--line); padding: 20px 0; }
+.job:not(.captured-page *) h3 { font-size: 1.1rem; margin-bottom: 5px; }
+.job:not(.captured-page *) .meta { color: var(--muted); font-size: .88rem; }
+.pill:not(.captured-page *) { display: inline-block; background: var(--bg-soft); border: 1px solid var(--line); border-radius: 20px; padding: 3px 10px; font-size: .78rem; color: var(--muted); margin-right: 6px; }
+
+/* News list */
+.news-item:not(.captured-page *) { display: grid; grid-template-columns: 96px 1fr; gap: 22px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.news-date:not(.captured-page *) { color: var(--muted); font-size: .85rem; }
+.news-item:not(.captured-page *) h3 { font-size: 1.15rem; margin-bottom: 6px; }
+.news-item:not(.captured-page *) p { color: var(--muted); margin: 0; }
+
+/* Quote */
+.quote:not(.captured-page *) { border-left: 4px solid var(--blue); padding: 10px 0 10px 24px; font-size: 1.2rem; color: var(--navy); font-style: italic; }
+
+/* Footer */
+.site-footer:not(.captured-page *) { background: var(--navy); color: #cdd8e2; padding: 60px 0 0; }
+.footer-top:not(.captured-page *) { display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 34px; padding-bottom: 46px; }
+.footer-brand:not(.captured-page *) img { width: 86px; margin-bottom: 18px; filter: brightness(0) invert(1); }
+.footer-brand:not(.captured-page *) p { font-size: .88rem; color: #a9b8c6; max-width: 240px; }
+.footer-col:not(.captured-page *) h4 { color: #fff; font-size: .95rem; margin-bottom: 14px; }
+.footer-col:not(.captured-page *) h4 button { all: unset; cursor: pointer; color: #fff; font: inherit; font-weight: 700; }
+.footer-col:not(.captured-page *) ul { list-style: none; margin: 0; padding: 0; }
+.footer-col:not(.captured-page *) li { margin-bottom: 9px; }
+.footer-col:not(.captured-page *) a { color: #cdd8e2; font-size: .88rem; }
+.footer-col:not(.captured-page *) a:hover { color: #fff; }
+.footer-bottom:not(.captured-page *) { border-top: 1px solid rgba(255,255,255,.14); padding: 22px 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.footer-bottom:not(.captured-page *) p { margin: 0; font-size: .84rem; color: #a9b8c6; }
+.socials:not(.captured-page *) { display: flex; gap: 14px; }
+.socials:not(.captured-page *) a { width: 32px; height: 32px; border: 1px solid rgba(255,255,255,.28); border-radius: 50%; display: grid; place-items: center; color: #fff; }
+.socials:not(.captured-page *) a:hover { background: var(--blue); border-color: var(--blue); }
+.socials:not(.captured-page *) svg { width: 15px; height: 15px; fill: currentColor; }
+.socials:not(.captured-page *) img { width: 15px; height: 15px; object-fit: contain; filter: brightness(0) invert(1); }
+.to-top:not(.captured-page *) { position: fixed; right: 22px; bottom: 22px; width: 44px; height: 44px; border-radius: 50%; background: var(--blue); color: #fff; border: 0; box-shadow: var(--shadow-lg); cursor: pointer; display: none; align-items: center; justify-content: center; z-index: 80; }
+.to-top:not(.captured-page *).show { display: flex; }
+.to-top:not(.captured-page *) svg { width: 18px; height: 18px; fill: currentColor; }
+
+/* CTA band */
+.cta-band:not(.captured-page *) { display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+.cta-band:not(.captured-page *) h2 { margin: 0; }
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .grid-4:not(.captured-page *) { grid-template-columns: repeat(2, 1fr); }
+  .footer-top:not(.captured-page *) { grid-template-columns: repeat(3, 1fr); }
+  .footer-brand:not(.captured-page *) { grid-column: 1 / -1; }
+}
+@media (max-width: 820px) {
+  .container:not(.captured-page *), .container-narrow:not(.captured-page *) { width: min(100% - 32px, 1280px); }
+  .hero:not(.captured-page *) .container { grid-template-columns: 1fr; padding: 56px 0 64px; }
+  .hero-media:not(.captured-page *) { display: none; }
+  .grid-2:not(.captured-page *), .grid-3:not(.captured-page *), .grid-4:not(.captured-page *) { grid-template-columns: 1fr; }
+  .stats:not(.captured-page *) { grid-template-columns: repeat(2, 1fr); }
+  .logo-strip:not(.captured-page *) { grid-template-columns: repeat(3, 1fr); }
+  .feature-row:not(.captured-page *) { grid-template-columns: 1fr; gap: 12px; }
+  .section:not(.captured-page *) { padding: 44px 0; }
+  .mega:not(.captured-page *) { display: none !important; }
+  .footer-top:not(.captured-page *) { grid-template-columns: repeat(2, 1fr); }
+  .news-item:not(.captured-page *) { grid-template-columns: 1fr; gap: 4px; }
+  .job:not(.captured-page *) { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .brand:not(.captured-page *) img { width: 62px; }
+  .masthead-actions:not(.captured-page *) .hide-sm { display: none; }
+  .footer-top:not(.captured-page *) { grid-template-columns: 1fr; }
+  .stats:not(.captured-page *) { grid-template-columns: 1fr; }
+}
+
+/* Older scraped pages have no SAP runtime, so their lazy-loader placeholders
+   must be forced visible. Fresh live captures do have SAP's own CSS and DOM,
+   including the hydrated <picture> and overlay-scrollbar animations, so leave
+   those pages alone. */
+.captured-page:not(:has(.captured-body)) .Image__placeholder--Oj7M3 {
+  opacity: 1 !important;
+  padding-top: 0 !important;
+  height: auto !important;
+}
+
+/* Captured SAP markup uses the same generic .section class as the local
+   design system. Keep local spacing away from the official layout.
+   Only for the older scraped pages: live captures (.captured-body) bring
+   SAP's own stylesheets, whose section padding must apply as-is. */
+.captured-page:not(:has(.captured-body)) :is(.section, .sectionUI2020, .legoContainer, .verticalTabs) {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.captured-page .captured-page-links { display: none; }
+/* SAP's footer wrapper also carries the generic .section class. */
+.sap-footer .section { padding: 0; }
+
+/* Base element styles inside captured SAP markup, mirroring live sap.com's
+   own defaults (measured with unstyled probe elements): the clone's design
+   system base (bold 56px headings with margins, 1.55 line-height, 16px
+   paragraph margins, block images) must not leak in. :where() keeps these at
+   element specificity, so SAP's component classes still win. */
+:where(.captured-page) {
+  color: rgb(84, 84, 84);
+  font-family: "72 Brand Variable", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+}
+:where(.captured-page) :is(h1, h2, h3, h4, h5) {
+  margin: 0; font-size: revert; font-weight: 400; line-height: inherit;
+  color: inherit; letter-spacing: normal;
+}
+:where(.captured-page) h6 { line-height: inherit; color: inherit; }
+:where(.captured-page) :is(p, ul, ol) { margin: revert; padding: revert; }
+:where(.captured-page) a { color: rgb(0, 87, 210); text-decoration: underline; }
+:where(.captured-page) a:hover { color: rgb(0, 87, 210); }
+:where(.captured-page) img { display: inline; }
+:where(.captured-page) button { font-family: inherit; }
+:where(.captured-page) :is(input, select, textarea) { font-family: inherit; font-size: inherit; }
+
+/* SAP shows the country banner only on pages that include its country
+   selector component (home, product and company pages; not forms). */
+body:not(:has(.captured-page [data-component="BannerCountrySelector"])):has(.captured-page) .sap-country-banner {
+  display: none;
+}
+
+/* The clone's own base heading style (letter-spacing -.02em) must not leak
+   into SAP markup: SAP leaves letter-spacing at normal, and the tighter
+   spacing changed where captured headings wrap. */
+.captured-page :is(h1, h2, h3, h4, h5, h6),
+.sap-footer :is(h1, h2, h3, h4, h5, h6) { letter-spacing: normal; }
+
+/* The community page loads community.sap.com's own stylesheet. Undo the
+   local base rules that would otherwise leak into its captured markup. */
+.page-community :is(h1, h2, h3, h4, h5, h6) { color: inherit; }
+.page-community img { display: inline; }
+
+/* Resource pages render their H1 in black on pages.community.sap.com. */
+.page-community-events-event-organizer h1,
+.page-community-help-resources h1,
+.page-community-help-legal-resources h1 { color: #000; }
+
+/* pages.community.sap.com resource pages use hydrated UDEX web components.
+   The captured DOM keeps their light-content, but the live stylesheet hides
+   undefined custom elements. Restore the captured breadcrumb and Requirements/
+   Benefits table until the components are hydrated. */
+.page-community-events-event-organizer udex-table {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(20ch, 1fr));
+}
+.page-community-events-event-organizer udex-table-header-row,
+.page-community-events-event-organizer udex-table-row {
+  display: contents !important;
+}
+.page-community-events-event-organizer udex-table-header-cell,
+.page-community-events-event-organizer udex-table-cell {
+  display: flex !important;
+  align-items: flex-start;
+  justify-content: flex-start !important;
+  padding: 12px 16px 12px 0;
+  border-bottom: 1px solid #d5dadd;
+  color: #223548;
+  font-family: var(--sapFontFamily, Arial, sans-serif);
+  font-size: 16px;
+  line-height: 24px;
+}
+.page-community-events-event-organizer udex-table-header-cell {
+  align-items: center;
+  background: #f5f6f7;
+  font-weight: 500;
+  line-height: 18px;
+}
+.page-community-events-event-organizer .Subheader_root__6CPpW udex-link {
+  display: flex !important;
+  color: #5b738b;
+  font-family: var(--sapFontFamily, Arial, sans-serif);
+  font-size: 12px;
+}
+
+/* Footer columns become accordions below 980px, as on sap.com: the desktop
+   title is swapped for SAP's opener button and the link list collapses. */
+.footer-mobile-opener { display: none !important; }
+/* Divider SAP inserts under the contact block while it spans the full row. */
+.footer-tablet-divider { display: none; }
+@media (min-width: 980px) and (max-width: 1279px) {
+  .footer-tablet-divider { display: block; }
+}
+@media (max-width: 979px) {
+  .footer-desktop-title { display: none !important; }
+  .footer-mobile-opener { display: flex !important; }
+  .sap-footer .footer-collapsible { height: 0; overflow: hidden; }
+  .sap-footer .NavigationColumn__opened--iB5Kj + .footer-collapsible,
+  .sap-footer h6:has(.NavigationColumn__opened--iB5Kj) + .footer-collapsible { height: auto; }
+}
+
+/* Content images: on desktop SAP serves 568x319 (16:9) renditions and the
+   <img> keeps that natural size, centered in its column. Local files are
+   other sizes, so pin the same box. */
+.home-page .ImageContent__image--Oh4_3 {
+  display: block;
+  /* Fixed width (not %): the wrappers are shrink-to-fit flex boxes that
+     take their size from the image, exactly as with SAP's 568px rendition. */
+  width: 568px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 568 / 319;
+  object-fit: cover;
+  margin: 0 auto;
+}
+@media (max-width: 979px) {
+  /* Tablet renditions use the 3198x1648 crop (e.g. 689x355 at 800px). */
+  /* Images fill the column here (689px at 800); an oversized fixed width
+     capped by max-width keeps the shrink-to-fit wrappers from collapsing. */
+  .home-page .ImageContent__image--Oh4_3 { width: 2000px; max-width: 100%; aspect-ratio: 3198 / 1648; }
+}
+@media (max-width: 639px) {
+  /* Phone renditions are exactly 16:9 (352x198 at 400px). */
+  .home-page .ImageContent__image--Oh4_3 { aspect-ratio: 16 / 9; }
+}
+/* Column-direction flex centers this wrapper at fit-content width; cap it
+   to its column so narrower cards (partners, 395px) scale the image down. */
+.home-page .ImageContent__imageWrapper--uhUpV { max-width: 100%; }
+/* "What's new" event tile image: fills the full height of the tile, which
+   grows with its text (228px at 1440, 252px at 1000). */
+.home-page .TileHomepage__imageFullHeight--wduxC .Image__wrapper--g1IpI,
+.home-page .TileHomepage__imageFullHeight--wduxC .Image__wrapper--g1IpI > div,
+.home-page .TileHomepage__imageFullHeight--wduxC picture { height: 100%; }
+.home-page .TileHomepage__image--XWCEK { width: 100%; height: 100%; object-fit: cover; }
+
+/* Joule video play/pause button. SAP draws the glyph with its "SAPcom icons"
+   font, which is not captured, so use equivalent circle glyphs as masks. */
+.home-page .home-video-toggle {
+  margin-top: 16px;
+  cursor: pointer;
+  background-color: currentColor;
+  -webkit-mask: var(--home-video-glyph) center / 24px 24px no-repeat;
+  mask: var(--home-video-glyph) center / 24px 24px no-repeat;
+  --home-video-glyph: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 1a11 11 0 1 1 0 22 11 11 0 0 1 0-22Zm0 1.6a9.4 9.4 0 1 0 0 18.8 9.4 9.4 0 0 0 0-18.8ZM9.6 7.8c.44 0 .8.36.8.8v6.8a.8.8 0 0 1-1.6 0V8.6c0-.44.36-.8.8-.8Zm4.8 0c.44 0 .8.36.8.8v6.8a.8.8 0 0 1-1.6 0V8.6c0-.44.36-.8.8-.8Z'/%3E%3C/svg%3E");
+}
+.home-page .home-video-toggle[data-state="paused"] {
+  --home-video-glyph: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 1a11 11 0 1 1 0 22 11 11 0 0 1 0-22Zm0 1.6a9.4 9.4 0 1 0 0 18.8 9.4 9.4 0 0 0 0-18.8ZM9.8 7.6a.8.8 0 0 1 .8-.1l6 4a.8.8 0 0 1 0 1.33l-6 4A.8.8 0 0 1 9.4 16.2V8.2c0-.25.13-.48.4-.6Z'/%3E%3C/svg%3E");
+}
+
+/* "Contact us" flyout panel layout (rules from the live ContactUs chunk,
+   which the captured styles don't include). */
+.Content__row--MeiRF { align-items: center; display: flex; flex-direction: column; }
+.Content__call--He4u5 {
+  align-items: center; color: var(--sapContent_ContrastTextColor); display: flex;
+  justify-content: center; width: 100%; background-color: var(--udexColorBlue7);
+}
+.Content__service--vHjEz { color: var(--sapContent_ContrastTextColor); flex-grow: 1; width: 100%; }
+
+/* "What's new" promo tiles: SAP's JS sets each tile to half width from
+   980px up (inline style); the captured SSR markup only has width:100%. */
+@media (min-width: 980px) {
+  .home-page .VerticalTilePromo__root--k3TZx > [data-component-name="TilePromoItem"] {
+    width: calc(50% - 24px) !important;
+  }
+}
+
+/* Home hero (LegoContainer). SAP's JS writes these inline styles per
+   breakpoint after load; the captured SSR markup only has the >=1600px
+   defaults. Values measured from the live sap.com/mena page. */
+@media (max-width: 1599px) {
+  .home-page .LegoContainer__content--IlXI7 {
+    padding: 100px 72px 80px !important;
+  }
+}
+@media (max-width: 979px) {
+  .home-page .LegoContainer__content--IlXI7 {
+    padding: 84px 48px 0 !important;
+    align-items: start !important;
+  }
+}
+@media (max-width: 639px) {
+  .home-page .LegoContainer__content--IlXI7 {
+    padding: 32px 24px 0 !important;
+    min-height: 550px !important;
+  }
+  .home-page .LegoBackground__containerFixed--Z_OTv { height: 550px !important; }
+}
+
+/* Size variants SAP's JS picks per breakpoint after hydration. The captured
+   markup carries the desktop (>=1280px) variants; step them down to the
+   classes live uses at smaller widths (measured at 1300/1000/800/400px). */
+@media (max-width: 1279px) {
+  /* Promo tile headlines: headline-s -> headline-xs. */
+  .home-page .TilePromoItem__headline--TVisb.Headline__headline-s--cO80X.Headline__medium--irDyM {
+    font-size: var(--udexTypographyHeadingMediumXSFontSize);
+  }
+  /* Floating "Contact us": label pill -> square icon button. */
+  .home-page .Flyout__opener--i_uwb { padding: var(--udexSpacer16); }
+  .home-page .Flyout__opener--i_uwb > .Flyout__title--Y5t3N { display: none; }
+}
+@media (max-width: 979px) {
+  /* Hero text column: 50% -> full width. */
+  .home-page .LegoContainer__content--IlXI7 > * { width: 100% !important; }
+  /* Promo tile buttons: Button__l -> Button__m. */
+  .home-page .TilePromoItem__button--lZicU.Button__l--wew_t { min-height: 36px; padding: 8px 9px; }
+  /* Joule titles: headline-xxs (20px) -> headline-xxxs (18px). */
+  .home-page .TextItem__title--fbWFy.Headline__headline-xxs--MKrVj.Headline__medium--irDyM {
+    font-size: var(--udexTypographyHeadingMediumXXXSFontSize);
+  }
+}
+
+/* Official SAP MENA country banner (overlay bar over the hero). */
+.sap-country-banner {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.93);
+}
+.sap-country-banner-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 72px;
+}
+@media (min-width: 1600px) {
+  .sap-country-banner-inner { max-width: 1431px; margin: 0 auto; padding: 0; }
+}
+.sap-country-banner p {
+  flex: 1 1 auto;
+  margin: 0;
+  color: #475e75;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 17.6px;
+}
+.sap-country-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: 32px;
+}
+.sap-country-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 4px 9px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 17.6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+.sap-country-btn-primary {
+  background: #0057d2;
+  border-color: #0057d2;
+  color: #fff;
+}
+.sap-country-btn-primary { gap: 10px; padding: 4px 9px 4px 5px; }
+.sap-country-btn-primary:hover { background: #0046ad; border-color: #0046ad; color: #fff; }
+.sap-country-btn img { width: 16px; height: 16px; object-fit: contain; }
+.sap-country-btn-secondary {
+  background: #fff;
+  border-color: #475e75;
+  color: #0040b0;
+}
+.sap-country-btn-secondary:hover { background: #eef4ff; color: #0040b0; }
+.sap-country-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  margin-left: 32px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #000;
+  cursor: pointer;
+}
+.sap-country-close svg { width: 24px; height: 24px; fill: currentColor; }
+
+/* /products (MENA): tablet renditions of the featured image use the
+   3198x1648 crop (329x169 at 800px), as on the home page. */
+@media (min-width: 640px) and (max-width: 979px) {
+  .page-mena-products .ImageContent__image--Oh4_3 { aspect-ratio: 3198 / 1648; height: auto; }
+}
+
+/* "How is your experience with this page?" rating: below 640px SAP renders
+   the question as a 16px centered NavigationHeadline instead of headline-s. */
+@media (max-width: 639px) {
+  .captured-page .FirstQuestion__root--NouWM > h5 {
+    font-size: 16px; font-weight: 500; line-height: 17.6px;
+    color: #000; text-align: center;
+  }
+}
+
+/* Vertical tile promos: SAP's script sets each item's inline width per
+   breakpoint (calc(50% - 24px) on desktop, 100% on phones). Captures are
+   taken at desktop width, so restore the phone value here. */
+@media (max-width: 639px) {
+  .captured-page [class*="VerticalTilePromo__root"] > .item { width: 100% !important; }
+}
+
+/* Pages with SAP's secondary navigation (e.g. /products) show the banner
+   below that bar (72px, 64px on phones), as on sap.com. */
+body:has(.captured-page ds-secondary-navigation) .sap-country-banner { top: 132px; }
+@media (max-width: 639px) {
+  body:has(.captured-page ds-secondary-navigation) .sap-country-banner { top: 124px; }
+}
+
+/* Secondary navigation: SAP's component renders the tab row on desktop and
+   a "More" dropdown below 980px. Both are in the captured markup; show the
+   one that matches the width. On phones the page title is plain text. */
+@media (min-width: 980px) {
+  .captured-page ds-secondary-navigation .mobile-nav { display: none; }
+}
+@media (max-width: 979px) {
+  .captured-page ds-secondary-navigation ds-nav-tabs-component { display: none; }
+  .captured-page ds-secondary-navigation .page-heading a {
+    color: inherit; text-decoration: none; pointer-events: none;
+  }
+}
+
+/* Below 1280px SAP stacks the banner (still overlaying the hero): the text
+   shares a row with the close button, the buttons sit 24px below. Side
+   padding follows the page grid: 72px, 48px (<980), 24px (<640). */
+@media (max-width: 1279px) {
+  .sap-country-banner { height: auto; padding: 24px 0; }
+  .sap-country-banner-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 32px;
+    row-gap: 24px;
+    align-items: start;
+    height: auto;
+  }
+  .sap-country-banner p { grid-column: 1; grid-row: 1; align-self: center; }
+  .sap-country-close { grid-column: 2; grid-row: 1; margin: 0; }
+  .sap-country-banner-actions { grid-column: 1 / -1; grid-row: 2; margin: 0; }
+}
+@media (max-width: 979px) {
+  .sap-country-banner-inner { padding: 0 48px; }
+}
+@media (max-width: 639px) {
+  .sap-country-banner-inner { padding: 0 24px; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SAP login, registration, logged-in profile menu and member pages
+   Measured from the live SAP lightbox / accounts.sap.com screens.
+   ───────────────────────────────────────────────────────────── */
+:root {
+  --sap-blue: #0057d2;
+  --sap-blue-bright: #0070f2;
+  --sap-ink: #1a2733;
+  --sap-muted: #475e75;
+  --sap-line: #e3e7ea;
+  --sap-field-border: #5b738b;
+}
+
+/* Email-start lightbox */
+.sap-auth-overlay {
+  position: fixed; inset: 0; z-index: 230; background: rgba(18, 33, 47, .58);
+  display: flex; align-items: center; justify-content: center; padding: 24px;
+}
+.sap-auth-modal {
+  width: min(600px, 100%); background: #fff; border-radius: 20px; overflow: hidden;
+  box-shadow: 0 24px 70px rgba(18, 33, 47, .3);
+}
+.sap-auth-header {
+  position: relative; display: flex; align-items: center; justify-content: center;
+  min-height: 64px; padding: 16px 56px; border-bottom: 1px solid #eaecee;
+}
+.sap-auth-header h2 {
+  margin: 0; font-size: 16px; font-weight: 500; line-height: 22px;
+  color: #000; text-align: center;
+}
+.sap-auth-close {
+  position: absolute; top: 50%; right: 16px; transform: translateY(-50%);
+  width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center;
+  border: 0; border-radius: 50%; background: transparent; color: var(--sap-muted); cursor: pointer;
+}
+.sap-auth-close:hover { background: #f5f6f7; color: var(--sap-ink); }
+.sap-auth-close svg { fill: currentColor; }
+.sap-auth-body { padding: 40px 48px 44px; }
+.sap-auth-field { display: flex; flex-direction: column; gap: 8px; }
+.sap-auth-field label { font-size: 16px; font-weight: 500; color: var(--sap-ink); }
+.sap-auth-field label span { color: #b00020; }
+.sap-auth-input {
+  width: 320px; max-width: 100%; height: 42px; padding: 0 12px;
+  font: 400 16px/22px var(--font); color: var(--sap-ink); background: #fff;
+  border: 1px solid var(--sap-field-border); border-radius: 4px;
+}
+.sap-auth-input:focus {
+  border-color: var(--sap-blue-bright); outline: 2px solid rgba(0, 112, 242, .2); outline-offset: 0;
+}
+.sap-auth-button {
+  min-width: 80px; height: 42px; margin-top: 24px; padding: 0 18px;
+  border: 1px solid var(--sap-blue); border-radius: 8px;
+  background: var(--sap-blue); color: #fff; cursor: pointer;
+  font: 500 16px/17.6px var(--font);
+}
+.sap-auth-button:hover { background: #0048ad; border-color: #0048ad; }
+.sap-auth-error {
+  margin: 16px 0 0; padding: 10px 12px; border: 1px solid #f3b7b7;
+  border-radius: 4px; background: #fff0f0; color: #a01010; font-size: 14px;
+}
+
+/* accounts.sap.com style sign-in page */
+.sap-signin-page {
+  min-height: calc(100vh - 60px); display: flex; align-items: center; justify-content: center;
+  background: #fff; padding: 56px 24px;
+}
+.sap-signin-card { width: 416px; max-width: 100%; }
+.sap-signin-brand {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 36px;
+  font-size: 14px; font-weight: 600; color: var(--sap-muted);
+}
+.sap-signin-mark {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 48px; height: 26px; border-radius: 3px; background: #0a6ed1; color: #fff;
+  font-size: 14px; font-weight: 900; letter-spacing: .04em;
+}
+.sap-signin-title {
+  margin: 0 0 24px; font: 900 24px/30px var(--font); letter-spacing: 0;
+  color: var(--sap-ink);
+}
+.sap-signin-label {
+  display: block; margin-bottom: 8px; font-size: 14px; font-weight: 600;
+  color: var(--sap-ink);
+}
+.sap-signin-input {
+  width: 100%; height: 32px; padding: 0 12px;
+  font: 400 14px/20px var(--font); color: var(--sap-ink);
+  background: #f5f6f7; border: 1px solid #d5dadd; border-radius: 6px;
+}
+.sap-signin-input:focus { border-color: var(--sap-blue-bright); outline: 2px solid rgba(0, 112, 242, .18); }
+.sap-signin-button {
+  width: 100%; height: 40px; margin-top: 16px; border: 0; border-radius: 6px;
+  background: var(--sap-blue-bright); color: #fff; cursor: pointer;
+  font: 600 14px/20px var(--font);
+}
+.sap-signin-button:hover { background: #005ec7; }
+.sap-signin-register { margin: 24px 0 0; font-size: 14px; color: var(--sap-muted); }
+.sap-signin-register a { color: var(--sap-blue-bright); font-weight: 600; }
+.sap-signin-footer {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 18px;
+  margin-top: 56px; font-size: 12px; color: #5b738b;
+}
+.sap-signin-footer a { color: #5b738b; }
+
+/* Registration / verify e-mail page */
+.sap-register-page {
+  min-height: calc(100vh - 60px); padding: 32px 24px 72px; background: #f5f6f7;
+}
+.sap-register-card {
+  width: min(1000px, 100%); margin: 0 auto; background: #fff;
+  border-radius: 20px; box-shadow: 0 12px 40px rgba(29, 45, 62, .12); overflow: hidden;
+}
+.sap-register-steps {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  min-height: 69px; border-bottom: 1px solid #eaecee;
+}
+.sap-register-step {
+  display: flex; align-items: center; gap: 10px; padding: 0 24px;
+  font-size: 14px; color: #5b738b; border-right: 1px solid #eaecee;
+}
+.sap-register-step:last-child { border-right: 0; }
+.sap-register-step.active { color: var(--sap-ink); font-weight: 600; }
+.sap-register-step-num {
+  width: 24px; height: 24px; flex: 0 0 auto; display: grid; place-items: center;
+  border: 1px solid currentColor; border-radius: 50%; font-size: 12px;
+}
+.sap-register-step.active .sap-register-step-num {
+  background: var(--sap-blue); border-color: var(--sap-blue); color: #fff;
+}
+.sap-register-body { padding: 36px 48px 44px; }
+.sap-register-heading {
+  margin: 0 0 8px; font: 500 20px/22px var(--font); color: #000; text-transform: none;
+}
+.sap-register-sub { margin: 0 0 28px; font-size: 16px; color: var(--sap-muted); }
+.sap-register-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 24px; }
+.sap-register-field { margin-bottom: 20px; }
+.sap-register-label {
+  display: block; margin-bottom: 8px; font-size: 14px; font-weight: 500; color: var(--sap-ink);
+}
+.sap-register-label span { color: #b00020; }
+.sap-register-input, .sap-register-select {
+  width: 100%; height: 42px; padding: 0 12px; font: 400 16px/22px var(--font);
+  color: var(--sap-ink); background: #fff;
+  border: 1px solid var(--sap-field-border); border-radius: 4px;
+}
+.sap-register-input:focus, .sap-register-select:focus {
+  border-color: var(--sap-blue-bright); outline: 2px solid rgba(0, 112, 242, .18);
+}
+.sap-phone-row { display: flex; gap: 8px; }
+.sap-phone-prefix {
+  height: 42px; padding: 0 12px; border: 1px solid var(--sap-field-border);
+  border-radius: 4px; background: #f5f6f7; color: var(--sap-ink); font: 400 14px/20px var(--font);
+}
+.sap-register-legal { margin: 8px 0 16px; font-size: 13px; line-height: 1.55; color: var(--sap-muted); }
+.sap-register-checks { display: flex; gap: 32px; margin-bottom: 14px; }
+.sap-register-checks label, .sap-register-check {
+  display: flex; align-items: flex-start; gap: 8px; font-size: 14px; color: var(--sap-ink);
+}
+.sap-register-check { margin-bottom: 12px; }
+.sap-register-checks input, .sap-register-check input {
+  width: 16px; height: 16px; margin: 2px 0 0; accent-color: var(--sap-blue-bright);
+}
+.sap-register-recaptcha { margin: 0 0 20px; font-size: 12px; color: #5b738b; }
+.sap-register-actions { display: flex; align-items: center; gap: 20px; }
+.sap-register-actions .sap-auth-button { margin-top: 0; }
+.sap-register-back, .sap-register-support { font-size: 14px; font-weight: 600; }
+
+/* Logged-in profile menu */
+.profile-wrap { position: relative; display: inline-flex; }
+.profile-menu {
+  position: absolute; top: 42px; right: 0; z-index: 150; width: 320px;
+  padding: 8px 0; background: #fff; border: 1px solid #eaecee; border-radius: 8px;
+  box-shadow: 0 12px 34px rgba(29, 45, 62, .22); color: var(--navy);
+  font-size: 14px; text-align: left;
+}
+.profile-menu-user {
+  display: flex; align-items: center; gap: 12px; padding: 14px 18px;
+  border-bottom: 1px solid #eaecee;
+}
+.profile-menu-avatar {
+  width: 36px; height: 36px; flex: 0 0 auto; display: grid; place-items: center;
+  border-radius: 50%; background: #0a6ed1; color: #fff; font-size: 13px; font-weight: 700;
+}
+.profile-menu-user strong { display: block; color: var(--sap-ink); font-size: 14px; }
+.profile-menu-user small {
+  display: block; max-width: 230px; overflow-wrap: anywhere;
+  color: #5b738b; font-size: 12px;
+}
+.profile-menu-section { padding: 8px 0; border-bottom: 1px solid #eaecee; }
+.profile-menu-section-last { border-bottom: 0; }
+.profile-menu-heading {
+  margin: 4px 0 6px; padding: 0 18px; color: #5b738b;
+  font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+}
+.profile-menu-link {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 9px 18px; color: var(--navy); text-decoration: none;
+}
+.profile-menu-link:hover { background: #f5f6f7; color: var(--sap-blue); text-decoration: none; }
+.profile-menu-badge {
+  min-width: 22px; height: 22px; padding: 0 6px; display: grid; place-items: center;
+  border-radius: 11px; background: #e5f3ff; color: var(--sap-blue);
+  font-size: 12px; font-weight: 700;
+}
+.profile-menu-signout {
+  width: 100%; padding: 11px 18px; border: 0; background: none;
+  color: var(--sap-blue); font: inherit; text-align: left; cursor: pointer;
+}
+.profile-menu-signout:hover { background: #f5f6f7; }
+
+/* Logged-in member pages */
+.account-loading { min-height: 50vh; display: grid; place-items: center; color: var(--muted); }
+.account-shell { width: min(1120px, calc(100% - 48px)); margin: 0 auto; padding: 44px 0 80px; }
+.account-breadcrumb {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 28px;
+  font-size: 12px; color: #5b738b;
+}
+.account-breadcrumb a { color: #5b738b; }
+.account-breadcrumb a:hover { color: var(--sap-blue); }
+.account-hero { margin-bottom: 40px; }
+.account-hero .eyebrow { margin-bottom: 10px; }
+.account-hero h1 {
+  margin: 0 0 12px; font: 700 36px/1.15 var(--font); letter-spacing: -.02em; color: var(--sap-ink);
+}
+.account-hero > p:last-child { max-width: 680px; margin: 0; font-size: 16px; color: var(--sap-muted); }
+.account-section { margin-top: 36px; }
+.account-section > h2 { margin: 0 0 6px; font-size: 22px; color: var(--sap-ink); }
+.account-section-description { margin: 0 0 18px; font-size: 14px; color: var(--sap-muted); }
+.account-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.account-card {
+  display: flex; flex-direction: column; min-height: 168px; padding: 22px;
+  border: 1px solid var(--sap-line); border-radius: 8px; background: #fff;
+  color: var(--navy); text-decoration: none; transition: border-color .15s, box-shadow .15s;
+}
+.account-card:hover {
+  border-color: var(--sap-blue); box-shadow: 0 6px 18px rgba(29, 45, 62, .12); text-decoration: none;
+}
+.account-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.account-card h3 { margin: 0 0 8px; font-size: 17px; color: var(--sap-ink); }
+.account-card p { margin: 0 0 18px; font-size: 14px; color: #5b738b; }
+.account-card-action { margin-top: auto; color: var(--sap-blue); font-size: 14px; font-weight: 600; }
+.account-badge {
+  min-width: 22px; height: 22px; padding: 0 6px; display: grid; place-items: center;
+  border-radius: 11px; background: var(--sap-blue); color: #fff; font-size: 12px; font-weight: 700;
+}
+.account-panel {
+  padding: 24px; border: 1px solid var(--sap-line); border-radius: 8px; background: #fff;
+}
+.account-rows { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 32px; margin: 0; }
+.account-row { padding-bottom: 12px; border-bottom: 1px solid #eaecee; }
+.account-row dt { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #5b738b; }
+.account-row dd { margin: 4px 0 0; font-size: 16px; color: var(--sap-ink); }
+.account-table-wrap { overflow-x: auto; border: 1px solid var(--sap-line); border-radius: 8px; background: #fff; }
+.account-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.account-table th, .account-table td { padding: 14px 18px; text-align: left; border-bottom: 1px solid #eaecee; }
+.account-table th { background: #f5f6f7; color: var(--sap-muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+.account-table tr:last-child td { border-bottom: 0; }
+.account-messages { padding: 0; }
+.account-message {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 12px;
+  padding: 15px 18px; border-bottom: 1px solid #eaecee;
+}
+.account-message:last-child { border-bottom: 0; }
+.account-unread { width: 8px; height: 8px; border-radius: 50%; background: var(--sap-blue-bright); }
+.account-message strong { display: block; color: var(--sap-ink); font-size: 14px; }
+.account-message small { display: block; color: #5b738b; font-size: 12px; }
+.account-message-date { font-size: 12px; color: #5b738b; }
+.account-pref {
+  display: flex; align-items: flex-start; gap: 12px; padding: 14px 0; border-bottom: 1px solid #eaecee;
+}
+.account-pref:last-child { border-bottom: 0; }
+.account-pref input { width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--sap-blue-bright); }
+.account-pref strong { display: block; color: var(--sap-ink); font-size: 15px; }
+.account-pref small { display: block; color: #5b738b; font-size: 13px; }
+.account-product-card { max-width: 520px; }
+.account-product-card h2 { margin: 0 0 18px; font-size: 22px; color: var(--sap-ink); }
+.account-product-card form { display: flex; flex-direction: column; gap: 10px; }
+.account-product-label { font-size: 14px; font-weight: 600; color: var(--sap-ink); }
+.account-product-input {
+  height: 42px; padding: 0 12px; border: 1px solid var(--sap-field-border);
+  border-radius: 4px; font: 400 16px/22px var(--font);
+}
+.account-product-card .btn { align-self: flex-start; }
+.account-product-help { margin: 14px 0 0; font-size: 13px; color: #5b738b; }
+.account-success { margin: 16px 0 0; padding: 10px 12px; border-radius: 4px; background: #e5f3ff; color: #0048ad; font-size: 14px; }
+.account-gate {
+  min-height: calc(100vh - 60px); display: flex; align-items: center; justify-content: center;
+  padding: 64px 24px; background: #f5f6f7;
+}
+.account-gate-card {
+  width: min(560px, 100%); padding: 44px 48px; text-align: center;
+  border: 1px solid var(--sap-line); border-radius: 12px; background: #fff;
+  box-shadow: 0 12px 40px rgba(29, 45, 62, .1);
+}
+.account-gate-icon {
+  width: 56px; height: 56px; margin: 0 auto 20px; display: grid; place-items: center;
+  border-radius: 50%; background: #e5f3ff; color: var(--sap-blue);
+}
+.account-gate-icon svg { fill: currentColor; }
+.account-gate-kicker { margin: 0 0 8px; color: var(--sap-blue); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.account-gate-card h1 { margin: 0 0 12px; font-size: 26px; color: var(--sap-ink); }
+.account-gate-card > p:not(.account-gate-kicker) { margin: 0 0 24px; color: var(--sap-muted); }
+.account-gate-button { min-width: 200px; }
+
+/* Account forms, marketing choices and utility auth screens */
+.sap-signin-forgot { margin: 12px 0 0; font-size: 13px; text-align: center; }
+.sap-signin-forgot a { color: var(--sap-blue-bright); font-weight: 600; }
+.sap-signin-label-spaced { margin-top: 16px; }
+.sap-register-step.done { color: var(--sap-blue); }
+.sap-register-step.done .sap-register-step-num { background: #e5f3ff; border-color: var(--sap-blue); }
+.sap-verify-card { max-width: 760px; }
+.sap-verify-body { text-align: left; }
+.sap-verify-note { display: block; background: #f5f6f7; border-color: #d5dadd; color: var(--sap-muted); }
+
+.account-choices { display: flex; flex-direction: column; gap: 18px; }
+.account-choice { margin: 0; padding: 0 0 16px; border: 0; border-bottom: 1px solid #eaecee; }
+.account-choice:last-of-type { border-bottom: 0; padding-bottom: 0; }
+.account-choice legend { padding: 0; color: var(--sap-ink); font-size: 15px; font-weight: 600; }
+.account-choice-options { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 10px; }
+.account-choice-options label { display: inline-flex; align-items: center; gap: 7px; color: var(--sap-muted); font-size: 14px; cursor: pointer; }
+.account-choice-options input { width: 16px; height: 16px; accent-color: var(--sap-blue-bright); }
+
+.account-form { display: flex; flex-direction: column; gap: 18px; }
+.account-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 24px; }
+.account-form-field { display: flex; flex-direction: column; gap: 7px; }
+.account-form-label { color: var(--sap-ink); font-size: 14px; font-weight: 600; }
+.account-form-label span { color: #b00020; }
+.account-form-input {
+  width: 100%; height: 42px; padding: 0 12px;
+  border: 1px solid var(--sap-field-border); border-radius: 4px;
+  background: #fff; color: var(--sap-ink); font: 400 15px/22px var(--font);
+}
+.account-form-input:focus { border-color: var(--sap-blue-bright); outline: 2px solid rgba(0, 112, 242, .18); }
+.account-form-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+.account-form-actions .btn { min-height: 40px; }
+.account-form-status { margin: 0; padding: 10px 12px; border-radius: 4px; background: #e5f3ff; color: #0048ad; font-size: 14px; }
+.account-form-error { background: #fff0f0; color: #a01010; border: 1px solid #f3b7b7; }
+.account-form-note { margin: 0; color: var(--sap-muted); font-size: 14px; line-height: 1.6; }
+.account-form-check { display: inline-flex; align-items: center; gap: 9px; color: var(--sap-ink); font-size: 14px; cursor: pointer; }
+.account-form-check input { width: 17px; height: 17px; accent-color: var(--sap-blue-bright); }
+.account-phone-row { display: flex; gap: 8px; }
+.account-phone-prefix {
+  min-width: 64px; height: 42px; display: grid; place-items: center;
+  border: 1px solid var(--sap-field-border); border-radius: 4px;
+  background: #f5f6f7; color: var(--sap-ink); font-size: 14px;
+}
+.account-inline-button {
+  padding: 5px 10px; border: 1px solid var(--sap-blue); border-radius: 4px;
+  background: #fff; color: var(--sap-blue); font: 600 13px/18px var(--font); cursor: pointer;
+}
+.account-inline-button:hover { background: #e5f3ff; }
+.account-current-label {
+  display: inline-block; margin-left: 8px; padding: 2px 7px; border-radius: 10px;
+  background: #e5f3ff; color: var(--sap-blue); font-size: 10px; font-weight: 700;
+  letter-spacing: .05em; text-transform: uppercase; vertical-align: middle;
+}
+.account-session-table td { vertical-align: middle; }
+.account-data-rows { gap: 14px 32px; }
+.account-social-buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.account-interest-search-row { display: flex; align-items: center; gap: 16px; }
+.account-interest-search-row .account-form-input { max-width: 420px; }
+.account-interest-count { color: #5b738b; font-size: 13px; }
+.account-interest-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 32px; max-height: 360px; overflow-y: auto; padding-right: 8px; }
+.account-interest-group { margin: 0; padding: 0; border: 0; }
+.account-interest-group legend { padding: 0 0 8px; color: var(--sap-ink); font-size: 14px; font-weight: 700; }
+.account-interest-option { display: grid; grid-template-columns: 16px minmax(0, 1fr); gap: 0 10px; padding: 5px 0; color: var(--sap-ink); font-size: 14px; cursor: pointer; }
+.account-interest-option input { grid-row: span 2; width: 16px; height: 16px; margin-top: 2px; accent-color: var(--sap-blue-bright); }
+.account-interest-option small { grid-column: 2; color: #5b738b; font-size: 11px; }
+.account-interest-selected { padding: 16px; border: 1px solid #eaecee; border-radius: 6px; background: #f5f6f7; }
+.account-interest-selected > strong { display: block; margin-bottom: 10px; color: var(--sap-ink); font-size: 14px; }
+.account-interest-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.account-interest-chip {
+  padding: 6px 10px; border: 1px solid var(--sap-blue); border-radius: 16px;
+  background: #fff; color: var(--sap-blue); font: 600 12px/16px var(--font); cursor: pointer;
+}
+.account-interest-chip:hover { background: #e5f3ff; }
+
+@media (max-width: 979px) {
+  .account-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sap-register-grid { grid-template-columns: 1fr; }
+  .account-form-grid, .account-interest-groups { grid-template-columns: 1fr; }
+}
+@media (max-width: 639px) {
+  .sap-auth-body { padding: 28px 24px 32px; }
+  .sap-auth-input { width: 100%; }
+  .sap-register-page { padding: 16px 12px 48px; }
+  .sap-register-card { border-radius: 12px; }
+  .sap-register-steps { grid-template-columns: 1fr; min-height: 0; }
+  .sap-register-step { min-height: 46px; border-right: 0; border-bottom: 1px solid #eaecee; }
+  .sap-register-body { padding: 24px 20px 32px; }
+  .sap-register-actions { flex-wrap: wrap; }
+  .sap-signin-page { padding: 32px 20px; }
+  .profile-menu { right: -8px; width: min(320px, calc(100vw - 24px)); }
+  .account-shell { width: calc(100% - 32px); padding: 28px 0 64px; }
+  .account-hero h1 { font-size: 28px; }
+  .account-grid { grid-template-columns: 1fr; }
+  .account-rows { grid-template-columns: 1fr; }
+  .account-gate-card { padding: 32px 24px; }
+  .account-interest-search-row { flex-direction: column; align-items: stretch; }
+  .account-interest-search-row .account-form-input { max-width: none; }
+  .account-form-actions .btn { flex: 1 1 auto; }
+}
+
+/* Exact Canadian spend-management capture: sap.com renders the masthead as an
+   empty 60px bar once its web components hydrate; the captured light DOM is
+   hidden, so keep the bar and color without exposing those raw menu labels. */
+.page-products-spend-management #header,
+.page-canada-products-spend-management #header {
+  height: 60px;
+  background: #f5f6f7;
+}
+.page-products-spend-management #header > *,
+.page-canada-products-spend-management #header > * {
+  display: none !important;
+}
+                                       

@@ -1,0 +1,11 @@
+:host { --udex-table-cell-sticky-shadow: 0 4px 8px rgba(34,54,73,.3); }
+:host { display: flex; align-items: center; box-sizing: border-box; border-bottom-width: 1px; border-bottom-style: solid; position: relative; word-break: break-word; }
+:host([vertical-align="Top"]) { align-items: flex-start; }
+:host([vertical-align="Bottom"]) { align-items: flex-end; }
+:host([_sticky]) { position: sticky; left: 0px; z-index: var(--udexZIndex1, 1); }
+:host([_sticky]:dir(rtl)) { right: 0px; }
+:host([_horizontal-offset]) { box-shadow: var(--udex-table-cell-sticky-shadow); }
+:host { --udex-table-cell-color: var(--udexColorGrey9, #223548); --udex-table-cell-border-color: var(--udexColorGrey3, #D5DADD); --udex-table-cell-padding: var(--udexSpacer8, 8px) var(--udexSpacer16, 16px); --udex-table-cell-background: var(--sapList_HeaderBackground, var(--udexCoreBase, #fff )); --udex-table-cell-highlighted-background: var(--udexColorGrey1, #F5F6F7); --udex-table-cell-highlighted-border-color: var(--udexColorGrey3, #D5DADD); --udex-table-cell-highlighted-column-background: var(--sapList_SelectionBackgroundColor, var(--udexColorBlue1, #ebf8ff)); --udex-table-cell-icon-width: 18px; --udex-table-cell-icon-height: 18px; }
+:host { font-family: var(--sapFontFamily); font-size: var(--udexTypographyBodySFontSize); line-height: var(--udexTypographyBodyLineHeight); border-color: var(--udex-table-cell-border-color); padding: var(--udex-table-cell-padding); background: var(--udex-table-cell-background); color: var(--udex-table-cell-color); }
+:host([_highlighted]) { background: var(--udex-table-cell-highlighted-background); border-color: var(--udex-table-cell-highlighted-border-color); }
+.udex-table-cell__icon { min-width: var(--udex-table-cell-icon-width); height: var(--udex-table-cell-icon-height); margin-inline-end: var(--udexSpacer4); color: var(--udex-table-cell-color); }

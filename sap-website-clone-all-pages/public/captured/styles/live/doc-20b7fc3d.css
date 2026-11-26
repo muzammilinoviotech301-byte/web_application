@@ -1,0 +1,35 @@
+/* scoped-for-clone v2 */
+/* This stylesheet is created by 6sense */
+            .mktoForm:is(.captured-body, .captured-body *) .mktoFormRow:has(._6si_sff_filled) {
+                display: none;
+            }
+            .mktoForm:is(.captured-body, .captured-body *) .mktoFormRow ._6si_sff_filled {
+                display: none;
+            }
+            .hs-form:is(.captured-body, .captured-body *) .hs-form-field:has(._6si_sff_filled) {
+                display: none;
+            }
+            .hs-form:is(.captured-body, .captured-body *) .hs-form-field ._6si_sff_filled {
+                display: none;
+            }
+            [class*="hsfc-"]:has(> ._6si_sff_filled):is(.captured-body, .captured-body *) {
+                display: none;
+            }
+            form:is(.captured-body, .captured-body *) .form-field:not(.error):has(._6si_sff_filled) {
+                display: none;
+            }
+            form:is(.captured-body, .captured-body *) .form-field:not(.error) ._6si_sff_filled {
+                display: none;
+            }
+            .elq-form:is(.captured-body, .captured-body *) .row:has(._6si_sff_filled) {
+                display: none;
+            }
+            .elq-form:is(.captured-body, .captured-body *) .row ._6si_sff_filled {
+                display: none;
+            }
+            .elq-form:is(.captured-body, .captured-body *) .field-wrapper:has(._6si_sff_filled) {
+                display: none;
+            }
+            .elq-form:is(.captured-body, .captured-body *) .field-wrapper ._6si_sff_filled {
+                display: none;
+            }

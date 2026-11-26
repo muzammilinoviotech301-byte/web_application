@@ -1,0 +1,1055 @@
+/* Note: the @font-face for '72 Brand Variable' is NOT imported here. It ships
+   as a standalone stylesheet (./fonts.css, copied to dist/contact-us/fonts.css)
+   that the host imports statically, so the host's bundler resolves and emits the
+   font. Injecting it via JS here would leave a dangling hashed font URL that the
+   host's re-bundler can't resolve (404). The widget uses `font-family: '72 Brand
+   Variable'`, which the host provides. */
+
+.digital-platforms-contact-us-flyout-portal,
+.digital-platforms-contact-us-call-me-now-popup,
+.digital-platforms-contact-us-flyout-opener {
+  --fontWeightRegular: 400;
+  --fontWeightMedium: 500;
+  --fontWeightBold: 700;
+
+  --digital-platforms-contact-us-bg: var(--udexColorNeutralWhite, #fff);
+  --digital-platforms-contact-us-fg: var(--sapTextColor, #223548);
+  --digital-platforms-contact-us-muted: var(--udexColorGrey7, #5a6b7d);
+  --digital-platforms-contact-us-accent: var(--sapLinkColor, #0a6ed1);
+  --digital-platforms-contact-us-error: var(--sapErrorColor, #bb0000);
+  --digital-platforms-contact-us-border: var(--sapContent_ForegroundBorderColor, #d5dadd);
+  --digital-platforms-contact-us-radius: var(--udexRadiusM, 8px);
+  /* Two-tone focus ring (UI5's SAPONEDX-77418 trick): dark ring + white ring,
+     one always clears 3:1 whatever surface (light OR blue) is adjacent.
+     box-shadow follows each element's own border-radius, so no rectangle. */
+  --digital-platforms-contact-us-focus-ring: 0 0 0 var(--sapContent_FocusWidth, 0.125rem) var(--sapContent_FocusColor, #002a86),
+    0 0 0 calc(2 * var(--sapContent_FocusWidth, 0.125rem)) var(--sapContent_ContrastFocusColor, #fff);
+  --digital-platforms-contact-us-opener-height: 58px;
+  --digital-platforms-contact-us-z-portal: 998;
+  --digital-platforms-contact-us-z-flyout: 999;
+  --digital-platforms-contact-us-z-popup: 1000;
+  --digital-platforms-contact-us-z-opener: 997;
+}
+
+.digital-platforms-contact-us-flyout-portal :where(a, button, input, select, textarea, [tabindex='0']):focus-visible,
+.digital-platforms-contact-us-call-me-now-popup :where(a, button, input, select, textarea, [tabindex='0']):focus-visible,
+.digital-platforms-contact-us-flyout-opener:focus-visible {
+  outline: none;
+  box-shadow: var(--digital-platforms-contact-us-focus-ring);
+}
+
+
+.digital-platforms-contact-us-flyout-portal {
+  position: fixed;
+  inset: 0;
+  z-index: var(--digital-platforms-contact-us-z-portal);
+  pointer-events: none;
+}
+
+.digital-platforms-contact-us-flyout-portal--active {
+  pointer-events: auto;
+}
+
+/* Mobile-first full-screen flyout; enhanced to an anchored card on wider screens. */
+.digital-platforms-contact-us-flyout {
+  position: fixed;
+  inset: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  max-height: none;
+  overflow: auto;
+  scrollbar-color: auto;
+  overscroll-behavior: contain;
+  background: var(--udexColorNeutralWhite, var(--digital-platforms-contact-us-bg));
+  color: var(--digital-platforms-contact-us-fg);
+  box-shadow: var(--sapContent_Shadow3);
+  border-radius: 0;
+  z-index: var(--digital-platforms-contact-us-z-flyout);
+  display: flex;
+  flex-direction: column;
+  font-family: '72 Brand Variable', Arial, Helvetica, sans-serif;
+  transition: none;
+  touch-action: pan-y;
+}
+
+.digital-platforms-contact-us-flyout--active {
+  right: 0;
+}
+
+.digital-platforms-contact-us-flyout::-webkit-scrollbar {
+  width: 12px;
+  background: var(--sapScrollBar_TrackColor);
+}
+
+.digital-platforms-contact-us-flyout::-webkit-scrollbar-track {
+  background: var(--sapScrollBar_TrackColor);
+  padding: var(--udexSpacer2);
+}
+
+.digital-platforms-contact-us-flyout::-webkit-scrollbar-thumb {
+  background-color: var(--sapScrollBar_FaceColor);
+  border-radius: 8px;
+  width: var(--sapScrollBar_Dimension);
+  height: 10px;
+}
+
+.digital-platforms-contact-us-flyout::-webkit-scrollbar-thumb:hover {
+  background: var(--udexColorGrey7);
+}
+
+/* RTL: anchor to the left edge instead — matches when dir is on the flyout itself or a parent */
+[dir='rtl'] .digital-platforms-contact-us-flyout,
+.digital-platforms-contact-us-flyout[dir='rtl'] {
+  transition-property: left;
+  right: 0;
+  left: 0;
+}
+
+[dir='rtl'] .digital-platforms-contact-us-flyout.digital-platforms-contact-us-flyout--active,
+.digital-platforms-contact-us-flyout[dir='rtl'].digital-platforms-contact-us-flyout--active {
+  left: 0;
+  right: 0;
+}
+
+.digital-platforms-contact-us-flyout__title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.digital-platforms-contact-us-flyout__close {
+  position: absolute;
+  inset-block-start: 28px;
+  inset-inline-end: var(--udexSpacer32, 32px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 0;
+  cursor: pointer;
+  color: var(--udexColorNeutralWhite);
+  line-height: 0;
+  z-index: 1;
+}
+
+.digital-platforms-contact-us-flyout__close svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.digital-platforms-contact-us-flyout__close:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border-color: var(--udexColorGrey5);
+  color: var(--udexColorBlue3);
+}
+
+.digital-platforms-contact-us-flyout__close:active {
+  background: rgba(0, 0, 0, 0.4);
+  border-color: var(--udexColorBlue4);
+  color: var(--udexColorBlue4);
+}
+
+.digital-platforms-contact-us-flyout__close:focus-visible {
+  outline: none;
+  box-shadow: var(--digital-platforms-contact-us-focus-ring);
+}
+
+@media (min-width: 640px) {
+  .digital-platforms-contact-us-flyout {
+    inset: auto;
+    right: -100%;
+    bottom: calc(2 * var(--udexSpacer16, 16px) + var(--digital-platforms-contact-us-opener-height));
+    width: 360px;
+    height: auto;
+    max-height: calc(100dvh - (2 * var(--udexSpacer16, 16px) + var(--digital-platforms-contact-us-opener-height) + 2px));
+    overflow: hidden auto;
+    border-radius: var(--digital-platforms-contact-us-radius);
+    transition: right 0.4s;
+  }
+
+  .digital-platforms-contact-us-flyout--active {
+    right: var(--udexSpacer16, 16px);
+  }
+
+  [dir='rtl'] .digital-platforms-contact-us-flyout,
+  .digital-platforms-contact-us-flyout[dir='rtl'] {
+    right: auto;
+    left: -100%;
+  }
+
+  [dir='rtl'] .digital-platforms-contact-us-flyout.digital-platforms-contact-us-flyout--active,
+  .digital-platforms-contact-us-flyout[dir='rtl'].digital-platforms-contact-us-flyout--active {
+    right: auto;
+    left: var(--udexSpacer16, 16px);
+  }
+
+  /* Close is XS-only: S–XL dismiss via outside click / opener toggle. */
+  .digital-platforms-contact-us-flyout__close {
+    display: none;
+  }
+}
+
+/* M breakpoint and up (980px+): edge/bottom offset is Spacer/24 per spec; S/XS stay Spacer/16. */
+@media (min-width: 980px) {
+  .digital-platforms-contact-us-flyout {
+    bottom: calc(2 * var(--udexSpacer24, 24px) + var(--digital-platforms-contact-us-opener-height));
+    max-height: calc(100dvh - (2 * var(--udexSpacer24, 24px) + var(--digital-platforms-contact-us-opener-height) + 2px));
+  }
+
+  .digital-platforms-contact-us-flyout--active {
+    right: var(--udexSpacer24, 24px);
+  }
+
+  [dir='rtl'] .digital-platforms-contact-us-flyout.digital-platforms-contact-us-flyout--active,
+  .digital-platforms-contact-us-flyout[dir='rtl'].digital-platforms-contact-us-flyout--active {
+    right: auto;
+    left: var(--udexSpacer24, 24px);
+  }
+}
+
+.digital-platforms-contact-us-call-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* XS top padding reserves space for the absolute close (28 + close 32 +
+     Spacer/4 gap); S–XL below resets to a plain 28 since the close is hidden. */
+  padding: calc(28px + 32px + var(--udexSpacer4, 4px)) var(--udexSpacer32, 32px) 28px;
+  background: var(--udexColorBlue7);
+  color: var(--udexColorNeutralWhite);
+  text-align: center;
+  font-family: var(--sapFontFamily, '72 Brand Variable', Arial, Helvetica, sans-serif);
+}
+
+@media (min-width: 640px) {
+  .digital-platforms-contact-us-call-container {
+    padding: 28px var(--udexSpacer32, 32px);
+  }
+}
+
+.digital-platforms-contact-us-call-container--empty {
+  padding: 0;
+  height: 1rem;
+}
+
+.digital-platforms-contact-us-call-container__invitation {
+  margin: 0;
+  font-size: var(--udexTypographyHeadingMediumXSFontSize);
+  font-weight: var(--fontWeightMedium);
+  line-height: var(--udexTypographyHeadingLineHeight);
+}
+
+@media (min-width: 640px) {
+  .digital-platforms-contact-us-call-container__invitation {
+    font-weight: var(--fontWeightRegular);
+    line-height: var(--udexTypographyBodyLineHeight);
+  }
+}
+
+/* Country label spacing. */
+.digital-platforms-contact-us-call-container__country {
+  margin-top: var(--udexSpacer12);
+  font-size: var(--udexTypographyBodyXSFontSize, 0.875rem);
+  font-weight: var(--fontWeightRegular);
+  line-height: var(--udexTypographyBodyLineHeight, 1.5);
+}
+
+.digital-platforms-contact-us-call-container__phone {
+  color: var(--udexColorNeutralWhite);
+  text-decoration: none;
+  text-underline-offset: 3px;
+  display: block;
+  align-self: center;
+  margin: 0;
+  font-size: var(--udexTypographyHeadingMediumSFontSize);
+  font-weight: var(--fontWeightMedium);
+  line-height: var(--udexTypographyHeadingLineHeight);
+  padding-top: var(--udexSpacer2);
+}
+
+.digital-platforms-contact-us-call-container__phone:hover,
+.digital-platforms-contact-us-call-container__phone:focus {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.digital-platforms-contact-us-call-container__phone:focus-visible {
+  border-radius: var(--udexRadiusXXS);
+  outline: none;
+  box-shadow: var(--digital-platforms-contact-us-focus-ring);
+}
+
+.digital-platforms-contact-us-call-container__phone-second {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0;
+  padding-top: var(--udexSpacer2);
+  margin-bottom: var(--udexSpacer20);
+  justify-content: center;
+}
+
+.digital-platforms-contact-us-call-container__phone--second {
+  display: inline;
+  font-size: var(--udexTypographyBodyLFontSize);
+}
+
+/* Primary joined row keeps the larger primary phone font (no secondary
+   shrink / bottom margin). */
+.digital-platforms-contact-us-call-container__phone-second--primary {
+  margin-bottom: 0;
+}
+
+.digital-platforms-contact-us-call-container__phone-divider {
+  padding-inline: var(--udexSpacer4);
+  /* Secondary-block size by default; matches the smaller --second numbers. */
+  font-size: var(--udexTypographyBodyLFontSize);
+  font-weight: var(--fontWeightMedium);
+}
+
+/* Primary-row divider matches the larger primary phone numbers. */
+.digital-platforms-contact-us-call-container__phone-second--primary
+  .digital-platforms-contact-us-call-container__phone-divider {
+  font-size: var(--udexTypographyHeadingMediumSFontSize);
+}
+
+.digital-platforms-contact-us-call-container__hours {
+  margin-top: var(--udexSpacer16);
+  font-size: var(--udexTypographyBodyXSFontSize, 0.875rem);
+  font-weight: var(--fontWeightRegular);
+  line-height: var(--udexTypographyBodyLineHeight, 1.5);
+  overflow-wrap: break-word;
+}
+
+.digital-platforms-contact-us-call-container__hours p {
+  margin: 0;
+  font-weight: 400;
+  overflow-wrap: break-word;
+}
+
+.digital-platforms-contact-us-call-container__hours span,
+.digital-platforms-contact-us-call-container__hours a {
+  font-weight: 400;
+}
+
+.digital-platforms-contact-us-call-container__hours strong,
+.digital-platforms-contact-us-call-container__hours b {
+  font-weight: 700;
+}
+
+.digital-platforms-contact-us-call-container__hours a {
+  color: var(--udexColorNeutralWhite);
+  overflow-wrap: break-word;
+}
+
+.digital-platforms-contact-us-call-container__hours a:focus-visible {
+  /* Nested inline outlines preserve both focus colors across wrapped fragments. */
+  outline: var(--sapContent_FocusWidth, 0.125rem) solid
+    var(--sapContent_ContrastFocusColor, #fff);
+  outline-offset: var(--sapContent_FocusWidth, 0.125rem);
+  box-shadow: none;
+}
+
+.digital-platforms-contact-us-call-container__hours
+  a:focus-visible
+  > .digital-platforms-contact-us-call-container__hours-link-ring {
+  outline: var(--sapContent_FocusWidth, 0.125rem) solid
+    var(--sapContent_FocusColor, #002a86);
+}
+
+.digital-platforms-contact-us-call-container--invitation-only {
+  box-sizing: border-box;
+  height: 72px;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--udexSpacer8, 8px);
+  padding-block: var(--udexSpacer20, 20px);
+  padding-inline: var(--udexSpacer16, 16px);
+  text-align: start;
+}
+
+.digital-platforms-contact-us-call-container--invitation-only
+  .digital-platforms-contact-us-call-container__invitation {
+  flex: 1;
+  font-size: var(--udexTypographyHeadingMediumXXXSFontSize, 1.125rem);
+}
+
+/* Close is an in-flow flex child here (not absolute) so the Spacer/8 row gap is
+   literal. Label is prepended in DOM; order flips it to [label] [close]. */
+.digital-platforms-contact-us-call-container--invitation-only
+  .digital-platforms-contact-us-flyout__close {
+  position: static;
+  order: 1;
+  flex-shrink: 0;
+}
+
+.digital-platforms-contact-us-service-container {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 18px;
+}
+
+.digital-platforms-contact-us-tile {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding-bottom: 16px;
+  background: transparent;
+  text-align: start;
+}
+
+.digital-platforms-contact-us-tile:first-child {
+  padding-top: 16px;
+}
+
+
+.digital-platforms-contact-us-tile__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  color: var(--digital-platforms-contact-us-muted);
+}
+
+.digital-platforms-contact-us-tile__icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.digital-platforms-contact-us-tile__icon-image {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.digital-platforms-contact-us-tile__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.digital-platforms-contact-us-tile__title {
+  display: inline-block;
+  color: var(--udexColorBlue8, var(--digital-platforms-contact-us-accent));
+  font-family: var(--sapFontFamily);
+  font-size: var(--udexTypographyBodySFontSize, 1rem);
+  font-weight: var(--fontWeightRegular);
+  line-height: var(--udexTypographyBodyLineHeight, 1.5);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.digital-platforms-contact-us-tile--secondary .digital-platforms-contact-us-tile__title {
+  font-weight: var(--fontWeightMedium, 500);
+  line-height: var(--udexTypographyHeadingLineHeight, 1.1);
+}
+
+.digital-platforms-contact-us-tile__title:hover {
+  text-decoration: underline;
+}
+
+.digital-platforms-contact-us-tile__title:focus-visible {
+  outline: none;
+  box-shadow: var(--digital-platforms-contact-us-focus-ring);
+  border-radius: var(--udexRadiusXXS);
+}
+
+/* Static (offline) title — not interactive */
+.digital-platforms-contact-us-tile__title--static {
+  color: var(--digital-platforms-contact-us-fg);
+  text-decoration: none;
+  cursor: default;
+}
+
+.digital-platforms-contact-us-tile__title--static:hover {
+  text-decoration: none;
+}
+
+.digital-platforms-contact-us-tile__desc {
+  margin: 0;
+  color: var(--sapTextColor);
+  font-size: var(--udexTypographyBodyXSFontSize, 0.875rem);
+  font-weight: var(--fontWeightRegular);
+  line-height: var(--udexTypographyBodyLineHeight, 1.5);
+}
+
+.digital-platforms-contact-us-tile__desc a {
+  display: inline-block;
+}
+
+.digital-platforms-contact-us-tile__desc a:focus-visible {
+  outline: none;
+  box-shadow: var(--digital-platforms-contact-us-focus-ring);
+}
+
+.digital-platforms-contact-us-tile__extra-image {
+  width: 100px;
+  height: 100px;
+  margin-top: var(--udexSpacer8, 8px);
+}
+
+.digital-platforms-contact-us-tile__extra-image img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.digital-platforms-contact-us-status-view {
+  display: flex;
+  flex-direction: column;
+  padding-block: var(--udexSpacer16, 16px);
+}
+
+.digital-platforms-contact-us-status-view__headline {
+  color: var(--sapTitleColor);
+  font-size: var(--udexTypographyHeadingMediumSFontSize, 1.75rem);
+  font-weight: var(--fontWeightMedium);
+  line-height: var(--udexTypographyHeadingLineHeight, 1.25);
+  margin: 0 0 4px;
+}
+
+.digital-platforms-contact-us-status-view__description {
+  margin: var(--udexSpacer16) 0 28px;
+  font-size: var(--udexTypographyBodySFontSize, 1rem);
+  font-weight: var(--fontWeightRegular);
+  line-height: var(--udexTypographyBodyLineHeight, 1.5);
+  color: var(--sapTextColor);
+}
+
+/* Interim CallMeNow entry form (plain phone input). */
+.digital-platforms-contact-us-form--call-me-now {
+  display: flex;
+  flex-direction: column;
+  padding-block: var(--udexSpacer16, 16px);
+  padding-inline: 32px;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-color: auto;
+}
+
+.digital-platforms-contact-us-call-me-now-popup .digital-platforms-contact-us-form--call-me-now::-webkit-scrollbar {
+  width: 12px;
+}
+
+.digital-platforms-contact-us-call-me-now-popup .digital-platforms-contact-us-form--call-me-now::-webkit-scrollbar-track {
+  background: var(--sapScrollBar_TrackColor);
+  padding: var(--udexSpacer2);
+}
+
+.digital-platforms-contact-us-call-me-now-popup .digital-platforms-contact-us-form--call-me-now::-webkit-scrollbar-thumb {
+  background: var(--sapScrollBar_FaceColor);
+  border-radius: var(--udexRadiusM);
+  width: var(--sapScrollBar_Dimension);
+  height: 10px;
+}
+
+.digital-platforms-contact-us-call-me-now-popup .digital-platforms-contact-us-form--call-me-now::-webkit-scrollbar-thumb:hover {
+  background: var(--udexColorGrey7);
+  border-radius: var(--udexRadiusM);
+}
+
+.digital-platforms-contact-us-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--udexSpacer4, 4px);
+  margin-bottom: var(--udexSpacer16);
+}
+
+.digital-platforms-contact-us-form__label {
+  font-size: var(--udexTypographyBodySFontSize, 1rem);
+  font-weight: var(--fontWeightRegular);
+  line-height: var(--udexTypographyBodyLineHeight, 1.5);
+  color: var(--sapTextColor);
+}
+
+.digital-platforms-contact-us-form__input {
+  font-family: var(--sapFontFamily, inherit);
+  font-size: var(--udexTypographyBodySFontSize, 1rem);
+  line-height: var(--udexTypographyBodyLineHeight, 1.5);
+  color: var(--sapField_TextColor, var(--sapTextColor));
+  padding: var(--udexSpacer8, 8px) var(--udexSpacer12, 12px);
+  background: var(--sapField_Background, var(--udexColorNeutralWhite));
+  border: 1px solid var(--sapField_BorderColor);
+  border-radius: 4px;
+}
+
+.digital-platforms-contact-us-form__input:focus-visible {
+  outline: none;
+  box-shadow: var(--digital-platforms-contact-us-focus-ring);
+}
+
+.digital-platforms-contact-us-form__input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+[dir='rtl'] .digital-platforms-contact-us-form__input {
+  text-align: right;
+}
+
+.digital-platforms-contact-us-form__error {
+  margin: var(--udexSpacer4, 4px) 0 0;
+  font-size: var(--udexTypographyBodyXsFontSize, 0.875rem);
+  line-height: var(--udexTypographyBodyLineHeight, 1.5);
+  color: var(--sapNegativeColor, var(--sapErrorColor));
+}
+
+.digital-platforms-contact-us-form__submit {
+  align-self: flex-start;
+  margin-bottom: var(--udexSpacer16);
+}
+
+/* FAB opener button. */
+.digital-platforms-contact-us-flyout-opener {
+  position: fixed;
+  bottom: var(--udexSpacer16);
+  right: var(--udexSpacer16);
+  z-index: var(--digital-platforms-contact-us-z-opener);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--udexSpacer12);
+  height: 58px;
+  padding: var(--udexSpacer16);
+  background: var(--udexColorBlue7);
+  color: var(--sapButton_Emphasized_TextColor);
+  border: 2px solid var(--udexColorNeutralWhite);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px 0 rgba(34, 53, 72, 0.3);
+  font-family: '72 Brand Variable', Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+  transition-property: background, color, border-color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+/* Label is hidden on narrow viewports — icon-only FAB. */
+.digital-platforms-contact-us-flyout-opener__label {
+  display: none;
+  font-size: var(--udexTypographyHeadingMediumXXXSFontSize);
+  font-weight: var(--fontWeightMedium);
+  line-height: var(--udexTypographyHeadingLineHeight);
+}
+
+.digital-platforms-contact-us-flyout-opener:hover {
+  background: var(--sapButton_Emphasized_Hover_Background);
+  border-color: var(--udexColorNeutralWhite);
+  color: var(--sapButton_Emphasized_Hover_TextColor);
+}
+
+/* Two-tone ring clears 3:1 on any background and follows the pill radius. */
+.digital-platforms-contact-us-flyout-opener:focus-visible {
+  outline: none;
+  box-shadow: var(--digital-platforms-contact-us-focus-ring);
+}
+
+.digital-platforms-contact-us-flyout-opener.active,
+.digital-platforms-contact-us-flyout-opener:active {
+  background: var(--sapButton_Emphasized_Active_Background);
+  border-color: var(--sapButton_Emphasized_Active_BorderColor);
+  color: var(--sapButton_Emphasized_Active_TextColor);
+}
+
+.digital-platforms-contact-us-flyout-opener__icon {
+  display: flex;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.digital-platforms-contact-us-flyout-opener__icon svg {
+  width: 26px;
+  height: 26px;
+  fill: var(--sapButton_Emphasized_TextColor);
+  transition: fill 0.4s ease-in-out;
+}
+
+.digital-platforms-contact-us-flyout-opener.active .digital-platforms-contact-us-flyout-opener__icon svg,
+.digital-platforms-contact-us-flyout-opener:active .digital-platforms-contact-us-flyout-opener__icon svg {
+  fill: var(--sapButton_Emphasized_Active_TextColor);
+}
+
+[dir='rtl'] .digital-platforms-contact-us-flyout ~ .digital-platforms-contact-us-flyout-opener,
+[dir='rtl'] .digital-platforms-contact-us-flyout-opener {
+  right: auto;
+  left: var(--udexSpacer16, 16px);
+}
+
+/* M breakpoint and up (980px+): opener edge offset is Spacer/24 per spec; S/XS stay Spacer/16. */
+@media (min-width: 980px) {
+  .digital-platforms-contact-us-flyout-opener {
+    right: var(--udexSpacer24, 24px);
+    bottom: var(--udexSpacer24, 24px);
+  }
+
+  [dir='rtl'] .digital-platforms-contact-us-flyout ~ .digital-platforms-contact-us-flyout-opener,
+  [dir='rtl'] .digital-platforms-contact-us-flyout-opener {
+    left: var(--udexSpacer24, 24px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .digital-platforms-contact-us-flyout-opener {
+    padding: var(--udexSpacer16) var(--udexSpacer20);
+  }
+
+  .digital-platforms-contact-us-flyout-opener__label {
+    padding: 19px 0;
+    display: inline-block;
+  }
+
+  .digital-platforms-contact-us-flyout-opener--square {
+    padding: var(--udexSpacer16);
+  }
+
+  .digital-platforms-contact-us-flyout-opener--square
+    .digital-platforms-contact-us-flyout-opener__label {
+    display: none;
+  }
+}
+
+/* ============================================================
+   Call Me Now popup
+   ============================================================ */
+
+.digital-platforms-contact-us-call-me-now-popup {
+  position: fixed;
+  inset: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--digital-platforms-contact-us-bg);
+  color: var(--digital-platforms-contact-us-fg);
+  box-shadow: var(--sapContent_Shadow3);
+  border-radius: 0;
+  z-index: var(--digital-platforms-contact-us-z-popup);
+  font-family: '72 Brand Variable', Arial, Helvetica, sans-serif;
+  /* Flex column so the heading stays pinned and the body (form/status view)
+     takes the remaining height and scrolls instead of clipping. */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: none;
+}
+
+.digital-platforms-contact-us-call-me-now-popup.digital-platforms-contact-us-minimized {
+  overflow: auto;
+}
+
+[dir='rtl'] .digital-platforms-contact-us-call-me-now-popup,
+.digital-platforms-contact-us-call-me-now-popup[dir='rtl'] {
+  right: 0;
+  left: 0;
+}
+
+.digital-platforms-contact-us-call-me-now-popup .digital-platforms-contact-us-call-me-now-heading__minimize {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .digital-platforms-contact-us-call-me-now-popup {
+    inset: auto;
+    right: var(--udexSpacer16, 16px);
+    bottom: calc(2 * var(--udexSpacer16, 16px) + var(--digital-platforms-contact-us-opener-height));
+    left: auto;
+    width: 360px;
+    height: auto;
+    max-height: calc(100dvh - (2 * var(--udexSpacer16, 16px) + var(--digital-platforms-contact-us-opener-height) + 2px));
+    overflow: auto;
+    border-radius: var(--digital-platforms-contact-us-radius);
+  }
+
+  .digital-platforms-contact-us-call-me-now-popup.digital-platforms-contact-us-minimized {
+    height: 72px;
+    right: var(--udexSpacer16, 16px);
+    bottom: var(--udexSpacer16, 16px);
+    overflow: hidden;
+  }
+
+  [dir='rtl'] .digital-platforms-contact-us-call-me-now-popup,
+  .digital-platforms-contact-us-call-me-now-popup[dir='rtl'] {
+    right: auto;
+    left: var(--udexSpacer16, 16px);
+  }
+
+  .digital-platforms-contact-us-call-me-now-popup .digital-platforms-contact-us-call-me-now-heading__minimize {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 980px) {
+  .digital-platforms-contact-us-call-me-now-popup {
+    right: var(--udexSpacer24, 24px);
+    bottom: calc(2 * var(--udexSpacer24, 24px) + var(--digital-platforms-contact-us-opener-height));
+    max-height: calc(100dvh - (2 * var(--udexSpacer24, 24px) + var(--digital-platforms-contact-us-opener-height) + 2px));
+  }
+
+  .digital-platforms-contact-us-call-me-now-popup.digital-platforms-contact-us-minimized {
+    right: var(--udexSpacer24, 24px);
+    bottom: var(--udexSpacer24, 24px);
+  }
+
+  [dir='rtl'] .digital-platforms-contact-us-call-me-now-popup,
+  .digital-platforms-contact-us-call-me-now-popup[dir='rtl'] {
+    left: var(--udexSpacer24, 24px);
+    right: auto;
+  }
+
+  [dir='rtl'] .digital-platforms-contact-us-call-me-now-popup.digital-platforms-contact-us-minimized,
+  .digital-platforms-contact-us-call-me-now-popup[dir='rtl'].digital-platforms-contact-us-minimized {
+    left: var(--udexSpacer24, 24px);
+    right: auto;
+  }
+}
+
+/* Heading bar */
+.digital-platforms-contact-us-call-me-now-heading {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: var(--udexSpacer8);
+  padding: var(--udexSpacer24) var(--udexSpacer16);
+  padding-inline: var(--udexSpacer32) var(--udexSpacer16);
+  background-color: var(--udexColorBlue7);
+  color: var(--udexColorNeutralWhite);
+  flex-shrink: 0;
+}
+
+.digital-platforms-contact-us-call-me-now-heading__title {
+  flex: 1 0;
+  color: var(--udexColorNeutralWhite);
+  font-size: var(--udexTypographyHeadingMediumXXXSFontSize, 1rem);
+  font-weight: var(--fontWeightMedium);
+  line-height: var(--udexTypographyHeadingLineHeight, 1.25);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.digital-platforms-contact-us-call-me-now-heading__btn {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: var(--udexColorNeutralWhite);
+  cursor: pointer;
+  padding: 0;
+}
+
+.digital-platforms-contact-us-call-me-now-heading__btn:focus-visible {
+  outline: none;
+  box-shadow: var(--digital-platforms-contact-us-focus-ring);
+}
+
+.digital-platforms-contact-us-call-me-now-heading__btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border-color: var(--udexColorGrey5);
+  color: var(--udexColorBlue3);
+}
+
+.digital-platforms-contact-us-call-me-now-heading__btn:active {
+  background: rgba(0, 0, 0, 0.4);
+  border-color: var(--udexColorBlue4);
+  color: var(--udexColorBlue4);
+}
+
+.digital-platforms-contact-us-call-me-now-heading__icon {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.digital-platforms-contact-us-call-me-now-heading__icon svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.digital-platforms-contact-us-call-me-now-heading__icon--maximize {
+  display: none;
+}
+
+.digital-platforms-contact-us-call-me-now-heading__minimize[data-minimized='true'] .digital-platforms-contact-us-call-me-now-heading__icon--maximize {
+  display: inline-flex;
+}
+
+.digital-platforms-contact-us-call-me-now-heading__minimize[data-minimized='true'] .digital-platforms-contact-us-call-me-now-heading__icon--minimize {
+  display: none;
+}
+
+/* Status view body padding inside the popup */
+.digital-platforms-contact-us-call-me-now-popup .digital-platforms-contact-us-status-view--call-me-now {
+  padding: 32px;
+  flex: 1 1 auto;
+  min-height: 0;
+  /* Scroll own overflow: on mobile the body scroll is locked, so content
+     taller than the full-screen popup must scroll here or it is unreachable. */
+  overflow-y: auto;
+  scrollbar-color: auto;
+}
+
+.digital-platforms-contact-us-call-me-now-popup .digital-platforms-contact-us-status-view--call-me-now .digital-platforms-contact-us-actions {
+  margin-bottom: 60px;
+}
+
+.digital-platforms-contact-us-call-me-now-popup .digital-platforms-contact-us-status-view--call-me-now .digital-platforms-contact-us-actions:empty {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.digital-platforms-contact-us-call-me-now-popup .digital-platforms-contact-us-status-view--call-me-now::-webkit-scrollbar {
+  width: 12px;
+}
+
+.digital-platforms-contact-us-call-me-now-popup .digital-platforms-contact-us-status-view--call-me-now::-webkit-scrollbar-track {
+  background: var(--sapScrollBar_TrackColor);
+  padding: var(--udexSpacer2);
+}
+
+.digital-platforms-contact-us-call-me-now-popup .digital-platforms-contact-us-status-view--call-me-now::-webkit-scrollbar-thumb {
+  background: var(--sapScrollBar_FaceColor);
+  border-radius: var(--udexRadiusM);
+  width: var(--sapScrollBar_Dimension);
+  height: 10px;
+}
+
+.digital-platforms-contact-us-call-me-now-popup .digital-platforms-contact-us-status-view--call-me-now::-webkit-scrollbar-thumb:hover {
+  background: var(--udexColorGrey7);
+  border-radius: var(--udexRadiusM);
+}
+
+/* Action buttons row */
+.digital-platforms-contact-us-actions {
+  display: flex;
+  flex-direction: row;
+  gap: var(--udexSpacer16, 16px);
+}
+
+.digital-platforms-contact-us-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 11px 13px;
+  border-style: solid;
+  border-width: var(--sapButton_BorderWidth, 1px);
+  border-radius: var(--sapButton_BorderCornerRadius, 0.5rem);
+  font-family: var(--sapFontFamily, inherit);
+  font-size: var(--udexTypographyNavigationMediumXLFontSize, 0.875rem);
+  font-weight: var(--fontWeightMedium);
+  line-height: var(--udexTypographyNavigationLineHeight, 1.25);
+  cursor: pointer;
+  text-align: start;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.digital-platforms-contact-us-button:focus-visible {
+  outline: none;
+  box-shadow: var(--digital-platforms-contact-us-focus-ring);
+}
+
+.digital-platforms-contact-us-button:disabled,
+.digital-platforms-contact-us-button.disabled {
+  pointer-events: none;
+  opacity: var(--sapContent_DisabledOpacity);
+}
+
+.digital-platforms-contact-us-button--primary {
+  background: var(--sapButton_Emphasized_Background);
+  color: var(--sapButton_Emphasized_TextColor, var(--udexColorNeutralWhite));
+  border: 1px solid var(--sapButton_Emphasized_BorderColor, var(--sapButton_Emphasized_Background));
+}
+
+.digital-platforms-contact-us-button--primary:hover {
+  background: var(--sapButton_Emphasized_Hover_Background);
+  border-color: var(--sapButton_Emphasized_Hover_BorderColor, var(--sapButton_Emphasized_Hover_Background));
+  color: var(--sapButton_Emphasized_Hover_TextColor, var(--sapButton_Emphasized_TextColor, var(--udexColorNeutralWhite)));
+}
+
+.digital-platforms-contact-us-button--primary:active,
+.digital-platforms-contact-us-button--primary.active {
+  background: var(--sapButton_Emphasized_Active_Background);
+  border-color: var(--sapButton_Emphasized_Active_BorderColor, var(--sapButton_Emphasized_Active_Background));
+  color: var(--sapButton_Emphasized_Active_TextColor, var(--sapButton_Emphasized_TextColor, var(--udexColorNeutralWhite)));
+}
+
+.digital-platforms-contact-us-button--secondary {
+  background: var(--sapButton_Background);
+  color: var(--sapButton_TextColor);
+  border: 1px solid var(--sapButton_BorderColor);
+}
+
+.digital-platforms-contact-us-button--secondary:hover {
+  background: var(--sapButton_Hover_Background);
+  color: var(--sapButton_Hover_TextColor);
+  border-color: var(--sapButton_Hover_BorderColor);
+}
+
+.digital-platforms-contact-us-button--secondary:active,
+.digital-platforms-contact-us-button--secondary.active {
+  background: var(--sapButton_Active_Background);
+  color: var(--sapButton_Active_TextColor);
+  border-color: var(--sapButton_Active_BorderColor);
+}
+
+/* Privacy link */
+.digital-platforms-contact-us-form__privacy {
+  font-family: var(--sapFontFamily, inherit);
+  font-size: var(--sapFontSize, 1rem);
+  font-weight: var(--fontWeightRegular);
+  line-height: var(--sapContent_LineHeight, 1.5);
+  color: var(--udexColorBlue8, var(--sapLinkColor));
+  text-underline-offset: 3px;
+  text-decoration: none;
+}
+
+.digital-platforms-contact-us-form__privacy:hover {
+  text-decoration: var(--sapLink_Hover_TextDecoration, underline);
+  color: var(--udexColorBlue10, var(--sapLink_Hover_Color));
+}
+
+.digital-platforms-contact-us-form__privacy:visited {
+  color: var(--udexColorBlue8, var(--sapLink_Visited_Color));
+}
+
+.digital-platforms-contact-us-form__privacy:active {
+  color: var(--udexColorBlue11, var(--sapLink_Active_Color));
+}
+
+.digital-platforms-contact-us-form__privacy:focus-visible {
+  outline: none;
+  box-shadow: var(--digital-platforms-contact-us-focus-ring);
+  border-radius: var(--udexRadiusXXS);
+}
+
+div#cvc-container iframe:first-child {
+  display: none;
+}
+
+#cvc-frame:dir(rtl) {
+  right: unset !important;
+  left: 1% !important;
+}

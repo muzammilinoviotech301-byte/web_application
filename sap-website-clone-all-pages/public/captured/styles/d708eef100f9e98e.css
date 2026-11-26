@@ -1,0 +1,1 @@
+.text-large{font-size:var(--udexTypographyBodyMFontSize)}.text-large p{margin-block:var(--udexSpacer20) 0}.text-large p:first-child{margin-block-start:0}@media (width>=980px){.text-large{font-size:var(--udexTypographyBodyLFontSize)}}

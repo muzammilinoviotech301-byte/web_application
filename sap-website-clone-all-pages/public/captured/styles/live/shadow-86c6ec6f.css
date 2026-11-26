@@ -1,0 +1,16 @@
+:host { --udex-link-list-columns-xl: 4; --udex-link-list-columns-l: 4; --udex-link-list-columns-m: 3; --udex-link-list-columns-s: 2; --udex-link-list-columns-xs: 1; --udex-link-list-column-gap-xl: var(--udexSpacer48); --udex-link-list-column-gap-l: var(--udexSpacer48); --udex-link-list-column-gap-m: var(--udexSpacer48); --udex-link-list-column-gap-s: var(--udexSpacer16); --udex-link-list-column-gap-xs: var(--udexSpacer16); --udex-link-list-row-gap: inherit; --udex-link-list-grid: grid; }
+.udex-link-list { display: var(--udex-link-list-grid); grid-template-columns: repeat(var(--udex-link-list-columns-xl),1fr); column-gap: var(--udex-link-list-column-gap-xl); row-gap: var(--udex-link-list-row-gap); }
+:host([type="TileS"]) .udex-link-list { --udex-link-list-row-gap: var(--udexSpacer20); }
+:host([type="TileL"]) .udex-link-list { --udex-link-list-row-gap: var(--udexSpacer40); }
+@media (width < 1600px) {
+  .udex-link-list { grid-template-columns: repeat(var(--udex-link-list-columns-l),1fr); }
+}
+@media (width < 1280px) {
+  .udex-link-list { grid-template-columns: repeat(var(--udex-link-list-columns-m),1fr); }
+}
+@media (width < 980px) {
+  .udex-link-list { grid-template-columns: repeat(var(--udex-link-list-columns-s),1fr); }
+}
+@media (width < 640px) {
+  .udex-link-list { grid-template-columns: repeat(var(--udex-link-list-columns-xs),1fr); }
+}

@@ -1,0 +1,180 @@
+/* survey.css — #chat_survey post-interaction Qualtrics survey panel.
+ * The one data-driven variant line is `--survey-header-bg`, set inline per variant
+ * (blue var(--udexColorBlue7) for call/chat, violet gradient for advisor). */
+
+#chat_survey {
+  background: var(--udexColorNeutralWhite);
+  width: 400px;
+  height: 550px;
+  position: fixed;
+  right: 1%;
+  bottom: calc(58px + var(--udexSpacer24) * 2);
+  z-index: 1000001;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: var(--sapContent_Shadow3);
+}
+
+#chat_survey:not(.collapsed) {
+  max-height: calc(
+    100vh - 58px - var(--udexSpacer24) * 2 - var(--udexSpacer16)
+  );
+  max-height: calc(
+    100dvh - 58px - var(--udexSpacer24) * 2 - var(--udexSpacer16)
+  );
+}
+
+#chat_survey .survey_body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-color: auto;
+}
+
+#chat_survey .survey_body::-webkit-scrollbar {
+  width: 12px;
+  background: var(--sapScrollBar_TrackColor);
+}
+
+#chat_survey .survey_body::-webkit-scrollbar-track {
+  background: var(--sapScrollBar_TrackColor);
+  padding: var(--udexSpacer2);
+}
+
+#chat_survey .survey_body::-webkit-scrollbar-thumb {
+  background-color: var(--sapScrollBar_FaceColor);
+  border-radius: 8px;
+  width: var(--sapScrollBar_Dimension);
+  height: 10px;
+}
+
+#chat_survey .survey_body::-webkit-scrollbar-thumb:hover {
+  background: var(--udexColorGrey7);
+}
+
+#chat_survey .survey_iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* Qualtrics disables internal scrolling; scroll the body instead. */
+  min-height: 600px;
+  border: none;
+}
+
+#chat_survey .survey_title {
+  flex: 0 0 auto;
+  background: var(--survey-header-bg, var(--udexColorBlue7));
+  color: var(--udexColorNeutralWhite);
+  padding: var(--udexSpacer24) var(--udexSpacer16);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#chat_survey .survey_title_text {
+  font-size: var(--udexTypographyHeadingMediumXXXSFontSize);
+  font-weight: var(--fontWeightMedium);
+  padding: 0 var(--udexSpacer16);
+}
+
+#chat_survey .button-group button {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--udexColorNeutralWhite);
+  cursor: pointer;
+}
+
+#chat_survey .button-group button:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border-color: var(--udexColorGrey5);
+  color: var(--udexColorBlue3);
+}
+
+#chat_survey .button-group button:active {
+  background: rgba(0, 0, 0, 0.4);
+  border-color: var(--udexColorBlue4);
+  color: var(--udexColorBlue4);
+}
+
+/* Two-tone focus ring (SAPONEDX-77418): dark + white so one always clears 3:1
+   against the blue/violet header. Ring literals inline — the panel mounts to
+   body, outside the wrapper that carries the shared focus-ring var. */
+#chat_survey :is(button, iframe, .survey_body):focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 var(--sapContent_FocusWidth, 0.125rem) var(--sapContent_FocusColor, #002a86),
+    0 0 0 calc(2 * var(--sapContent_FocusWidth, 0.125rem)) var(--sapContent_ContrastFocusColor, #fff);
+}
+
+#chat_survey :is(.survey_iframe, .survey_body):focus-visible {
+  box-shadow: inset 0 0 0 var(--sapContent_FocusWidth, 0.125rem) var(--sapContent_FocusColor, #002a86),
+    inset 0 0 0 calc(2 * var(--sapContent_FocusWidth, 0.125rem)) var(--sapContent_ContrastFocusColor, #fff);
+}
+
+#chat_survey.collapsed {
+  height: 77px;
+  overflow: hidden;
+  bottom: var(--udexSpacer16);
+}
+
+#chat_survey.collapsed .survey_collapse svg {
+  transform: rotate(180deg);
+}
+
+#chat_survey.collapsed .survey_body {
+  display: none;
+}
+
+@media screen and (max-width: 766px) {
+  html:has(#chat_survey:not(.collapsed)),
+  body:has(#chat_survey:not(.collapsed)) {
+    overflow: hidden;
+  }
+
+  #chat_survey {
+    height: 100%;
+    bottom: 0;
+    width: 100%;
+    right: 0px;
+    border-radius: 0;
+  }
+
+  #chat_survey .survey_body {
+    scrollbar-width: none;
+    overscroll-behavior: contain;
+  }
+
+  #chat_survey .survey_body::-webkit-scrollbar {
+    display: none;
+  }
+
+  #chat_survey:not(.collapsed) {
+    max-height: 100vh;
+    max-height: 100dvh;
+  }
+
+  #chat_survey .survey_iframe {
+    min-height: 625px;
+  }
+
+  #chat_survey .survey_collapse {
+    display: none;
+  }
+}
+
+#chat_survey:dir(rtl) {
+  right: unset;
+  left: 1%;
+}
+
+/* While the survey panel is open, hide the contact flyout/call surfaces so they
+ * do not overlap the survey in the shared bottom-right corner (SAPONEDX-77045).
+ * The FAB opener button stays visible. Restores when #chat_survey is removed. */
+body:has(#chat_survey) .digital-platforms-contact-us-flyout-portal,
+body:has(#chat_survey) .digital-platforms-contact-us-call-me-now-popup {
+  display: none;
+}

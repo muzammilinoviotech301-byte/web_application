@@ -1,0 +1,30 @@
+.option-search{position:relative;height:42px;color:#727272;border:1px solid #727272;display:flex;align-items:center;background:#fff}
+.mobile+.filter-bar .option-search{display:none}
+.option-search button,.option-search input{-webkit-appearance:none;background:0;border:0;outline:0;padding:0}
+.option-search button::-ms-clear,.option-search input::-ms-clear{display:none}
+.option-search button::-webkit-search-decoration,.option-search input::-webkit-search-decoration,.option-search button::-webkit-search-cancel-button,.option-search input::-webkit-search-cancel-button,.option-search button::-webkit-search-results-button,.option-search input::-webkit-search-results-button,.option-search button::-webkit-search-results-decoration,.option-search input::-webkit-search-results-decoration{display:none}
+.option-search.active{border:1px solid #007db8}
+.option-search__input{color:#727272;padding:0;width:100%;height:100%}
+.option-search input.option-search__input,.option-search .input-placeholder-text{font-size:1rem;line-height:1.5}
+@media only screen and (max-width:767px){.option-search input.option-search__input,.option-search .input-placeholder-text{font-size:1rem}
+}
+.option-search .input-placeholder-text{display:flex;top:0;bottom:0;right:0;left:0;flex-direction:column;justify-content:center;color:#727272;font-style:italic}
+.option-search__placeholder-wrapper{flex:1;position:relative;height:100%}
+.option-search__submit span,.option-search__clear span{display:flex}
+.option-search__submit{color:#727272}
+.option-search__submit,.option-search__submit span[class^='icon-']::before{font-size:24px;line-height:40px}
+.option-search__submit,.option-search__clear{flex:0 1 auto}
+.option-search__clear{color:#727272}
+.option-search__clear:hover{color:#727272}
+.option-search__clear,.option-search__clear span[class^='icon-']::before{font-size:16px;line-height:40px}
+.sreen-reader-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.image-gradient{position:absolute;top:0;left:50%;width:100%;height:100%;max-width:100vw;transform:translateX(-50%)}
+.image-gradient-wrapper:not(.industriesComponent__bgImg){height:100%;position:relative}
+.image-gradient.__desktop{display:none}
+@media only screen and (min-width:1280px){.image-gradient.__desktop{display:block}
+}
+@media only screen and (min-width:640px){.image-gradient.__mobile{display:none}
+}
+.image-gradient.__tablet{display:none}
+@media only screen and (min-width:640px) and (max-width:1279px){.image-gradient.__tablet{display:block}
+}

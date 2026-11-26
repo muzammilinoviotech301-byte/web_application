@@ -1,0 +1,2245 @@
+<link rel="stylesheet" href="https://community.sap.com/skins/2061141/b7edf49b5577a545e15abe53775466ad/sapglow.css">
+<link rel="stylesheet" href="https://community.sap.com/html/@F29E03718864DE2E89353DC9E96C0CEF/assets/prism-kh.css">
+<link rel="stylesheet" href="https://contextualnavigation.api.community.sap.com/static/1.47.5/cxs-designsystem/cxs-designsystem.css">
+<link rel="stylesheet" href="/assets/event-organizer-base.css">
+<style>
+
+
+              .sapThemeMetaData-Base-baseLib {
+  background-image: url('data:text/plain;utf-8, { "Path": "Base.baseLib.sap_glow.css_variables", "Extends": ["sap_horizon","baseTheme"]}');
+}
+:root {
+  --fontH1_Bold: bold var(--sapFontHeader1Size) var(--sapFontFamily);
+  --fontH2_Bold: bold var(--sapFontHeader2Size) var(--sapFontFamily);
+  --fontH3_Bold: bold var(--sapFontHeader3Size) var(--sapFontFamily);
+  --fontH4_Bold: bold var(--sapFontHeader4Size) var(--sapFontFamily);
+  --fontH5_Bold: bold var(--sapFontHeader5Size) var(--sapFontFamily);
+  --fontH6_Bold: bold var(--sapFontHeader6Size) var(--sapFontFamily);
+  --sapFontSize: 16px;
+  --sapPrimary1: hsla(201, 100%, 96.078%, 1);
+  --sapPrimary2: hsla(212.231, 100%, 47.451%, 1);
+  --sapPrimary3: hsla(0, 0%, 100%, 1);
+  --sapPrimary4: hsla(210, 11.111%, 96.471%, 1);
+  --sapPrimary5: #5B738B;
+  --sapPrimary6: hsla(210.909, 36.264%, 17.843%, 1);
+  --sapPrimary7: hsla(210.667, 20.93%, 42.157%, 1);
+  --udexRadiusL: 12px;
+  --udexRadiusM: 8px;
+  --udexRadiusS: 6px;
+  --udexSpacer2: 2px;
+  --udexSpacer4: 4px;
+  --udexSpacer8: 8px;
+  --fontH1_Black: 900 var(--sapFontHeader1Size) var(--sapFontFamily);
+  --fontH1_Light: 300 var(--sapFontHeader1Size) var(--sapFontFamily);
+  --fontH2_Black: 900 var(--sapFontHeader2Size) var(--sapFontFamily);
+  --fontH2_Light: 300 var(--sapFontHeader2Size) var(--sapFontFamily);
+  --fontH3_Black: 900 var(--sapFontHeader3Size) var(--sapFontFamily);
+  --fontH3_Light: 300 var(--sapFontHeader3Size) var(--sapFontFamily);
+  --fontH4_Black: 900 var(--sapFontHeader4Size) var(--sapFontFamily);
+  --fontH4_Light: 300 var(--sapFontHeader4Size) var(--sapFontFamily);
+  --fontH5_Black: 900 var(--sapFontHeader5Size) var(--sapFontFamily);
+  --fontH5_Light: 300 var(--sapFontHeader5Size) var(--sapFontFamily);
+  --fontH6_Black: 900 var(--sapFontHeader6Size) var(--sapFontFamily);
+  --fontH6_Light: 300 var(--sapFontHeader6Size) var(--sapFontFamily);
+  --sapBaseColor: #FFFFFF;
+  --sapChart_Bad: hsla(0, 91.011%, 57.902%, 1);
+  --sapLinkColor: var(--udexColorBlue8);
+  --sapTextColor: #223548;
+  --udexCoreBase: #FFFFFF;
+  --udexRadiusXL: 16px;
+  --udexRadiusXS: 4px;
+  --udexSpacer12: 12px;
+  --udexSpacer16: 16px;
+  --udexSpacer20: 20px;
+  --udexSpacer24: 24px;
+  --udexSpacer32: 32px;
+  --udexSpacer40: 40px;
+  --udexSpacer48: 48px;
+  --udexSpacer56: 56px;
+  --udexSpacer64: 64px;
+  --udexSpacer72: 72px;
+  --udexSpacer84: 84px;
+  --udexSpacer96: 96px;
+  --sapBrandColor: #0070F2;
+  --sapChart_Good: hsla(137.027, 50%, 38.02%, 1);
+  --sapErrorColor: #840606;
+  --sapFontFamily: font72BrandRegular,  font72BrandRegular Fallback,  Arial,  Helvetica,  sans-serif;
+  --sapHoverColor: #0070F2;
+  --sapShellColor: hsla(0, 0%, 100%, 1);
+  --sapTitleColor: #000000;
+  --udexColorRed1: #FFEAF4;
+  --udexColorRed2: #FFD5EA;
+  --udexColorRed3: #FFB2D2;
+  --udexColorRed4: #FF8CB2;
+  --udexColorRed5: #FF5C77;
+  --udexColorRed6: #EE3939;
+  --udexColorRed7: #D20A0A;
+  --udexColorRed8: #AA0808;
+  --udexColorRed9: #840606;
+  --udexRadiusXXL: 24px;
+  --udexRadiusXXS: 2px;
+  --udexSpacer108: 108px;
+  --udexSpacer120: 120px;
+  --font-sap-icons: fontSapIcons,  fontSapIcons Fallback;
+  --fontH1_Regular: var(--sapFontHeader1Size) var(--sapFontFamily);
+  --fontH2_Regular: var(--sapFontHeader2Size) var(--sapFontFamily);
+  --fontH3_Regular: var(--sapFontHeader3Size) var(--sapFontFamily);
+  --fontH4_Regular: var(--sapFontHeader4Size) var(--sapFontFamily);
+  --fontH5_Regular: var(--sapFontHeader5Size) var(--sapFontFamily);
+  --fontH6_Regular: var(--sapFontHeader6Size) var(--sapFontFamily);
+  --sapActiveColor: #0040B0;
+  --sapCompanyLogo: none;
+  --sapShell_Color: #FFFFFF;
+  --sapShell_Gap_L: 3rem;
+  --sapShell_Gap_M: 2rem;
+  --sapShell_Gap_S: 2rem;
+  --udexColorBlue1: #EBF8FF;
+  --udexColorBlue2: #D1EFFF;
+  --udexColorBlue3: #A6E0FF;
+  --udexColorBlue4: #89D1FF;
+  --udexColorBlue5: #4DB1FF;
+  --udexColorBlue6: #1B90FF;
+  --udexColorBlue7: #0070F2;
+  --udexColorBlue8: #0057D2;
+  --udexColorBlue9: #0040B0;
+  --udexColorGrey1: #F5F6F7;
+  --udexColorGrey2: #EAECEE;
+  --udexColorGrey3: #D5DADD;
+  --udexColorGrey4: #A9B4BE;
+  --udexColorGrey5: #8396A8;
+  --udexColorGrey6: #5B738B;
+  --udexColorGrey7: #475E75;
+  --udexColorGrey8: #354A5F;
+  --udexColorGrey9: #223548;
+  --udexColorPink1: #FFF0FA;
+  --udexColorPink2: #FFDCF3;
+  --udexColorPink3: #FFAFED;
+  --udexColorPink4: #FF8AF0;
+  --udexColorPink5: #F65AF2;
+  --udexColorPink6: #F31DED;
+  --udexColorPink7: #CC00DC;
+  --udexColorPink8: #A100C2;
+  --udexColorPink9: #7800A4;
+  --udexColorRed10: #5A0404;
+  --udexColorRed11: #350000;
+  --udexColorTeal1: #DAFDF5;
+  --udexColorTeal2: #C2FCEE;
+  --udexColorTeal3: #64EDD2;
+  --udexColorTeal4: #2CE0BF;
+  --udexColorTeal5: #00CEAC;
+  --udexColorTeal6: #049F9A;
+  --udexColorTeal7: #07838F;
+  --udexColorTeal8: #046C7A;
+  --udexColorTeal9: #035663;
+  --sapAccentColor1: #C35500;
+  --sapAccentColor2: #D20A0A;
+  --sapAccentColor3: #DF1278;
+  --sapAccentColor4: #CC00DC;
+  --sapAccentColor5: #5D36FF;
+  --sapAccentColor6: #0070F2;
+  --sapAccentColor7: #07838F;
+  --sapAccentColor8: #188918;
+  --sapAccentColor9: #7800A4;
+  --sapField_Shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  --sapLegendColor1: hsla(26.154, 100%, 38.235%, 1);
+  --sapLegendColor2: hsla(14.4, 90.909%, 43.137%, 1);
+  --sapLegendColor3: hsla(330.146, 85.062%, 47.255%, 1);
+  --sapLegendColor4: hsla(0, 91.304%, 27.059%, 1);
+  --sapLegendColor5: hsla(295.636, 100%, 43.137%, 1);
+  --sapLegendColor6: hsla(215.143, 100%, 41.176%, 1);
+  --sapLegendColor7: hsla(185.294, 90.667%, 29.412%, 1);
+  --sapLegendColor8: hsla(120, 70.186%, 31.569%, 1);
+  --sapLegendColor9: hsla(210, 20.87%, 45.098%, 1);
+  --sapNeutralColor: #FFFFFF;
+  --sapShell_Gap_XL: 3rem;
+  --sapShell_Gap_XS: 1rem;
+  --sapShell_Shadow: 0 0.125rem 0.125rem 0 hsla(210.667, 20.93%, 42.157%, 0.1), inset 0 -0.063rem 0 0 hsla(210.667, 20.93%, 42.157%, 0.2);
+  --sapSuccessColor: #1E592F;
+  --sapWarningColor: #8D2A00;
+  --udexColorBlue10: #002A86;
+  --udexColorBlue11: #00144A;
+  --udexColorGreen1: #F5FAE5;
+  --udexColorGreen2: #EBF5CB;
+  --udexColorGreen3: #BDE986;
+  --udexColorGreen4: #97DD40;
+  --udexColorGreen5: #5DC122;
+  --udexColorGreen6: #36A41D;
+  --udexColorGreen7: #188918;
+  --udexColorGreen8: #256F3A;
+  --udexColorGreen9: #1E592F;
+  --udexColorGrey10: #1A2733;
+  --udexColorGrey11: #12171C;
+  --udexColorMango1: #FFF8D6;
+  --udexColorMango2: #FFF3B8;
+  --udexColorMango3: #FFDF72;
+  --udexColorMango4: #FFC933;
+  --udexColorMango5: #FFB300;
+  --udexColorMango6: #E76500;
+  --udexColorMango7: #C35500;
+  --udexColorMango8: #A93E00;
+  --udexColorMango9: #8D2A00;
+  --udexColorPink10: #510080;
+  --udexColorPink11: #28004A;
+  --udexColorTeal10: #02414C;
+  --udexColorTeal11: #012931;
+  --udexCorePointer: #1A2733;
+  --udexGridColumns: 12;
+  --sapAccentColor10: #475E75;
+  --sapChart_Neutral: hsla(210, 20.536%, 56.078%, 1);
+  --sapCriticalColor: hsla(26.234, 100%, 45.294%, 1);
+  --sapFontLargeSize: 1.125rem;
+  --sapFontSmallSize: .875rem;
+  --sapLegendColor10: hsla(283.902, 100%, 32.157%, 1);
+  --sapLegendColor11: hsla(22.012, 100%, 33.137%, 1);
+  --sapLegendColor12: hsla(11.111, 91.011%, 34.902%, 1);
+  --sapLegendColor13: hsla(326, 93.75%, 37.647%, 1);
+  --sapLegendColor14: hsla(17.872, 100%, 27.647%, 1);
+  --sapLegendColor15: hsla(269.302, 54.43%, 30.98%, 1);
+  --sapLegendColor16: hsla(221.194, 100%, 26.275%, 1);
+  --sapLegendColor17: hsla(188.125, 94.118%, 20%, 1);
+  --sapLegendColor18: hsla(137.288, 49.58%, 23.333%, 1);
+  --sapLegendColor19: hsla(218.226, 70.455%, 34.51%, 1);
+  --sapLegendColor20: hsla(255.733, 90.361%, 48.824%, 1);
+  --sapNegativeColor: #D20A0A;
+  --sapPositiveColor: #1E592F;
+  --sapSelectedColor: #0070F2;
+  --sapShell_Favicon: none;
+  --udexColorGreen10: #164323;
+  --udexColorGreen11: #0E2B16;
+  --udexColorIndigo1: #F1ECFF;
+  --udexColorIndigo2: #E2D8FF;
+  --udexColorIndigo3: #D3B6FF;
+  --udexColorIndigo4: #B894FF;
+  --udexColorIndigo5: #9B76FF;
+  --udexColorIndigo6: #7858FF;
+  --udexColorIndigo7: #5D36FF;
+  --udexColorIndigo8: #470CED;
+  --udexColorIndigo9: #2C13AD;
+  --udexColorMango10: #6D1900;
+  --udexColorMango11: #450B00;
+  --udexCoreTextDark: #223548;
+  --udexGridLGutters: 48px;
+  --udexGridLMargins: 72px;
+  --udexGridMGutters: 48px;
+  --udexGridMMargins: 72px;
+  --udexGridSGutters: 32px;
+  --udexGridSMargins: 48px;
+  --sapChart_Critical: hsla(26.234, 100%, 45.294%, 1);
+  --sapElement_Height: 2.25rem;
+  --sapFontBoldFamily: font72BrandBold,  font72BrandBold Fallback,  Arial,  Helvetica,  sans-serif;
+  --sapFontBoldItalic: font72BrandBoldItalic,  font72BrandBoldItalic Fallback,  Arial,  Helvetica,  sans-serif;
+  --sapHighlightColor: #0070F2;
+  --sapList_TextColor: #000000;
+  --sapTile_IconColor: #354A5F;
+  --sapTile_TextColor: #223548;
+  --udexColorIndigo10: #1C0C6E;
+  --udexColorIndigo11: #0E0637;
+  --udexCoreTextLight: #FFFFFF;
+  --udexGridLMaxWidth: 1599px;
+  --udexGridLMinWidth: 1280px;
+  --udexGridMMaxWidth: 1279px;
+  --udexGridMMinWidth: 980px;
+  --udexGridSMaxWidth: 979px;
+  --udexGridSMinWidth: 640px;
+  --udexGridXLGutters: 48px;
+  --udexGridXLMargins: 84px;
+  --udexGridXSGutters: 16px;
+  --udexGridXSMargins: 24px;
+  --sapBackgroundColor: #FFFFFF;
+  --sapBackgroundImage: none;
+  --sapContent_Shadow0: 0px 2px 4px 0px rgba(34, 54, 73, 0.2);
+  --sapContent_Shadow1: 0px 2px 8px 0px rgba(34, 54, 73, 0.3);
+  --sapContent_Shadow2: 0px 10px 30px 0px rgba(34, 54, 73, 0.25);
+  --sapContent_Shadow3: 0px 20px 80px 0px rgba(34, 54, 73, 0.25);
+  --sapContent_Space_L: 3rem;
+  --sapContent_Space_M: 2rem;
+  --sapContent_Space_S: 2rem;
+  --sapErrorBackground: #FFEAF4;
+  --sapField_TextColor: #223548;
+  --sapFontBlackFamily: font72BrandBlack,  font72BrandBlack Fallback,  Arial,  Helvetica,  sans-serif;
+  --sapFontHeader1Size: 2.25rem;
+  --sapFontHeader2Size: 2rem;
+  --sapFontHeader3Size: 24px;
+  --sapFontHeader4Size: 20px;
+  --sapFontHeader5Size: 18px;
+  --sapFontHeader6Size: 16px;
+  --sapFontLightFamily: font72BrandLight,  font72BrandLight Fallback,  Arial,  Helvetica,  sans-serif;
+  --sapList_Background: #FFFFFF;
+  --sapShell_TextColor: #223548;
+  --sapTile_Background: #FFFFFF;
+  --udexCoreNavigation: #223548;
+  --udexGridXLMaxWidth: 1920px;
+  --udexGridXLMinWidth: 1600px;
+  --udexGridXSMaxWidth: 639px;
+  --udexGridXSMinWidth: 360px;
+  --fontDisplay_18_Bold: bold 18px var(--sapFontFamily);
+  --fontDisplay_24_Bold: bold 24px var(--sapFontFamily);
+  --fontDisplay_32_Bold: bold 32px var(--sapFontFamily);
+  --fontDisplay_36_Bold: bold 36px var(--sapFontFamily);
+  --fontDisplay_40_Bold: bold 40px var(--sapFontFamily);
+  --fontDisplay_44_Bold: bold 44px var(--sapFontFamily);
+  --fontDisplay_48_Bold: bold 48px var(--sapFontFamily);
+  --fontDisplay_64_Bold: bold 64px var(--sapFontFamily);
+  --fontDisplay_72_Bold: bold 72px var(--sapFontFamily);
+  --sapButton_IconColor: hsla(210.909, 36.264%, 17.843%, 1);
+  --sapButton_TextColor: #0040B0;
+  --sapChart_Sequence_1: hsla(212.231, 100%, 47.451%, 1);
+  --sapChart_Sequence_2: hsla(36.9, 100%, 39.216%, 1);
+  --sapChart_Sequence_3: hsla(74.894, 86.503%, 31.961%, 1);
+  --sapChart_Sequence_4: hsla(330.146, 85.062%, 47.255%, 1);
+  --sapChart_Sequence_5: hsla(268.333, 64.286%, 56.078%, 1);
+  --sapChart_Sequence_6: hsla(178.065, 95.092%, 31.961%, 1);
+  --sapChart_Sequence_7: hsla(210.186, 70.306%, 55.098%, 1);
+  --sapChart_Sequence_8: hsla(295.636, 100%, 43.137%, 1);
+  --sapChart_Sequence_9: hsla(114.286, 8.367%, 50.784%, 1);
+  --sapContent_GridSize: 1rem;
+  --sapContent_Space_XL: 3rem;
+  --sapContent_Space_XS: 2rem;
+  --sapErrorBorderColor: #D20A0A;
+  --sapField_Background: #FFFFFF;
+  --sapFontHeaderFamily: var(--sapFontBoldFamily);
+  --sapInformationColor: #0040B0;
+  --sapInformativeColor: #0040B0;
+  --sapLink_Hover_Color: var(--udexColorBlue10);
+  --sapLink_SubtleColor: hsla(210.909, 36.264%, 17.843%, 1);
+  --sapList_BorderColor: #A9B4BE;
+  --sapList_BorderWidth: 0.063rem;
+  --sapNeutralTextColor: #475E75;
+  --sapShell_Background: #FFFFFF;
+  --sapShell_GroupGap_L: 3rem;
+  --sapShell_GroupGap_M: 3rem;
+  --sapShell_GroupGap_S: 2rem;
+  --sapSvgLib_SAP-icons: none;
+  --sapTile_BorderColor: #EAECEE;
+  --udexColorRaspberry1: #FFF0F5;
+  --udexColorRaspberry2: #FFDCE8;
+  --udexColorRaspberry3: #FECBDA;
+  --udexColorRaspberry4: #FEADC8;
+  --udexColorRaspberry5: #FE83AE;
+  --udexColorRaspberry6: #FA4F96;
+  --udexColorRaspberry7: #DF1278;
+  --udexColorRaspberry8: #BA066C;
+  --udexColorRaspberry9: #9B015D;
+  --udexCoreHeadingDark: #000000;
+  --udexCoreSizeBorderS: 2px;
+  --udexCoreSizeWidgetS: 360px;
+  --fontDisplay_18_Black: 900 18px var(--sapFontFamily);
+  --fontDisplay_18_Light: 300 18px var(--sapFontFamily);
+  --fontDisplay_24_Black: 900 24px var(--sapFontFamily);
+  --fontDisplay_24_Light: 300 24px var(--sapFontFamily);
+  --fontDisplay_32_Black: 900 32px var(--sapFontFamily);
+  --fontDisplay_32_Light: 300 32px var(--sapFontFamily);
+  --fontDisplay_36_Black: 900 36px var(--sapFontFamily);
+  --fontDisplay_36_Light: 300 36px var(--sapFontFamily);
+  --fontDisplay_40_Black: 900 40px var(--sapFontFamily);
+  --fontDisplay_40_Light: 300 40px var(--sapFontFamily);
+  --fontDisplay_44_Black: 900 44px var(--sapFontFamily);
+  --fontDisplay_44_Light: 300 44px var(--sapFontFamily);
+  --fontDisplay_48_Black: 900 48px var(--sapFontFamily);
+  --fontDisplay_48_Light: 300 48px var(--sapFontFamily);
+  --fontDisplay_64_Black: 900 64px var(--sapFontFamily);
+  --fontDisplay_64_Light: 300 64px var(--sapFontFamily);
+  --fontDisplay_72_Black: 900 72px var(--sapFontFamily);
+  --fontDisplay_72_Light: 300 72px var(--sapFontFamily);
+  --sapButton_Background: #FFFFFF;
+  --sapButton_FontFamily: var(--sapFontSemiboldDuplexFamily);
+  --sapChart_Sequence_10: hsla(0, 59.783%, 63.922%, 1);
+  --sapChart_Sequence_11: hsla(251.642, 100%, 60.588%, 1);
+  --sapContent_BusyColor: #0057D2;
+  --sapContent_HelpColor: hsla(120, 70.186%, 31.569%, 1);
+  --sapContent_IconColor: #223548;
+  --sapContent_TextColor: #223548;
+  --sapCriticalTextColor: #8D2A00;
+  --sapField_BorderColor: #5B738B;
+  --sapField_BorderStyle: none;
+  --sapField_BorderWidth: 0.063rem;
+  --sapGroup_BorderWidth: 0.063rem;
+  --sapIndicationColor_1: hsla(0, 91.304%, 27.059%, 1);
+  --sapIndicationColor_2: hsla(0, 91.011%, 34.902%, 1);
+  --sapIndicationColor_3: hsla(26.27, 100%, 36.275%, 1);
+  --sapIndicationColor_4: hsla(137.027, 50%, 29.02%, 1);
+  --sapIndicationColor_5: hsla(212.231, 100%, 47.451%, 1);
+  --sapIndicationColor_6: hsla(187.119, 93.651%, 24.706%, 1);
+  --sapIndicationColor_7: hsla(251.642, 100%, 60.588%, 1);
+  --sapIndicationColor_8: hsla(289.794, 100%, 38.039%, 1);
+  --sapIndicationColor_9: #D1EFFF;
+  --sapInfobar_TextColor: hsla(187.119, 93.651%, 24.706%, 1);
+  --sapLink_Active_Color: #00144A;
+  --sapLink_Subtle_Color: #354A5F;
+  --sapNegativeTextColor: #840606;
+  --sapNeutralBackground: #FFFFFF;
+  --sapPositiveTextColor: #1E592F;
+  --sapProgress_FontSize: 16px;
+  --sapShell_BorderColor: #D5DADD;
+  --sapShell_GroupGap_XL: 3rem;
+  --sapSlider_Background: #D5DADD;
+  --sapSuccessBackground: #F5FAE5;
+  --sapWarningBackground: #FFF8D6;
+  --udexColorRaspberry10: #71014B;
+  --udexColorRaspberry11: #510136;
+  --udexCoreDividerLight: #D5DADD;
+  --udexCoreFocusDefault: #002A86;
+  --udexCoreHeadingLight: #FFFFFF;
+  --udexCoreSizeBorderXS: 1px;
+  --udexCoreSurfaceBrand: #0070F2;
+  --udexCoreSurfaceLight: #F5F6F7;
+  --fontH1_SemiboldDuplex: 500 var(--sapFontHeader1Size) var(--sapFontFamily);
+  --fontH2_SemiboldDuplex: 500 var(--sapFontHeader2Size) var(--sapFontFamily);
+  --fontH3_SemiboldDuplex: 500 var(--sapFontHeader3Size) var(--sapFontFamily);
+  --fontH4_SemiboldDuplex: 500 var(--sapFontHeader4Size) var(--sapFontFamily);
+  --fontH5_SemiboldDuplex: 500 var(--sapFontHeader5Size) var(--sapFontFamily);
+  --fontH6_SemiboldDuplex: 500 var(--sapFontHeader6Size) var(--sapFontFamily);
+  --sapAvatar_1_TextColor: #A93E00;
+  --sapAvatar_2_TextColor: #AA0808;
+  --sapAvatar_3_TextColor: #BA066C;
+  --sapAvatar_4_TextColor: #A100C2;
+  --sapAvatar_5_TextColor: #470CED;
+  --sapAvatar_6_TextColor: #0057D2;
+  --sapAvatar_7_TextColor: #046C7A;
+  --sapAvatar_8_TextColor: #256F3A;
+  --sapAvatar_9_TextColor: #354A5F;
+  --sapButton_BorderColor: #475E75;
+  --sapButton_BorderWidth: 0.063rem;
+  --sapContent_FocusColor: #002A86;
+  --sapContent_FocusStyle: solid;
+  --sapContent_FocusWidth: 0.125rem;
+  --sapContent_IconHeight: 1rem;
+  --sapContent_LabelColor: #475E75;
+  --sapContent_LineHeight: 1.5;
+  --sapContent_RatedColor: #E76500;
+  --sapContent_Space_Tiny: 0.5rem;
+  --sapContent_TextShadow: 0 0 0.125rem 0 hsla(0, 0%, 100%, 1);
+  --sapContent_TitleColor: #000000;
+  --sapElement_LineHeight: 2.75rem;
+  --sapField_Hover_Shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  --sapField_InvalidColor: #D20A0A;
+  --sapField_SuccessColor: #188918;
+  --sapField_WarningColor: #C35500;
+  --sapFontSemiboldFamily: font72BrandSemiBold,  font72BrandSemiBold Fallback,  Arial,  Helvetica,  sans-serif;
+  --sapHighlightTextColor: #0070F2;
+  --sapIndicationColor_10: #EAECEE;
+  --sapIndicationColor_1b: hsla(0, 92.157%, 80%, 1);
+  --sapIndicationColor_2b: hsla(0, 90.323%, 87.843%, 1);
+  --sapIndicationColor_3b: hsla(47.619, 100%, 87.647%, 1);
+  --sapIndicationColor_4b: hsla(122.609, 50%, 81.961%, 1);
+  --sapIndicationColor_5b: hsla(200, 91.304%, 90.98%, 1);
+  --sapIndicationColor_6b: hsla(166.5, 66.667%, 88.235%, 1);
+  --sapIndicationColor_7b: hsla(251.667, 100%, 92.941%, 1);
+  --sapIndicationColor_8b: hsla(289.756, 100%, 91.961%, 1);
+  --sapIndicationColor_9b: #0057D2;
+  --sapInfobar_Background: hsla(165.517, 90.625%, 87.451%, 1);
+  --sapLink_InvertedColor: hsla(212.231, 100%, 87.451%, 1);
+  --sapLink_Visited_Color: #0057D2;
+  --sapNeutralBorderColor: #A9B4BE;
+  --sapProgress_TextColor: #223548;
+  --sapShell_NeutralColor: #475E75;
+  --sapSlider_BorderColor: #D5DADD;
+  --sapSuccessBorderColor: #188918;
+  --sapTile_Padding_Block: 1.5rem;
+  --sapToolbar_Background: hsla(0, 0%, 100%, 1);
+  --sapWarningBorderColor: #C35500;
+  --udexColorNeutralBlack: #000000;
+  --udexColorNeutralWhite: #FFFFFF;
+  --udexCoreBorderDefault: #5B738B;
+  --udexCorePrimaryAction: #0070F2;
+  --udexCoreSemanticInfo1: #EBF8FF;
+  --udexCoreSemanticInfo2: #D1EFFF;
+  --udexCoreSemanticInfo3: #A6E0FF;
+  --udexCoreSemanticInfo4: #89D1FF;
+  --udexCoreSemanticInfo5: #4DB1FF;
+  --udexCoreSemanticInfo6: #1B90FF;
+  --udexCoreSemanticInfo7: #0070F2;
+  --udexCoreSemanticInfo8: #0057D2;
+  --udexCoreSemanticInfo9: #0040B0;
+  --udexCoreSizeIconInput: 18px;
+  --udexCoreSurfaceHigher: #EAECEE;
+  --udexTypographyBaseREM: 16px;
+  --fontDisplay_18_Regular: 18px var(--sapFontFamily);
+  --fontDisplay_24_Regular: 24px var(--sapFontFamily);
+  --fontDisplay_32_Regular: 32px var(--sapFontFamily);
+  --fontDisplay_36_Regular: 36px var(--sapFontFamily);
+  --fontDisplay_40_Regular: 40px var(--sapFontFamily);
+  --fontDisplay_44_Regular: 44px var(--sapFontFamily);
+  --fontDisplay_48_Regular: 48px var(--sapFontFamily);
+  --fontDisplay_64_Regular: 64px var(--sapFontFamily);
+  --fontDisplay_72_Regular: 72px var(--sapFontFamily);
+  --sapAvatar_10_TextColor: #0070F2;
+  --sapAvatar_1_Background: #FFF3B8;
+  --sapAvatar_2_Background: #FFD5EA;
+  --sapAvatar_3_Background: #FFDCE8;
+  --sapAvatar_4_Background: #FFDCF3;
+  --sapAvatar_5_Background: #E2D8FF;
+  --sapAvatar_6_Background: #D1EFFF;
+  --sapAvatar_7_Background: #C2FCEE;
+  --sapAvatar_8_Background: #EBF5CB;
+  --sapAvatar_9_Background: #EAECEE;
+  --sapContent_ShadowColor: hsla(210.667, 20.93%, 42.157%, 1);
+  --sapContent_Space_Large: 3rem;
+  --sapContent_Space_Micro: 0.25rem;
+  --sapContent_Space_Small: 1rem;
+  --sapElement_BorderWidth: 0.063rem;
+  --sapField_InvalidShadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  --sapField_RequiredColor: hsla(326, 93.75%, 37.647%, 1);
+  --sapField_SuccessShadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  --sapField_WarningShadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  --sapIndicationColor_10b: #5B738B;
+  --sapLink_Inverted_Color: #FFFFFF;
+  --sapLink_TextDecoration: none;
+  --sapList_HighlightColor: #0057D2;
+  --sapMessage_BorderWidth: 1px;
+  --sapNeutralElementColor: #5B738B;
+  --sapProgress_Background: #D5DADD;
+  --sapScrollBar_Dimension: 12px;
+  --sapScrollBar_FaceColor: #8396A8;
+  --sapShell_CriticalColor: #C35500;
+  --sapShell_NegativeColor: #D20A0A;
+  --sapShell_PositiveColor: #188918;
+  --sapTile_Padding_Inline: 1.25rem;
+  --sapTile_SeparatorColor: #D5DADD;
+  --sapTile_TitleTextColor: #000000;
+  --udexColorNeutralWhite0: #FFFFFF00;
+  --udexCoreDividerDefault: #475E75;
+  --udexCoreSemanticError1: #FFEAF4;
+  --udexCoreSemanticError2: #FFD5EA;
+  --udexCoreSemanticError3: #FFB2D2;
+  --udexCoreSemanticError4: #FF8CB2;
+  --udexCoreSemanticError5: #FF5C77;
+  --udexCoreSemanticError6: #EE3939;
+  --udexCoreSemanticError7: #D20A0A;
+  --udexCoreSemanticError8: #AA0808;
+  --udexCoreSemanticError9: #840606;
+  --udexCoreSemanticInfo10: #002A86;
+  --udexCoreSemanticInfo11: #00144A;
+  --udexCoreSizeIconHeader: 24px;
+  --udexCoreSurfaceNeutral: #FFFFFF;
+  --fontLargeText_LH15_Bold: bold var(--sapFontLargeSize)/var(--sapContent_LineHeight) var(--sapFontFamily);
+  --fontSmallText_LH15_Bold: bold var(--sapFontSmallSize)/var(--sapContent_LineHeight) var(--sapFontFamily);
+  --sapAvatar_10_Background: #FFFFFF;
+  --sapAvatar_1_BorderColor: #FFF3B8;
+  --sapAvatar_2_BorderColor: #FFD5EA;
+  --sapAvatar_3_BorderColor: #FFDCE8;
+  --sapAvatar_4_BorderColor: #FFDCF3;
+  --sapAvatar_5_BorderColor: #E2D8FF;
+  --sapAvatar_6_BorderColor: #D1EFFF;
+  --sapAvatar_7_BorderColor: #C2FCEE;
+  --sapAvatar_8_BorderColor: #EBF5CB;
+  --sapAvatar_9_BorderColor: #EAECEE;
+  --sapChart_OrderedColor_1: hsla(212.231, 100%, 47.451%, 1);
+  --sapChart_OrderedColor_2: hsla(36.9, 100%, 39.216%, 1);
+  --sapChart_OrderedColor_3: hsla(74.894, 86.503%, 31.961%, 1);
+  --sapChart_OrderedColor_4: hsla(330.146, 85.062%, 47.255%, 1);
+  --sapChart_OrderedColor_5: hsla(268.333, 64.286%, 56.078%, 1);
+  --sapChart_OrderedColor_6: hsla(178.065, 95.092%, 31.961%, 1);
+  --sapChart_OrderedColor_7: hsla(210.186, 70.306%, 55.098%, 1);
+  --sapChart_OrderedColor_8: hsla(295.636, 100%, 43.137%, 1);
+  --sapChart_OrderedColor_9: hsla(114.286, 8.367%, 50.784%, 1);
+  --sapContent_HeaderShadow: none;
+  --sapContent_Space_Medium: 2rem;
+  --sapContent_Space_XLarge: 4rem;
+  --sapContent_UnratedColor: #5B738B;
+  --sapCriticalElementColor: #C35500;
+  --sapField_HelpBackground: hsla(210, 11.111%, 94.471%, 1);
+  --sapGroup_TitleTextColor: hsla(210.909, 36.264%, 17.843%, 1);
+  --sapGroup_Title_FontSize: 18px;
+  --sapInformativeTextColor: #0040B0;
+  --sapList_FooterTextColor: #223548;
+  --sapList_HeaderTextColor: #223548;
+  --sapNegativeElementColor: #D20A0A;
+  --sapPageFooter_TextColor: hsla(210.909, 36.264%, 17.843%, 1);
+  --sapPageHeader_TextColor: #223548;
+  --sapPositiveElementColor: #188918;
+  --sapProgress_BorderColor: #D5DADD;
+  --sapScrollBar_TrackColor: #FFFFFF;
+  --udexColorNeutralBlack10: #0000001A;
+  --udexColorNeutralBlack40: #00000066;
+  --udexColorNeutralBlack70: #000000B3;
+  --udexColorNeutralWhite20: #FFFFFF33;
+  --udexColorNeutralWhite40: #FFFFFF66;
+  --udexCoreSemanticError10: #5A0404;
+  --udexCoreSemanticError11: #350000;
+  --udexCoreSocialMediaIcon: #1A2733;
+  --sapAvatar_10_BorderColor: #D5DADD;
+  --sapBackgroundImageRepeat: false;
+  --sapBlockLayer_Background: #000000d6;
+  --sapButton_Lite_TextColor: #0040B0;
+  --sapChart_OrderedColor_10: hsla(0, 59.783%, 63.922%, 1);
+  --sapChart_OrderedColor_11: hsla(251.642, 100%, 60.588%, 1);
+  --sapField_BackgroundStyle: 0 100% / 100% 0.063rem no-repeat linear-gradient(0deg, #5B738B, #5B738B) border-box;
+  --sapField_FocusBackground: #FFFFFF;
+  --sapGroup_TitleBackground: hsla(0, 0%, 100%, 1);
+  --sapInformationBackground: #EBF8FF;
+  --sapList_Active_TextColor: #000000;
+  --sapList_FooterBackground: #FFFFFF;
+  --sapList_HeaderBackground: #FFFFFF;
+  --sapList_Hover_Background: #F5F6F7;
+  --sapPageFooter_Background: hsla(0, 0%, 100%, 1);
+  --sapPageHeader_Background: hsla(0, 0%, 100%, 1);
+  --sapScrollBar_BorderColor: hsla(210.638, 20.524%, 57.098%, 1);
+  --sapScrollBar_SymbolColor: hsla(210.909, 36.264%, 17.843%, 1);
+  --sapShell_BackgroundImage: linear-gradient(to bottom, #FFFFFF, #FFFFFF);
+  --sapTile_Hover_Background: #FFFFFF;
+  --udexCoreSemanticSuccess1: #F5FAE5;
+  --udexCoreSemanticSuccess2: #EBF5CB;
+  --udexCoreSemanticSuccess3: #BDE986;
+  --udexCoreSemanticSuccess4: #97DD40;
+  --udexCoreSemanticSuccess5: #5DC122;
+  --udexCoreSemanticSuccess6: #36A41D;
+  --udexCoreSemanticSuccess7: #188918;
+  --udexCoreSemanticSuccess8: #256F3A;
+  --udexCoreSemanticSuccess9: #1E592F;
+  --udexCoreSemanticWarning1: #FFF8D6;
+  --udexCoreSemanticWarning2: #FFF3B8;
+  --udexCoreSemanticWarning3: #FFDF72;
+  --udexCoreSemanticWarning4: #FFC933;
+  --udexCoreSemanticWarning5: #FFB300;
+  --udexCoreSemanticWarning6: #E76500;
+  --udexCoreSemanticWarning7: #C35500;
+  --udexCoreSemanticWarning8: #A93E00;
+  --udexCoreSemanticWarning9: #8D2A00;
+  --udexCoreSizeIconSemantic: 16px;
+  --fontLargeText_LHAuto_Bold: bold var(--sapFontLargeSize) var(--sapFontFamily);
+  --fontSmallText_LHAuto_Bold: bold var(--sapFontSmallSize) var(--sapFontFamily);
+  --sapAccentBackgroundColor1: hsla(49.859, 100%, 86.078%, 1);
+  --sapAccentBackgroundColor2: hsla(330.638, 100%, 90.784%, 1);
+  --sapAccentBackgroundColor3: hsla(340, 100%, 92.941%, 1);
+  --sapAccentBackgroundColor4: hsla(320.571, 100%, 93.137%, 1);
+  --sapAccentBackgroundColor5: hsla(255, 100%, 91.373%, 1);
+  --sapAccentBackgroundColor6: hsla(200.87, 100%, 90.98%, 1);
+  --sapAccentBackgroundColor7: hsla(165.517, 90.625%, 87.451%, 1);
+  --sapAccentBackgroundColor8: hsla(74.286, 67.742%, 87.843%, 1);
+  --sapAccentBackgroundColor9: hsla(268.333, 54.545%, 87.059%, 1);
+  --sapBackgroundColorDefault: hsla(0, 0%, 97%, 1);
+  --sapBackgroundImageOpacity: 1;
+  --sapButton_Hover_TextColor: #0040B0;
+  --sapButton_Lite_Background: #FFFFFF00;
+  --sapButton_TokenBackground: #EAECEE;
+  --sapButton_Track_TextColor: hsla(0, 0%, 100%, 1);
+  --sapChart_Sequence_Neutral: hsla(210, 20.536%, 56.078%, 1);
+  --sapContent_BadgeTextColor: hsla(0, 0%, 100%, 1);
+  --sapContent_IconFontFamily: var(--font-sap-icons);
+  --sapContent_Neutral_Shadow: 0 0 0.125rem 0 hsla(210, 20.536%, 56.078%, 0.72);
+  --sapElement_Compact_Height: 1.625rem;
+  --sapField_Focus_Background: hsla(0, 0%, 100%, 1);
+  --sapField_Hover_Background: #FFFFFF;
+  --sapField_InformationColor: #0057D2;
+  --sapGroup_FooterBackground: hsla(0, 0%, 0%, 0);
+  --sapGroup_TitleBorderColor: hsla(210.638, 13.524%, 70.098%, 1);
+  --sapInformationBorderColor: #0057D2;
+  --sapLegendBackgroundColor1: hsla(50, 100%, 81.176%, 1);
+  --sapLegendBackgroundColor2: hsla(18.621, 93.548%, 93.922%, 1);
+  --sapLegendBackgroundColor3: hsla(336, 38.462%, 97.451%, 1);
+  --sapLegendBackgroundColor4: hsla(0, 66.667%, 95.294%, 1);
+  --sapLegendBackgroundColor5: hsla(302.308, 100%, 94.902%, 1);
+  --sapLegendBackgroundColor6: hsla(200.87, 100%, 90.98%, 1);
+  --sapLegendBackgroundColor7: hsla(165.517, 90.625%, 87.451%, 1);
+  --sapLegendBackgroundColor8: hsla(74.286, 67.742%, 93.922%, 1);
+  --sapLegendBackgroundColor9: hsla(210, 11.111%, 96.471%, 1);
+  --sapLegend_CurrentDateTime: #A100C2;
+  --sapList_Active_Background: #EAECEE;
+  --sapList_HeaderBorderColor: #A9B4BE;
+  --sapList_TableFooterBorder: #A9B4BE;
+  --sapPageFooter_BorderColor: #D5DADD;
+  --sapPageHeader_BorderColor: hsla(0, 0%, 85%, 1);
+  --sapShell_Active_TextColor: #0040B0;
+  --sapShell_Hover_Background: #FFFFFF;
+  --sapShell_InformativeColor: #0057D2;
+  --sapTile_Active_Background: #FFFFFF;
+  --sapTile_OverlayBackground: #FFFFFF;
+  --sapToolbar_SeparatorColor: #A9B4BE;
+  --udexCorePlayIconIconHover: #000000;
+  --udexCoreSemanticSuccess10: #164323;
+  --udexCoreSemanticSuccess11: #0E2B16;
+  --udexCoreSemanticWarning10: #6D1900;
+  --udexCoreSemanticWarning11: #450B00;
+  --fontLargeText_LH15_Regular: var(--sapFontLargeSize)/var(--sapContent_LineHeight) var(--sapFontFamily);
+  --fontLargeText_LHAuto_Black: 900 var(--sapFontLargeSize) var(--sapFontFamily);
+  --fontLargeText_LHAuto_Light: 300 var(--sapFontLargeSize) var(--sapFontFamily);
+  --fontMediumText_LHAuto_Bold: bold var(--sapFontSize) var(--sapFontFamily);
+  --fontSmallText_LH15_Regular: var(--sapFontSmallSize)/var(--sapContent_LineHeight) var(--sapFontFamily);
+  --fontSmallText_LHAuto_Black: 900 var(--sapFontSmallSize) var(--sapFontFamily);
+  --fontSmallText_LHAuto_Light: 300 var(--sapFontSmallSize) var(--sapFontFamily);
+  --sapAccentBackgroundColor10: hsla(210, 10.526%, 92.549%, 1);
+  --sapButton_Accept_TextColor: #256F3A;
+  --sapButton_Active_TextColor: #0040B0;
+  --sapButton_Handle_TextColor: #223548;
+  --sapButton_Hover_Background: #EAECEE;
+  --sapButton_Lite_BorderColor: #FFFFFF00;
+  --sapButton_Reject_TextColor: #AA0808;
+  --sapButton_TokenBorderColor: #D5DADD;
+  --sapButton_Track_Background: #8396A8;
+  --sapContent_BadgeBackground: hsla(0, 91.011%, 34.902%, 1);
+  --sapContent_Critical_Shadow: 0 0 0.125rem 0 hsla(26.234, 100%, 45.294%, 0.72);
+  --sapContent_DisabledOpacity: 0.4;
+  --sapContent_ForegroundColor: hsla(0, 0%, 93.9%, 1);
+  --sapContent_MarkerIconColor: #0040B0;
+  --sapContent_MarkerTextColor: hsla(187.119, 93.651%, 24.706%, 1);
+  --sapContent_Negative_Shadow: 0 0 0.125rem 0 hsla(0, 91.011%, 34.902%, 0.72);
+  --sapContent_Positive_Shadow: 0 0 0.125rem 0 hsla(137.027, 50%, 29.02%, 0.72);
+  --sapContent_Selected_Shadow: 0 0 0.125rem 0 hsla(212.231, 100%, 47.451%, 0.72);
+  --sapField_Focus_BorderColor: hsla(212.231, 100%, 47.451%, 1);
+  --sapField_Hover_BorderColor: #1B90FF;
+  --sapField_InformationShadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  --sapField_InvalidBackground: #FFFFFF;
+  --sapField_SuccessBackground: #FFFFFF;
+  --sapField_WarningBackground: #FFFFFF;
+  --sapGroup_ContentBackground: #FFFFFF;
+  --sapInformativeElementColor: #0057D2;
+  --sapLegendBackgroundColor10: hsla(320, 100%, 97.059%, 1);
+  --sapLegendBackgroundColor11: hsla(49.756, 100%, 91.961%, 1);
+  --sapLegendBackgroundColor12: hsla(0, 100%, 98.235%, 1);
+  --sapLegendBackgroundColor13: hsla(340, 42.857%, 94.51%, 1);
+  --sapLegendBackgroundColor14: hsla(49.286, 50%, 89.02%, 1);
+  --sapLegendBackgroundColor15: hsla(271.765, 54.839%, 93.922%, 1);
+  --sapLegendBackgroundColor16: hsla(201, 100%, 96.078%, 1);
+  --sapLegendBackgroundColor17: hsla(166.286, 89.744%, 92.353%, 1);
+  --sapLegendBackgroundColor18: hsla(74.286, 67.742%, 87.843%, 1);
+  --sapLegendBackgroundColor19: hsla(204, 100%, 99.02%, 1);
+  --sapLegendBackgroundColor20: hsla(233.684, 100%, 96.275%, 1);
+  --sapNegativeBackgroundColor: #D20A0A;
+  --sapObjectHeader_Background: #FFFFFF;
+  --sapShell_Active_Background: #FFFFFF;
+  --sapSlider_HandleBackground: #FFFFFF;
+  --sapTile_BorderCornerRadius: 1rem;
+  --udexCorePlayIconBackground: #FFFFFF66;
+  --fontMediumText_LHAuto_Black: 900 var(--sapFontSize) var(--sapFontFamily);
+  --fontMediumText_LHAuto_Light: 300 var(--sapFontSize) var(--sapFontFamily);
+  --sapButton_Accept_Background: #EBF5CB;
+  --sapButton_Active_Background: #FFFFFF;
+  --sapButton_Handle_Background: #FFFFFF;
+  --sapButton_Hover_BorderColor: #475E75;
+  --sapButton_Neutral_TextColor: #223548;
+  --sapButton_Reject_Background: #FFD5EA;
+  --sapButton_Success_TextColor: #256F3A;
+  --sapButton_Track_BorderColor: hsla(210, 20.536%, 56.078%, 1);
+  --sapElement_Condensed_Height: 1.375rem;
+  --sapField_Active_BorderColor: #0040B0;
+  --sapField_BorderCornerRadius: 0.25rem;
+  --sapField_InvalidBorderStyle: none;
+  --sapField_InvalidBorderWidth: 1px;
+  --sapField_SuccessBorderStyle: none;
+  --sapField_SuccessBorderWidth: 1px;
+  --sapField_WarningBorderStyle: none;
+  --sapField_WarningBorderWidth: 0.125rem;
+  --sapFontSemiboldDuplexFamily: font72BrandSemiBoldDuplex,  font72BrandSemiBoldDuplex Fallback,  Arial,  Helvetica,  sans-serif;
+  --sapGroup_BorderCornerRadius: 0.5rem;
+  --sapGroup_ContentBorderColor: hsla(0, 0%, 85%, 1);
+  --sapInfobar_Hover_Background: hsla(0, 0%, 100%, 1);
+  --sapLegend_WorkingBackground: #FFFFFF;
+  --sapMessage_ErrorBorderColor: #D20A0A;
+  --sapObjectHeader_BorderColor: #A9B4BE;
+  --sapProgress_Value_TextColor: #223548;
+  --sapShell_BackgroundGradient: linear-gradient(to bottom, #FFFFFF, #FFFFFF);
+  --sapShell_NeutralBorderColor: #A9B4BE;
+  --sapShell_Selected_TextColor: #0070F2;
+  --sapSlider_HandleBorderColor: #89D1FF;
+  --udexCorePlayIconIconDefault: #475E75;
+  --udexCoreSizeOpacityDisabled: 40px;
+  --udexTypographyBodyLFontSize: 20px;
+  --udexTypographyBodyMFontSize: 18px;
+  --udexTypographyBodySFontSize: 16px;
+  --fontLargeText_LHAuto_Regular: var(--sapFontLargeSize) var(--sapFontFamily);
+  --fontMediumText_LH15Wrap_Bold: bold var(--sapFontSize)/var(--sapContent_LineHeight) var(--sapFontFamily);
+  --fontSmallText_LHAuto_Regular: var(--sapFontSmallSize) var(--sapFontFamily);
+  --sapButton_Accept_BorderColor: #188918;
+  --sapButton_Active_BorderColor: #0040B0;
+  --sapButton_BorderCornerRadius: 0.5rem;
+  --sapButton_Critical_TextColor: hsla(0, 0%, 100%, 1);
+  --sapButton_Handle_BorderColor: hsla(0, 0%, 100%, 1);
+  --sapButton_Negative_TextColor: #AA0808;
+  --sapButton_Neutral_Background: #FFFFFF;
+  --sapButton_Reject_BorderColor: #D20A0A;
+  --sapButton_Selected_TextColor: #0040B0;
+  --sapButton_Success_Background: #EBF5CB;
+  --sapContent_ContrastIconColor: #FFFFFF;
+  --sapContent_ContrastTextColor: #FFFFFF;
+  --sapContent_DisabledTextColor: #A9B4BE;
+  --sapContent_ForcedColorAdjust: none;
+  --sapField_Hover_InvalidShadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  --sapField_Hover_SuccessShadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  --sapField_Hover_WarningShadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  --sapField_ReadOnly_Background: #EAECEE;
+  --sapInfobar_Active_Background: hsla(0, 0%, 100%, 1);
+  --sapLink_Hover_TextDecoration: underline;
+  --sapList_GroupHeaderTextColor: #1A2733;
+  --sapList_SelectionBorderColor: #0040B0;
+  --sapProgress_Value_Background: #475E75;
+  --sapScrollBar_Hover_FaceColor: #5B738B;
+  --sapShell_GroupTitleTextColor: #354A5F;
+  --sapShell_Selected_Background: #F5F6F7;
+  --udexTypographyBodyLineHeight: 1.5;
+  --udexTypographyBodyXLFontSize: 24px;
+  --udexTypographyBodyXSFontSize: 14px;
+  --udexTypographyFontWeightBold: 700;
+  --fontLargeText_LHAuto_Semibold: 500 var(--sapFontLargeSize) var(--sapFontFamily);
+  --fontMediumText_LHAuto_Regular: var(--sapFontSize) var(--sapFontFamily);
+  --fontSmallText_LHAuto_Semibold: 500 var(--sapFontSmallSize) var(--sapFontFamily);
+  --sapButton_Attention_TextColor: #A93E00;
+  --sapButton_Critical_Background: hsla(26.234, 100%, 45.294%, 1);
+  --sapButton_Negative_Background: #FFD5EA;
+  --sapButton_Neutral_BorderColor: #A9B4BE;
+  --sapButton_Selected_Background: #FFFFFF;
+  --sapButton_Success_BorderColor: #188918;
+  --sapContent_ContrastFocusColor: #FFFFFF;
+  --sapContent_ContrastTextShadow: 0 0 0.063rem 0 hsla(210.667, 20.93%, -57.843%, 0.7);
+  --sapContent_Informative_Shadow: 0 0 0.125rem 0 hsla(212.231, 100%, 47.451%, 0.72);
+  --sapContent_Interaction_Shadow: 0 0 0.125rem 0 hsla(210.667, 20.93%, 42.157%, 0.72);
+  --sapContent_Selected_TextColor: #0040B0;
+  --sapElement_BorderCornerRadius: 0.5rem;
+  --sapElement_Compact_LineHeight: 2rem;
+  --sapField_Focus_HelpBackground: hsla(0, 0%, 100%, 1);
+  --sapField_Hover_HelpBackground: hsla(0, 0%, 100%, 1);
+  --sapField_PlaceholderTextColor: #475E75;
+  --sapField_ReadOnly_BorderColor: #5B738B;
+  --sapField_ReadOnly_BorderStyle: none;
+  --sapLink_Active_TextDecoration: underline;
+  --sapList_AlternatingBackground: #F5F6F7;
+  --sapList_GroupHeaderBackground: #FFFFFF;
+  --sapList_TableFixedBorderColor: #A9B4BE;
+  --sapMessage_SuccessBorderColor: #188918;
+  --sapMessage_WarningBorderColor: #C35500;
+  --sapPopover_BorderCornerRadius: 0.5rem;
+  --sapProgress_CriticalTextColor: #223548;
+  --sapProgress_NegativeTextColor: #223548;
+  --sapProgress_PositiveTextColor: #223548;
+  --sapProgress_Value_BorderColor: #475E75;
+  --sapShell_Category_1_TextColor: hsla(0, 0%, 100%, 1);
+  --sapShell_Category_2_TextColor: hsla(0, 0%, 100%, 1);
+  --sapShell_Category_3_TextColor: hsla(0, 0%, 100%, 1);
+  --sapShell_Category_4_TextColor: hsla(0, 0%, 100%, 1);
+  --sapShell_Category_5_TextColor: hsla(0, 0%, 100%, 1);
+  --sapShell_Category_6_TextColor: hsla(0, 0%, 100%, 1);
+  --sapShell_Category_7_TextColor: hsla(0, 0%, 100%, 1);
+  --sapShell_Category_8_TextColor: hsla(0, 0%, 100%, 1);
+  --sapShell_Category_9_TextColor: hsla(0, 0%, 100%, 1);
+  --sapShell_GroupTitleTextShadow: 0 0 0.125rem 0 hsla(0, 0%, 100%, 1);
+  --sapShell_InteractiveTextColor: #354A5F;
+  --sapShell_Navigation_TextColor: #223548;
+  --sapSlider_Selected_Background: #0070F2;
+  --udexCoreSocialMediaBackground: #FFFFFF;
+  --udexTypographyBodyXXLFontSize: 28px;
+  --udexTypographyBodyXXSFontSize: 12px;
+  --fontMediumText_LHAuto_Semibold: 500 var(--sapFontSize) var(--sapFontFamily);
+  --sapButton_Attention_Background: #FFF3B8;
+  --sapButton_Critical_BorderColor: hsla(26.234, 100%, 45.294%, 1);
+  --sapButton_Emphasized_TextColor: #FFFFFF;
+  --sapButton_Lite_Hover_TextColor: #0040B0;
+  --sapButton_Negative_BorderColor: #D20A0A;
+  --sapButton_Selected_BorderColor: #0040B0;
+  --sapContent_ContrastShadowColor: hsla(0, 0%, 100%, 1);
+  --sapContent_ForegroundTextColor: #223548;
+  --sapContent_Illustrative_Color1: #9b015d;
+  --sapContent_Illustrative_Color2: #56bdff;
+  --sapContent_Illustrative_Color3: #ff7f4c;
+  --sapContent_Illustrative_Color4: #00144a;
+  --sapContent_Illustrative_Color5: #a9b4be;
+  --sapContent_Illustrative_Color6: #d5dadd;
+  --sapContent_Illustrative_Color7: #dbf1ff;
+  --sapContent_Illustrative_Color8: #fff;
+  --sapContent_Illustrative_Color9: #0899a7;
+  --sapContent_MonospaceFontFamily: "72Mono", "72Monofull", lucida console, monospace;
+  --sapContent_Selected_Background: #FFFFFF;
+  --sapContent_Selected_FocusColor: #0040B0;
+  --sapField_Hover_BackgroundStyle: 0 100% / 100% 0.063rem no-repeat linear-gradient(0deg, #1B90FF, #1B90FF) border-box;
+  --sapField_InformationBackground: #FFFFFF;
+  --sapIndicationColor_1_TextColor: hsla(0, 0%, 100%, 1);
+  --sapIndicationColor_2_TextColor: hsla(0, 0%, 100%, 1);
+  --sapIndicationColor_3_TextColor: hsla(0, 0%, 100%, 1);
+  --sapIndicationColor_4_TextColor: hsla(0, 0%, 100%, 1);
+  --sapIndicationColor_5_TextColor: hsla(0, 0%, 100%, 1);
+  --sapIndicationColor_6_TextColor: hsla(0, 0%, 100%, 1);
+  --sapIndicationColor_7_TextColor: hsla(0, 0%, 100%, 1);
+  --sapIndicationColor_8_TextColor: hsla(0, 0%, 100%, 1);
+  --sapIndicationColor_9_TextColor: #354A5F;
+  --sapLegend_NonWorkingBackground: #EAECEE;
+  --sapList_GroupHeaderBorderColor: #A9B4BE;
+  --sapObjectHeader_Title_FontSize: 28px;
+  --sapProgress_CriticalBackground: #FFDF72;
+  --sapProgress_NegativeBackground: #FFB2D2;
+  --sapProgress_PositiveBackground: #BDE986;
+  --sapShell_BackgroundImageRepeat: false;
+  --sapShell_Category_10_TextColor: hsla(0, 0%, 100%, 1);
+  --sapShell_Category_11_TextColor: hsla(0, 0%, 100%, 1);
+  --sapShell_Category_12_TextColor: hsla(0, 0%, 100%, 1);
+  --sapShell_Category_13_TextColor: hsla(0, 0%, 100%, 1);
+  --sapShell_Category_14_TextColor: #FFFFFF;
+  --sapShell_Category_15_TextColor: #1A2733;
+  --sapShell_Category_16_TextColor: #D1EFFF;
+  --sapShell_Category_1_Background: hsla(215.143, 100%, 41.176%, 1);
+  --sapShell_Category_1_TextShadow: 0 0 0.063rem 0 hsla(210.667, 20.93%, -57.843%, 0.7);
+  --sapShell_Category_2_Background: hsla(330.146, 85.062%, 47.255%, 1);
+  --sapShell_Category_2_TextShadow: 0 0 0.063rem 0 hsla(210.667, 20.93%, -57.843%, 0.7);
+  --sapShell_Category_3_Background: hsla(26.234, 100%, 45.294%, 1);
+  --sapShell_Category_3_TextShadow: 0 0 0.063rem 0 hsla(210.667, 20.93%, -57.843%, 0.7);
+  --sapShell_Category_4_Background: hsla(283.902, 100%, 32.157%, 1);
+  --sapShell_Category_4_TextShadow: 0 0 0.063rem 0 hsla(210.667, 20.93%, -57.843%, 0.7);
+  --sapShell_Category_5_Background: hsla(11.111, 91.011%, 34.902%, 1);
+  --sapShell_Category_5_TextShadow: 0 0 0.063rem 0 hsla(210.667, 20.93%, -57.843%, 0.7);
+  --sapShell_Category_6_Background: hsla(185.294, 90.667%, 29.412%, 1);
+  --sapShell_Category_6_TextShadow: 0 0 0.063rem 0 hsla(210.667, 20.93%, -57.843%, 0.7);
+  --sapShell_Category_7_Background: hsla(301.682, 89.916%, 53.333%, 1);
+  --sapShell_Category_7_TextShadow: 0 0 0.063rem 0 hsla(210.667, 20.93%, -57.843%, 0.7);
+  --sapShell_Category_8_Background: hsla(120, 70.186%, 31.569%, 1);
+  --sapShell_Category_8_TextShadow: 0 0 0.063rem 0 hsla(210.667, 20.93%, -57.843%, 0.7);
+  --sapShell_Category_9_Background: hsla(221.194, 100%, 26.275%, 1);
+  --sapShell_Category_9_TextShadow: 0 0 0.063rem 0 hsla(210.667, 20.93%, -57.843%, 0.7);
+  --sapShell_InteractiveBackground: #F5F6F7;
+  --sapShell_Interactive_TextColor: #354A5F;
+  --sapShell_Navigation_Background: #FFFFFF;
+  --sapSlider_Selected_BorderColor: #0070F2;
+  --sapTile_OverlayForegroundColor: #000000;
+  --udexTypographyEyebrowLFontSize: 16px;
+  --udexTypographyEyebrowMFontSize: 14px;
+  --udexTypographyEyebrowSFontSize: 12px;
+  --udexTypographyFontWeightMedium: 500;
+  --fontMediumText_LH15Wrap_Regular: var(--sapFontSize)/var(--sapContent_LineHeight) var(--sapFontFamily);
+  --sapButton_Attention_BorderColor: #C35500;
+  --sapButton_Emphasized_Background: #0057D2;
+  --sapButton_Emphasized_FontFamily: var(--sapFontBoldFamily);
+  --sapButton_Emphasized_FontWeight: 700;
+  --sapButton_Emphasized_TextShadow: hsla(0, 0%, 0%, 0);
+  --sapButton_Information_TextColor: hsla(0, 0%, 100%, 1);
+  --sapButton_Lite_Hover_Background: #EAECEE;
+  --sapContent_Illustrative_Color10: #dbf1ff;
+  --sapContent_Illustrative_Color11: #df1278;
+  --sapContent_Illustrative_Color12: #00a800;
+  --sapContent_Illustrative_Color13: #0070f2;
+  --sapContent_Illustrative_Color14: #0040b0;
+  --sapContent_Illustrative_Color15: #c35500;
+  --sapContent_Illustrative_Color16: #8d2a00;
+  --sapContent_Illustrative_Color17: #046c7c;
+  --sapContent_Illustrative_Color18: #bce5ff;
+  --sapContent_Illustrative_Color19: #a3dbff;
+  --sapContent_Illustrative_Color20: #89d1ff;
+  --sapContent_Illustrative_Color21: #1b90ff;
+  --sapContent_Illustrative_Color22: #00144a;
+  --sapContent_Illustrative_Color23: #d20a0a;
+  --sapContent_Illustrative_Color24: #ffb2d2;
+  --sapContent_Illustrative_Color25: #ffeaf4;
+  --sapContent_Illustrative_Color26: #ffdf72;
+  --sapContent_Illustrative_Color27: #fff8d6;
+  --sapContent_Illustrative_Color28: #a93e00;
+  --sapContent_Illustrative_Color29: #450b00;
+  --sapContent_Illustrative_Color30: #340800;
+  --sapContent_Illustrative_Color31: #ffab92;
+  --sapContent_SearchHighlightColor: hsla(166.286, 89.744%, 92.353%, 1);
+  --sapElement_Condensed_LineHeight: 1.5rem;
+  --sapField_InformationBorderStyle: none;
+  --sapField_InformationBorderWidth: 0.125rem;
+  --sapField_InvalidBackgroundStyle: 0 100% / 100% 1px no-repeat linear-gradient(0deg, #D20A0A, #D20A0A) border-box;
+  --sapField_SuccessBackgroundStyle: 0 100% / 100% 1px no-repeat linear-gradient(0deg, #188918, #188918) border-box;
+  --sapField_WarningBackgroundStyle: 0 100% / 100% 0.125rem no-repeat linear-gradient(0deg, #C35500, #C35500) border-box;
+  --sapIndicationColor_10_TextColor: #FFFFFF;
+  --sapIndicationColor_1_Background: hsla(0, 91.304%, 27.059%, 1);
+  --sapIndicationColor_2_Background: hsla(0, 91.011%, 34.902%, 1);
+  --sapIndicationColor_3_Background: hsla(26.234, 100%, 45.294%, 1);
+  --sapIndicationColor_4_Background: hsla(137.027, 50%, 29.02%, 1);
+  --sapIndicationColor_5_Background: hsla(212.231, 100%, 47.451%, 1);
+  --sapIndicationColor_6_Background: hsla(187.119, 93.651%, 24.706%, 1);
+  --sapIndicationColor_7_Background: hsla(251.642, 100%, 60.588%, 1);
+  --sapIndicationColor_8_Background: hsla(289.794, 100%, 38.039%, 1);
+  --sapIndicationColor_9_Background: #0057D2;
+  --sapObjectHeader_Title_TextColor: #000000;
+  --sapProgress_CriticalBorderColor: #FFDF72;
+  --sapProgress_NegativeBorderColor: #FFB2D2;
+  --sapProgress_PositiveBorderColor: #BDE986;
+  --sapShell_BackgroundImageOpacity: 1;
+  --sapShell_BackgroundPatternColor: hsla(0, 0%, 0%, 0);
+  --sapShell_Category_10_Background: hsla(210, 20.87%, 45.098%, 1);
+  --sapShell_Category_10_TextShadow: 0 0 0.063rem 0 hsla(210.667, 20.93%, -57.843%, 0.7);
+  --sapShell_Category_11_Background: hsla(0, 90.909%, 43.137%, 1);
+  --sapShell_Category_11_TextShadow: 0 0 0.063rem 0 hsla(210.667, 20.93%, -57.843%, 0.7);
+  --sapShell_Category_12_Background: hsla(251.497, 100%, 67.255%, 1);
+  --sapShell_Category_12_TextShadow: 0 0 0.063rem 0 hsla(210.667, 20.93%, -57.843%, 0.7);
+  --sapShell_Category_13_Background: hsla(316.974, 90.476%, 32.941%, 1);
+  --sapShell_Category_13_TextShadow: 0 0 0.063rem 0 hsla(210.667, 20.93%, -57.843%, 0.7);
+  --sapShell_Category_14_Background: #0070F2;
+  --sapShell_Category_14_TextShadow: 0 0 0.063rem 0 hsla(210.667, 20.93%, -57.843%, 0.7);
+  --sapShell_Category_15_Background: #F5F6F7;
+  --sapShell_Category_15_TextShadow: 0 0 0.063rem 0 hsla(210.667, 20.93%, -57.843%, 0.7);
+  --sapShell_Category_16_Background: #D1EFFF;
+  --sapShell_Category_16_TextShadow: 0 0 0.063rem 0 hsla(210.667, 20.93%, -57.843%, 0.7);
+  --sapShell_Category_1_BorderColor: hsla(215.143, 100%, 41.176%, 1);
+  --sapShell_Category_2_BorderColor: hsla(330.146, 85.062%, 47.255%, 1);
+  --sapShell_Category_3_BorderColor: hsla(26.234, 100%, 45.294%, 1);
+  --sapShell_Category_4_BorderColor: hsla(283.902, 100%, 32.157%, 1);
+  --sapShell_Category_5_BorderColor: hsla(11.111, 91.011%, 34.902%, 1);
+  --sapShell_Category_6_BorderColor: hsla(185.294, 90.667%, 29.412%, 1);
+  --sapShell_Category_7_BorderColor: hsla(301.682, 89.916%, 53.333%, 1);
+  --sapShell_Category_8_BorderColor: hsla(120, 70.186%, 31.569%, 1);
+  --sapShell_Category_9_BorderColor: hsla(221.194, 100%, 26.275%, 1);
+  --sapShell_InteractiveBorderColor: hsla(210.638, 20.524%, 42.098%, 1);
+  --sapSlider_RangeHandleBackground: #FFFFFF;
+  --sapTile_Interactive_BorderColor: #1B90FF;
+  --udexTypographyDisplayLineHeight: 1.1;
+  --udexTypographyEyebrowLineHeight: 1.1;
+  --udexTypographyFontWeightRegular: 400;
+  --udexTypographyHeadingLineHeight: 1.1;
+  --sapButton_Accept_Hover_TextColor: #164323;
+  --sapButton_Emphasized_BorderColor: #0057D2;
+  --sapButton_Information_Background: hsla(212.231, 100%, 47.451%, 1);
+  --sapButton_Lite_Active_Background: #FFFFFF;
+  --sapButton_Lite_Hover_BorderColor: #475E75;
+  --sapButton_Reject_Hover_TextColor: #5A0404;
+  --sapButton_Track_Hover_Background: #5B738B;
+  --sapContent_ContrastTextThreshold: 0.65;
+  --sapContent_ForegroundBorderColor: #5B738B;
+  --sapContent_MeasureIndicatorColor: #5B738B;
+  --sapField_Hover_InformationShadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  --sapField_ReadOnly_HelpBackground: hsla(0, 0%, 0%, 0);
+  --sapIndicationColor_10_Background: #1A2733;
+  --sapIndicationColor_1_BorderColor: hsla(0, 91.304%, 27.059%, 1);
+  --sapIndicationColor_2_BorderColor: hsla(0, 91.011%, 34.902%, 1);
+  --sapIndicationColor_3_BorderColor: hsla(26.234, 100%, 45.294%, 1);
+  --sapIndicationColor_4_BorderColor: hsla(137.027, 50%, 29.02%, 1);
+  --sapIndicationColor_5_BorderColor: hsla(212.231, 100%, 47.451%, 1);
+  --sapIndicationColor_6_BorderColor: hsla(187.119, 93.651%, 24.706%, 1);
+  --sapIndicationColor_7_BorderColor: hsla(251.642, 100%, 60.588%, 1);
+  --sapIndicationColor_8_BorderColor: hsla(289.794, 100%, 38.039%, 1);
+  --sapIndicationColor_9_BorderColor: #D1EFFF;
+  --sapList_SelectionBackgroundColor: #EBF8FF;
+  --sapObjectHeader_Hover_Background: #FFFFFF;
+  --sapObjectHeader_Title_FontFamily: var(--sapFontBlackFamily);
+  --sapProgress_InformationTextColor: #223548;
+  --sapShell_Category_10_BorderColor: hsla(210, 20.87%, 45.098%, 1);
+  --sapShell_Category_11_BorderColor: hsla(0, 90.909%, 43.137%, 1);
+  --sapShell_Category_12_BorderColor: hsla(251.497, 100%, 67.255%, 1);
+  --sapShell_Category_13_BorderColor: hsla(316.974, 90.476%, 32.941%, 1);
+  --sapShell_Category_14_BorderColor: #FFFFFF;
+  --sapShell_Category_15_BorderColor: #D5DADD;
+  --sapShell_Category_16_BorderColor: #D1EFFF;
+  --sapShell_Interactive_BorderColor: #0070F2;
+  --sapSlider_Hover_HandleBackground: #D1EFFF;
+  --sapButton_Accept_Active_TextColor: #164323;
+  --sapButton_Accept_Hover_Background: #BDE986;
+  --sapButton_Handle_Hover_Background: #FFFFFF;
+  --sapButton_Information_BorderColor: hsla(212.231, 100%, 47.451%, 1);
+  --sapButton_Lite_Active_BorderColor: #0040B0;
+  --sapButton_Lite_Disabled_TextColor: #0040B0;
+  --sapButton_Neutral_Hover_TextColor: #223548;
+  --sapButton_Reject_Active_TextColor: #5A0404;
+  --sapButton_Reject_Hover_Background: #FFB2D2;
+  --sapButton_Success_Hover_TextColor: #164323;
+  --sapButton_Track_Hover_BorderColor: hsla(210, 20.536%, 49.078%, 1);
+  --sapContent_DragAndDropActiveColor: hsla(212.231, 100%, 47.451%, 1);
+  --sapField_ReadOnly_BackgroundStyle: 0 100% / 0.375rem 0.063rem repeat-x linear-gradient(90deg, #5B738B 0, #5B738B 0.25rem, transparent 0.25rem) border-box;
+  --sapIndicationColor_10_BorderColor: #1A2733;
+  --sapIndicationColor_1b_BorderColor: hsla(0, 92.157%, 80%, 1);
+  --sapIndicationColor_2b_BorderColor: hsla(0, 90.323%, 87.843%, 1);
+  --sapIndicationColor_3b_BorderColor: hsla(47.619, 100%, 87.647%, 1);
+  --sapIndicationColor_4b_BorderColor: hsla(122.609, 50%, 81.961%, 1);
+  --sapIndicationColor_5b_BorderColor: hsla(200, 91.304%, 90.98%, 1);
+  --sapIndicationColor_6b_BorderColor: hsla(166.5, 66.667%, 88.235%, 1);
+  --sapIndicationColor_7b_BorderColor: hsla(251.667, 100%, 92.941%, 1);
+  --sapIndicationColor_8b_BorderColor: hsla(289.756, 100%, 91.961%, 1);
+  --sapIndicationColor_9b_BorderColor: hsla(0, 0%, 85%, 1);
+  --sapList_Hover_SelectionBackground: #D1EFFF;
+  --sapList_TableGroupHeaderTextColor: #223548;
+  --sapMessage_InformationBorderColor: #0057D2;
+  --sapProgress_InformationBackground: #A6E0FF;
+  --sapShell_Navigation_SelectedColor: #0070F2;
+  --sapSlider_Active_HandleBackground: transparent;
+  --sapSlider_Hover_HandleBorderColor: #89D1FF;
+  --sapButton_Accept_Active_Background: #FFFFFF;
+  --sapButton_Accept_Hover_BorderColor: #164323;
+  --sapButton_Critical_Hover_TextColor: hsla(0, 0%, 100%, 1);
+  --sapButton_Handle_Hover_BorderColor: #FFFFFF66;
+  --sapButton_Negative_Hover_TextColor: #5A0404;
+  --sapButton_Neutral_Active_TextColor: #0040B0;
+  --sapButton_Neutral_Hover_Background: #EAECEE;
+  --sapButton_Reject_Active_Background: #FFFFFF;
+  --sapButton_Reject_Hover_BorderColor: #5A0404;
+  --sapButton_Success_Active_TextColor: #164323;
+  --sapButton_Success_Hover_Background: #BDE986;
+  --sapButton_Track_Negative_TextColor: #AA0808;
+  --sapButton_Track_Positive_TextColor: hsla(0, 0%, 100%, 1);
+  --sapButton_Track_Selected_TextColor: hsla(0, 0%, 100%, 1);
+  --sapContent_MonospaceBoldFontFamily: "72Mono-Bold", "72Mono-Boldfull", lucida console, monospace;
+  --sapContent_NonInteractiveIconColor: #475E75;
+  --sapIndicationColor_10b_BorderColor: #5B738B;
+  --sapList_TableGroupHeaderBackground: #FFFFFF;
+  --sapObjectHeader_SubTitle_TextColor: #5B738B;
+  --sapObjectHeader_Subtitle_TextColor: hsla(210.667, 20.93%, 42.157%, 1);
+  --sapProgress_InformationBorderColor: #A6E0FF;
+  --sapShell_Selected_Hover_Background: #FFFFFF;
+  --sapSlider_Active_HandleBorderColor: #0040B0;
+  --udexTypographyDisplayBoldLFontSize: 84px;
+  --udexTypographyDisplayBoldMFontSize: 72px;
+  --udexTypographyDisplayBoldSFontSize: 64px;
+  --udexTypographyHeadingBoldLFontSize: 36px;
+  --udexTypographyHeadingBoldMFontSize: 32px;
+  --udexTypographyHeadingBoldSFontSize: 28px;
+  --udexTypographyNavigationLineHeight: 1.1;
+  --fontLargeText_LHAuto_SemiboldDuplex: 500 var(--sapFontLargeSize) var(--sapFontFamily);
+  --fontSmallText_LHAuto_SemiboldDuplex: 500 var(--sapFontSmallSize) var(--sapFontFamily);
+  --sapButton_Accept_Active_BorderColor: #164323;
+  --sapButton_Accept_Selected_TextColor: #164323;
+  --sapButton_Attention_Hover_TextColor: #6D1900;
+  --sapButton_Critical_Active_TextColor: hsla(0, 0%, 100%, 1);
+  --sapButton_Critical_Hover_Background: hsla(26.234, 100%, 43.294%, 1);
+  --sapButton_Handle_Negative_TextColor: #AA0808;
+  --sapButton_Handle_Positive_TextColor: #256F3A;
+  --sapButton_Handle_Selected_TextColor: #0070F2;
+  --sapButton_Negative_Active_TextColor: #5A0404;
+  --sapButton_Negative_Hover_Background: #FFB2D2;
+  --sapButton_Neutral_Active_Background: #FFFFFF;
+  --sapButton_Neutral_Hover_BorderColor: #A9B4BE;
+  --sapButton_Reject_Active_BorderColor: #5A0404;
+  --sapButton_Reject_Selected_TextColor: #5A0404;
+  --sapButton_Selected_Hover_Background: #D1EFFF;
+  --sapButton_Success_Active_Background: #FFFFFF;
+  --sapButton_Success_Hover_BorderColor: #164323;
+  --sapButton_Track_Negative_Background: #EE3939;
+  --sapButton_Track_Positive_Background: #188918;
+  --sapButton_Track_Selected_Background: #0070F2;
+  --sapContent_Selected_ForegroundColor: #0070F2;
+  --sapField_InformationBackgroundStyle: 0 100% / 100% 0.125rem no-repeat linear-gradient(0deg, #0057D2, #0057D2) border-box;
+  --sapList_TableGroupHeaderBorderColor: #A9B4BE;
+  --sapProgress_Value_CriticalTextColor: #C35500;
+  --sapProgress_Value_NegativeTextColor: #D20A0A;
+  --sapProgress_Value_PositiveTextColor: #188918;
+  --udexTypographyDisplayBoldXSFontSize: 56px;
+  --udexTypographyHeadingBoldXLFontSize: 40px;
+  --udexTypographyHeadingBoldXSFontSize: 24px;
+  --fontMediumText_LHAuto_SemiboldDuplex: 500 var(--sapFontSize) var(--sapFontFamily);
+  --sapButton_Accept_Selected_Background: #FFFFFF;
+  --sapButton_Attention_Active_TextColor: #6D1900;
+  --sapButton_Attention_Hover_Background: #FFDF72;
+  --sapButton_Critical_Active_Background: hsla(26.234, 100%, 41.294%, 1);
+  --sapButton_Critical_Hover_BorderColor: hsla(26.234, 100%, 43.294%, 1);
+  --sapButton_Emphasized_Hover_TextColor: #FFFFFF;
+  --sapButton_Handle_Negative_Background: #FFFFFF;
+  --sapButton_Handle_Positive_Background: #FFFFFF;
+  --sapButton_Handle_Selected_Background: #FFFFFF;
+  --sapButton_Negative_Active_Background: #FFFFFF;
+  --sapButton_Negative_Hover_BorderColor: #5A0404;
+  --sapButton_Neutral_Active_BorderColor: #0040B0;
+  --sapButton_Neutral_Selected_TextColor: #0040B0;
+  --sapButton_Reject_Selected_Background: #FFFFFF;
+  --sapButton_Selected_Hover_BorderColor: hsla(212.231, 100%, 47.451%, 1);
+  --sapButton_Selected_Hover_Bordercolor: #0040B0;
+  --sapButton_Success_Active_BorderColor: #164323;
+  --sapButton_Track_Negative_BorderColor: hsla(0, 91.011%, 57.902%, 1);
+  --sapButton_Track_Positive_BorderColor: #188918;
+  --sapButton_Track_Selected_BorderColor: hsla(212.231, 100%, 47.451%, 1);
+  --sapContent_Selected_Hover_Background: #FFFFFF;
+  --sapInfobar_NonInteractive_Background: hsla(210, 11.111%, 96.471%, 1);
+  --sapProgress_Value_CriticalBackground: #C35500;
+  --sapProgress_Value_NegativeBackground: #D20A0A;
+  --sapProgress_Value_PositiveBackground: #188918;
+  --sapShell_Navigation_Active_TextColor: #5B738B;
+  --sapShell_Navigation_Hover_Background: #F5F6F7;
+  --udexTypographyDisplayMediumLFontSize: 84px;
+  --udexTypographyDisplayMediumMFontSize: 72px;
+  --udexTypographyDisplayMediumSFontSize: 64px;
+  --udexTypographyHeadingBoldXXLFontSize: 44px;
+  --udexTypographyHeadingBoldXXSFontSize: 20px;
+  --udexTypographyHeadingMediumLFontSize: 36px;
+  --udexTypographyHeadingMediumMFontSize: 32px;
+  --udexTypographyHeadingMediumSFontSize: 28px;
+  --sapButton_Accept_Selected_BorderColor: #164323;
+  --sapButton_Attention_Active_Background: #FFFFFF;
+  --sapButton_Attention_Hover_BorderColor: #6D1900;
+  --sapButton_Critical_Active_BorderColor: hsla(26.234, 100%, 41.294%, 1);
+  --sapButton_Emphasized_Active_TextColor: #0040B0;
+  --sapButton_Emphasized_Hover_Background: #0040B0;
+  --sapButton_Handle_Negative_BorderColor: #EE3939;
+  --sapButton_Handle_Positive_BorderColor: hsla(0, 0%, 100%, 1);
+  --sapButton_Handle_Selected_BorderColor: hsla(0, 0%, 100%, 1);
+  --sapButton_Information_Hover_TextColor: hsla(0, 0%, 100%, 1);
+  --sapButton_Negative_Active_BorderColor: #5A0404;
+  --sapButton_Neutral_Selected_Background: #FFFFFF;
+  --sapButton_Reject_Selected_BorderColor: #5A0404;
+  --sapContent_ImagePlaceholderBackground: #FFFFFF00;
+  --sapIndicationColor_1_Active_TextColor: hsla(0, 91.304%, 27.059%, 1);
+  --sapIndicationColor_1_Hover_Background: hsla(0, 91.304%, 22.059%, 1);
+  --sapIndicationColor_2_Active_TextColor: hsla(0, 91.011%, 34.902%, 1);
+  --sapIndicationColor_2_Hover_Background: hsla(0, 91.011%, 29.902%, 1);
+  --sapIndicationColor_3_Active_TextColor: hsla(26.27, 100%, 36.275%, 1);
+  --sapIndicationColor_3_Hover_Background: hsla(26.234, 100%, 42.294%, 1);
+  --sapIndicationColor_4_Active_TextColor: hsla(137.027, 50%, 29.02%, 1);
+  --sapIndicationColor_4_Hover_Background: hsla(137.027, 50%, 24.02%, 1);
+  --sapIndicationColor_5_Active_TextColor: hsla(212.231, 100%, 47.451%, 1);
+  --sapIndicationColor_5_Hover_Background: hsla(212.231, 100%, 42.451%, 1);
+  --sapIndicationColor_6_Active_TextColor: hsla(187.119, 93.651%, 24.706%, 1);
+  --sapIndicationColor_6_Hover_Background: hsla(187.119, 93.651%, 19.706%, 1);
+  --sapIndicationColor_7_Active_TextColor: hsla(251.642, 100%, 60.588%, 1);
+  --sapIndicationColor_7_Hover_Background: hsla(251.642, 100%, 55.588%, 1);
+  --sapIndicationColor_8_Active_TextColor: hsla(289.794, 100%, 38.039%, 1);
+  --sapIndicationColor_8_Hover_Background: hsla(289.794, 100%, 33.039%, 1);
+  --sapIndicationColor_9_Active_TextColor: #FFFFFF;
+  --sapIndicationColor_9_Hover_Background: #FFF3B8;
+  --sapObjectHeader_Title_SnappedFontSize: 20px;
+  --sapProgress_Value_CriticalBorderColor: #C35500;
+  --sapProgress_Value_NegativeBorderColor: #D20A0A;
+  --sapProgress_Value_PositiveBorderColor: #188918;
+  --sapShell_Navigation_Active_Background: #F5F6F7;
+  --sapSlider_Hover_RangeHandleBackground: #D1EFFF;
+  --udexTypographyDisplayMediumXSFontSize: 56px;
+  --udexTypographyDisplayRegularLFontSize: 84px;
+  --udexTypographyDisplayRegularMFontSize: 72px;
+  --udexTypographyDisplayRegularSFontSize: 64px;
+  --udexTypographyHeadingBoldXXXLFontSize: 48px;
+  --udexTypographyHeadingBoldXXXSFontSize: 18px;
+  --udexTypographyHeadingMediumXLFontSize: 40px;
+  --udexTypographyHeadingMediumXSFontSize: 24px;
+  --udexTypographyHeadingRegularLFontSize: 36px;
+  --udexTypographyHeadingRegularMFontSize: 32px;
+  --udexTypographyHeadingRegularSFontSize: 28px;
+  --udexTypographyNavigationBoldLFontSize: 15px;
+  --udexTypographyNavigationBoldMFontSize: 14px;
+  --udexTypographyNavigationBoldSFontSize: 13px;
+  --sapButton_Attention_Active_BorderColor: #6D1900;
+  --sapButton_Attention_Selected_TextColor: #6D1900;
+  --sapButton_Emphasized_Active_Background: #FFFFFF;
+  --sapButton_Emphasized_Hover_BorderColor: #0040B0;
+  --sapButton_Information_Active_TextColor: hsla(0, 0%, 100%, 1);
+  --sapButton_Information_Hover_Background: hsla(212.231, 100%, 42.451%, 1);
+  --sapButton_Neutral_Selected_BorderColor: #0040B0;
+  --sapContent_Placeholderloading_Gradient: linear-gradient(to right, hsla(0, 0%, 80%, 1) 0%, hsla(0, 0%, 80%, 1) 20%, hsla(0, 0%, 0, 1) 50%, hsla(0, 0%, 80%, 1) 80%, hsla(0, 0%, 80%, 1) 100%);
+  --sapIndicationColor_10_Active_TextColor: #223548;
+  --sapIndicationColor_10_Hover_Background: #475E75;
+  --sapIndicationColor_1_Active_Background: hsla(0, 91.304%, 17.059%, 1);
+  --sapIndicationColor_1b_Hover_Background: hsla(0, 92.157%, 75%, 1);
+  --sapIndicationColor_2_Active_Background: hsla(0, 91.011%, 24.902%, 1);
+  --sapIndicationColor_2b_Hover_Background: hsla(0, 90.323%, 82.843%, 1);
+  --sapIndicationColor_3_Active_Background: hsla(26.234, 100%, 39.294%, 1);
+  --sapIndicationColor_3b_Hover_Background: hsla(47.619, 100%, 82.647%, 1);
+  --sapIndicationColor_4_Active_Background: hsla(137.027, 50%, 19.02%, 1);
+  --sapIndicationColor_4b_Hover_Background: hsla(122.609, 50%, 76.961%, 1);
+  --sapIndicationColor_5_Active_Background: hsla(212.231, 100%, 37.451%, 1);
+  --sapIndicationColor_5b_Hover_Background: hsla(200, 91.304%, 85.98%, 1);
+  --sapIndicationColor_6_Active_Background: hsla(187.119, 93.651%, 14.706%, 1);
+  --sapIndicationColor_6b_Hover_Background: hsla(166.5, 66.667%, 83.235%, 1);
+  --sapIndicationColor_7_Active_Background: hsla(251.642, 100%, 50.588%, 1);
+  --sapIndicationColor_7b_Hover_Background: hsla(251.667, 100%, 87.941%, 1);
+  --sapIndicationColor_8_Active_Background: hsla(289.794, 100%, 28.039%, 1);
+  --sapIndicationColor_8b_Hover_Background: hsla(289.756, 100%, 86.961%, 1);
+  --sapIndicationColor_9_Active_Background: #0040B0;
+  --sapIndicationColor_9b_Hover_Background: hsla(0, 0%, 95%, 1);
+  --sapProgress_Value_InformationTextColor: #0057D2;
+  --sapShell_Navigation_Selected_TextColor: #0070F2;
+  --sapSlider_Active_RangeHandleBackground: transparent;
+  --udexTypographyDisplayRegularXSFontSize: 56px;
+  --udexTypographyHeadingBoldXXXXSFontSize: 16px;
+  --udexTypographyHeadingMediumXXLFontSize: 44px;
+  --udexTypographyHeadingMediumXXSFontSize: 20px;
+  --udexTypographyHeadingRegularXLFontSize: 40px;
+  --udexTypographyHeadingRegularXSFontSize: 24px;
+  --udexTypographyNavigationBoldXLFontSize: 16px;
+  --udexTypographyNavigationBoldXSFontSize: 12px;
+  --sapButton_Attention_Selected_Background: #FFFFFF;
+  --sapButton_Emphasized_Active_BorderColor: #0040B0;
+  --sapButton_Information_Active_Background: hsla(212.231, 100%, 37.451%, 1);
+  --sapButton_Information_Hover_BorderColor: hsla(212.231, 100%, 42.451%, 1);
+  --sapIndicationColor_10_Active_Background: #EAECEE;
+  --sapIndicationColor_10b_Hover_Background: #5B738B;
+  --sapIndicationColor_1_Active_BorderColor: hsla(0, 92.157%, 80%, 1);
+  --sapIndicationColor_1_Selected_TextColor: hsla(0, 91.304%, 27.059%, 1);
+  --sapIndicationColor_2_Active_BorderColor: hsla(0, 90.323%, 87.843%, 1);
+  --sapIndicationColor_2_Selected_TextColor: hsla(0, 91.011%, 34.902%, 1);
+  --sapIndicationColor_3_Active_BorderColor: hsla(47.619, 100%, 87.647%, 1);
+  --sapIndicationColor_3_Selected_TextColor: hsla(26.27, 100%, 36.275%, 1);
+  --sapIndicationColor_4_Active_BorderColor: hsla(122.609, 50%, 81.961%, 1);
+  --sapIndicationColor_4_Selected_TextColor: hsla(137.027, 50%, 29.02%, 1);
+  --sapIndicationColor_5_Active_BorderColor: hsla(200, 91.304%, 90.98%, 1);
+  --sapIndicationColor_5_Selected_TextColor: hsla(212.231, 100%, 47.451%, 1);
+  --sapIndicationColor_6_Active_BorderColor: hsla(166.5, 66.667%, 88.235%, 1);
+  --sapIndicationColor_6_Selected_TextColor: hsla(187.119, 93.651%, 24.706%, 1);
+  --sapIndicationColor_7_Active_BorderColor: hsla(251.667, 100%, 92.941%, 1);
+  --sapIndicationColor_7_Selected_TextColor: hsla(251.642, 100%, 60.588%, 1);
+  --sapIndicationColor_8_Active_BorderColor: hsla(289.756, 100%, 91.961%, 1);
+  --sapIndicationColor_8_Selected_TextColor: hsla(289.794, 100%, 38.039%, 1);
+  --sapIndicationColor_9_Active_BorderColor: #A9B4BE;
+  --sapIndicationColor_9_Selected_TextColor: hsla(210.909, 36.264%, 17.843%, 1);
+  --sapProgress_Value_InformationBackground: #0057D2;
+  --udexTypographyHeadingMediumXXXLFontSize: 48px;
+  --udexTypographyHeadingMediumXXXSFontSize: 18px;
+  --udexTypographyHeadingRegularXXLFontSize: 44px;
+  --udexTypographyHeadingRegularXXSFontSize: 20px;
+  --udexTypographyNavigationMediumLFontSize: 15px;
+  --udexTypographyNavigationMediumMFontSize: 14px;
+  --udexTypographyNavigationMediumSFontSize: 13px;
+  --sapButton_Attention_Selected_BorderColor: #6D1900;
+  --sapButton_Information_Active_BorderColor: hsla(212.231, 100%, 37.451%, 1);
+  --sapContent_Placeholderloading_Background: hsla(0, 0%, 80%, 1);
+  --sapIndicationColor_10_Active_BorderColor: #EAECEE;
+  --sapIndicationColor_10_Selected_TextColor: #FFFFFF;
+  --sapIndicationColor_1_Selected_Background: hsla(0, 91.304%, 17.059%, 1);
+  --sapIndicationColor_2_Selected_Background: hsla(0, 91.011%, 24.902%, 1);
+  --sapIndicationColor_3_Selected_Background: hsla(26.234, 100%, 39.294%, 1);
+  --sapIndicationColor_4_Selected_Background: hsla(137.027, 50%, 19.02%, 1);
+  --sapIndicationColor_5_Selected_Background: hsla(212.231, 100%, 37.451%, 1);
+  --sapIndicationColor_6_Selected_Background: hsla(187.119, 93.651%, 14.706%, 1);
+  --sapIndicationColor_7_Selected_Background: hsla(251.642, 100%, 50.588%, 1);
+  --sapIndicationColor_8_Selected_Background: hsla(289.794, 100%, 28.039%, 1);
+  --sapIndicationColor_9_Selected_Background: #F5F6F7;
+  --sapList_GroupAlternatingHeaderBackground: #A9B4BE;
+  --sapProgress_Value_InformationBorderColor: #0057D2;
+  --udexTypographyHeadingMediumXXXXSFontSize: 16px;
+  --udexTypographyHeadingRegularXXXLFontSize: 48px;
+  --udexTypographyHeadingRegularXXXSFontSize: 18px;
+  --udexTypographyNavigationMediumXLFontSize: 16px;
+  --udexTypographyNavigationMediumXSFontSize: 12px;
+  --udexTypographyNavigationRegularLFontSize: 15px;
+  --udexTypographyNavigationRegularMFontSize: 14px;
+  --udexTypographyNavigationRegularSFontSize: 13px;
+  --sapButton_Track_Negative_Hover_Background: #D20A0A;
+  --sapButton_Track_Positive_Hover_Background: #256F3A;
+  --sapButton_Track_Selected_Hover_Background: #0040B0;
+  --sapContent_Selected_MeasureIndicatorColor: #0040B0;
+  --sapIndicationColor_10_Selected_Background: #000000B3;
+  --sapIndicationColor_1_Selected_BorderColor: hsla(0, 92.157%, 80%, 1);
+  --sapIndicationColor_2_Selected_BorderColor: hsla(0, 90.323%, 87.843%, 1);
+  --sapIndicationColor_3_Selected_BorderColor: hsla(47.619, 100%, 87.647%, 1);
+  --sapIndicationColor_4_Selected_BorderColor: hsla(122.609, 50%, 81.961%, 1);
+  --sapIndicationColor_5_Selected_BorderColor: hsla(200, 91.304%, 90.98%, 1);
+  --sapIndicationColor_6_Selected_BorderColor: hsla(166.5, 66.667%, 88.235%, 1);
+  --sapIndicationColor_7_Selected_BorderColor: hsla(251.667, 100%, 92.941%, 1);
+  --sapIndicationColor_8_Selected_BorderColor: hsla(289.756, 100%, 91.961%, 1);
+  --sapIndicationColor_9_Selected_BorderColor: #0040B0;
+  --udexTypographyHeadingRegularXXXXSFontSize: 16px;
+  --udexTypographyNavigationRegularXLFontSize: 16px;
+  --udexTypographyNavigationRegularXSFontSize: 12px;
+  --fontProgressIndicator_SapProgress_FontSize: var(--sapFontSize) var(--sapFontFamily);
+  --sapButton_Accept_Selected_Hover_Background: #EBF5CB;
+  --sapButton_Handle_Negative_Hover_Background: #FFFFFF;
+  --sapButton_Handle_Positive_Hover_Background: #FFFFFF;
+  --sapButton_Handle_Selected_Hover_Background: hsla(0, 0%, 100%, 1);
+  --sapButton_Reject_Selected_Hover_Background: #FFD5EA;
+  --sapButton_Track_Negative_Hover_BorderColor: #D20A0A;
+  --sapButton_Track_Positive_Hover_BorderColor: #256F3A;
+  --sapButton_Track_Selected_Hover_BorderColor: hsla(212.231, 100%, 42.451%, 1);
+  --sapContent_ImagePlaceholderForegroundColor: #0070F2;
+  --sapIndicationColor_10_Selected_BorderColor: #000000B3;
+  --sapButton_Accept_Selected_Hover_BorderColor: #256F3A;
+  --sapButton_Handle_Negative_Hover_BorderColor: #FFFFFF66;
+  --sapButton_Handle_Positive_Hover_BorderColor: #FFFFFF66;
+  --sapButton_Handle_Selected_Hover_BorderColor: #FFFFFF66;
+  --sapButton_Reject_Selected_Hover_BorderColor: #AA0808;
+  --fontTitleOfComponents_SapGroup_TitleFontSize: bold 16px var(--sapFontFamily);
+  --sapButton_Attention_Selected_Hover_Background: #FFF3B8;
+  --sapButton_Attention_Selected_Hover_BorderColor: #A93E00;
+  --fontButton_Emphasized_SapButton_Emphasized_FontWeight: bold var(--sapFontSize) var(--sapFontFamily);
+}
+[udex-status-message], [udex-text-field], [udex-date-picker] {
+  --sapFontSmallSize: .75rem;
+}
+html {
+  --cxs-font-family-bold: font72BrandRegular,  font72BrandRegular Fallback,  Arial,  Helvetica,  sans-serif;
+  --cxs-font-family-book: font72BrandRegular,  font72BrandRegular Fallback,  Arial,  Helvetica,  sans-serif;
+  --cxs-font-family-medium: font72BrandRegular,  font72BrandRegular Fallback,  Arial,  Helvetica,  sans-serif;
+  --cxs-font-family-regular: font72BrandRegular,  font72BrandRegular Fallback,  Arial,  Helvetica,  sans-serif;
+}
+ds-footer {
+  --cxs-font-family-book: font72BrandRegular,  font72BrandRegular Fallback,  Arial,  Helvetica,  sans-serif;
+  --cxs-font-family-regular: font72BrandRegular,  font72BrandRegular Fallback,  Arial,  Helvetica,  sans-serif;
+}
+            
+
+</style>
+<link rel="stylesheet" href="/assets/event-organizer-grid.css">
+<link rel="stylesheet" href="/assets/event-organizer-components.css">
+
+
+
+<div id="__next"><div id="page"><div id="main"><div class="PageShell_root__KRpA4"><div class="custom-local-header-wrapper">
+    <header class="custom-local-header">
+        <section class="logo-navigation">
+            <div class="logo-link">
+                <a class="logo" href="https://sap.com"><img src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNDEyLjM4IDIwNCI+PGRlZnM+PHN0eWxlPi5jbHMtMSwuY2xzLTJ7ZmlsbC1ydWxlOmV2ZW5vZGQ7fS5jbHMtMXtmaWxsOnVybCgjbGluZWFyLWdyYWRpZW50KTt9LmNscy0ye2ZpbGw6I2ZmZjt9PC9zdHlsZT48bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudCIgeDE9IjIwNi4xOSIgeDI9IjIwNi4xOSIgeTI9IjIwNCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwYjhmMSIvPjxzdG9wIG9mZnNldD0iMC4wMiIgc3RvcC1jb2xvcj0iIzAxYjZmMCIvPjxzdG9wIG9mZnNldD0iMC4zMSIgc3RvcC1jb2xvcj0iIzBkOTBkOSIvPjxzdG9wIG9mZnNldD0iMC41OCIgc3RvcC1jb2xvcj0iIzE3NzVjOCIvPjxzdG9wIG9mZnNldD0iMC44MiIgc3RvcC1jb2xvcj0iIzFjNjViZiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzFlNWZiYiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjx0aXRsZT5TQVBfZ3JhZF9SX3Njcm5fWmVpY2hlbmZsw6RjaGUgMTwvdGl0bGU+PHBvbHlsaW5lIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSIwIDIwNCAyMDguNDEgMjA0IDQxMi4zOCAwIDAgMCAwIDIwNCIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTI0NC43MywzOC4zNmwtNDAuNiwwdjk2LjUyTDE2OC42NywzOC4zM0gxMzMuNTFsLTMwLjI3LDgwLjcyQzEwMCw5OC43LDc5LDkxLjY3LDYyLjQsODYuNCw1MS40Niw4Mi44OSwzOS44NSw3Ny43Miw0MCw3MmMuMDktNC42OCw2LjIzLTksMTguMzgtOC4zOCw4LjE3LjQzLDE1LjM3LDEuMDksMjkuNzEsOGwxNC4xLTI0LjU1Qzg5LjA2LDQwLjQyLDcxLDM2LjIxLDU2LjE3LDM2LjE5aC0uMDljLTE3LjI4LDAtMzEuNjgsNS42LTQwLjYsMTQuODNBMzQuMjMsMzQuMjMsMCwwLDAsNS43Nyw3NC43QzUuNTQsODcuMTUsMTAuMTEsOTYsMTkuNzEsMTAzYzguMSw1Ljk0LDE4LjQ2LDkuNzksMjcuNiwxMi42MiwxMS4yNywzLjQ5LDIwLjQ3LDYuNTMsMjAuMzYsMTNBOS41Nyw5LjU3LDAsMCwxLDY1LDEzNWMtMi44MSwyLjktNy4xMyw0LTEzLjA5LDQuMS0xMS40OS4yNC0yMC0xLjU2LTMzLjYxLTkuNTlMNS43NywxNTQuNDJhOTMuNzcsOTMuNzcsMCwwLDAsNDYsMTIuMjJsMi4xMSwwYzE0LjI0LS4yNSwyNS43NC00LjMxLDM0LjkyLTExLjcxLjUzLS40MSwxLS44NCwxLjQ5LTEuMjhMODYuMTcsMTY0LjVIMTIzbDYuMTktMTguODJhNjcuNDYsNjcuNDYsMCwwLDAsMjEuNjgsMy40Myw2OC4zMyw2OC4zMywwLDAsMCwyMS4xNi0zLjI1bDYsMTguNjRoNjAuMTR2LTM5aDEzLjExYzMxLjcxLDAsNTAuNDYtMTYuMTUsNTAuNDYtNDMuMkMzMDEuNzQsNTIuMTksMjgzLjUyLDM4LjM2LDI0NC43MywzOC4zNlpNMTUwLjkxLDEyMWEzNi45MywzNi45MywwLDAsMS0xMy0yLjI4bDEyLjg3LTQwLjU5SDE1MWwxMi42NSw0MC43MUEzOC41LDM4LjUsMCwwLDEsMTUwLjkxLDEyMVptOTYuMi0yMy4zM2gtOC45NFY2NC45MWg4Ljk0YzExLjkzLDAsMjEuNDQsNCwyMS40NCwxNi4xNCwwLDEyLjYtOS41MSwxNi41Ny0yMS40NCwxNi41NyIvPjwvc3ZnPg=="></a>
+                <a class="link" href="https://community.sap.com/">Community</a>
+            </div>
+            <div class="navigation">
+                <ul>			<li class="has-submenu ">
+				<a href="#">Products and Technology</a>
+					<div class="sub-menu" style="grid-template-columns: 250px 250px;">
+							<div class="menu-body">
+									<h3>By Category</h3>
+								<ul>
+										<li>
+											<a href="/t5/crm-and-customer-experience/ct-p/crm">CRM and Customer Experience</a>
+										</li>
+										<li>
+											<a href="/t5/enterprise-resource-planning/ct-p/erp">Enterprise Resource Planning</a>
+										</li>
+										<li>
+											<a href="/t5/financial-management/ct-p/financial-management">Financial Management</a>
+										</li>
+										<li>
+											<a href="/t5/human-capital-management/ct-p/hcm">Human Capital Management</a>
+										</li>
+										<li>
+											<a href="/t5/product-lifecycle-management/ct-p/plm">Product Lifecycle Management</a>
+										</li>
+										<li>
+											<a href="/t5/spend-management/ct-p/spend-management">Spend Management</a>
+										</li>
+										<li>
+											<a href="/t5/supply-chain-management/ct-p/scm">Supply Chain Management</a>
+										</li>
+										<li>
+											<a href="/t5/technology/ct-p/technology">Technology</a>
+										</li>
+								</ul>
+							</div>
+							<div class="menu-body">
+									<h3>Related Content</h3>
+								<ul>
+										<li>
+											<a href="/t5/all-sap-community-blogs/ct-p/all-blogs">All Blogs</a>
+										</li>
+										<li>
+											<a href="/t5/questions-about-sap-websites/qa-p/website-questions">Questions about SAP Websites</a>
+										</li>
+										<li>
+											<a href="/t5/blogs-about-sap-websites/bg-p/website-blog">Blogs about SAP Websites</a>
+										</li>
+										<li>
+											<a href="/t5/all-sap-managed-tags/ct-p/managed-tags">All SAP Managed Tags</a>
+										</li>
+										<li>
+											<a href="/t5/archived-content/ct-p/archive">Archived Content</a>
+										</li>
+								</ul>
+							</div>
+					</div>
+			</li>
+			<li class="has-submenu ">
+				<a href="#">Groups</a>
+					<div class="sub-menu" style="grid-template-columns: 250px 250px 250px;">
+							<div class="menu-body">
+									<h3>Activity Groups</h3>
+								<ul>
+										<li>
+											<a href="https://community.sap.com/t5/devtoberfest/gh-p/Devtoberfest">Devtoberfest</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/sap-codejam/gh-p/code-jam">SAP CodeJam</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/sap-teched/gh-p/SAP-TechEd-Group">SAP TechEd</a>
+										</li>
+								</ul>
+							</div>
+							<div class="menu-body">
+									<h3>Industry Groups</h3>
+								<ul>
+										<li>
+											<a href="https://community.sap.com/t5/sap-for-oil-gas-and-energy/gh-p/oil-gas">Oil, Gas, and Energy</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/sap-for-healthcare/gh-p/healthcare">SAP for Healthcare</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/sap-for-utilities/gh-p/utilities">Utilities</a>
+										</li>
+								</ul>
+							</div>
+							<div class="menu-body">
+									<h3>Influence and Feedback Groups</h3>
+								<ul>
+										<li>
+											<a href="https://pages.community.sap.com/resources//event-organizer">SAP Community Event Organizers</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/sap-community-leaders-and-sap-advocates/ct-p/sap-influencers-and-advocates">SAP Community Leaders and Advocates</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/sap-community-leaders-finder/bg-p/influencers-directory">Meet our SAP Champions and Mentors</a>
+										</li>
+								</ul>
+							</div>
+							<div class="menu-body">
+									<h3>Interest Groups</h3>
+								<ul>
+										<li>
+											<a href="https://community.sap.com/t5/business-transformation/gh-p/business-transformation-champions">Business Transformation</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/community-corner/gh-p/Coffee-Corner">Community Corner</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/data-professionals/gh-p/data-professionals">Data and AI Professionals</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/enterprise-architecture/gh-p/Enterprise-Architecture">Enterprise Architecture</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/sap-learning-groups/ct-p/SAP-Learning">SAP Learning Groups</a>
+										</li>
+										<li>
+											<a href="/t5/welcome-corner/gh-p/welcome-corner">Welcome Corner</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/interest-groups/ct-p/interests">All Interest Groups</a>
+										</li>
+								</ul>
+							</div>
+							<div class="menu-body">
+									<h3>Location Groups</h3>
+								<ul>
+										<li>
+											<a href="https://community.sap.com/t5/americas/ct-p/americas">Americas</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/asia-pacific/ct-p/asia-pacific">Asia Pacific</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/europe/ct-p/europe">Europe</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/middle-east-and-africa/ct-p/middle-east-and-africa">Middle East and Africa</a>
+										</li>
+								</ul>
+							</div>
+							<div class="menu-body">
+									<h3>Customer Only Groups</h3>
+								<ul>
+										<li>
+											<a href="https://pages.community.sap.com/resources/enterprise-support-value-maps">SAP Enterprise Support Value Maps</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/sap-successfactors-user-groups/ct-p/successfactors-user-groups">SAP SuccessFactors</a>
+										</li>
+								</ul>
+							</div>
+					</div>
+			</li>
+			<li class="has-submenu ">
+				<a href="#">Developers</a>
+					<div class="sub-menu" style="grid-template-columns: 250px 250px;">
+							<div class="menu-body">
+									<h3>Forums</h3>
+								<ul>
+										<li>
+											<a href="https://community.sap.com/t5/abap/gh-p/abap">ABAP</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/artificial-intelligence-and-machine-learning/gh-p/ai">Artificial Intelligence</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/sap-cap/gh-p/cap">CAP</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/data-and-analytics/gh-p/data-analytics">Data and Analytics</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/devops-and-system-administration/gh-p/devops-sysadmin">DevOps and System Administration</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/frontend-ui5-sap-fiori/gh-p/frontend-ui5-fiori">Frontend / UI5 / Fiori</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/integration/gh-p/integration">Integration</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/tooling-build/gh-p/tooling">Tooling (+ Build)</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/developer-news/bg-p/developer-news">Developer News</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/developers/ct-p/developers">All Developer Forums</a>
+										</li>
+								</ul>
+							</div>
+							<div class="menu-body">
+									<h3>Related Resources</h3>
+								<ul>
+										<li>
+											<a href="https://learning.sap.com/browse/roles/developer">Learning</a>
+										</li>
+										<li>
+											<a href="https://developers.sap.com/tutorial-navigator.html">Tutorials</a>
+										</li>
+								</ul>
+							</div>
+					</div>
+			</li>
+			<li class=" ">
+				<a href="https://pages.community.sap.com/resources/partners">Partners</a>
+			</li>
+			<li class="has-submenu ">
+				<a href="#">Events</a>
+					<div class="sub-menu" style="grid-template-columns: 250px;">
+							<div class="menu-body">
+								<ul>
+										<li>
+											<a href="/community/events/event-organizer">Become an Event Organizer</a>
+										</li>
+										<li>
+											<a href="/t5/application-lifecycle-management/eb-p/alm-events">Application Lifecycle Management</a>
+										</li>
+										<li>
+											<a href="/t5/devtoberfest/eb-p/devtoberfest-events">Devtoberfest</a>
+										</li>
+										<li>
+											<a href="/t5/industries/eb-p/industries">Industries</a>
+										</li>
+										<li>
+											<a href="/t5/sap-codejam/eb-p/codejam-events">SAP CodeJam</a>
+										</li>
+										<li>
+											<a href="/t5/sap-community/eb-p/community-events">SAP Community</a>
+										</li>
+										<li>
+											<a href="/t5/sap-successfactors/eb-p/successfactorsevents">SAP SuccessFactors</a>
+										</li>
+										<li>
+											<a href="/t5/user-groups/eb-p/user-groups">User Groups</a>
+										</li>
+										<li>
+											<a href="/t5/events/ct-p/events">All Location Events</a>
+										</li>
+								</ul>
+							</div>
+					</div>
+			</li>
+			<li class="has-submenu ">
+				<a href="#">Help Center</a>
+					<div class="sub-menu" style="grid-template-columns: 250px;">
+							<div class="menu-body">
+								<ul>
+										<li>
+											<a href="/t5/what-s-new/bg-p/whats-new">What's New</a>
+										</li>
+										<li>
+											<a href="/t5/welcome-corner/gh-p/welcome-corner">Welcome Corner</a>
+										</li>
+										<li>
+											<a href="/t5/help/faqpage">FAQs</a>
+										</li>
+										<li>
+											<a href="/community/help/resources">Help Resources</a>
+										</li>
+										<li>
+											<a href="/community/help/legal-resources">Legal Resources</a>
+										</li>
+								</ul>
+							</div>
+					</div>
+			</li>
+			<li class=" ">
+				<a href="https://pages.community.sap.com/topics">Topic Pages</a>
+			</li>
+</ul>
+				<div class="desktop-sap-search">
+	<input class="execute-search" placeholder="Search the SAP Community" aria-label="Search">
+	<button class="execute-search">
+		<svg viewBox="0 0 18 17" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+			<path d="M17.1914 15.3281C17.3555 15.4922 17.4375 15.7031 17.4375 15.9609C17.4375 16.2188 17.3438 16.4414 17.1562 16.6289C16.9922 16.793 16.7812 16.875 16.5234 16.875C16.2656 16.875 16.0547 16.793 15.8906 16.6289L12.375 13.1133C11.7656 13.582 11.0742 13.957 10.3008 14.2383C9.55078 14.4961 8.74219 14.625 7.875 14.625C6.84375 14.625 5.88281 14.4375 4.99219 14.0625C4.10156 13.6875 3.32812 13.1719 2.67188 12.5156C2.01562 11.8594 1.5 11.0859 1.125 10.1953C0.75 9.30469 0.5625 8.34375 0.5625 7.3125C0.5625 6.28125 0.75 5.32031 1.125 4.42969C1.5 3.53906 2.01562 2.76562 2.67188 2.10938C3.32812 1.45312 4.10156 0.9375 4.99219 0.5625C5.88281 0.1875 6.84375 0 7.875 0C8.90625 0 9.86719 0.1875 10.7578 0.5625C11.6484 0.9375 12.4219 1.45312 13.0781 2.10938C13.7344 2.76562 14.25 3.53906 14.625 4.42969C15 5.32031 15.1875 6.28125 15.1875 7.3125C15.1875 8.17969 15.0469 9 14.7656 9.77344C14.5078 10.5234 14.1445 11.2031 13.6758 11.8125L17.1914 15.3281ZM7.875 12.832C8.64844 12.832 9.36328 12.6914 10.0195 12.4102C10.6992 12.1289 11.2852 11.7422 11.7773 11.25C12.293 10.7344 12.6914 10.1484 12.9727 9.49219C13.2539 8.8125 13.3945 8.08594 13.3945 7.3125C13.3945 6.53906 13.2539 5.82422 12.9727 5.16797C12.6914 4.48828 12.293 3.90234 11.7773 3.41016C11.2852 2.89453 10.6992 2.49609 10.0195 2.21484C9.36328 1.93359 8.64844 1.79297 7.875 1.79297C7.10156 1.79297 6.375 1.93359 5.69531 2.21484C5.03906 2.49609 4.45312 2.89453 3.9375 3.41016C3.44531 3.90234 3.05859 4.48828 2.77734 5.16797C2.49609 5.82422 2.35547 6.53906 2.35547 7.3125C2.35547 8.08594 2.49609 8.8125 2.77734 9.49219C3.05859 10.1484 3.44531 10.7344 3.9375 11.25C4.45312 11.7422 5.03906 12.1289 5.69531 12.4102C6.375 12.6914 7.10156 12.832 7.875 12.832Z"></path>
+		</svg>
+	</button>
+				</div>
+            </div>
+        </section>
+        <section class="user-menu">
+            <ul>
+			<li class="has-submenu explore-menu">
+				<a href="#">Explore SAP</a>
+					<div class="sub-menu" style="grid-template-columns: 250px 250px 250px;">
+							<div class="menu-body">
+									<h3>Products</h3>
+								<ul>
+										<li>
+											<a href="https://www.sap.com/products/business-suite.html">Autonomous Enterprise</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/artificial-intelligence.html">Artificial intelligence</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/data-cloud.html">Data and analytics</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/business-applications.html">Autonomous Suite</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/ai-platform.html">AI platform</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/business-transformation-management.html">Transformation management</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/erp/grow.html">Midsize business solutions</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/financial-management.html">Financial management</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/spend-management.html">Spend management</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/scm.html">Supply chain management</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/hcm.html">Human capital management</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/crm.html">Customer experience</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/erp.html">Enterprise resource planning</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/business-network.html">Business network</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/sustainability.html">Sustainability management</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/store.html">SAP Store</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/try-sap.html">Try SAP</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/industries.html">View all industries</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/partners.html">Partners</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/services-support.html">Services</a>
+										</li>
+								</ul>
+							</div>
+							<div class="menu-body">
+									<h3>Learning and Support</h3>
+								<ul>
+										<li>
+											<a href="https://learning.sap.com/">Learning and certification</a>
+										</li>
+										<li>
+											<a href="https://support.sap.com/">Support</a>
+										</li>
+										<li>
+											<a href="https://help.sap.com/">Documentation</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/">Community</a>
+										</li>
+								</ul>
+							</div>
+							<div class="menu-body">
+									<h3>About</h3>
+								<ul>
+										<li>
+											<a href="https://www.sap.com/about/company.html">Company Information</a>
+										</li>
+										<li>
+											<a href="https://jobs.sap.com/?utm_source=CareerSite&amp;utm_campaign=CorpSite_HD">Careers</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/about/customer-stories.html">Customer Stories</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/events.html">Events</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/investors/en.html">Investor Relations</a>
+										</li>
+										<li>
+											<a href="https://news.sap.com/">News Center</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/about/trust-center.html">SAP Trust Center</a>
+										</li>
+								</ul>
+							</div>
+					</div>
+			</li>
+                <li class="user-menu-search">
+                    <a class="search" href="#">
+                        <svg viewBox="0 0 18 17" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.1914 15.3281C17.3555 15.4922 17.4375 15.7031 17.4375 15.9609C17.4375 16.2188 17.3438 16.4414 17.1562 16.6289C16.9922 16.793 16.7812 16.875 16.5234 16.875C16.2656 16.875 16.0547 16.793 15.8906 16.6289L12.375 13.1133C11.7656 13.582 11.0742 13.957 10.3008 14.2383C9.55078 14.4961 8.74219 14.625 7.875 14.625C6.84375 14.625 5.88281 14.4375 4.99219 14.0625C4.10156 13.6875 3.32812 13.1719 2.67188 12.5156C2.01562 11.8594 1.5 11.0859 1.125 10.1953C0.75 9.30469 0.5625 8.34375 0.5625 7.3125C0.5625 6.28125 0.75 5.32031 1.125 4.42969C1.5 3.53906 2.01562 2.76562 2.67188 2.10938C3.32812 1.45312 4.10156 0.9375 4.99219 0.5625C5.88281 0.1875 6.84375 0 7.875 0C8.90625 0 9.86719 0.1875 10.7578 0.5625C11.6484 0.9375 12.4219 1.45312 13.0781 2.10938C13.7344 2.76562 14.25 3.53906 14.625 4.42969C15 5.32031 15.1875 6.28125 15.1875 7.3125C15.1875 8.17969 15.0469 9 14.7656 9.77344C14.5078 10.5234 14.1445 11.2031 13.6758 11.8125L17.1914 15.3281ZM7.875 12.832C8.64844 12.832 9.36328 12.6914 10.0195 12.4102C10.6992 12.1289 11.2852 11.7422 11.7773 11.25C12.293 10.7344 12.6914 10.1484 12.9727 9.49219C13.2539 8.8125 13.3945 8.08594 13.3945 7.3125C13.3945 6.53906 13.2539 5.82422 12.9727 5.16797C12.6914 4.48828 12.293 3.90234 11.7773 3.41016C11.2852 2.89453 10.6992 2.49609 10.0195 2.21484C9.36328 1.93359 8.64844 1.79297 7.875 1.79297C7.10156 1.79297 6.375 1.93359 5.69531 2.21484C5.03906 2.49609 4.45312 2.89453 3.9375 3.41016C3.44531 3.90234 3.05859 4.48828 2.77734 5.16797C2.49609 5.82422 2.35547 6.53906 2.35547 7.3125C2.35547 8.08594 2.49609 8.8125 2.77734 9.49219C3.05859 10.1484 3.44531 10.7344 3.9375 11.25C4.45312 11.7422 5.03906 12.1289 5.69531 12.4102C6.375 12.6914 7.10156 12.832 7.875 12.832Z"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="user-menu-avatar ">
+                    <a href="https://community.sap.com/plugins/common/feature/oidcss/sso_login_redirect/providerid/sap_ids_prompt?referer=https%3A%2F%2Fcommunity.sap.com%2F" class="avatar">
+							<svg width="100%" height="100%" viewBox="0 0 18 18" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12.5684 8.50769C13.8809 8.99988 14.9355 9.83191 15.7324 11.0038C16.5527 12.1522 16.9629 13.4764 16.9629 14.9764V16.9803C16.9629 17.285 16.8691 17.5311 16.6816 17.7186C16.5176 17.9061 16.2832 17.9999 15.9785 17.9999H1.98633C1.68164 17.9999 1.43555 17.9061 1.24805 17.7186C1.08398 17.5311 1.00195 17.285 1.00195 16.9803V14.9764C1.00195 13.4764 1.40039 12.1522 2.19727 11.0038C3.01758 9.83191 4.08398 8.99988 5.39648 8.50769C4.45898 7.57019 3.99023 6.41003 3.99023 5.02722C3.99023 4.3241 4.11914 3.66785 4.37695 3.05847C4.63477 2.4491 4.98633 1.92175 5.43164 1.47644C5.90039 1.03113 6.42773 0.679565 7.01367 0.421753C7.62305 0.16394 8.2793 0.0350342 8.98242 0.0350342C9.68555 0.0350342 10.3418 0.16394 10.9512 0.421753C11.5605 0.679565 12.0879 1.03113 12.5332 1.47644C12.9785 1.92175 13.3301 2.4491 13.5879 3.05847C13.8457 3.66785 13.9746 4.3241 13.9746 5.02722C13.9746 6.41003 13.5059 7.57019 12.5684 8.50769ZM8.98242 2.00378C8.13867 2.00378 7.42383 2.29675 6.83789 2.88269C6.27539 3.44519 5.99414 4.16003 5.99414 5.02722C5.99414 5.87097 6.27539 6.58582 6.83789 7.17175C7.42383 7.73425 8.13867 8.0155 8.98242 8.0155C9.82617 8.0155 10.5293 7.73425 11.0918 7.17175C11.6777 6.58582 11.9707 5.87097 11.9707 5.02722C11.9707 4.16003 11.6777 3.44519 11.0918 2.88269C10.5293 2.29675 9.82617 2.00378 8.98242 2.00378ZM14.959 14.9764C14.959 14.2733 14.8301 13.6288 14.5723 13.0428C14.3145 12.4335 13.9629 11.9061 13.5176 11.4608C13.0723 10.9921 12.5449 10.6288 11.9355 10.371C11.3496 10.1132 10.7051 9.98425 10.002 9.98425H7.99805C7.29492 9.98425 6.63867 10.1132 6.0293 10.371C5.41992 10.6288 4.89258 10.9921 4.44727 11.4608C4.00195 11.9061 3.65039 12.4335 3.39258 13.0428C3.13477 13.6288 3.00586 14.2733 3.00586 14.9764V15.996H14.959V14.9764Z"></path>
+							</svg>
+
+                    </a>
+	<div class="sub-menu">
+		<div class="avatar-email">
+			<img src="https://community.sap.com/skins/images/B3306F7C80EA150B6C118BA721EE90DD/responsive_peak/images/icon_anonymous_message.png" title="" alt="Former Member">
+			<h2> </h2>
+			<p></p>
+		</div>
+		<div class="menu-body">
+			<h3><a href="https://profile.sap.com">My SAP Profile</a></h3>
+			<ul>
+				<li><a href="https://community.sap.com/t5/user/myprofilepage/tab/personal-profile">Settings</a></li>
+				<li><a href="https://community.sap.com/t5/user/myprofilepage/tab/user-subscriptions">Subscriptions</a></li>
+				<li><a href="https://notify.sap.com/inbox/">Notification Center</a></li>
+			</ul>
+			<a class="lia-button lia-button-primary" href="https://community.sap.com/t5/community/page.logoutpage?t:cp=authentication/contributions/unticketedauthenticationactions&amp;dest_url=https%3A%2F%2Fcommunity.sap.com%2F&amp;lia-action-token=b6jdAUMnyCiu_VRVo2ZNT41uvFCu3SPAWQSsfVekEkQ.&amp;lia-action-token-id=logoff">Logout</a>
+		</div>
+	</div>
+                </li>
+				<li class="user-menu-mobile">
+					<a href="#" class="mobile-menu-toggle">
+						<svg width="100%" height="100%" viewBox="0 0 18 18" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.125 4.40552C0.796875 4.40552 0.527344 4.31177 0.316406 4.12427C0.105469 3.91333 0 3.6438 0 3.31567C0 2.96411 0.105469 2.69458 0.316406 2.50708C0.527344 2.29614 0.796875 2.19067 1.125 2.19067H16.8398C17.5898 2.19067 17.9648 2.56567 17.9648 3.31567C17.9648 4.04224 17.5898 4.40552 16.8398 4.40552H1.125ZM16.8398 7.78052C17.1914 7.78052 17.4609 7.88599 17.6484 8.09692C17.8594 8.30786 17.9648 8.57739 17.9648 8.90552C17.9648 9.23364 17.8594 9.50317 17.6484 9.71411C17.4609 9.92505 17.1914 10.0305 16.8398 10.0305H1.125C0.796875 10.0305 0.527344 9.92505 0.316406 9.71411C0.105469 9.50317 0 9.23364 0 8.90552C0 8.57739 0.105469 8.30786 0.316406 8.09692C0.527344 7.88599 0.796875 7.78052 1.125 7.78052H16.8398ZM16.8398 13.4055C17.1914 13.4055 17.4609 13.511 17.6484 13.7219C17.8594 13.9329 17.9648 14.2024 17.9648 14.5305C17.9648 14.8586 17.8594 15.1282 17.6484 15.3391C17.4609 15.55 17.1914 15.6555 16.8398 15.6555H1.125C0.796875 15.6555 0.527344 15.55 0.316406 15.3391C0.105469 15.1282 0 14.8586 0 14.5305C0 14.2024 0.105469 13.9329 0.316406 13.7219C0.527344 13.511 0.796875 13.4055 1.125 13.4055H16.8398Z"></path>
+						</svg>
+					</a>
+					<div class="sub-menu-mobile">
+						<div class="user-menu-avatar has-submenu">
+	<div class="sub-menu">
+		<div class="avatar-email">
+			<img src="https://community.sap.com/skins/images/B3306F7C80EA150B6C118BA721EE90DD/responsive_peak/images/icon_anonymous_message.png" title="" alt="Former Member">
+			<h2> </h2>
+			<p></p>
+		</div>
+		<div class="menu-body">
+			<h3><a href="https://profile.sap.com">My SAP Profile</a></h3>
+			<ul>
+				<li><a href="https://community.sap.com/t5/user/myprofilepage/tab/personal-profile">Settings</a></li>
+				<li><a href="https://community.sap.com/t5/user/myprofilepage/tab/user-subscriptions">Subscriptions</a></li>
+				<li><a href="https://notify.sap.com/inbox/">Notification Center</a></li>
+			</ul>
+			<a class="lia-button lia-button-primary" href="https://community.sap.com/t5/community/page.logoutpage?t:cp=authentication/contributions/unticketedauthenticationactions&amp;dest_url=https%3A%2F%2Fcommunity.sap.com%2F&amp;lia-action-token=b6jdAUMnyCiu_VRVo2ZNT41uvFCu3SPAWQSsfVekEkQ.&amp;lia-action-token-id=logoff">Logout</a>
+		</div>
+	</div>
+						</div>
+						<div class="shadow-menu">
+							<ul>		<li class="">
+			<a class="has-submenu " data-id="1" href="#">Products and Technology</a>
+				<ul>
+					<li><a class="go-back" data-id="0" href="#"><span>Products and Technology</span></a></li>
+							<li>
+								<a class="has-submenu " href="#" data-id="2">By Category</a>
+								<ul>
+									<li><a class="go-back " data-id="1" href="#"><span>By Category</span></a></li>
+										<li>
+											<a data-id="3" href="/t5/crm-and-customer-experience/ct-p/crm">CRM and Customer Experience</a>
+										</li>
+										<li>
+											<a data-id="4" href="/t5/enterprise-resource-planning/ct-p/erp">Enterprise Resource Planning</a>
+										</li>
+										<li>
+											<a data-id="5" href="/t5/financial-management/ct-p/financial-management">Financial Management</a>
+										</li>
+										<li>
+											<a data-id="6" href="/t5/human-capital-management/ct-p/hcm">Human Capital Management</a>
+										</li>
+										<li>
+											<a data-id="7" href="/t5/product-lifecycle-management/ct-p/plm">Product Lifecycle Management</a>
+										</li>
+										<li>
+											<a data-id="8" href="/t5/spend-management/ct-p/spend-management">Spend Management</a>
+										</li>
+										<li>
+											<a data-id="9" href="/t5/supply-chain-management/ct-p/scm">Supply Chain Management</a>
+										</li>
+										<li>
+											<a data-id="10" href="/t5/technology/ct-p/technology">Technology</a>
+										</li>
+								</ul>
+							</li>
+							<li>
+								<a class="has-submenu " href="#" data-id="11">Related Content</a>
+								<ul>
+									<li><a class="go-back " data-id="1" href="#"><span>Related Content</span></a></li>
+										<li>
+											<a data-id="12" href="/t5/all-sap-community-blogs/ct-p/all-blogs">All Blogs</a>
+										</li>
+										<li>
+											<a data-id="13" href="/t5/questions-about-sap-websites/qa-p/website-questions">Questions about SAP Websites</a>
+										</li>
+										<li>
+											<a data-id="14" href="/t5/blogs-about-sap-websites/bg-p/website-blog">Blogs about SAP Websites</a>
+										</li>
+										<li>
+											<a data-id="15" href="/t5/all-sap-managed-tags/ct-p/managed-tags">All SAP Managed Tags</a>
+										</li>
+										<li>
+											<a data-id="16" href="/t5/archived-content/ct-p/archive">Archived Content</a>
+										</li>
+								</ul>
+							</li>
+				</ul>
+		</li>
+		<li class="">
+			<a class="has-submenu " data-id="17" href="#">Groups</a>
+				<ul>
+					<li><a class="go-back" data-id="0" href="#"><span>Groups</span></a></li>
+							<li>
+								<a class="has-submenu " href="#" data-id="18">Activity Groups</a>
+								<ul>
+									<li><a class="go-back " data-id="17" href="#"><span>Activity Groups</span></a></li>
+										<li>
+											<a data-id="19" href="https://community.sap.com/t5/devtoberfest/gh-p/Devtoberfest">Devtoberfest</a>
+										</li>
+										<li>
+											<a data-id="20" href="https://community.sap.com/t5/sap-codejam/gh-p/code-jam">SAP CodeJam</a>
+										</li>
+										<li>
+											<a data-id="21" href="https://community.sap.com/t5/sap-teched/gh-p/SAP-TechEd-Group">SAP TechEd</a>
+										</li>
+								</ul>
+							</li>
+							<li>
+								<a class="has-submenu " href="#" data-id="22">Industry Groups</a>
+								<ul>
+									<li><a class="go-back " data-id="17" href="#"><span>Industry Groups</span></a></li>
+										<li>
+											<a data-id="23" href="https://community.sap.com/t5/sap-for-oil-gas-and-energy/gh-p/oil-gas">Oil, Gas, and Energy</a>
+										</li>
+										<li>
+											<a data-id="24" href="https://community.sap.com/t5/sap-for-healthcare/gh-p/healthcare">SAP for Healthcare</a>
+										</li>
+										<li>
+											<a data-id="25" href="https://community.sap.com/t5/sap-for-utilities/gh-p/utilities">Utilities</a>
+										</li>
+								</ul>
+							</li>
+							<li>
+								<a class="has-submenu " href="#" data-id="26">Influence and Feedback Groups</a>
+								<ul>
+									<li><a class="go-back " data-id="17" href="#"><span>Influence and Feedback Groups</span></a></li>
+										<li>
+											<a data-id="27" href="https://pages.community.sap.com/resources//event-organizer">SAP Community Event Organizers</a>
+										</li>
+										<li>
+											<a data-id="28" href="https://community.sap.com/t5/sap-community-leaders-and-sap-advocates/ct-p/sap-influencers-and-advocates">SAP Community Leaders and Advocates</a>
+										</li>
+										<li>
+											<a data-id="29" href="https://community.sap.com/t5/sap-community-leaders-finder/bg-p/influencers-directory">Meet our SAP Champions and Mentors</a>
+										</li>
+								</ul>
+							</li>
+							<li>
+								<a class="has-submenu " href="#" data-id="30">Interest Groups</a>
+								<ul>
+									<li><a class="go-back " data-id="17" href="#"><span>Interest Groups</span></a></li>
+										<li>
+											<a data-id="31" href="https://community.sap.com/t5/business-transformation/gh-p/business-transformation-champions">Business Transformation</a>
+										</li>
+										<li>
+											<a data-id="32" href="https://community.sap.com/t5/community-corner/gh-p/Coffee-Corner">Community Corner</a>
+										</li>
+										<li>
+											<a data-id="33" href="https://community.sap.com/t5/data-professionals/gh-p/data-professionals">Data and AI Professionals</a>
+										</li>
+										<li>
+											<a data-id="34" href="https://community.sap.com/t5/enterprise-architecture/gh-p/Enterprise-Architecture">Enterprise Architecture</a>
+										</li>
+										<li>
+											<a data-id="35" href="https://community.sap.com/t5/sap-learning-groups/ct-p/SAP-Learning">SAP Learning Groups</a>
+										</li>
+										<li>
+											<a data-id="36" href="/t5/welcome-corner/gh-p/welcome-corner">Welcome Corner</a>
+										</li>
+										<li>
+											<a data-id="37" href="https://community.sap.com/t5/interest-groups/ct-p/interests">All Interest Groups</a>
+										</li>
+								</ul>
+							</li>
+							<li>
+								<a class="has-submenu " href="#" data-id="38">Location Groups</a>
+								<ul>
+									<li><a class="go-back " data-id="17" href="#"><span>Location Groups</span></a></li>
+										<li>
+											<a data-id="39" href="https://community.sap.com/t5/americas/ct-p/americas">Americas</a>
+										</li>
+										<li>
+											<a data-id="40" href="https://community.sap.com/t5/asia-pacific/ct-p/asia-pacific">Asia Pacific</a>
+										</li>
+										<li>
+											<a data-id="41" href="https://community.sap.com/t5/europe/ct-p/europe">Europe</a>
+										</li>
+										<li>
+											<a data-id="42" href="https://community.sap.com/t5/middle-east-and-africa/ct-p/middle-east-and-africa">Middle East and Africa</a>
+										</li>
+								</ul>
+							</li>
+							<li>
+								<a class="has-submenu " href="#" data-id="43">Customer Only Groups</a>
+								<ul>
+									<li><a class="go-back " data-id="17" href="#"><span>Customer Only Groups</span></a></li>
+										<li>
+											<a data-id="44" href="https://pages.community.sap.com/resources/enterprise-support-value-maps">SAP Enterprise Support Value Maps</a>
+										</li>
+										<li>
+											<a data-id="45" href="https://community.sap.com/t5/sap-successfactors-user-groups/ct-p/successfactors-user-groups">SAP SuccessFactors</a>
+										</li>
+								</ul>
+							</li>
+				</ul>
+		</li>
+		<li class="">
+			<a class="has-submenu " data-id="46" href="#">Developers</a>
+				<ul>
+					<li><a class="go-back" data-id="0" href="#"><span>Developers</span></a></li>
+							<li>
+								<a class="has-submenu " href="#" data-id="47">Forums</a>
+								<ul>
+									<li><a class="go-back " data-id="46" href="#"><span>Forums</span></a></li>
+										<li>
+											<a data-id="48" href="https://community.sap.com/t5/abap/gh-p/abap">ABAP</a>
+										</li>
+										<li>
+											<a data-id="49" href="https://community.sap.com/t5/artificial-intelligence-and-machine-learning/gh-p/ai">Artificial Intelligence</a>
+										</li>
+										<li>
+											<a data-id="50" href="https://community.sap.com/t5/sap-cap/gh-p/cap">CAP</a>
+										</li>
+										<li>
+											<a data-id="51" href="https://community.sap.com/t5/data-and-analytics/gh-p/data-analytics">Data and Analytics</a>
+										</li>
+										<li>
+											<a data-id="52" href="https://community.sap.com/t5/devops-and-system-administration/gh-p/devops-sysadmin">DevOps and System Administration</a>
+										</li>
+										<li>
+											<a data-id="53" href="https://community.sap.com/t5/frontend-ui5-sap-fiori/gh-p/frontend-ui5-fiori">Frontend / UI5 / Fiori</a>
+										</li>
+										<li>
+											<a data-id="54" href="https://community.sap.com/t5/integration/gh-p/integration">Integration</a>
+										</li>
+										<li>
+											<a data-id="55" href="https://community.sap.com/t5/tooling-build/gh-p/tooling">Tooling (+ Build)</a>
+										</li>
+										<li>
+											<a data-id="56" href="https://community.sap.com/t5/developer-news/bg-p/developer-news">Developer News</a>
+										</li>
+										<li>
+											<a data-id="57" href="https://community.sap.com/t5/developers/ct-p/developers">All Developer Forums</a>
+										</li>
+								</ul>
+							</li>
+							<li>
+								<a class="has-submenu " href="#" data-id="58">Related Resources</a>
+								<ul>
+									<li><a class="go-back " data-id="46" href="#"><span>Related Resources</span></a></li>
+										<li>
+											<a data-id="59" href="https://learning.sap.com/browse/roles/developer">Learning</a>
+										</li>
+										<li>
+											<a data-id="60" href="https://developers.sap.com/tutorial-navigator.html">Tutorials</a>
+										</li>
+								</ul>
+							</li>
+				</ul>
+		</li>
+		<li class="">
+			<a class=" " data-id="61" href="https://pages.community.sap.com/resources/partners">Partners</a>
+		</li>
+		<li class="">
+			<a class="has-submenu " data-id="62" href="#">Events</a>
+				<ul>
+					<li><a class="go-back" data-id="0" href="#"><span>Events</span></a></li>
+								<li>
+									<a data-id="64" href="/community/events/event-organizer">Become an Event Organizer</a>
+								</li>
+								<li>
+									<a data-id="65" href="/t5/application-lifecycle-management/eb-p/alm-events">Application Lifecycle Management</a>
+								</li>
+								<li>
+									<a data-id="66" href="/t5/devtoberfest/eb-p/devtoberfest-events">Devtoberfest</a>
+								</li>
+								<li>
+									<a data-id="67" href="/t5/industries/eb-p/industries">Industries</a>
+								</li>
+								<li>
+									<a data-id="68" href="/t5/sap-codejam/eb-p/codejam-events">SAP CodeJam</a>
+								</li>
+								<li>
+									<a data-id="69" href="/t5/sap-community/eb-p/community-events">SAP Community</a>
+								</li>
+								<li>
+									<a data-id="70" href="/t5/sap-successfactors/eb-p/successfactorsevents">SAP SuccessFactors</a>
+								</li>
+								<li>
+									<a data-id="71" href="/t5/user-groups/eb-p/user-groups">User Groups</a>
+								</li>
+								<li>
+									<a data-id="72" href="/t5/events/ct-p/events">All Location Events</a>
+								</li>
+				</ul>
+		</li>
+		<li class="">
+			<a class="has-submenu " data-id="73" href="#">Help Center</a>
+				<ul>
+					<li><a class="go-back" data-id="0" href="#"><span>Help Center</span></a></li>
+								<li>
+									<a data-id="75" href="/t5/what-s-new/bg-p/whats-new">What's New</a>
+								</li>
+								<li>
+									<a data-id="76" href="/t5/welcome-corner/gh-p/welcome-corner">Welcome Corner</a>
+								</li>
+								<li>
+									<a data-id="77" href="/t5/help/faqpage">FAQs</a>
+								</li>
+								<li>
+									<a data-id="78" href="/community/help/resources">Help Resources</a>
+								</li>
+								<li>
+									<a data-id="79" href="/community/help/legal-resources">Legal Resources</a>
+								</li>
+				</ul>
+		</li>
+		<li class="">
+			<a class=" " data-id="80" href="https://pages.community.sap.com/topics">Topic Pages</a>
+		</li>
+		<li class="custom-explore-menu">
+			<a class="has-submenu trigger-explore-menu" data-id="81" href="#">Explore SAP</a>
+				<ul>
+					<li><a class="go-back" data-id="0" href="#"><span>Explore SAP</span></a></li>
+							<li>
+								<a class="has-submenu trigger-explore-menu" href="#" data-id="82">Products</a>
+								<ul>
+									<li><a class="go-back trigger-explore-menu" data-id="81" href="#"><span>Products</span></a></li>
+										<li>
+											<a data-id="83" href="https://www.sap.com/products/business-suite.html">Autonomous Enterprise</a>
+										</li>
+										<li>
+											<a data-id="84" href="https://www.sap.com/products/artificial-intelligence.html">Artificial intelligence</a>
+										</li>
+										<li>
+											<a data-id="85" href="https://www.sap.com/products/data-cloud.html">Data and analytics</a>
+										</li>
+										<li>
+											<a data-id="86" href="https://www.sap.com/products/business-applications.html">Autonomous Suite</a>
+										</li>
+										<li>
+											<a data-id="87" href="https://www.sap.com/products/ai-platform.html">AI platform</a>
+										</li>
+										<li>
+											<a data-id="88" href="https://www.sap.com/products/business-transformation-management.html">Transformation management</a>
+										</li>
+										<li>
+											<a data-id="89" href="https://www.sap.com/products/erp/grow.html">Midsize business solutions</a>
+										</li>
+										<li>
+											<a data-id="90" href="https://www.sap.com/products/financial-management.html">Financial management</a>
+										</li>
+										<li>
+											<a data-id="91" href="https://www.sap.com/products/spend-management.html">Spend management</a>
+										</li>
+										<li>
+											<a data-id="92" href="https://www.sap.com/products/scm.html">Supply chain management</a>
+										</li>
+										<li>
+											<a data-id="93" href="https://www.sap.com/products/hcm.html">Human capital management</a>
+										</li>
+										<li>
+											<a data-id="94" href="https://www.sap.com/products/crm.html">Customer experience</a>
+										</li>
+										<li>
+											<a data-id="95" href="https://www.sap.com/products/erp.html">Enterprise resource planning</a>
+										</li>
+										<li>
+											<a data-id="96" href="https://www.sap.com/products/business-network.html">Business network</a>
+										</li>
+										<li>
+											<a data-id="97" href="https://www.sap.com/products/sustainability.html">Sustainability management</a>
+										</li>
+										<li>
+											<a data-id="98" href="https://www.sap.com/store.html">SAP Store</a>
+										</li>
+										<li>
+											<a data-id="99" href="https://www.sap.com/products/try-sap.html">Try SAP</a>
+										</li>
+										<li>
+											<a data-id="100" href="https://www.sap.com/industries.html">View all industries</a>
+										</li>
+										<li>
+											<a data-id="101" href="https://www.sap.com/partners.html">Partners</a>
+										</li>
+										<li>
+											<a data-id="102" href="https://www.sap.com/services-support.html">Services</a>
+										</li>
+								</ul>
+							</li>
+							<li>
+								<a class="has-submenu trigger-explore-menu" href="#" data-id="103">Learning and Support</a>
+								<ul>
+									<li><a class="go-back trigger-explore-menu" data-id="81" href="#"><span>Learning and Support</span></a></li>
+										<li>
+											<a data-id="104" href="https://learning.sap.com/">Learning and certification</a>
+										</li>
+										<li>
+											<a data-id="105" href="https://support.sap.com/">Support</a>
+										</li>
+										<li>
+											<a data-id="106" href="https://help.sap.com/">Documentation</a>
+										</li>
+										<li>
+											<a data-id="107" href="https://community.sap.com/">Community</a>
+										</li>
+								</ul>
+							</li>
+							<li>
+								<a class="has-submenu trigger-explore-menu" href="#" data-id="108">About</a>
+								<ul>
+									<li><a class="go-back trigger-explore-menu" data-id="81" href="#"><span>About</span></a></li>
+										<li>
+											<a data-id="109" href="https://www.sap.com/about/company.html">Company Information</a>
+										</li>
+										<li>
+											<a data-id="110" href="https://jobs.sap.com/?utm_source=CareerSite&amp;utm_campaign=CorpSite_HD">Careers</a>
+										</li>
+										<li>
+											<a data-id="111" href="https://www.sap.com/about/customer-stories.html">Customer Stories</a>
+										</li>
+										<li>
+											<a data-id="112" href="https://www.sap.com/events.html">Events</a>
+										</li>
+										<li>
+											<a data-id="113" href="https://www.sap.com/investors/en.html">Investor Relations</a>
+										</li>
+										<li>
+											<a data-id="114" href="https://news.sap.com/">News Center</a>
+										</li>
+										<li>
+											<a data-id="115" href="https://www.sap.com/about/trust-center.html">SAP Trust Center</a>
+										</li>
+								</ul>
+							</li>
+				</ul>
+		</li>
+</ul>
+						</div>
+						<div class="visible-menu">
+							<div>
+								<div class="mobile-sap-search">
+	<input class="execute-search" placeholder="Search the SAP Community" aria-label="Search">
+	<button class="execute-search">
+		<svg viewBox="0 0 18 17" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+			<path d="M17.1914 15.3281C17.3555 15.4922 17.4375 15.7031 17.4375 15.9609C17.4375 16.2188 17.3438 16.4414 17.1562 16.6289C16.9922 16.793 16.7812 16.875 16.5234 16.875C16.2656 16.875 16.0547 16.793 15.8906 16.6289L12.375 13.1133C11.7656 13.582 11.0742 13.957 10.3008 14.2383C9.55078 14.4961 8.74219 14.625 7.875 14.625C6.84375 14.625 5.88281 14.4375 4.99219 14.0625C4.10156 13.6875 3.32812 13.1719 2.67188 12.5156C2.01562 11.8594 1.5 11.0859 1.125 10.1953C0.75 9.30469 0.5625 8.34375 0.5625 7.3125C0.5625 6.28125 0.75 5.32031 1.125 4.42969C1.5 3.53906 2.01562 2.76562 2.67188 2.10938C3.32812 1.45312 4.10156 0.9375 4.99219 0.5625C5.88281 0.1875 6.84375 0 7.875 0C8.90625 0 9.86719 0.1875 10.7578 0.5625C11.6484 0.9375 12.4219 1.45312 13.0781 2.10938C13.7344 2.76562 14.25 3.53906 14.625 4.42969C15 5.32031 15.1875 6.28125 15.1875 7.3125C15.1875 8.17969 15.0469 9 14.7656 9.77344C14.5078 10.5234 14.1445 11.2031 13.6758 11.8125L17.1914 15.3281ZM7.875 12.832C8.64844 12.832 9.36328 12.6914 10.0195 12.4102C10.6992 12.1289 11.2852 11.7422 11.7773 11.25C12.293 10.7344 12.6914 10.1484 12.9727 9.49219C13.2539 8.8125 13.3945 8.08594 13.3945 7.3125C13.3945 6.53906 13.2539 5.82422 12.9727 5.16797C12.6914 4.48828 12.293 3.90234 11.7773 3.41016C11.2852 2.89453 10.6992 2.49609 10.0195 2.21484C9.36328 1.93359 8.64844 1.79297 7.875 1.79297C7.10156 1.79297 6.375 1.93359 5.69531 2.21484C5.03906 2.49609 4.45312 2.89453 3.9375 3.41016C3.44531 3.90234 3.05859 4.48828 2.77734 5.16797C2.49609 5.82422 2.35547 6.53906 2.35547 7.3125C2.35547 8.08594 2.49609 8.8125 2.77734 9.49219C3.05859 10.1484 3.44531 10.7344 3.9375 11.25C4.45312 11.7422 5.03906 12.1289 5.69531 12.4102C6.375 12.6914 7.10156 12.832 7.875 12.832Z"></path>
+		</svg>
+	</button>
+								</div>
+								<ul></ul>
+							</div>
+							<div class="explore-sap">
+								<a href="#" class="mobile-explore-button">Explore SAP</a>
+							</div>
+						</div>
+					</div>
+
+				</li>
+				<li class="user-menu-close">
+					<a href="#" class="user-menu-close-button">
+						<svg width="100%" height="100%" viewBox="0 0 18 18" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+							<path d="M10.2656 9L14.3789 13.1133C14.543 13.2773 14.625 13.4883 14.625 13.7461C14.625 14.0039 14.5312 14.2148 14.3438 14.3789C14.1797 14.543 13.9688 14.625 13.7109 14.625C13.4531 14.625 13.2422 14.543 13.0781 14.3789L9 10.3008L4.92188 14.3789C4.75781 14.543 4.54688 14.625 4.28906 14.625C4.03125 14.625 3.80859 14.543 3.62109 14.3789C3.45703 14.2148 3.375 14.0039 3.375 13.7461C3.375 13.4883 3.45703 13.2773 3.62109 13.1133L7.73438 9L3.62109 4.92188C3.45703 4.75781 3.375 4.54688 3.375 4.28906C3.375 4.03125 3.45703 3.82031 3.62109 3.65625C3.80859 3.46875 4.03125 3.375 4.28906 3.375C4.52344 3.375 4.73438 3.46875 4.92188 3.65625L9 7.73438L13.0781 3.65625C13.2656 3.46875 13.4766 3.375 13.7109 3.375C13.9688 3.375 14.1797 3.46875 14.3438 3.65625C14.5312 3.82031 14.625 4.03125 14.625 4.28906C14.625 4.54688 14.543 4.75781 14.3789 4.92188L10.2656 9Z"></path>
+						</svg>
+					</a>
+				</li>
+            </ul>
+        </section>
+    </header>
+</div><div class="Header_container__Q9KhP"><udex-masthead-shell body-overflow="" home-url="https://sap.com" logo-title="SAP" site-label-aria-label="Community" homepage-aria-label="SAP Homepage" close-button-accessible-name="Close Search" mobile-close-button-accessible-name="Close Menu" logo-alt="SAP Logo" logo-url="https://cdn.udex.services.sap.com/dds/design-tokens/assets/logos/sap-logo.svg" site-label="Community" site-label-url="https://community.sap.com/" udex-masthead-shell="" desktop="" style="--udex-masthead-shell-mobile-menu-height: 640px;"><udex-masthead-item accessible-name="Products and Technology" href="" target="_self" udex-masthead-item="" sub-items="" menu-title="" icon="" icon-alt="" label="Products and Technology" _direction="ltr" desktop="" slot="default-1">Products and Technology<udex-masthead-menu sub-items="[{&quot;subMenuLinkItems&quot;:[{&quot;category&quot;:&quot;By Category&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;CRM and Customer Experience&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/customer-relationship-management/ct-p/crm&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Enterprise Resource Planning&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/enterprise-resource-planning/ct-p/erp&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Financial Management&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/financial-management/ct-p/financial-management&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Human Capital Management&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/human-capital-management/ct-p/hcm&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Product Lifecycle Management&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/product-lifecycle-management/ct-p/plm&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Spend Management&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/spend-management/ct-p/spend-management&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Supply Chain Management&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/supply-chain-management/ct-p/scm&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Technology&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/technology/ct-p/technology&quot;,&quot;externalLink&quot;:false}],&quot;displayItemsAsCategoryLink&quot;:false},{&quot;category&quot;:&quot;Related Content&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;All Blogs&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/all-sap-community-blogs/ct-p/all-blogs&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Questions about SAP Websites&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/questions-about-sap-websites/qa-p/website-questions&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Blogs about SAP Websites&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/blogs-about-sap-websites/bg-p/website-blog&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;All SAP Managed Tags&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/all-sap-managed-tags/ct-p/managed-tags&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Archived Content&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/archived-content/ct-p/Archive&quot;,&quot;externalLink&quot;:false}],&quot;displayItemsAsCategoryLink&quot;:false}]}]" slot="dropdown" udex-masthead-menu="" menu-title=""></udex-masthead-menu></udex-masthead-item><udex-masthead-item accessible-name="Groups" href="/community" target="_self" udex-masthead-item="" sub-items="" menu-title="" icon="" icon-alt="" label="Groups" _direction="ltr" desktop="" slot="default-2">Groups<udex-masthead-menu sub-items="[{&quot;subMenuLinkItems&quot;:[{&quot;category&quot;:&quot;Activity Groups&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;Devtoberfest&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/devtoberfest/gh-p/Devtoberfest&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;SAP CodeJam&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-codejam/gh-p/code-jam&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;SAP TechEd&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-teched/gh-p/SAP-TechEd-Group&quot;,&quot;externalLink&quot;:false}],&quot;displayItemsAsCategoryLink&quot;:false},{&quot;category&quot;:&quot;Industry Groups&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;Oil, Gas, and Energy&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-for-oil-gas-and-energy/gh-p/oil-gas&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;SAP for Healthcare&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-for-healthcare/gh-p/healthcare&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Utilities&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-for-utilities/gh-p/utilities&quot;,&quot;externalLink&quot;:false}],&quot;displayItemsAsCategoryLink&quot;:false},{&quot;category&quot;:&quot;Influence and Feedback Groups&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;SAP Community Event Organizers&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-community-event-organizers/gh-p/community-event-organizers&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;SAP Community Leaders and SAP Advocates&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-community-leaders-and-sap-advocates/ct-p/sap-influencers-and-advocates&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Meet our SAP Champions and Mentors&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-community-leaders-finder/bg-p/influencers-directory&quot;,&quot;externalLink&quot;:false}],&quot;displayItemsAsCategoryLink&quot;:false}]},{&quot;subMenuLinkItems&quot;:[{&quot;category&quot;:&quot;Interest Groups&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;Business Transformation&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/business-transformation/gh-p/business-transformation-champions&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Community Corner&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/community-corner/gh-p/Coffee-Corner&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Data and AI Professionals&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/data-professionals/gh-p/data-professionals&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Enterprise Architecture&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/enterprise-architecture/gh-p/Enterprise-Architecture&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;SAP Learning Groups&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-learning-groups/ct-p/SAP-Learning&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Welcome Corner&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/welcome-corner/gh-p/welcome-corner&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;All Interest Groups&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/interest-groups/ct-p/interests&quot;,&quot;externalLink&quot;:false}],&quot;displayItemsAsCategoryLink&quot;:false},{&quot;category&quot;:&quot;Location Groups&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;Americas&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/americas/ct-p/americas&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Asia Pacific&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/asia-pacific/ct-p/asia-pacific&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Europe&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/europe/ct-p/europe&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Middle East and Africa&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/middle-east-and-africa/ct-p/middle-east-and-africa&quot;,&quot;externalLink&quot;:false}],&quot;displayItemsAsCategoryLink&quot;:false},{&quot;category&quot;:&quot;Customer Only Groups&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;SAP SuccessFactors&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-successfactors-user-groups/ct-p/successfactors-user-groups&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;SAP Enterprise Support Value Maps&quot;,&quot;url&quot;:&quot;https://pages.community.sap.com/resources/enterprise-support-value-maps&quot;,&quot;externalLink&quot;:false}],&quot;displayItemsAsCategoryLink&quot;:false}]}]" slot="dropdown" udex-masthead-menu="" menu-title=""></udex-masthead-menu></udex-masthead-item><udex-masthead-item accessible-name="Developers" href="" target="_self" udex-masthead-item="" sub-items="" menu-title="" icon="" icon-alt="" label="Developers" _direction="ltr" desktop="" slot="default-3">Developers<udex-masthead-menu sub-items="[{&quot;subMenuLinkItems&quot;:[{&quot;category&quot;:&quot;Forums&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;ABAP&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/abap-general/gh-p/abap&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Artificial Intelligence&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/artificial-intelligence-and-machine-learning/gh-p/ai&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;SAP CAP&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-cap/gh-p/cap&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Data and Analytics&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/data-and-analytics/gh-p/data-analytics&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;DevOps and System Administration&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/devops-and-system-administration/gh-p/devops-sysadmin&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Frontend / UI5 / Fiori&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/frontend-ui5-fiori/gh-p/frontend-ui5-fiori&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Integration&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/integration/gh-p/integration&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Tooling (+ SAP Build)&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/tooling-build/gh-p/tooling&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Developer News&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/developer-news/bg-p/developer-news&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;All Developer Forums&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/developers/ct-p/developers&quot;,&quot;externalLink&quot;:false}],&quot;displayItemsAsCategoryLink&quot;:false},{&quot;category&quot;:&quot;Related Resources&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;Learning&quot;,&quot;url&quot;:&quot;https://learning.sap.com/browse/roles/developer&quot;,&quot;externalLink&quot;:true},{&quot;title&quot;:&quot;Tutorials&quot;,&quot;url&quot;:&quot;https://developers.sap.com/tutorial-navigator.html&quot;,&quot;externalLink&quot;:true}],&quot;displayItemsAsCategoryLink&quot;:false}]}]" slot="dropdown" udex-masthead-menu="" menu-title=""></udex-masthead-menu></udex-masthead-item><udex-masthead-item accessible-name="Partners" href="https://pages.community.sap.com/resources/partners" target="_self" udex-masthead-item="" sub-items="" menu-title="" icon="" icon-alt="" label="Partners" _direction="ltr" desktop="" slot="default-4">Partners</udex-masthead-item><udex-masthead-item accessible-name="Events" href="" target="_self" udex-masthead-item="" sub-items="" menu-title="" icon="" icon-alt="" label="Events" _direction="ltr" desktop="" slot="default-5">Events<udex-masthead-menu sub-items="[{&quot;subMenuLinkItems&quot;:[{&quot;category&quot;:&quot;&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;Become an Event Organizer&quot;,&quot;url&quot;:&quot;https://pages.community.sap.com/resources/event-organizer&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Application Lifecycle Management&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/application-lifecycle-management/eb-p/alm-events&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Devtoberfest&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/devtoberfest/eb-p/devtoberfest-events&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Industries&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/industries/eb-p/Industries&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;SAP CodeJam&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-codejam/eb-p/codejam-events&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;SAP Community&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-community/eb-p/community-events&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;SAP SuccessFactors&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-successfactors/eb-p/successfactorsevents&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;User Groups&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/user-groups/eb-p/user-groups&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;View all Location Events&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/events/ct-p/events&quot;,&quot;externalLink&quot;:false}],&quot;displayItemsAsCategoryLink&quot;:false}]}]" slot="dropdown" udex-masthead-menu="" menu-title=""></udex-masthead-menu></udex-masthead-item><udex-masthead-item accessible-name="Help Center​" href="" target="_self" udex-masthead-item="" sub-items="" menu-title="" icon="" icon-alt="" label="Help Center​" _direction="ltr" desktop="" slot="default-6">Help Center​<udex-masthead-menu sub-items="[{&quot;subMenuLinkItems&quot;:[{&quot;category&quot;:&quot;&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;What's New&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/what-s-new/bg-p/whats-new&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Welcome Corner&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/welcome-corner/gh-p/welcome-corner&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;FAQs&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/help/faqpage&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Help Resources&quot;,&quot;url&quot;:&quot;https://pages.community.sap.com/resources&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Legal Resources&quot;,&quot;url&quot;:&quot;https://pages.community.sap.com/resources-legal&quot;,&quot;externalLink&quot;:false}],&quot;displayItemsAsCategoryLink&quot;:false}]}]" slot="dropdown" udex-masthead-menu="" menu-title=""></udex-masthead-menu></udex-masthead-item><udex-masthead-item accessible-name="Topic Pages" href="https://pages.community.sap.com/topics" target="_self" udex-masthead-item="" sub-items="" menu-title="" icon="" icon-alt="" label="Topic Pages" _direction="ltr" desktop="" slot="default-7">Topic Pages</udex-masthead-item><udex-masthead-item hide-arrow-icon="" accessible-name="Explore SAP" label="Explore SAP" target="_self" slot="exploreSAP" udex-masthead-item="" sub-items="" menu-title="" icon="" icon-alt="" _direction="ltr" desktop="">Explore SAP<udex-masthead-menu menu-title="Explore SAP" sub-items="[{&quot;subMenuLinkItems&quot;:[{&quot;category&quot;:&quot;Products&quot;,&quot;url&quot;:&quot;https://www.sap.com/products.html&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;Autonomous Enterprise&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/business-suite.html&quot;},{&quot;title&quot;:&quot;Artificial intelligence&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/artificial-intelligence.html&quot;},{&quot;title&quot;:&quot;Data and analytics&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/data-cloud.html&quot;},{&quot;title&quot;:&quot;Autonomous Suite&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/business-applications.html&quot;},{&quot;title&quot;:&quot;AI platform&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/ai-platform.html&quot;},{&quot;title&quot;:&quot;Transformation management&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/business-transformation-management.html&quot;},{&quot;title&quot;:&quot;Midsize business solutions&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/erp/grow.html&quot;},{&quot;title&quot;:&quot;Financial management&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/financial-management.html&quot;},{&quot;title&quot;:&quot;Spend management&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/spend-management.html&quot;},{&quot;title&quot;:&quot;Supply chain management&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/scm.html&quot;},{&quot;title&quot;:&quot;Human capital management&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/hcm.html&quot;},{&quot;title&quot;:&quot;Customer experience&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/crm.html&quot;},{&quot;title&quot;:&quot;Enterprise resource planning&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/erp.html&quot;},{&quot;title&quot;:&quot;Business network&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/business-network.html&quot;},{&quot;title&quot;:&quot;Sustainability management&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/sustainability.html&quot;},{&quot;title&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;SAP Store&quot;,&quot;url&quot;:&quot;https://www.sap.com/store.html&quot;},{&quot;title&quot;:&quot;Try SAP&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/try-sap.html&quot;},{&quot;title&quot;:&quot;View all industries&quot;,&quot;url&quot;:&quot;https://www.sap.com/industries.html&quot;},{&quot;title&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;Partners&quot;,&quot;url&quot;:&quot;https://www.sap.com/partners.html&quot;},{&quot;title&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;Services&quot;,&quot;url&quot;:&quot;https://www.sap.com/services-support.html&quot;}],&quot;displayItemsAsCategoryLink&quot;:false},{&quot;category&quot;:&quot;Learning and support&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;Learning and certification&quot;,&quot;url&quot;:&quot;https://learning.sap.com&quot;},{&quot;title&quot;:&quot;Support&quot;,&quot;url&quot;:&quot;https://support.sap.com&quot;},{&quot;title&quot;:&quot;Documentation&quot;,&quot;url&quot;:&quot;https://help.sap.com&quot;},{&quot;title&quot;:&quot;Community&quot;,&quot;url&quot;:&quot;https://community.sap.com/&quot;}],&quot;displayItemsAsCategoryLink&quot;:false},{&quot;category&quot;:&quot;About&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;Company information&quot;,&quot;url&quot;:&quot;https://www.sap.com/about/company.html&quot;},{&quot;title&quot;:&quot;Careers&quot;,&quot;url&quot;:&quot;https://jobs.sap.com/?utm_source=CareerSite&amp;utm_campaign=CorpSite_HD&quot;},{&quot;title&quot;:&quot;Customer stories&quot;,&quot;url&quot;:&quot;https://www.sap.com/about/customer-stories.html&quot;},{&quot;title&quot;:&quot;Ethics and compliance&quot;,&quot;url&quot;:&quot;https://www.sap.com/about/ethics-and-compliance.html&quot;},{&quot;title&quot;:&quot;Events&quot;,&quot;url&quot;:&quot;https://www.sap.com/events.html&quot;},{&quot;title&quot;:&quot;Investor Relations&quot;,&quot;url&quot;:&quot;https://www.sap.com/investors/en.html&quot;},{&quot;title&quot;:&quot;News center&quot;,&quot;url&quot;:&quot;https://news.sap.com/&quot;},{&quot;title&quot;:&quot;SAP Trust Center&quot;,&quot;url&quot;:&quot;https://www.sap.com/about/trust-center.html&quot;}],&quot;displayItemsAsCategoryLink&quot;:false}]}]" slot="dropdown" class="Header_explore-sap__3LvsJ" udex-masthead-menu=""></udex-masthead-menu></udex-masthead-item><udex-search show-submit-button="" mode="Home Search" slot="search" class="Header_search__akd_w" udex-search="" value="" label-animation-disabled="" language-voice="en-US" no-result-text="No matches found." unsuccessful-retry-message="UdexSearchSuggestionsPopover couldn`t be opened" retry-delay="200" max-retry-attempts="5" _search-width="0"></udex-search><udex-masthead-mobile-menu slot="mobileMenu" udex-masthead-mobile-menu=""><udex-masthead-item accessible-name="Products and Technology" href="" sub-items="[{&quot;subMenuLinkItems&quot;:[{&quot;category&quot;:&quot;By Category&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;CRM and Customer Experience&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/customer-relationship-management/ct-p/crm&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Enterprise Resource Planning&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/enterprise-resource-planning/ct-p/erp&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Financial Management&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/financial-management/ct-p/financial-management&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Human Capital Management&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/human-capital-management/ct-p/hcm&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Product Lifecycle Management&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/product-lifecycle-management/ct-p/plm&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Spend Management&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/spend-management/ct-p/spend-management&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Supply Chain Management&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/supply-chain-management/ct-p/scm&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Technology&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/technology/ct-p/technology&quot;,&quot;externalLink&quot;:false}],&quot;displayItemsAsCategoryLink&quot;:false},{&quot;category&quot;:&quot;Related Content&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;All Blogs&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/all-sap-community-blogs/ct-p/all-blogs&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Questions about SAP Websites&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/questions-about-sap-websites/qa-p/website-questions&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Blogs about SAP Websites&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/blogs-about-sap-websites/bg-p/website-blog&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;All SAP Managed Tags&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/all-sap-managed-tags/ct-p/managed-tags&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Archived Content&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/archived-content/ct-p/Archive&quot;,&quot;externalLink&quot;:false}],&quot;displayItemsAsCategoryLink&quot;:false}]}]" target="_self" udex-masthead-item="" menu-title="" icon="" icon-alt="" label="Products and Technology" _direction="ltr" desktop="">Products and Technology</udex-masthead-item><udex-masthead-item accessible-name="Groups" href="/community" sub-items="[{&quot;subMenuLinkItems&quot;:[{&quot;category&quot;:&quot;Activity Groups&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;Devtoberfest&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/devtoberfest/gh-p/Devtoberfest&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;SAP CodeJam&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-codejam/gh-p/code-jam&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;SAP TechEd&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-teched/gh-p/SAP-TechEd-Group&quot;,&quot;externalLink&quot;:false}],&quot;displayItemsAsCategoryLink&quot;:false},{&quot;category&quot;:&quot;Industry Groups&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;Oil, Gas, and Energy&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-for-oil-gas-and-energy/gh-p/oil-gas&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;SAP for Healthcare&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-for-healthcare/gh-p/healthcare&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Utilities&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-for-utilities/gh-p/utilities&quot;,&quot;externalLink&quot;:false}],&quot;displayItemsAsCategoryLink&quot;:false},{&quot;category&quot;:&quot;Influence and Feedback Groups&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;SAP Community Event Organizers&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-community-event-organizers/gh-p/community-event-organizers&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;SAP Community Leaders and SAP Advocates&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-community-leaders-and-sap-advocates/ct-p/sap-influencers-and-advocates&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Meet our SAP Champions and Mentors&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-community-leaders-finder/bg-p/influencers-directory&quot;,&quot;externalLink&quot;:false}],&quot;displayItemsAsCategoryLink&quot;:false}]},{&quot;subMenuLinkItems&quot;:[{&quot;category&quot;:&quot;Interest Groups&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;Business Transformation&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/business-transformation/gh-p/business-transformation-champions&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Community Corner&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/community-corner/gh-p/Coffee-Corner&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Data and AI Professionals&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/data-professionals/gh-p/data-professionals&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Enterprise Architecture&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/enterprise-architecture/gh-p/Enterprise-Architecture&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;SAP Learning Groups&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-learning-groups/ct-p/SAP-Learning&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Welcome Corner&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/welcome-corner/gh-p/welcome-corner&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;All Interest Groups&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/interest-groups/ct-p/interests&quot;,&quot;externalLink&quot;:false}],&quot;displayItemsAsCategoryLink&quot;:false},{&quot;category&quot;:&quot;Location Groups&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;Americas&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/americas/ct-p/americas&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Asia Pacific&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/asia-pacific/ct-p/asia-pacific&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Europe&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/europe/ct-p/europe&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Middle East and Africa&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/middle-east-and-africa/ct-p/middle-east-and-africa&quot;,&quot;externalLink&quot;:false}],&quot;displayItemsAsCategoryLink&quot;:false},{&quot;category&quot;:&quot;Customer Only Groups&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;SAP SuccessFactors&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-successfactors-user-groups/ct-p/successfactors-user-groups&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;SAP Enterprise Support Value Maps&quot;,&quot;url&quot;:&quot;https://pages.community.sap.com/resources/enterprise-support-value-maps&quot;,&quot;externalLink&quot;:false}],&quot;displayItemsAsCategoryLink&quot;:false}]}]" target="_self" udex-masthead-item="" menu-title="" icon="" icon-alt="" label="Groups" _direction="ltr" desktop="">Groups</udex-masthead-item><udex-masthead-item accessible-name="Developers" href="" sub-items="[{&quot;subMenuLinkItems&quot;:[{&quot;category&quot;:&quot;Forums&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;ABAP&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/abap-general/gh-p/abap&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Artificial Intelligence&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/artificial-intelligence-and-machine-learning/gh-p/ai&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;SAP CAP&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-cap/gh-p/cap&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Data and Analytics&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/data-and-analytics/gh-p/data-analytics&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;DevOps and System Administration&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/devops-and-system-administration/gh-p/devops-sysadmin&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Frontend / UI5 / Fiori&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/frontend-ui5-fiori/gh-p/frontend-ui5-fiori&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Integration&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/integration/gh-p/integration&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Tooling (+ SAP Build)&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/tooling-build/gh-p/tooling&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Developer News&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/developer-news/bg-p/developer-news&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;All Developer Forums&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/developers/ct-p/developers&quot;,&quot;externalLink&quot;:false}],&quot;displayItemsAsCategoryLink&quot;:false},{&quot;category&quot;:&quot;Related Resources&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;Learning&quot;,&quot;url&quot;:&quot;https://learning.sap.com/browse/roles/developer&quot;,&quot;externalLink&quot;:true},{&quot;title&quot;:&quot;Tutorials&quot;,&quot;url&quot;:&quot;https://developers.sap.com/tutorial-navigator.html&quot;,&quot;externalLink&quot;:true}],&quot;displayItemsAsCategoryLink&quot;:false}]}]" target="_self" udex-masthead-item="" menu-title="" icon="" icon-alt="" label="Developers" _direction="ltr" desktop="">Developers</udex-masthead-item><udex-masthead-item accessible-name="Partners" href="https://pages.community.sap.com/resources/partners" target="_self" udex-masthead-item="" sub-items="" menu-title="" icon="" icon-alt="" label="Partners" _direction="ltr" desktop="">Partners</udex-masthead-item><udex-masthead-item accessible-name="Events" href="" sub-items="[{&quot;subMenuLinkItems&quot;:[{&quot;category&quot;:&quot;&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;Become an Event Organizer&quot;,&quot;url&quot;:&quot;https://pages.community.sap.com/resources/event-organizer&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Application Lifecycle Management&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/application-lifecycle-management/eb-p/alm-events&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Devtoberfest&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/devtoberfest/eb-p/devtoberfest-events&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Industries&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/industries/eb-p/Industries&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;SAP CodeJam&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-codejam/eb-p/codejam-events&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;SAP Community&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-community/eb-p/community-events&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;SAP SuccessFactors&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/sap-successfactors/eb-p/successfactorsevents&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;User Groups&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/user-groups/eb-p/user-groups&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;View all Location Events&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/events/ct-p/events&quot;,&quot;externalLink&quot;:false}],&quot;displayItemsAsCategoryLink&quot;:false}]}]" target="_self" udex-masthead-item="" menu-title="" icon="" icon-alt="" label="Events" _direction="ltr" desktop="">Events</udex-masthead-item><udex-masthead-item accessible-name="Help Center​" href="" sub-items="[{&quot;subMenuLinkItems&quot;:[{&quot;category&quot;:&quot;&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;What's New&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/what-s-new/bg-p/whats-new&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Welcome Corner&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/welcome-corner/gh-p/welcome-corner&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;FAQs&quot;,&quot;url&quot;:&quot;https://community.sap.com/t5/help/faqpage&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Help Resources&quot;,&quot;url&quot;:&quot;https://pages.community.sap.com/resources&quot;,&quot;externalLink&quot;:false},{&quot;title&quot;:&quot;Legal Resources&quot;,&quot;url&quot;:&quot;https://pages.community.sap.com/resources-legal&quot;,&quot;externalLink&quot;:false}],&quot;displayItemsAsCategoryLink&quot;:false}]}]" target="_self" udex-masthead-item="" menu-title="" icon="" icon-alt="" label="Help Center​" _direction="ltr" desktop="">Help Center​</udex-masthead-item><udex-masthead-item accessible-name="Topic Pages" href="https://pages.community.sap.com/topics" target="_self" udex-masthead-item="" sub-items="" menu-title="" icon="" icon-alt="" label="Topic Pages" _direction="ltr" desktop="">Topic Pages</udex-masthead-item><udex-search show-submit-button="" mode="Home Search" slot="search" class="Header_search__akd_w" udex-search="" value="" label-animation-disabled="" language-voice="en-US" no-result-text="No matches found." unsuccessful-retry-message="UdexSearchSuggestionsPopover couldn`t be opened" retry-delay="200" max-retry-attempts="5" _search-width="0"></udex-search><udex-masthead-item accessible-name="Explore SAP" label="Explore SAP" sub-items="[{&quot;subMenuLinkItems&quot;:[{&quot;category&quot;:&quot;Products&quot;,&quot;url&quot;:&quot;https://www.sap.com/products.html&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;Autonomous Enterprise&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/business-suite.html&quot;},{&quot;title&quot;:&quot;Artificial intelligence&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/artificial-intelligence.html&quot;},{&quot;title&quot;:&quot;Data and analytics&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/data-cloud.html&quot;},{&quot;title&quot;:&quot;Autonomous Suite&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/business-applications.html&quot;},{&quot;title&quot;:&quot;AI platform&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/ai-platform.html&quot;},{&quot;title&quot;:&quot;Transformation management&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/business-transformation-management.html&quot;},{&quot;title&quot;:&quot;Midsize business solutions&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/erp/grow.html&quot;},{&quot;title&quot;:&quot;Financial management&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/financial-management.html&quot;},{&quot;title&quot;:&quot;Spend management&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/spend-management.html&quot;},{&quot;title&quot;:&quot;Supply chain management&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/scm.html&quot;},{&quot;title&quot;:&quot;Human capital management&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/hcm.html&quot;},{&quot;title&quot;:&quot;Customer experience&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/crm.html&quot;},{&quot;title&quot;:&quot;Enterprise resource planning&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/erp.html&quot;},{&quot;title&quot;:&quot;Business network&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/business-network.html&quot;},{&quot;title&quot;:&quot;Sustainability management&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/sustainability.html&quot;},{&quot;title&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;SAP Store&quot;,&quot;url&quot;:&quot;https://www.sap.com/store.html&quot;},{&quot;title&quot;:&quot;Try SAP&quot;,&quot;url&quot;:&quot;https://www.sap.com/products/try-sap.html&quot;},{&quot;title&quot;:&quot;View all industries&quot;,&quot;url&quot;:&quot;https://www.sap.com/industries.html&quot;},{&quot;title&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;Partners&quot;,&quot;url&quot;:&quot;https://www.sap.com/partners.html&quot;},{&quot;title&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;Services&quot;,&quot;url&quot;:&quot;https://www.sap.com/services-support.html&quot;}],&quot;displayItemsAsCategoryLink&quot;:false},{&quot;category&quot;:&quot;Learning and support&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;Learning and certification&quot;,&quot;url&quot;:&quot;https://learning.sap.com&quot;},{&quot;title&quot;:&quot;Support&quot;,&quot;url&quot;:&quot;https://support.sap.com&quot;},{&quot;title&quot;:&quot;Documentation&quot;,&quot;url&quot;:&quot;https://help.sap.com&quot;},{&quot;title&quot;:&quot;Community&quot;,&quot;url&quot;:&quot;https://community.sap.com/&quot;}],&quot;displayItemsAsCategoryLink&quot;:false},{&quot;category&quot;:&quot;About&quot;,&quot;url&quot;:&quot;&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;Company information&quot;,&quot;url&quot;:&quot;https://www.sap.com/about/company.html&quot;},{&quot;title&quot;:&quot;Careers&quot;,&quot;url&quot;:&quot;https://jobs.sap.com/?utm_source=CareerSite&amp;utm_campaign=CorpSite_HD&quot;},{&quot;title&quot;:&quot;Customer stories&quot;,&quot;url&quot;:&quot;https://www.sap.com/about/customer-stories.html&quot;},{&quot;title&quot;:&quot;Ethics and compliance&quot;,&quot;url&quot;:&quot;https://www.sap.com/about/ethics-and-compliance.html&quot;},{&quot;title&quot;:&quot;Events&quot;,&quot;url&quot;:&quot;https://www.sap.com/events.html&quot;},{&quot;title&quot;:&quot;Investor Relations&quot;,&quot;url&quot;:&quot;https://www.sap.com/investors/en.html&quot;},{&quot;title&quot;:&quot;News center&quot;,&quot;url&quot;:&quot;https://news.sap.com/&quot;},{&quot;title&quot;:&quot;SAP Trust Center&quot;,&quot;url&quot;:&quot;https://www.sap.com/about/trust-center.html&quot;}],&quot;displayItemsAsCategoryLink&quot;:false}]}]" target="_self" slot="exploreSapMobileButton" udex-masthead-item="" menu-title="" icon="" icon-alt="" _direction="ltr" desktop="">Explore SAP</udex-masthead-item></udex-masthead-mobile-menu></udex-masthead-shell></div><div class="Grid_grid__nYQy4 "><div class="Grid_row__PRJ5D "><div class="Grid_col-lg-12__5TGf6"><nav data-testid="bread-crumb-nav" class="Subheader_root__6CPpW"><ul class="Subheader_list__Fux4w" title="Breadcrumbs"><li class="Subheader_listItem__9dDFw Subheader_dropdownListItem__nuw_B"><udex-link accessible-role="Button" icon="slim-arrow-down" id="_R_1al6_" aria-haspopup="true" class="Subheader_link___qmE3 Subheader_dropdownTrigger__mlHUD" udex-link="" design="Default" interactive-area-size="Normal" wrapping-type="Normal" desktop=""></udex-link></li><li class="Subheader_listItem__9dDFw" data-testid="bread-crumb-nav-item-0"><span class="Subheader_separator__bauzw" aria-hidden="true"></span><udex-link href="/community" class="Subheader_link___qmE3" udex-link="" design="Default" interactive-area-size="Normal" wrapping-type="Normal" accessible-role="Link" desktop="">SAP Community</udex-link></li><li class="Subheader_listItem__9dDFw" data-testid="bread-crumb-nav-item-1"><span class="Subheader_separator__bauzw" aria-hidden="true"></span><span class="Subheader_link___qmE3">Resources</span></li></ul><udex-dropdown horizontal-align="Start" opener="_R_1al6_" placement="Bottom" class="Subheader_dropdown__YJa8g" udex-dropdown="" accessible-role="Dialog" on-desktop="" vertical-align="Center" hide-arrow="" actual-placement="Right" popover="manual" desktop="" tabindex="-1" data-sap-ui-fastnavgroup-container="true" media-range="S"><ul class="Subheader_list__Fux4w Subheader_dropdownContent__BVT4u"><li class="Subheader_dropdownItem__zHrFQ"><udex-link href="/community" icon="home" class="Subheader_link___qmE3" udex-link="" design="Default" interactive-area-size="Normal" wrapping-type="Normal" accessible-role="Link" desktop="">SAP Community</udex-link></li><li class="Subheader_dropdownItem__zHrFQ" style="--data-index:1"><span class="Subheader_link___qmE3">Resources</span></li></ul></udex-dropdown></nav></div></div></div><div class="PageShell_hero__q8am2" role="banner" aria-label="Resources overview"><div class="Grid_grid__nYQy4 "><div class="Grid_row__PRJ5D PageShell_hero__row__yJMHf"><div class="Grid_col-lg-12__5TGf6"><div id="hero-unit" class="HeroUnit_hero-unit__maDQ0" role="group" aria-label="Hero unit"><h1 class="Title_title__GSkiG Title_H1_SemiboldDuplex__MlS_k Title_H1__yUXu9">SAP Community Resources</h1></div></div></div></div></div><div class="PageShell_content__u_yAf"><div class="Grid_grid__nYQy4 "><div class="Grid_row__PRJ5D PageShell_row__4_1VL"><div class="Grid_col-sm-12__ACESy Grid_col-md-12__nTBJS Grid_col-lg-12__5TGf6 PageShell_col__AHiVO"><div class="ResourcesRootPageTemplate_content-wrapper__kiKP_" title="SAP Community Resources" role="list"><a role="listitem" class="ResourcesContentCard_root__yaMmy Card_root__GBo_8 Card_interactive__64na_ Card_clickable__0vIeO" aria-label="Card" href="https://pages.community.sap.com/resources/partners"><div data-ui5-styles="true"><h4 class="Title_title__GSkiG Title_H4_SemiboldDuplex__0nufb Title_H4__QdDO4">Partners</h4><p data-testid="resource-description" class="ResourcesContentCard_description__GooRg">A private area of SAP Community designed for SAP partners to collaborate, share expertise, and engage directly around SAP solutions, delivery, and best practices across SAP's Autonomous Enterprise.</p></div></a><a role="listitem" class="ResourcesContentCard_root__yaMmy Card_root__GBo_8 Card_interactive__64na_ Card_clickable__0vIeO" aria-label="Card" href="https://pages.community.sap.com/resources/moderation"><div data-ui5-styles="true"><h4 class="Title_title__GSkiG Title_H4_SemiboldDuplex__0nufb Title_H4__QdDO4">The SAP Community Points of Contact</h4><p data-testid="resource-description" class="ResourcesContentCard_description__GooRg">The SAP Community team is ready to answer your questions about our platform. Our team includes moderators who ensure that SAP Community remains a professional source of information, helping mediate conflicts related to moderation activities. </p></div></a><a role="listitem" class="ResourcesContentCard_root__yaMmy Card_root__GBo_8 Card_interactive__64na_ Card_clickable__0vIeO" aria-label="Card" href="https://pages.community.sap.com/resources/event-organizer"><div data-ui5-styles="true"><h4 class="Title_title__GSkiG Title_H4_SemiboldDuplex__0nufb Title_H4__QdDO4">Become an Event Organizer</h4><p data-testid="resource-description" class="ResourcesContentCard_description__GooRg">Learn what it takes to be an SAP Community event organizer, discover the benefits of this role, and find out how to apply.</p></div></a><a role="listitem" class="ResourcesContentCard_root__yaMmy Card_root__GBo_8 Card_interactive__64na_ Card_clickable__0vIeO" aria-label="Card" href="https://pages.community.sap.com/resources/enterprise-support-value-maps"><div data-ui5-styles="true"><h4 class="Title_title__GSkiG Title_H4_SemiboldDuplex__0nufb Title_H4__QdDO4">SAP Enterprise Support Value Maps</h4><p data-testid="resource-description" class="ResourcesContentCard_description__GooRg">As part of our foundational support offering – and included with every SAP cloud subscription – SAP Enterprise Support Value Maps give you private, expert-led groups that fast-track your success through targeted guidance. </p></div></a><a role="listitem" class="ResourcesContentCard_root__yaMmy Card_root__GBo_8 Card_interactive__64na_ Card_clickable__0vIeO" aria-label="Card" href="https://pages.community.sap.com/resources/sap-successfactors-community-user-groups"><div data-ui5-styles="true"><h4 class="Title_title__GSkiG Title_H4_SemiboldDuplex__0nufb Title_H4__QdDO4">SAP SuccessFactors Community User Groups</h4><p data-testid="resource-description" class="ResourcesContentCard_description__GooRg">SAP SuccessFactors Community User Groups provide a strategic platform for connecting experts and practitioners around shared priorities. These groups foster meaningful conversations, knowledge exchange, and collaboration that directly advance adoption and innovation.​</p></div></a><a role="listitem" class="ResourcesContentCard_root__yaMmy Card_root__GBo_8 Card_interactive__64na_ Card_clickable__0vIeO" aria-label="Card" href="https://pages.community.sap.com/resources/rules-of-engagement"><div data-ui5-styles="true"><h4 class="Title_title__GSkiG Title_H4_SemiboldDuplex__0nufb Title_H4__QdDO4">Rules of Engagement</h4><p data-testid="resource-description" class="ResourcesContentCard_description__GooRg">SAP Community participants should be respectful, supportive, and professional. Get to know the rules that all members should follow, as well as the actions that could lead to the removal of a member's content.</p></div></a><a role="listitem" class="ResourcesContentCard_root__yaMmy Card_root__GBo_8 Card_interactive__64na_ Card_clickable__0vIeO" aria-label="Card" href="https://pages.community.sap.com/resources/inauthentic-usage-policy"><div data-ui5-styles="true"><h4 class="Title_title__GSkiG Title_H4_SemiboldDuplex__0nufb Title_H4__QdDO4">Inauthentic Usage Policy</h4><p data-testid="resource-description" class="ResourcesContentCard_description__GooRg">The strength of our community comes from the genuine contributions of its members.
+Actions that are deceptive, manipulative, or that disrupt the normal operation of the platform are strictly prohibited.
+
+
+
+
+
+
+
+
+</p></div></a><a role="listitem" class="ResourcesContentCard_root__yaMmy Card_root__GBo_8 Card_interactive__64na_ Card_clickable__0vIeO" aria-label="Card" href="https://pages.community.sap.com/resources/sap-community-privacy-statement"><div data-ui5-styles="true"><h4 class="Title_title__GSkiG Title_H4_SemiboldDuplex__0nufb Title_H4__QdDO4">SAP Community Privacy Statement, Resources Section</h4><p data-testid="resource-description" class="ResourcesContentCard_description__GooRg">This Privacy Statement was updated on May 1, 2025.</p></div></a><a role="listitem" class="ResourcesContentCard_root__yaMmy Card_root__GBo_8 Card_interactive__64na_ Card_clickable__0vIeO" aria-label="Card" href="https://pages.community.sap.com/resources/tutorials"><div data-ui5-styles="true"><h4 class="Title_title__GSkiG Title_H4_SemiboldDuplex__0nufb Title_H4__QdDO4">SAP Community Tutorial</h4><p data-testid="resource-description" class="ResourcesContentCard_description__GooRg">The Tour the Community tutorial provides valuable insight into navigating and participating in the community, covering everything from the basics to blogging.</p></div></a><a role="listitem" class="ResourcesContentCard_root__yaMmy Card_root__GBo_8 Card_interactive__64na_ Card_clickable__0vIeO" aria-label="Card" href="https://pages.community.sap.com/resources/privacy"><div data-ui5-styles="true"><h4 class="Title_title__GSkiG Title_H4_SemiboldDuplex__0nufb Title_H4__QdDO4">Privacy - FAQs</h4><p data-testid="resource-description" class="ResourcesContentCard_description__GooRg">Get answers to frequently asked questions about profile privacy, so that you can learn how to get the most out of your SAP Community experience.</p></div></a></div></div></div></div></div></div></div><ds-footer navigation-items="[{&quot;url&quot;:&quot;https://pages.community.sap.com/resources/sap-community-privacy-statement&quot;,&quot;title&quot;:&quot;Privacy Statement&quot;,&quot;target&quot;:&quot;_blank&quot;,&quot;label&quot;:&quot;Privacy&quot;},{&quot;url&quot;:&quot;https://www.sap.com/about/legal/terms-of-use.html&quot;,&quot;title&quot;:&quot;Access the Terms of Use&quot;,&quot;target&quot;:&quot;_blank&quot;,&quot;label&quot;:&quot;Terms of Use&quot;},{&quot;url&quot;:&quot;https://sap.com/about/legal/impressum.html&quot;,&quot;target&quot;:&quot;_blank&quot;,&quot;label&quot;:&quot;Legal Disclosure&quot;},{&quot;url&quot;:&quot;https://sap.com/about/legal/copyright.html&quot;,&quot;title&quot;:&quot;View the Copyright Information&quot;,&quot;target&quot;:&quot;_blank&quot;,&quot;label&quot;:&quot;Copyright&quot;},{&quot;url&quot;:&quot;https://sap.com/about/legal/trademark.html&quot;,&quot;title&quot;:&quot;View the Trademark Information&quot;,&quot;target&quot;:&quot;_blank&quot;,&quot;label&quot;:&quot;Trademark&quot;},{&quot;url&quot;:&quot;https://pages.community.sap.com/resources/moderation&quot;,&quot;title&quot;:&quot;View the support contact channels for SAP&quot;,&quot;target&quot;:&quot;_blank&quot;,&quot;label&quot;:&quot;Support&quot;}]" social-links="[{&quot;tooltip&quot;:&quot;Visit the Services and Support from SAP Facebook page&quot;,&quot;target&quot;:&quot;_blank&quot;,&quot;rel&quot;:&quot;noopener noreferrer&quot;,&quot;name&quot;:&quot;facebook&quot;,&quot;url&quot;:&quot;https://www.facebook.com/sapcommunity&quot;,&quot;iconName&quot;:&quot;Facebook&quot;},{&quot;tooltip&quot;:&quot;Follow SAP Community on Bluesky&quot;,&quot;target&quot;:&quot;_blank&quot;,&quot;rel&quot;:&quot;noopener noreferrer&quot;,&quot;name&quot;:&quot;bluesky&quot;,&quot;url&quot;:&quot;https://bsky.app/profile/sapcommunity.bsky.social&quot;,&quot;iconName&quot;:&quot;Bluesky&quot;},{&quot;tooltip&quot;:&quot;Subscribe to Services and Support from SAP&quot;,&quot;target&quot;:&quot;_blank&quot;,&quot;rel&quot;:&quot;noopener noreferrer&quot;,&quot;name&quot;:&quot;youtube&quot;,&quot;url&quot;:&quot;https://www.youtube.com/@SAPCommunity&quot;,&quot;iconName&quot;:&quot;Youtube&quot;},{&quot;tooltip&quot;:&quot;Follow SAP Support Help&quot;,&quot;target&quot;:&quot;_blank&quot;,&quot;rel&quot;:&quot;noopener noreferrer&quot;,&quot;name&quot;:&quot;linkedin&quot;,&quot;url&quot;:&quot;https://www.linkedin.com/showcase/sap-developers&quot;,&quot;iconName&quot;:&quot;LinkedIn&quot;}]" is-show-cookie-preferences="" is-light-theme="" mode="light" class="hydrated"></ds-footer></div></div>

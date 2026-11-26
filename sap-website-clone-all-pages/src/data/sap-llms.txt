@@ -1,0 +1,117 @@
+# SAP > SAP SE is a global enterprise software company headquartered in Walldorf, Germany. SAP provides cloud applications for finance, spend management, supply chain, human capital management, customer experience, and ERP, alongside an AI platform and a portfolio of AI agents and assistants - serving customers across most industries. SAP's flagship applications include SAP S/4HANA Cloud, SAP SuccessFactors, SAP Ariba, SAP Customer Experience, and SAP Business Network. The SAP AI Platform provides data, models, and governance for enterprise AI, and Joule is SAP's enterprise AI copilot delivered through a growing catalog of AI agents and assistants. This llms.txt covers the global (English) sap.com site.
+
+## Company
+- [About SAP](https://www.sap.com/about.html): Company overview, leadership, strategy, purpose
+- [Investor Relations](https://www.sap.com/investors.html): Financial reports, stock information, governance
+- [Newsroom](https://news.sap.com/): Press releases, executive insights, product announcements
+- [Trust Center](https://www.sap.com/about/trust-center.html): Security, privacy, data protection, compliance
+
+## Products - Applications
+- [All Products A-Z](https://www.sap.com/products.html): Full product index
+- [Financial management](https://www.sap.com/products/financial-management.html): Cloud finance solutions
+- [Spend management](https://www.sap.com/products/spend-management.html): Procurement, sourcing, external workforce, travel and expense
+- [Supply chain management](https://www.sap.com/products/scm.html): Planning, manufacturing, logistics, asset management
+- [Human capital management](https://www.sap.com/products/hcm.html): SAP SuccessFactors and HR solutions
+- [Customer experience](https://www.sap.com/products/crm.html): CRM, commerce, sales, and service
+- [ERP](https://www.sap.com/products/erp.html): SAP S/4HANA Cloud
+
+## Products - AI Platform
+- [Develop](https://www.sap.com/products/artificial-intelligence/joule-studio.html): Build AI applications and extensions
+- [Integrate](https://www.sap.com/products/technology-platform/integration-suite.html): Connect AI across SAP and non-SAP systems
+- [Data and analytics](https://www.sap.com/products/data-cloud.html): Business data, analytics, planning
+- [AI models](https://www.sap.com/products/artificial-intelligence/ai-models.html): Foundation and SAP-tuned models
+- [AI agent governance](https://www.sap.com/products/artificial-intelligence/ai-agent-hub.html): Trust, compliance, and control for enterprise AI agents
+- [Transformation management](https://www.sap.com/products/business-transformation-management.html): Tools and methodology for AI-driven transformation
+
+## Products - Artificial Intelligence
+- [AI agents and assistants](https://www.sap.com/products/artificial-intelligence/ai-assistant.html): Joule and SAP's catalog of enterprise AI agents
+- [AI workspaces](https://www.sap.com/products/artificial-intelligence/joule-work.html): Workspaces for working with SAP AI
+
+## Products - More SAP Offerings
+- [RISE with SAP](https://www.sap.com/products/erp/rise.html): Cloud ERP transformation as a service
+- [Midsize business solutions](https://www.sap.com/products/erp/grow.html): SAP Business One, GROW with SAP, Business ByDesign
+- [Sustainability management](https://www.sap.com/products/sustainability.html): Carbon, climate, and circular economy solutions
+- [SAP Business Network](https://www.sap.com/products/business-network.html): Multi-enterprise business collaboration
+
+## Industries and Use Cases
+- [Industries](https://www.sap.com/industries.html): Industry-specific solution portfolios
+- [Use Cases](https://www.sap.com/use-cases): Problem- and outcome-framed solution entry points
+
+## Customers
+- [Customer Stories](https://www.sap.com/about/customer-stories.html): Case studies and references
+
+## Transform and Support
+- [SAP Help Portal](https://help.sap.com/): Official product documentation
+- [SAP Knowledge Base Articles](https://userapps.support.sap.com/): Searchable KBAs and support content
+- [SAP Support Portal](https://support.sap.com/): Incidents, notes, license keys
+
+## Learning
+- [SAP Learning](https://learning.sap.com/): Training, certification, and learning journeys
+- [SAP for Developers](https://developers.sap.com/): Tutorials, APIs, SDKs, sample code
+- [SAP Business Accelerator Hub](https://api.sap.com/): API discovery, events, integration content, and pre-built integrations
+
+## Community
+- [SAP Community](https://community.sap.com/): Blogs, Q&A, user groups
+
+## Partners
+- [Partners and SAP Store](https://www.sap.com/partner.html): Partner ecosystem and marketplace
+
+## Topics
+- [SAP Technology Topics & Trends Blog](https://www.sap.com/topics): Blog, research, and thought leadership
+
+## Events
+- [SAP Sapphire](https://www.sap.com/events/sapphire.html): Flagship annual event
+- [SAP TechEd](https://www.sap.com/events/teched.html): Flagship user event for developers, practitioners, enterprise architects, and IT leaders.
+- [SAP Connect](https://www.sap.com/events/connect.html): Annual event to discover how to maximize SAP solutions across every line of business along your journey to become an Autonomous Enterprise.
+
+## Regional and Country Sites
+SAP.com serves localized content through country and regional sub-paths. Each site targets one or more language-country combinations declared via hreflang. Some single-language markets share a regional site (e.g. /sea/ covers 10 Southeast Asian countries in English); others have two sites for the same market in different languages (e.g. /mena/ and /mena-ar/ both cover the Middle East, in English and Arabic respectively; /belgie/ and /belgique/ serve Dutch- and French-speaking Belgium).
+- [Global (English, US)](https://www.sap.com/): English (United States)
+- [Germany](https://www.sap.com/germany/): German (Germany)
+- [Austria](https://www.sap.com/austria/): German (Austria)
+- [Switzerland - German](https://www.sap.com/swiss/): German (Switzerland)
+- [Switzerland - French](https://www.sap.com/suisse/): French (Switzerland)
+- [France and Francophone North Africa](https://www.sap.com/france/): French (France, Morocco)
+- [UK and Ireland](https://www.sap.com/uk/): English (Ireland, United Kingdom)
+- [Netherlands](https://www.sap.com/netherlands/): Dutch (Netherlands)
+- [Belgium - Dutch](https://www.sap.com/belgie/): Dutch (Belgium)
+- [Belgium - French](https://www.sap.com/belgique/): French (Belgium)
+- [Spain](https://www.sap.com/spain/): Spanish (Spain)
+- [Italy](https://www.sap.com/italy/): Italian (Italy)
+- [Portugal](https://www.sap.com/portugal/): Portuguese (Portugal)
+- [Sweden](https://www.sap.com/sweden/): Swedish (Sweden)
+- [Denmark](https://www.sap.com/denmark/): Danish (Denmark)
+- [Norway](https://www.sap.com/norway/): Norwegian (Norway)
+- [Finland](https://www.sap.com/finland/): Finnish (Finland)
+- [Greece and Cyprus](https://www.sap.com/greece/): Greek (Cyprus, Greece)
+- [Turkey](https://www.sap.com/turkey/): Turkish (Turkey)
+- [Poland](https://www.sap.com/poland/): Polish (Poland)
+- [Czech Republic](https://www.sap.com/cz/): Czech (Czech Republic)
+- [Slovakia](https://www.sap.com/sk/): Slovak (Slovakia)
+- [Hungary](https://www.sap.com/hungary/): Hungarian (Hungary)
+- [Romania](https://www.sap.com/romania/): Romanian (Romania)
+- [Bulgaria](https://www.sap.com/bulgaria/): English (Bulgaria)
+- [Croatia](https://www.sap.com/croatia/): English (Croatia)
+- [Slovenia](https://www.sap.com/slovenia/): English (Slovenia)
+- [Western Balkans](https://www.sap.com/westbalkans/): English (Albania, North Macedonia, Serbia)
+- [Estonia](https://www.sap.com/estonia/): English (Estonia)
+- [Latvia](https://www.sap.com/latvia/): English (Latvia)
+- [Lithuania](https://www.sap.com/lithuania/): English (Lithuania)
+- [Ukraine](https://www.sap.com/ukraine/): Ukrainian (Ukraine)
+- [Israel](https://www.sap.com/israel/): Hebrew (Israel)
+- [Canada - English](https://www.sap.com/canada/): English (Canada)
+- [Canada - French](https://www.sap.com/canada-fr/): French (Canada)
+- [Brazil](https://www.sap.com/brazil/): Portuguese (Brazil)
+- [Latin America (Spanish-speaking)](https://www.sap.com/latinamerica/): Spanish (Argentina, Bolivia, Chile, Colombia, Costa Rica, Dominican Republic, Ecuador, Guatemala, Honduras, Mexico, Panama, Peru, Uruguay, Venezuela)
+- [Middle East and North Africa - English](https://www.sap.com/mena/): English (Algeria, Egypt, Iraq, Jordan, Kuwait, Oman, Pakistan, Palestine, Qatar, Saudi Arabia, UAE)
+- [Middle East and North Africa - Arabic](https://www.sap.com/mena-ar/): Arabic (Algeria, Egypt, Iraq, Jordan, Kuwait, Oman, Palestine, Qatar, Saudi Arabia, UAE)
+- [Sub-Saharan Africa](https://www.sap.com/africa/): English (Ethiopia, Ghana, Kenya, Nigeria, South Africa)
+- [India and Bangladesh](https://www.sap.com/india/): English (Bangladesh, India)
+- [Central Asia and Caucasus](https://www.sap.com/central-asia-caucasus/): Russian (Armenia, Belarus, Georgia, Kazakhstan, Kyrgyzstan, Moldova, Mongolia, Russia, Uzbekistan)
+- [Southeast Asia](https://www.sap.com/sea/): English (Cambodia, Indonesia, Laos, Malaysia, Myanmar, Nepal, Philippines, Singapore, Thailand, Vietnam)
+- [Australia and New Zealand](https://www.sap.com/australia/): English (Australia, New Zealand)
+- [Hong Kong](https://www.sap.com/hk/): English (Hong Kong)
+- [Taiwan](https://www.sap.com/taiwan/): Chinese (Traditional) (Taiwan)
+- [Japan](https://www.sap.com/japan/): Japanese (Japan)
+- [South Korea](https://www.sap.com/korea/): Korean (South Korea)
+- [China](https://www.sap.cn/): Chinese (Simplified) (China)

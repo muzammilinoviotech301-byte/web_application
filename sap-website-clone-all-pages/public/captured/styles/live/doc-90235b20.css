@@ -1,0 +1,2 @@
+/* scoped-for-clone v2 */
+.contact-widget[data-block-status="loading"]:is(.captured-body, .captured-body *) { display: none !important; }

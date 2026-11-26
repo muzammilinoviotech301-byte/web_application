@@ -1,0 +1,2 @@
+/* scoped-for-clone v2 */
+.js-slide-hidden:is(.captured-body, .captured-body *){position:absolute !important;left:-9999px !important;top:-9999px !important;display:block !important}

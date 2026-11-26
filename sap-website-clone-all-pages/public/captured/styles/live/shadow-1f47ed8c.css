@@ -1,0 +1,57 @@
+:host { --udex-list-item-padding-vertical: var(--udexSpacer12, 12px); --udex-list-item-padding-horizontal: var(--udexSpacer16, 16px); --udex-list-item-padding-top: var(--udex-list-item-padding-vertical); --udex-list-item-padding-bottom: var(--udex-list-item-padding-vertical); --udex-list-item-padding-inline-start: var(--udex-list-item-padding-horizontal); --udex-list-item-padding-inline-end: var(--udex-list-item-padding-horizontal); --udex-list-item-background-active: var(--sapList_Active_Background, #EAECEE); --udex-list-item-border-color-active: var(--sapList_BorderColor, #A9B4BE); --udex-list-item-color-active: var(--sapList_Active_TextColor, #000); --udex-list-item-supporting-text-color-active: var(--sapContent_LabelColor, #475E75); --udex-list-item-background-selected-hover: var(--sapButton_Selected_Hover_Background, #D1EFFF); --udex-list-item-background-default: var(--sapList_Background, #FFF); --udex-list-item-color-default: var(--sapList_HeaderTextColor, #223548); --udex-list-item-supporting-text-color-default: var(--sapContent_LabelColor, #475E75); --udex-list-item-supporting-text-color-hover: var(--sapContent_LabelColor, #475E75); --udex-list-item-background-hover: var(--sapList_Hover_Background, #F5F6F7); --udex-list-item-color-hover: var(--sapList_HeaderTextColor, #223548); --udex-list-item-border-color-selected: var(--udexColorBlue8, #0057D2); --udex-list-item-background-selected: var(--sapList_SelectionBackgroundColor, #EBF8FF); --udex-list-item-color-selected: var(--sapList_HeaderTextColor, #223548); --udex-list-item-supporting-text-color-selected: var(--sapContent_LabelColor, #475E75); --udex-list-item-divider-border-color: var(--sapList_BorderColor, #A9B4BE); --udex-list-item-divider-border-color-hover: var(--sapList_BorderColor, #A9B4BE); --udex-list-item-outline-border-color: var(--udexColorBlue10, #002A86); --udex-list-item-disabled-opacity: var(--sapContent_DisabledOpacity, .4); --udex-list-item-additional-text-font-weight: 400; background: var(--udex-list-item-background-default); color: var(--udex-list-item-color-default); display: block; position: relative; }
+:host([selected])::before { content: ""; position: absolute; left: 0px; top: 0px; bottom: 0px; width: 3px; background-color: var(--udex-list-item-border-color-selected); }
+:host([selected]:dir(rtl))::before { left: auto; right: 0px; }
+:host([disabled]:not([mode="SingleContent"])) { opacity: var(--udex-list-item-disabled-opacity); pointer-events: none; }
+:host(:not([disabled]):not([mode="SingleContent"])) { cursor: pointer; }
+:host([active]) .udex-list__supporting-text { color: var(--udex-list-item-supporting-text-color-active); }
+:host([active][selected]) { background: var(--udex-list-item-background-active); }
+:host([_aria-selected]:not([mode="SingleContent"])), :host(:not([disabled]):not([selected]):not([mode="SingleContent"]):hover) { background: var(--udex-list-item-background-hover); color: var(--udex-list-item-color-hover); }
+:host([_aria-selected][selected]:not([mode="SingleContent"])) { background: var(--udex-list-item-background-selected-hover); }
+:host(:not([mode="SingleContent"]):not([disabled])[desktop]) .udex-list__item:focus::before, :host(:not([mode="SingleContent"]):not([disabled])) .udex-list__item:focus-visible::before { content: ""; position: absolute; inset: 4px 4px 4px 6px; outline: var(--udexRadiusXXS) solid var(--udex-list-item-outline-border-color); border-radius: var(--udexRadiusM, 8px); pointer-events: none; }
+:host([active]:not([mode="SingleContent"]):not([disabled])[desktop]:focus) { background: var(--udex-list-item-background-active); border-color: var(--udex-list-item-border-color-active); color: var(--udex-list-item-color-active); }
+:host(:not([disabled]):hover) .udex-list__supporting-text { color: var(--udex-list-item-supporting-text-color-hover); }
+:host([selected]:not([mode="SingleContent"])) { background: var(--udex-list-item-background-selected); color: var(--udex-list-item-color-selected); }
+:host(:hover[selected]:not([disabled]):not([mode="SingleContent"])) { background: var(--udex-list-item-background-selected-hover); }
+:host([selected]) .udex-list__supporting-text { color: var(--udex-list-item-supporting-text-color-selected); }
+:host([divider]) { border-color: var(--udex-list-item-divider-border-color); }
+:host([divider]):hover { border-color: var(--udex-list-item-divider-border-color-hover); }
+:host([additional-text-state="Success"])::part(additional-text) { color: var(--udexColorGreen9, #1E592F); }
+:host([additional-text-state="Error"])::part(additional-text) { color: var(--udexColorRed9, #840606); }
+:host([additional-text-state="Information"])::part(additional-text) { color: var(--udexColorBlue9, #0040B0); }
+:host([additional-text-state="Warning"])::part(additional-text) { color: var(--udexColorMango9, #8D2A00); }
+:host::part(checkbox), :host::part(radio) { padding-inline-end: var(--udexSpacer12, 12px); }
+:host::part(checkbox) { min-width: 24px; }
+:host::part(radio) { min-width: 42px; }
+:host([mode="SingleContent"])::part(item) { padding: var(--udexSpacer4, 4px) 0; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; }
+:host([mode="SingleContent"])::part(avatar) { padding-inline-start: var(--udexSpacer12, 12px); }
+:host::part(additional-text) { margin-inline-start: 0px; margin-inline-end: var(--udexSpacer12, 12px); }
+:host([mode="SingleContent"])::part(button) { padding: 0px; }
+:host(.udex-list__sticky) { position: absolute; top: 0px; right: 12px; left: 0px; z-index: 1; border-radius: var(--udexRadiusM, 8px) 0 0; }
+::slotted([udex-list]) { padding-top: var(--udexSpacer12, 12px); display: block; }
+::slotted(b) { display: inherit; }
+::slotted([udex-button]:hover:not([active])) { background-color: var(--udex-button-color-tertiary-standard-default-background); }
+.udex-list__item:focus-visible { outline: none; }
+.udex-list__item { padding-top: var(--udex-list-item-padding-top); padding-bottom: var(--udex-list-item-padding-bottom); padding-inline-start: var(--udex-list-item-padding-inline-start); padding-inline-end: var(--udex-list-item-padding-inline-end); display: flex; align-items: center; }
+.udex-list__content-wrap { display: flex; width: 100%; }
+.udex-list__btn-wrap { display: flex; gap: var(--udexSpacer8, 8px); }
+.udex-list__number { margin-inline-end: var(--udexSpacer8, 8px); }
+.udex-list__circle { display: block; min-width: 20px; height: 22px; position: relative; }
+.udex-list__supporting-text { font-family: var(--sapFontFamily, sans-serif); font-size: var(--udexTypographyBodyXSFontSize, 14px); line-height: var(--udexTypographyBodyLineHeight, 21px); font-weight: var(--udexTypographyFontWeightRegular, 400); color: var(--udex-list-item-supporting-text-color-default); padding-top: var(--udexSpacer2, 2px); }
+.udex-list__content { display: flex; align-items: center; flex: 1 1 auto; }
+.udex-list__text-holder { display: flex; flex-direction: column; flex-basis: 100%; }
+.udex-list__add-text { font-size: var(--udexTypographyBodyXSFontSize, 14px); line-height: var(--udexTypographyHeadingLineHeight, 21px); padding-inline-start: var(--udexSpacer12, 12px); white-space: nowrap; font-weight: var(--udex-list-item-additional-text-font-weight); }
+.udex-list__icon { margin-inline-end: var(--udexSpacer8, 8px); padding-top: 2px; min-width: 18px; height: 18px; }
+.udex-list__avatar { display: flex; align-items: center; margin-inline-end: var(--udexSpacer8, 8px); }
+.udex-list__item.udex-list__sticky.udex-list__item_controlled .udex-list__checkbox, .udex-list__item.udex-searchable-list__header.udex-list__item_controlled .udex-list__checkbox, .udex-list__item .udex-list__radio, .udex-list__item .udex-list__checkbox { pointer-events: none; min-width: auto; }
+.udex-list__item.udex-list__item_controlled .udex-list__radio, .udex-list__item.udex-list__item_controlled .udex-list__checkbox { pointer-events: auto; }
+.udex-list__radio { --udex-radio-button-outer-ring-padding: 0; }
+.udex-list__item_large { font-size: var(--udexTypographyBodyLFontSize, 20px); line-height: var(--udexTypographyHeadingLineHeight, 22px); font-weight: var(--udexTypographyFontWeightMedium, 500); }
+.udex-list__item_large .udex-list__supporting-text { font-size: var(--udexTypographyBodySFontSize, 16px); line-height: var(--udexTypographyBodyLineHeight, 24px); }
+.udex-list__flag-wrap { min-width: 30px; margin-inline-end: var(--udexSpacer12, 12px); position: relative; }
+.udex-list__flag { background-image: url("https://cdn.udex.services.sap.com/dds/design-tokens/assets/country_flag_iso3166.webp"); width: 30px; height: 20px; margin-inline-end: var(--udexSpacer12, 12px); position: absolute; top: 50%; transform: translateY(-50%); }
+.hidden { display: none; }
+.udex-list__group-heading__icon { transform: rotate(-90deg); height: 18px; width: 18px; color: inherit; cursor: pointer; --udex-button-icon-s-size: 18px; }
+.udex-list__group-heading__icon-wrapper { height: 24px; width: 24px; display: flex; justify-content: center; align-items: center; }
+:host([collapsed]) .udex-list__group-heading__icon, :host(:dir(rtl)) .udex-list__group-heading__icon { transform: rotate(90deg); }
+:host([collapsed]:dir(rtl)) .udex-list__group-heading__icon { transform: rotate(-90deg); }
+[udex-rating-indicator] { --udex_rating_indicator_disabled_opacity: 1; pointer-events: none; }

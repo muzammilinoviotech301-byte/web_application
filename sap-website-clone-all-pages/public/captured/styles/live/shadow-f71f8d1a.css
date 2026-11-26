@@ -1,0 +1,43 @@
+:host { --udex-filter-menu-trigger-color-default: var(--sapTextColor, #223548); --udex-filter-menu-trigger-color-hover: var(--sapHoverColor, #0070f2); --udex-filter-menu-trigger-color-active: var(--sapShell_Active_TextColor, #0040b0); --udex-filter-menu-trigger-color-disabled: var(--sapTextColor, #223548); --udex-filter-menu-trigger-icon-default: var(--sapContent_IconColor, #223548); --udex-filter-menu-trigger-icon-hover: var(--sapHoverColor, #0070f2); --udex-filter-menu-trigger-icon-active: var(--sapSelectedColor, #0040b0); --udex-filter-menu-trigger-icon-disabled: var(--sapContent_IconColor, #223548); --udex-filter-menu-trigger-prefix-color-default: var(--sapShell_NeutralColor, #475e75); --udex-filter-menu-trigger-prefix-color-hover: var(--sapShell_NeutralColor, #475e75); --udex-filter-menu-trigger-prefix-color-active: var(--sapShell_NeutralColor, #475e75); --udex-filter-menu-trigger-prefix-color-disabled: var(--sapShell_NeutralColor, #475e75); --udex-filter-menu-trigger-selection-bar-background: var(--sapHoverColor, #0070f2); --udex-filter-menu-trigger-outline-border-color: var(--udexColorBlue10, #002A86); --udex-filter-menu-popover-left-offset: 0px; --udex-filter-menu-popover-min-width-xs: calc(100% - var(--udex-filter-menu-popover-left-offset)); --udex-filter-menu-popover-max-width-xs: 100%; --udex-filter-menu-popover-width: fit-content; --udex-filter-menu-popover-min-width: 320px; --udex-filter-menu-popover-max-width: 640px; --udex-filter-menu-popover-shadow: var(--sapContent_Shadow1, 0px 2px 8px 0px rgba(34,54,73,.3)); --udex-filter-menu-popover-border-color: var(--sapField_BorderColor, var(--udexCoreBorderDefault)); --udex-filter-menu-popover-border-width: var(--sapElement_BorderWidth, 1px); --udex-filter-menu-popover-border-radius: var(--udexRadiusM, 8px); display: inline-block; }
+:host([desktop]) .udex-filter-menu__trigger:focus, .udex-filter-menu__trigger:focus-visible { outline: 2px solid var(--udex-filter-menu-trigger-outline-border-color); outline-offset: var(--udexSpacer2, 2px); border-radius: var(--udexRadiusM, 8px); }
+.udex-filter-menu__trigger { font-family: var(--sapFontFamily); font-weight: var(--udexTypographyFontWeightRegular, 400); font-size: var(--udexTypographyBodyXSFontSize, 14px); line-height: var(--udexTypographyBodyLineHeight, 1.5); display: inline-flex; align-items: center; padding: 5px 0px; position: relative; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; }
+.udex-filter-menu__trigger-wrap { cursor: pointer; display: inline-flex; align-items: center; }
+.udex-filter-menu__trigger-wrap[disabled] { pointer-events: none; }
+.udex-filter-menu__trigger-wrap[disabled]:hover .udex-filter-menu__trigger-name, .udex-filter-menu__trigger-wrap[disabled] .udex-filter-menu__trigger-name { color: var(--udex-filter-menu-trigger-color-disabled); opacity: var(--sapContent_DisabledOpacity, .4); }
+.udex-filter-menu__trigger-wrap[disabled] .udex-filter-menu__trigger-prefix { color: var(--udex-filter-menu-trigger-prefix-color-disabled); }
+.udex-filter-menu__trigger-wrap[disabled]:hover .udex-filter-menu__trigger-icon, .udex-filter-menu__trigger-wrap[disabled] .udex-filter-menu__trigger-icon { color: var(--udex-filter-menu-trigger-icon-disabled); opacity: var(--sapContent_DisabledOpacity, .4); }
+.udex-filter-menu__trigger-prefix { margin-right: var(--udexSpacer8, 8px); color: var(--udex-filter-menu-trigger-prefix-color-default); }
+.udex-filter-menu__trigger-wrap:hover .udex-filter-menu__trigger-prefix { color: var(--udex-filter-menu-trigger-prefix-color-hover); }
+.udex-filter-menu__trigger-name { color: var(--udex-filter-menu-trigger-color-default); }
+.udex-filter-menu__trigger::before { content: ""; position: absolute; bottom: 0px; left: 0px; right: 0px; height: 3px; border-radius: 2px 2px 0px; background: var(--udex-filter-menu-trigger-selection-bar-background); opacity: 0; }
+.udex-filter-menu__trigger-active .udex-filter-menu__trigger-prefix { color: var(--udex-filter-menu-trigger-prefix-color-active); }
+.udex-filter-menu__trigger-active::before { opacity: 1; }
+.udex-filter-menu__trigger-icon { width: 16px; height: 16px; margin-inline-start: var(--udexSpacer8, 8px); color: var(--udex-filter-menu-trigger-icon-default); }
+.udex-filter-menu__trigger-wrap:hover .udex-filter-menu__trigger-name { color: var(--udex-filter-menu-trigger-color-hover); }
+.udex-filter-menu__trigger-wrap:hover .udex-filter-menu__trigger-icon { color: var(--udex-filter-menu-trigger-icon-hover); }
+.udex-filter-menu__trigger-active .udex-filter-menu__trigger-icon { transform: rotate(180deg); color: var(--udex-filter-menu-trigger-icon-active); }
+.udex-filter-menu__trigger-active .udex-filter-menu__trigger-name { color: var(--udex-filter-menu-trigger-color-active); }
+.udex-filter-menu__search { width: 100%; }
+.udex-filter-menu__footer { width: 100%; display: flex; gap: 10px; }
+.udex-filter-menu__badge { margin-inline-start: var(--udexSpacer4, 4px); }
+[ui5-popover] { border: var(--udex-filter-menu-popover-border-width) solid var(--udex-filter-menu-popover-border-color); border-radius: var(--udex-filter-menu-popover-border-radius); box-shadow: var(--udex-filter-menu-popover-shadow); min-width: var(--udex-filter-menu-popover-min-width); max-width: var(--udex-filter-menu-popover-max-width); width: var(--udex-filter-menu-popover-width); }
+[ui5-popover]::part(content) { padding: 0px; overflow: auto; }
+[ui5-popover]::part(header), [ui5-popover]::part(footer) { padding: var(--udexSpacer16, 16px) var(--udexSpacer12, 12px); }
+[ui5-popover]::part(footer) { justify-content: flex-start; border-color: var(--sapField_BorderColor, var(--udexCoreBorderDefault)); box-shadow: var(--sapContent_Shadow1, 0px 2px 8px 0px rgba(34,54,73,.3)); }
+::slotted([slot="header"]) { width: 100%; }
+.udex-no-result { font-family: var(--sapFontFamily); font-weight: var(--udexTypographyFontWeightRegular, 400); font-size: var(--udexTypographyBodyXSFontSize, 14px); line-height: var(--udexTypographyBodyLineHeight, 1.5); color: var(--sapContent_TitleColor, #000000); padding: 0 var(--udexSpacer16, 16px) var(--udexSpacer16, 16px); }
+@media (width < 640px) {
+  [ui5-popover] { min-width: var(--udex-filter-menu-popover-min-width-xs); max-width: var(--udex-filter-menu-popover-max-width-xs); }
+}
+:host([prevent-page-scroll]) [ui5-popover]::part(content) { overscroll-behavior: contain; }
+:host::part(checkbox) { pointer-events: none; }
+.udex-searchable-list__header { display: block; margin-top: var(--udexSpacer16, 16px); }
+.udex-searchable-list__header:only-child, .udex-searchable-list__header.udex-searchable-list__header_no-margin { margin-top: 0px; }
+.udex-busy-indicator { padding-block: var(--udexSpacer16, 16px); margin: 0px auto; display: block; }
+.udex-filter-menu__search + .udex-busy-indicator { padding-top: 0px; }
+.hidden { position: absolute; width: 0px; height: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); border: 0px; padding: 0px; }
+::part(content)::-webkit-scrollbar:vertical, ::-webkit-scrollbar:vertical { width: calc(var(--sapScrollBar_Dimension) + 4px); }
+::part(content)::-webkit-scrollbar, ::-webkit-scrollbar { background-color: var(--sapScrollBar_TrackColor); border-left-width: medium; border-left-style: none; border-left-color: currentcolor; }
+::part(content)::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb { background-color: var(--sapScrollBar_FaceColor); border: 4px solid var(--sapScrollBar_TrackColor); border-radius: 8px; }
+::part(content)::-webkit-scrollbar-thumb:hover, ::-webkit-scrollbar-thumb:hover { border: 2px solid var(--sapScrollBar_TrackColor); background-color: var(--sapScrollBar_Hover_FaceColor); }
+::part(content)::-webkit-scrollbar-corner, ::-webkit-scrollbar-corner { background-color: var(--sapScrollBar_TrackColor); }

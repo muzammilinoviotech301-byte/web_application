@@ -1,0 +1,3 @@
+:host { --udex-divider-color: var(--udexColorGrey3, #D5DADD); --udex-divider-padding: var(--udexSpacer2) 0; --udex-divider-transition: none; }
+.udex-divider { transition: var(--udex-divider-transition); border-top: 1px solid var(--udex-divider-color); display: block; }
+.udex-divider-wrapper { padding: var(--udex-divider-padding); }

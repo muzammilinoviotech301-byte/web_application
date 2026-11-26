@@ -1,0 +1,2 @@
+/* scoped-for-clone v2 */
+.link-list:is(.captured-body, .captured-body *) udex-link-list{--udex-link-list-columns-s:1;--udex-link-list-columns-m:2}.link-list:is(.captured-body, .captured-body *) udex-link-list[type=TileS]{--udex-link-list-columns-l:3;--udex-link-list-columns-xl:3}

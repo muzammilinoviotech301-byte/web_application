@@ -1,0 +1,11 @@
+:host { --udex-table-cell-sticky-shadow: 0 4px 8px rgba(34,54,73,.3); }
+:host { display: flex; align-items: center; box-sizing: border-box; border-bottom-width: 1px; border-bottom-style: solid; position: relative; word-break: break-word; }
+:host([_sticky]) { position: sticky; left: 0px; z-index: 1; }
+:host([_sticky]:dir(rtl)) { right: 0px; }
+:host([_horizontal-offset]) { box-shadow: var(--udex-table-cell-sticky-shadow); }
+:host { --udex-table-header-cell-color: var(--udexColorGrey9, #223548); --udex-table-header-cell-border-color: var(--sapList_HeaderBorderColor, var(--udexColorGrey4, #a9b4be )); --udex-table-header-cell-padding: var(--udexSpacer12, 12px) var(--udexSpacer16, 16px); --udex-table-header-cell-background: var(--sapList_HeaderBackground, var(--udexCoreBase, #fff )); --udex-table-header-cell-highlighted-border-color: var(--sapIndicationColor_9_Selected_BorderColor, var(--udexColorBlue9, #0040B0)); --udex-table-header-cell-icon-width: 18px; --udex-table-header-cell-icon-height: 18px; --udex-table-header-cell-line-height: 18px; }
+:host { font-family: var(--sapFontFamily); font-size: var(--udexTypographyNavigationMediumXLFontSize); line-height: var(--udex-table-header-cell-line-height); font-weight: var(--udexTypographyFontWeightMedium); border-color: var(--udex-table-header-cell-border-color); padding: var(--udex-table-header-cell-padding); background: var(--udex-table-header-cell-background); color: var(--udex-table-header-cell-color); position: relative; }
+:host([highlighted]) { border-color: var(--udex-table-header-cell-highlighted-border-color); }
+:host([highlighted])::before { content: ""; position: absolute; left: 0px; right: 0px; bottom: 0px; height: 1px; background: var(--udex-table-header-cell-highlighted-border-color); }
+.udex-table-header-cell-wrap { display: flex; align-items: center; gap: var(--udexSpacer8); }
+.udex-table-header-cell-wrap__icon { color: var(--udex-table-header-cell-color); min-width: var(--udex-table-header-cell-icon-width); height: var(--udex-table-header-cell-icon-height); }

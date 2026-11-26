@@ -1,0 +1,49 @@
+.ui5-hidden-text { position: absolute; clip: rect(1px, 1px, 1px, 1px); user-select: none; left: -1000px; top: -1000px; pointer-events: none; font-size: 0px; }
+:host(:not([hidden])) { display: inline-flex; }
+:host { max-width: 100%; color: var(--sapLinkColor); font-family: var(--sapFontFamily); font-size: var(--sapFontSize); cursor: pointer; outline: none; text-decoration: var(--_ui5_link_text_decoration); text-shadow: var(--sapContent_TextShadow); white-space: normal; overflow-wrap: break-word; }
+:host(:hover) { color: var(--sapLink_Hover_Color); text-decoration: var(--_ui5_link_hover_text_decoration); }
+:host(:active) { color: var(--sapLink_Active_Color); text-decoration: var(--_ui5_link_active_text_decoration); }
+:host([disabled]) { pointer-events: none; }
+:host([disabled]) .ui5-link-root { text-shadow: none; outline: none; cursor: default; pointer-events: none; opacity: var(--sapContent_DisabledOpacity); }
+:host([design="Emphasized"]) .ui5-link-root { font-family: var(--sapFontBoldFamily); }
+:host([design="Subtle"]) { color: var(--sapLink_SubtleColor); text-decoration: var(--_ui5_link_subtle_text_decoration); }
+:host([design="Subtle"]:hover:not(:active)) { color: var(--sapLink_SubtleColor); text-decoration: var(--_ui5_link_subtle_text_decoration_hover); }
+:host([wrapping-type="None"]) { white-space: nowrap; overflow-wrap: normal; }
+.ui5-link-root { max-width: 100%; display: inline-block; position: relative; overflow: hidden; text-overflow: ellipsis; outline: none; white-space: inherit; overflow-wrap: inherit; text-decoration: inherit; color: inherit; }
+:host([wrapping-type="None"][end-icon]) .ui5-link-root { display: inline-flex; align-items: end; }
+:host .ui5-link-root { outline-offset: -0.0625rem; border-radius: var(--_ui5_link_focus_border-radius); }
+.ui5-link-icon, .ui5-link-end-icon { color: inherit; flex-shrink: 0; }
+.ui5-link-icon { float: inline-start; margin-inline-end: 0.125rem; }
+.ui5-link-end-icon { margin-inline-start: 0.125rem; vertical-align: bottom; }
+.ui5-link-text { overflow: hidden; text-overflow: ellipsis; }
+.ui5-link-root:focus-visible, :host([desktop]) .ui5-link-root:focus-within, :host([design="Subtle"]) .ui5-link-root:focus-visible, :host([design="Subtle"][desktop]) .ui5-link-root:focus-within { background-color: var(--_ui5_link_focus_background_color); outline: var(--_ui5_link_outline); border-radius: var(--_ui5_link_focus_border-radius); text-shadow: none; color: var(--_ui5_link_focus_color); }
+:host(:not([desktop])) .ui5-link-root:focus-visible, :host([desktop]:focus-within), :host([design="Subtle"][desktop]:focus-within) { text-decoration: var(--_ui5_link_focus_text_decoration); }
+:host([desktop]:hover:not(:active):focus-within), :host([design="Subtle"][desktop]:hover:not(:active):focus-within) { color: var(--_ui5_link_focused_hover_text_color); text-decoration: var(--_ui5_link_focused_hover_text_decoration); }
+:host([interactive-area-size="Large"]) .ui5-link-root { line-height: var(--_ui5_link_large_interactive_area_height); }
+:host([interactive-area-size="Large"])::part(icon), :host([interactive-area-size="Large"])::part(endIcon) { height: var(--_ui5_link_large_interactive_area_height); }
+:host { --udex-link-font-size: var(--sapFontSize); --udex-link-text-decoration: underline; --udex-link-hover-text-decoration: underline; --udex-link-focused-hover-text-decoration: underline; --udex-link-focus-text-decoration: underline; --udex-link-focus-outline-offset: var(--udexLinkOutlineOffset, 0px); --udex-link-focus-border-radius: var(--udexLinkOutlineRadius, 2px); --udex-link-emphasized-text-decoration: none; --udex-link-icon-height: 16px; --udex-link-line-height: var(--udexTypographyBodyLineHeight, 1.5); --udex-link-color: var(--udexColorBlue8); --udex-link-hover-color: var(--udexColorBlue10); --udex-link-active-color: var(--udexColorBlue11); --udex-link-icon-width: 16px; --udex-link-white-space: break-spaces; --udex-link-subtle-color: var(--udexColorGrey8, #354A5F); --udex-link-subtle-hover-color: var(--udexColorGrey11, #12171C); --udex-link-subtle-active-color: var(--udexColorBlue9, #0040B0); --udex-link-subtle-visited-color: var(--udexColorGrey8, #354A5F); --udex-link-focus-background-color: transparent; --udex-link-focus-color: inherit; white-space: normal; }
+:host([desktop]:hover:not(:active):focus-within), :host([design="Subtle"][desktop]:hover:not(:active):focus-within), :host([desktop]:focus-within), :host(:focus-visible), :host(:hover) { color: var(--udex-link-hover-color); }
+:host(:hover) { text-decoration: none; }
+:host(:active) { color: var(--udex-link-active-color); }
+:host, :host(:visited) { color: var(--udex-link-color); font-size: var(--udex-link-font-size); }
+:host([end-icon]) .ui5-link-text { white-space: var(--udex-link-white-space); margin-inline-end: var(--udexSpacer20); }
+:host([design="Emphasized"]) { font-weight: var(--udexTypographyFontWeightBold); }
+:host([design="Subtle"]) { color: var(--udex-link-subtle-color); }
+:host([design="Subtle"][focused]), :host([design="Subtle"]:hover:not(:active)) { color: var(--udex-link-subtle-hover-color); }
+:host([design="Subtle"]:active) { color: var(--udex-link-subtle-active-color); }
+:host([design="Subtle"]:visited) { color: var(--udex-link-subtle-visited-color); }
+:host([design="Subtle"]) .ui5-link-root:hover { text-decoration: var(--udex-link-hover-text-decoration); }
+.ui5-link-root { display: inline-block; overflow: visible; line-height: var(--udex-link-line-height); }
+[ui5-link][disabled] .linkIcon { opacity: inherit; }
+.ui5-link-root slot { text-decoration: var(--udex-link-text-decoration); display: inline; }
+.ui5-link-root:hover slot { text-decoration: var(--udex-link-hover-text-decoration); }
+:host(:not([desktop])) .ui5-link-root:focus-visible, :host([design="Emphasized"][desktop]:focus-within), :host([design="Emphasized"][desktop]:hover:not(:active):focus-within), :host([design="Emphasized"]:active), :host([desktop][design="Emphasized"]:active), :host([desktop][design="Emphasized"]:active:hover), :host([design="Emphasized"]) slot, :host([design="Emphasized"]:hover) slot, :host([design="Emphasized"][desktop]:hover) slot, :host([end-icon]) slot, :host([icon]) slot { text-decoration: var(--udex-link-emphasized-text-decoration); }
+:host(:hover) slot { text-decoration: var(--udex-link-hover-text-decoration); }
+[ui5-icon] { width: var(--udex-link-icon-width); height: var(--udex-link-icon-height); }
+:host([desktop]:hover:active), :host([desktop]:active) { text-decoration: var(--udex-link-focus-text-decoration); }
+:host .ui5-link-root { outline-offset: var(--udex-link-focus-outline-offset); }
+:host([design="Subtle"][desktop]) .ui5-link-root:focus-within, :host([desktop]) .ui5-link-root:focus-within, :host .ui5-link-root:focus-visible { outline: var(--sapContent_FocusColor, #002A86) var(--sapContent_FocusStyle, "solid") var(--sapContent_FocusWidth, .125rem); border-radius: var(--udex-link-focus-border-radius); }
+.ui5-link-root:focus-visible, :host([desktop]) .ui5-link-root:focus-within, :host([design="Subtle"]) .ui5-link-root:focus-visible, :host([design="Subtle"][desktop]) .ui5-link-root:focus-within { background-color: var(--udex-link-focus-background-color); }
+[ui5-link], .ui5-link-icon, .ui5-link-root:active .ui5-link-icon, .ui5-link-root:focus-visible, :host([desktop]) .ui5-link-root:focus-within, :host([design="Subtle"]) .ui5-link-root:focus-visible, :host([design="Subtle"][desktop]) .ui5-link-root:focus-within { color: var(--udex-link-focus-color); }
+.ui5-link-icon { margin-inline-end: 0px; padding-inline-end: var(--udexSpacer4, 4px); float: none; vertical-align: text-bottom; }
+.ui5-link-end-icon { margin-inline-start: calc(var(--udexSpacer20)* -1); padding-inline-start: var(--udexSpacer4, 4px); vertical-align: text-bottom; }

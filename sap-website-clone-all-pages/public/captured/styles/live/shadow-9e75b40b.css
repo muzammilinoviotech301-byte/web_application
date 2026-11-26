@@ -1,0 +1,5 @@
+:host { --udex-tooltip-background-color: var(--udexColorNeutralWhite, #FFF); --udex-tooltip-border-color: var(--udexColorGrey4, var(--udexColorGrey4)); --udex-tooltip-box-shadow: var(--sapContent_Shadow0, 0 2px 4px 0 rgba(34, 54, 72, .2)); --udex-tooltip-max-width: 360px; }
+[ui5-popover] { --_ui5_popover_box_shadow: 0 0 0 1px var(--udexColorGrey4); }
+:host { font-family: var(--sapFontFamily, sans-serif); font-size: var(--udexTypographyBodySFontSize , var(--sapFontSize, 16px)); color: var(--udexColorGrey9, #223548); }
+.udex-tooltip__pane { border: var(--sapElement_BorderWidth, 1px) solid var(--udex-tooltip-border-color); box-shadow: var(--udex-tooltip-box-shadow); border-radius: var(--sapPopover_BorderCornerRadius, 8px); background: var(--udex-tooltip-background-color); max-width: var(--udex-tooltip-max-width); }
+.udex-tooltip-title { font-size: var(--udexTypographyHeadingMediumXXXSFontSize, 18px); font-weight: var(--udexTypographyFontWeightMedium, 500); padding-bottom: var(--udexSpacer8, 8px); }

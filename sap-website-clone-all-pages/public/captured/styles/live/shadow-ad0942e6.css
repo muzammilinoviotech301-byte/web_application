@@ -1,0 +1,9 @@
+:host { --udex-rating-bar-progress-color: var(--udexColorMango6, #E76500); --udex-rating-bar-progress-track-color: var(--udexColorGrey1, #F5F6F7); --udex-rating-bar-text-color: var(--udexColorGrey9, #223548); --udex-rating-bar-text-percentage-color: var(--udexColorGrey7, #475E75); --udex-rating-bar-container-height: 1.5rem; --udex-rating-bar-progress: 100%; --udex-rating-bar-track-height: .75rem; --udex-rating-bar-progress-radius: var(--udexRadiusM, .5rem); }
+.udex-rating-bar__container { display: flex; flex-direction: row; align-items: center; gap: var(--udexSpacer4); height: var(--udex-rating-bar-container-height); font-family: var(--sapFontFamily, sans-serif); }
+.udex-rating-bar__percentage, .udex-rating-bar__rating { font-size: var(--udexTypographyBodySFontSize); font-weight: var(--udexTypographyFontWeightRegular); line-height: var(--udexTypographyBodyLineHeight); }
+.udex-rating-bar__rating { color: var(--udex-rating-bar-text-color); }
+.udex-rating-bar__percentage { color: var(--udex-rating-bar-text-percentage-color); }
+.udex-rating-bar__track { width: 100%; height: var(--udex-rating-bar-track-height); background-color: var(--udex-rating-bar-progress-track-color); border-width: medium; border-style: none; border-color: currentcolor; border-image: none; overflow: hidden; border-radius: var(--udex-rating-bar-progress-radius); }
+.udex-rating-bar__progress { width: var(--udex-rating-bar-progress); height: 100%; background-color: var(--udex-rating-bar-progress-color); border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: var(--udex-rating-bar-progress-radius); }
+.udex-rating-bar__icon { height: 0.875rem; width: 0.875rem; color: var(--udexColorMango6); }
+.hidden-text { display: none; }

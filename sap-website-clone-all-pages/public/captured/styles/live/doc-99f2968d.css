@@ -1,0 +1,11 @@
+/* scoped-for-clone v2 */
+
+      .video-js:is(.captured-body, .captured-body *) {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid:not(.vjs-audio-only-mode):is(.captured-body, .captured-body *) {
+        padding-top: 56.25%
+      }
+    

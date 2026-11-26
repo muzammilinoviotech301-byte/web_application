@@ -1,0 +1,166 @@
+/* Live account sections (catalog cards, lists, cart), feature notices and
+   the admin panel. Built on the existing .account-* SAP dashboard styles. */
+
+/* ---- Catalog cards ------------------------------------------------------ */
+.live-card { min-height: 210px; }
+.live-card:hover { border-color: var(--sap-line); box-shadow: 0 6px 18px rgba(29, 45, 62, .08); }
+.live-card .account-card-top { align-items: center; margin-bottom: 10px; }
+.live-eyebrow {
+  font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #5b738b;
+}
+.live-badge {
+  width: auto; min-width: 0; height: auto; padding: 3px 9px; border-radius: 12px;
+  background: #ebf5fe; color: #0057d2; font-size: 12px; font-weight: 600;
+}
+.live-card h3 a, .live-card h3 span { color: var(--sap-ink); text-decoration: none; }
+.live-card h3 a:hover { color: var(--sap-blue); text-decoration: underline; }
+.live-card p { margin-bottom: 10px; }
+.live-meta { font-size: 13px !important; color: #223548 !important; }
+.live-price { font-size: 20px !important; font-weight: 700; color: var(--sap-ink) !important; }
+.live-price small { font-size: 13px; font-weight: 400; color: #5b738b; }
+.live-actions {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  margin-top: auto; padding-top: 8px;
+}
+.live-btn { min-height: 36px; padding: 0 14px; font-size: 14px; }
+.live-done { font-size: 14px; font-weight: 700; color: #188918; }
+.live-save {
+  display: inline-flex; align-items: center; gap: 6px; padding: 6px 8px;
+  border: 0; border-radius: 6px; background: none; color: var(--sap-blue);
+  font: 600 14px/1 var(--font); cursor: pointer;
+}
+.live-save:hover { background: #ebf5fe; }
+.live-save.is-saved { color: #0040b0; }
+
+.live-toolbar { display: flex; justify-content: flex-end; margin: -8px 0 16px; }
+.live-search { width: 280px; max-width: 100%; height: 38px; }
+.live-empty { padding: 28px 24px; color: #5b738b; font-size: 15px; }
+.live-empty a { color: var(--sap-blue); font-weight: 600; }
+.live-note { font-size: 13px; color: #5b738b; }
+
+/* ---- Status pills ---------------------------------------------------------- */
+.live-status {
+  display: inline-block; padding: 3px 10px; border-radius: 12px;
+  background: #eef1f4; color: #354a5f; font-size: 12px; font-weight: 700; text-transform: capitalize;
+}
+.live-status-active, .live-status-registered { background: #f1fdf6; color: #188918; }
+.live-status-completed { background: #ebf5fe; color: #0057d2; }
+.live-status-recommended { background: #fff8d6; color: #845b00; }
+.live-cap { text-transform: capitalize; }
+.live-row-actions { white-space: nowrap; text-align: right; }
+.live-row-actions .account-inline-button + .account-inline-button { margin-left: 12px; }
+
+/* ---- Lists (recently viewed, saved) -------------------------------------- */
+.live-list { margin: 0; padding: 0; list-style: none; }
+.live-list li {
+  display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 16px;
+  padding: 14px 20px; border-bottom: 1px solid var(--sap-line);
+}
+.live-list li:last-child { border-bottom: 0; }
+.live-list a { color: var(--sap-blue); font-weight: 600; text-decoration: none; }
+.live-list a:hover { text-decoration: underline; }
+.live-list small { color: #5b738b; font-size: 13px; }
+
+/* ---- Inbox ---------------------------------------------------------------- */
+.live-message { border-bottom: 1px solid var(--sap-line); }
+.live-message:last-child { border-bottom: 0; }
+.live-message-head {
+  width: 100%; border: 0; background: none; text-align: left; font: inherit; cursor: pointer;
+}
+.live-message-head:hover { background: #f5f6f7; }
+.live-message.is-open .live-message-head { background: #f5faff; }
+.live-message-body { padding: 4px 20px 18px 44px; font-size: 14px; color: #223548; }
+.live-message-body p { margin: 0 0 8px; }
+
+/* ---- Cart ---------------------------------------------------------------- */
+.live-qty { width: 84px; height: 36px; }
+.live-cart tfoot td { border-top: 2px solid var(--sap-line); padding-top: 14px; }
+
+/* ---- Feature notice (features only SAP can provide) ------------------------- */
+.feature-notice {
+  display: flex; gap: 14px; padding: 18px 20px;
+  border: 1px solid #b8d6ff; border-left: 4px solid #0070f2; border-radius: 8px;
+  background: #f5faff; color: #223548;
+}
+.feature-notice svg { flex: 0 0 auto; color: #0070f2; margin-top: 1px; }
+.feature-notice strong { display: block; margin-bottom: 6px; font-size: 16px; color: var(--sap-ink); }
+.feature-notice p { margin: 0 0 8px; font-size: 14px; line-height: 1.5; }
+.feature-notice a { color: var(--sap-blue); font-weight: 600; font-size: 14px; }
+
+/* ---- Admin panel ------------------------------------------------------------ */
+.admin-shell {
+  width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 40px 0 80px;
+  font-family: var(--font); color: #223548;
+}
+.admin-shell h1 { margin: 4px 0 24px; font-size: 32px; font-weight: 700; color: var(--sap-ink); letter-spacing: normal; }
+.admin-shell .eyebrow { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #5b738b; }
+.admin-tabs, .admin-kinds {
+  display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 20px; border-bottom: 1px solid var(--sap-line);
+}
+.admin-tabs button, .admin-kinds button {
+  padding: 10px 14px; border: 0; border-bottom: 3px solid transparent; background: none;
+  color: #354a5f; font: 600 15px/1 var(--font); cursor: pointer;
+}
+.admin-kinds { border-bottom: 0; gap: 8px; margin-bottom: 8px; }
+.admin-kinds button {
+  border: 1px solid var(--sap-line); border-radius: 18px; padding: 8px 14px; font-size: 14px;
+}
+.admin-kinds button span { margin-left: 4px; color: #5b738b; font-weight: 400; }
+.admin-tabs button.is-active { border-bottom-color: #0070f2; color: #0057d2; }
+.admin-kinds button.is-active { border-color: #0070f2; background: #ebf5fe; color: #0057d2; }
+.admin-hint { margin: 4px 0 16px; font-size: 14px; color: #5b738b; }
+.admin-hint code, .admin-shell code { padding: 1px 5px; border-radius: 4px; background: #eef1f4; font-size: 13px; }
+.admin-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 12px 0; }
+.admin-form {
+  margin: 0 0 20px; padding: 20px 24px; border: 1px solid var(--sap-line); border-radius: 12px; background: #fff;
+}
+.admin-form h3 { margin: 0 0 16px; font-size: 18px; color: var(--sap-ink); }
+.admin-inline { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px; }
+.admin-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 20px; }
+.admin-field { display: flex; flex-direction: column; gap: 6px; font-size: 14px; }
+.admin-field > span { font-weight: 600; color: #354a5f; }
+.admin-field-wide { grid-column: 1 / -1; }
+.admin-field input, .admin-field textarea, .admin-field select {
+  width: 100%; padding: 9px 11px; border: 1px solid #758ca4; border-radius: 6px;
+  background: #fff; color: #223548; font: 400 14px/1.4 var(--font);
+}
+.admin-field input:focus, .admin-field textarea:focus, .admin-field select:focus {
+  outline: none; border-color: #0070f2; box-shadow: 0 0 0 1px #0070f2;
+}
+.admin-check { flex-direction: row; align-items: center; gap: 8px; }
+.admin-check input { width: 18px; height: 18px; }
+.admin-code { font-family: Consolas, "Courier New", monospace !important; font-size: 13px !important; }
+.admin-code-block {
+  padding: 12px 14px; border-radius: 8px; background: #1d2d3e; color: #fff;
+  font: 13px/1.5 Consolas, "Courier New", monospace; white-space: pre-wrap;
+}
+.admin-status {
+  margin: 8px 0 16px; padding: 10px 12px; border-left: 4px solid #188918; border-radius: 4px;
+  background: #f1fdf6; font-size: 14px;
+}
+.admin-status.is-error { border-left-color: #d20a0a; background: #fff4f4; color: #aa0808; }
+.admin-table-wrap { overflow-x: auto; border: 1px solid var(--sap-line); border-radius: 12px; background: #fff; }
+.admin-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.admin-table th {
+  padding: 12px 14px; border-bottom: 1px solid var(--sap-line); background: #f5f6f7;
+  text-align: left; font-weight: 700; color: #354a5f; white-space: nowrap;
+}
+.admin-table td { padding: 12px 14px; border-bottom: 1px solid var(--sap-line); vertical-align: top; }
+.admin-table tr:last-child td { border-bottom: 0; }
+.admin-table td strong { display: block; color: var(--sap-ink); }
+.admin-table td small { display: block; margin-top: 3px; color: #5b738b; max-width: 520px; }
+.admin-table tr.is-hidden td { opacity: .55; }
+.admin-row-actions { white-space: nowrap; text-align: right; }
+.admin-link {
+  padding: 0; border: 0; background: none; color: #0057d2; font: 600 14px/1.3 var(--font); cursor: pointer;
+}
+.admin-link + .admin-link { margin-left: 14px; }
+.admin-link:hover { text-decoration: underline; }
+.admin-danger { color: #aa0808; }
+
+@media (max-width: 760px) {
+  .admin-grid { grid-template-columns: 1fr; }
+  .live-list li { grid-template-columns: 1fr; gap: 4px; }
+  .live-toolbar { justify-content: stretch; }
+  .live-search { width: 100%; }
+}

@@ -1,0 +1,14 @@
+:host { --udex-link-list-item-tile-icon-l-size: 40px; --udex-link-list-item-tile-icon-s-size: 24px; --udex-link-list-item-tile-based-l-min-height: 148px; --udex-link-list-item-tile-text-color: var(--udexColorGrey9, #223548); --udex-link-list-item-tile-icon-color: var(--udexColorBlue8, #0057D2); }
+.udex-link-list-item { display: flex; flex-direction: column; align-items: self-start; height: 100%; }
+.udex-link-list-item__divider { padding: var(--udexSpacer4) 0; margin-top: auto; width: 100%; }
+[udex-tile]::part(tile) { height: 100%; box-sizing: border-box; }
+[udex-tile] { display: block; width: 100%; height: 100%; }
+.udex-link-list-item__tile-l { --udex-tile-content-padding-vertical: var(--udexSpacer24); --udex-tile-content-padding-horizontal: var(--udexSpacer24); }
+.udex-link-list-item__tile-l::part(tile) { min-height: var(--udex-link-list-item-tile-based-l-min-height); }
+.udex-link-list-item__tile-s { --udex-tile-content-padding-vertical: var(--udexSpacer16); --udex-tile-content-padding-horizontal: var(--udexSpacer16); }
+.udex-link-list-item__tile-icon-l { color: var(--udex-link-list-item-tile-icon-color); width: var(--udex-link-list-item-tile-icon-l-size); height: var(--udex-link-list-item-tile-icon-l-size); margin-bottom: var(--udexSpacer16); }
+.udex-link-list-item__tile-icon-s { color: var(--udex-link-list-item-tile-icon-color); width: var(--udex-link-list-item-tile-icon-s-size); min-width: var(--udex-link-list-item-tile-icon-s-size); height: var(--udex-link-list-item-tile-icon-s-size); margin-inline-end: var(--udexSpacer24); }
+.udex-link-list-item__tile-text-l { font-family: var(--sapFontFamily); line-height: var(--udexTypographyHeadingLineHeight); font-size: var(--udexTypographyHeadingMediumXXSFontSize); font-weight: var(--udexTypographyFontWeightMedium); }
+.udex-link-list-item__tile-text-s { font-family: var(--sapFontFamily, sans-serif); font-size: var(--udexTypographyBodySFontSize); font-weight: var(--udexTypographyFontWeightRegular); line-height: var(--udexTypographyBodyLineHeight); }
+.udex-link-list-item__tile-holder-l, .udex-link-list-item__tile-holder-s { color: var(--udex-link-list-item-tile-text-color); display: flex; }
+.udex-link-list-item__tile-holder-l { flex-direction: column; }

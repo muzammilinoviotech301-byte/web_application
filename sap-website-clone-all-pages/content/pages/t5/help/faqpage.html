@@ -1,0 +1,3664 @@
+<link rel="stylesheet" href="https://community.sap.com/skins/2061141/b7edf49b5577a545e15abe53775466ad/sapglow.css">
+<link rel="stylesheet" href="https://community.sap.com/html/@F29E03718864DE2E89353DC9E96C0CEF/assets/prism-kh.css">
+<link rel="stylesheet" href="https://contextualnavigation.api.community.sap.com/static/1.47.5/cxs-designsystem/cxs-designsystem.css">
+<div class="lia-page">
+		<center>
+			
+				<div class="custom-local-header-wrapper">
+    <header class="custom-local-header">
+        <section class="logo-navigation">
+            <div class="logo-link">
+                <a class="logo" href="https://sap.com/"><img src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNDEyLjM4IDIwNCI+PGRlZnM+PHN0eWxlPi5jbHMtMSwuY2xzLTJ7ZmlsbC1ydWxlOmV2ZW5vZGQ7fS5jbHMtMXtmaWxsOnVybCgjbGluZWFyLWdyYWRpZW50KTt9LmNscy0ye2ZpbGw6I2ZmZjt9PC9zdHlsZT48bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudCIgeDE9IjIwNi4xOSIgeDI9IjIwNi4xOSIgeTI9IjIwNCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwYjhmMSIvPjxzdG9wIG9mZnNldD0iMC4wMiIgc3RvcC1jb2xvcj0iIzAxYjZmMCIvPjxzdG9wIG9mZnNldD0iMC4zMSIgc3RvcC1jb2xvcj0iIzBkOTBkOSIvPjxzdG9wIG9mZnNldD0iMC41OCIgc3RvcC1jb2xvcj0iIzE3NzVjOCIvPjxzdG9wIG9mZnNldD0iMC44MiIgc3RvcC1jb2xvcj0iIzFjNjViZiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzFlNWZiYiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjx0aXRsZT5TQVBfZ3JhZF9SX3Njcm5fWmVpY2hlbmZsw6RjaGUgMTwvdGl0bGU+PHBvbHlsaW5lIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSIwIDIwNCAyMDguNDEgMjA0IDQxMi4zOCAwIDAgMCAwIDIwNCIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTI0NC43MywzOC4zNmwtNDAuNiwwdjk2LjUyTDE2OC42NywzOC4zM0gxMzMuNTFsLTMwLjI3LDgwLjcyQzEwMCw5OC43LDc5LDkxLjY3LDYyLjQsODYuNCw1MS40Niw4Mi44OSwzOS44NSw3Ny43Miw0MCw3MmMuMDktNC42OCw2LjIzLTksMTguMzgtOC4zOCw4LjE3LjQzLDE1LjM3LDEuMDksMjkuNzEsOGwxNC4xLTI0LjU1Qzg5LjA2LDQwLjQyLDcxLDM2LjIxLDU2LjE3LDM2LjE5aC0uMDljLTE3LjI4LDAtMzEuNjgsNS42LTQwLjYsMTQuODNBMzQuMjMsMzQuMjMsMCwwLDAsNS43Nyw3NC43QzUuNTQsODcuMTUsMTAuMTEsOTYsMTkuNzEsMTAzYzguMSw1Ljk0LDE4LjQ2LDkuNzksMjcuNiwxMi42MiwxMS4yNywzLjQ5LDIwLjQ3LDYuNTMsMjAuMzYsMTNBOS41Nyw5LjU3LDAsMCwxLDY1LDEzNWMtMi44MSwyLjktNy4xMyw0LTEzLjA5LDQuMS0xMS40OS4yNC0yMC0xLjU2LTMzLjYxLTkuNTlMNS43NywxNTQuNDJhOTMuNzcsOTMuNzcsMCwwLDAsNDYsMTIuMjJsMi4xMSwwYzE0LjI0LS4yNSwyNS43NC00LjMxLDM0LjkyLTExLjcxLjUzLS40MSwxLS44NCwxLjQ5LTEuMjhMODYuMTcsMTY0LjVIMTIzbDYuMTktMTguODJhNjcuNDYsNjcuNDYsMCwwLDAsMjEuNjgsMy40Myw2OC4zMyw2OC4zMywwLDAsMCwyMS4xNi0zLjI1bDYsMTguNjRoNjAuMTR2LTM5aDEzLjExYzMxLjcxLDAsNTAuNDYtMTYuMTUsNTAuNDYtNDMuMkMzMDEuNzQsNTIuMTksMjgzLjUyLDM4LjM2LDI0NC43MywzOC4zNlpNMTUwLjkxLDEyMWEzNi45MywzNi45MywwLDAsMS0xMy0yLjI4bDEyLjg3LTQwLjU5SDE1MWwxMi42NSw0MC43MUEzOC41LDM4LjUsMCwwLDEsMTUwLjkxLDEyMVptOTYuMi0yMy4zM2gtOC45NFY2NC45MWg4Ljk0YzExLjkzLDAsMjEuNDQsNCwyMS40NCwxNi4xNCwwLDEyLjYtOS41MSwxNi41Ny0yMS40NCwxNi41NyIvPjwvc3ZnPg=="></a>
+                <a class="link" href="/community">Community</a>
+            </div>
+            <div class="navigation">
+                <ul>			<li class="has-submenu ">
+				<a href="#">Products and Technology</a>
+					<div class="sub-menu" style="grid-template-columns: 250px 250px;">
+							<div class="menu-body">
+									<h3>By Category</h3>
+								<ul>
+										<li>
+											<a href="/t5/crm-and-customer-experience/ct-p/crm">CRM and Customer Experience</a>
+										</li>
+										<li>
+											<a href="/t5/enterprise-resource-planning/ct-p/erp">Enterprise Resource Planning</a>
+										</li>
+										<li>
+											<a href="/t5/financial-management/ct-p/financial-management">Financial Management</a>
+										</li>
+										<li>
+											<a href="/t5/human-capital-management/ct-p/hcm">Human Capital Management</a>
+										</li>
+										<li>
+											<a href="/t5/product-lifecycle-management/ct-p/plm">Product Lifecycle Management</a>
+										</li>
+										<li>
+											<a href="/t5/spend-management/ct-p/spend-management">Spend Management</a>
+										</li>
+										<li>
+											<a href="/t5/supply-chain-management/ct-p/scm">Supply Chain Management</a>
+										</li>
+										<li>
+											<a href="/t5/technology/ct-p/technology">Technology</a>
+										</li>
+								</ul>
+							</div>
+							<div class="menu-body">
+									<h3>Related Content</h3>
+								<ul>
+										<li>
+											<a href="/t5/all-sap-community-blogs/ct-p/all-blogs">All Blogs</a>
+										</li>
+										<li>
+											<a href="/t5/questions-about-sap-websites/qa-p/website-questions">Questions about SAP Websites</a>
+										</li>
+										<li>
+											<a href="/t5/blogs-about-sap-websites/bg-p/website-blog">Blogs about SAP Websites</a>
+										</li>
+										<li>
+											<a href="/t5/all-sap-managed-tags/ct-p/managed-tags">All SAP Managed Tags</a>
+										</li>
+										<li>
+											<a href="/t5/archived-content/ct-p/archive">Archived Content</a>
+										</li>
+								</ul>
+							</div>
+					</div>
+			</li>
+			<li class="has-submenu ">
+				<a href="#">Groups</a>
+					<div class="sub-menu" style="grid-template-columns: 250px 250px 250px;">
+							<div class="menu-body">
+									<h3>Activity Groups</h3>
+								<ul>
+										<li>
+											<a href="https://community.sap.com/t5/devtoberfest/gh-p/Devtoberfest">Devtoberfest</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/sap-codejam/gh-p/code-jam">SAP CodeJam</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/sap-teched/gh-p/SAP-TechEd-Group">SAP TechEd</a>
+										</li>
+								</ul>
+							</div>
+							<div class="menu-body">
+									<h3>Industry Groups</h3>
+								<ul>
+										<li>
+											<a href="https://community.sap.com/t5/sap-for-oil-gas-and-energy/gh-p/oil-gas">Oil, Gas, and Energy</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/sap-for-healthcare/gh-p/healthcare">SAP for Healthcare</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/sap-for-utilities/gh-p/utilities">Utilities</a>
+										</li>
+								</ul>
+							</div>
+							<div class="menu-body">
+									<h3>Influence and Feedback Groups</h3>
+								<ul>
+										<li>
+											<a href="https://pages.community.sap.com/resources//event-organizer">SAP Community Event Organizers</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/sap-community-leaders-and-sap-advocates/ct-p/sap-influencers-and-advocates">SAP Community Leaders and Advocates</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/sap-community-leaders-finder/bg-p/influencers-directory">Meet our SAP Champions and Mentors</a>
+										</li>
+								</ul>
+							</div>
+							<div class="menu-body">
+									<h3>Interest Groups</h3>
+								<ul>
+										<li>
+											<a href="https://community.sap.com/t5/business-transformation/gh-p/business-transformation-champions">Business Transformation</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/community-corner/gh-p/Coffee-Corner">Community Corner</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/data-professionals/gh-p/data-professionals">Data and AI Professionals</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/enterprise-architecture/gh-p/Enterprise-Architecture">Enterprise Architecture</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/sap-learning-groups/ct-p/SAP-Learning">SAP Learning Groups</a>
+										</li>
+										<li>
+											<a href="/t5/welcome-corner/gh-p/welcome-corner">Welcome Corner</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/interest-groups/ct-p/interests">All Interest Groups</a>
+										</li>
+								</ul>
+							</div>
+							<div class="menu-body">
+									<h3>Location Groups</h3>
+								<ul>
+										<li>
+											<a href="https://community.sap.com/t5/americas/ct-p/americas">Americas</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/asia-pacific/ct-p/asia-pacific">Asia Pacific</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/europe/ct-p/europe">Europe</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/middle-east-and-africa/ct-p/middle-east-and-africa">Middle East and Africa</a>
+										</li>
+								</ul>
+							</div>
+							<div class="menu-body">
+									<h3>Customer Only Groups</h3>
+								<ul>
+										<li>
+											<a href="https://pages.community.sap.com/resources/enterprise-support-value-maps">SAP Enterprise Support Value Maps</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/sap-successfactors-user-groups/ct-p/successfactors-user-groups">SAP SuccessFactors</a>
+										</li>
+								</ul>
+							</div>
+					</div>
+			</li>
+			<li class="has-submenu ">
+				<a href="#">Developers</a>
+					<div class="sub-menu" style="grid-template-columns: 250px 250px;">
+							<div class="menu-body">
+									<h3>Forums</h3>
+								<ul>
+										<li>
+											<a href="https://community.sap.com/t5/abap/gh-p/abap">ABAP</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/artificial-intelligence-and-machine-learning/gh-p/ai">Artificial Intelligence</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/sap-cap/gh-p/cap">CAP</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/data-and-analytics/gh-p/data-analytics">Data and Analytics</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/devops-and-system-administration/gh-p/devops-sysadmin">DevOps and System Administration</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/frontend-ui5-sap-fiori/gh-p/frontend-ui5-fiori">Frontend / UI5 / Fiori</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/integration/gh-p/integration">Integration</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/tooling-build/gh-p/tooling">Tooling (+ Build)</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/developer-news/bg-p/developer-news">Developer News</a>
+										</li>
+										<li>
+											<a href="https://community.sap.com/t5/developers/ct-p/developers">All Developer Forums</a>
+										</li>
+								</ul>
+							</div>
+							<div class="menu-body">
+									<h3>Related Resources</h3>
+								<ul>
+										<li>
+											<a href="https://learning.sap.com/browse/roles/developer">Learning</a>
+										</li>
+										<li>
+											<a href="https://developers.sap.com/tutorial-navigator.html">Tutorials</a>
+										</li>
+								</ul>
+							</div>
+					</div>
+			</li>
+			<li class=" ">
+				<a href="https://pages.community.sap.com/resources/partners">Partners</a>
+			</li>
+			<li class="has-submenu ">
+				<a href="#">Events</a>
+					<div class="sub-menu" style="grid-template-columns: 250px;">
+							<div class="menu-body">
+								<ul>
+										<li>
+											<a href="https://pages.community.sap.com/resources/event-organizer">Become an Event Organizer</a>
+										</li>
+										<li>
+											<a href="/t5/application-lifecycle-management/eb-p/alm-events">Application Lifecycle Management</a>
+										</li>
+										<li>
+											<a href="/t5/devtoberfest/eb-p/devtoberfest-events">Devtoberfest</a>
+										</li>
+										<li>
+											<a href="/t5/industries/eb-p/industries">Industries</a>
+										</li>
+										<li>
+											<a href="/t5/sap-codejam/eb-p/codejam-events">SAP CodeJam</a>
+										</li>
+										<li>
+											<a href="/t5/sap-community/eb-p/community-events">SAP Community</a>
+										</li>
+										<li>
+											<a href="/t5/sap-successfactors/eb-p/successfactorsevents">SAP SuccessFactors</a>
+										</li>
+										<li>
+											<a href="/t5/user-groups/eb-p/user-groups">User Groups</a>
+										</li>
+										<li>
+											<a href="/t5/events/ct-p/events">All Location Events</a>
+										</li>
+								</ul>
+							</div>
+					</div>
+			</li>
+			<li class="has-submenu ">
+				<a href="#">Help Center</a>
+					<div class="sub-menu" style="grid-template-columns: 250px;">
+							<div class="menu-body">
+								<ul>
+										<li>
+											<a href="/t5/what-s-new/bg-p/whats-new">What's New</a>
+										</li>
+										<li>
+											<a href="/t5/welcome-corner/gh-p/welcome-corner">Welcome Corner</a>
+										</li>
+										<li>
+											<a href="/t5/help/faqpage">FAQs</a>
+										</li>
+										<li>
+											<a href="/community/help/resources">Help Resources</a>
+										</li>
+										<li>
+											<a href="/community/help/legal-resources">Legal Resources</a>
+										</li>
+								</ul>
+							</div>
+					</div>
+			</li>
+			<li class=" ">
+				<a href="https://pages.community.sap.com/topics">Topic Pages</a>
+			</li>
+</ul>
+				<div class="desktop-sap-search">
+	<input class="execute-search" placeholder="Search the SAP Community" aria-label="Search">
+	<button class="execute-search">
+		<svg viewBox="0 0 18 17" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+			<path d="M17.1914 15.3281C17.3555 15.4922 17.4375 15.7031 17.4375 15.9609C17.4375 16.2188 17.3438 16.4414 17.1562 16.6289C16.9922 16.793 16.7812 16.875 16.5234 16.875C16.2656 16.875 16.0547 16.793 15.8906 16.6289L12.375 13.1133C11.7656 13.582 11.0742 13.957 10.3008 14.2383C9.55078 14.4961 8.74219 14.625 7.875 14.625C6.84375 14.625 5.88281 14.4375 4.99219 14.0625C4.10156 13.6875 3.32812 13.1719 2.67188 12.5156C2.01562 11.8594 1.5 11.0859 1.125 10.1953C0.75 9.30469 0.5625 8.34375 0.5625 7.3125C0.5625 6.28125 0.75 5.32031 1.125 4.42969C1.5 3.53906 2.01562 2.76562 2.67188 2.10938C3.32812 1.45312 4.10156 0.9375 4.99219 0.5625C5.88281 0.1875 6.84375 0 7.875 0C8.90625 0 9.86719 0.1875 10.7578 0.5625C11.6484 0.9375 12.4219 1.45312 13.0781 2.10938C13.7344 2.76562 14.25 3.53906 14.625 4.42969C15 5.32031 15.1875 6.28125 15.1875 7.3125C15.1875 8.17969 15.0469 9 14.7656 9.77344C14.5078 10.5234 14.1445 11.2031 13.6758 11.8125L17.1914 15.3281ZM7.875 12.832C8.64844 12.832 9.36328 12.6914 10.0195 12.4102C10.6992 12.1289 11.2852 11.7422 11.7773 11.25C12.293 10.7344 12.6914 10.1484 12.9727 9.49219C13.2539 8.8125 13.3945 8.08594 13.3945 7.3125C13.3945 6.53906 13.2539 5.82422 12.9727 5.16797C12.6914 4.48828 12.293 3.90234 11.7773 3.41016C11.2852 2.89453 10.6992 2.49609 10.0195 2.21484C9.36328 1.93359 8.64844 1.79297 7.875 1.79297C7.10156 1.79297 6.375 1.93359 5.69531 2.21484C5.03906 2.49609 4.45312 2.89453 3.9375 3.41016C3.44531 3.90234 3.05859 4.48828 2.77734 5.16797C2.49609 5.82422 2.35547 6.53906 2.35547 7.3125C2.35547 8.08594 2.49609 8.8125 2.77734 9.49219C3.05859 10.1484 3.44531 10.7344 3.9375 11.25C4.45312 11.7422 5.03906 12.1289 5.69531 12.4102C6.375 12.6914 7.10156 12.832 7.875 12.832Z"></path>
+		</svg>
+	</button>
+				</div>
+            </div>
+        </section>
+        <section class="user-menu">
+            <ul>
+			<li class="has-submenu explore-menu">
+				<a href="#">Explore SAP</a>
+					<div class="sub-menu" style="grid-template-columns: 250px 250px 250px;">
+							<div class="menu-body">
+									<h3>Products</h3>
+								<ul>
+										<li>
+											<a href="https://www.sap.com/products/business-suite.html">Autonomous Enterprise</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/artificial-intelligence.html">Artificial intelligence</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/data-cloud.html">Data and analytics</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/business-applications.html">Autonomous Suite</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/ai-platform.html">AI platform</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/business-transformation-management.html">Transformation management</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/erp/grow.html">Midsize business solutions</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/financial-management.html">Financial management</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/spend-management.html">Spend management</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/scm.html">Supply chain management</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/hcm.html">Human capital management</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/crm.html">Customer experience</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/erp.html">Enterprise resource planning</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/business-network.html">Business network</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/sustainability.html">Sustainability management</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/store.html">SAP Store</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/products/try-sap.html">Try SAP</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/industries.html">View all industries</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/partners.html">Partners</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/services-support.html">Services</a>
+										</li>
+								</ul>
+							</div>
+							<div class="menu-body">
+									<h3>Learning and Support</h3>
+								<ul>
+										<li>
+											<a href="https://learning.sap.com/">Learning and certification</a>
+										</li>
+										<li>
+											<a href="https://support.sap.com/">Support</a>
+										</li>
+										<li>
+											<a href="https://help.sap.com/">Documentation</a>
+										</li>
+										<li>
+											<a href="/community">Community</a>
+										</li>
+								</ul>
+							</div>
+							<div class="menu-body">
+									<h3>About</h3>
+								<ul>
+										<li>
+											<a href="https://www.sap.com/about/company.html">Company Information</a>
+										</li>
+										<li>
+											<a href="https://jobs.sap.com/?utm_source=CareerSite&amp;utm_campaign=CorpSite_HD">Careers</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/about/customer-stories.html">Customer Stories</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/events.html">Events</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/investors/en.html">Investor Relations</a>
+										</li>
+										<li>
+											<a href="https://news.sap.com/">News Center</a>
+										</li>
+										<li>
+											<a href="https://www.sap.com/about/trust-center.html">SAP Trust Center</a>
+										</li>
+								</ul>
+							</div>
+					</div>
+			</li>
+                <li class="user-menu-search">
+                    <a class="search" href="#">
+                        <svg viewBox="0 0 18 17" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.1914 15.3281C17.3555 15.4922 17.4375 15.7031 17.4375 15.9609C17.4375 16.2188 17.3438 16.4414 17.1562 16.6289C16.9922 16.793 16.7812 16.875 16.5234 16.875C16.2656 16.875 16.0547 16.793 15.8906 16.6289L12.375 13.1133C11.7656 13.582 11.0742 13.957 10.3008 14.2383C9.55078 14.4961 8.74219 14.625 7.875 14.625C6.84375 14.625 5.88281 14.4375 4.99219 14.0625C4.10156 13.6875 3.32812 13.1719 2.67188 12.5156C2.01562 11.8594 1.5 11.0859 1.125 10.1953C0.75 9.30469 0.5625 8.34375 0.5625 7.3125C0.5625 6.28125 0.75 5.32031 1.125 4.42969C1.5 3.53906 2.01562 2.76562 2.67188 2.10938C3.32812 1.45312 4.10156 0.9375 4.99219 0.5625C5.88281 0.1875 6.84375 0 7.875 0C8.90625 0 9.86719 0.1875 10.7578 0.5625C11.6484 0.9375 12.4219 1.45312 13.0781 2.10938C13.7344 2.76562 14.25 3.53906 14.625 4.42969C15 5.32031 15.1875 6.28125 15.1875 7.3125C15.1875 8.17969 15.0469 9 14.7656 9.77344C14.5078 10.5234 14.1445 11.2031 13.6758 11.8125L17.1914 15.3281ZM7.875 12.832C8.64844 12.832 9.36328 12.6914 10.0195 12.4102C10.6992 12.1289 11.2852 11.7422 11.7773 11.25C12.293 10.7344 12.6914 10.1484 12.9727 9.49219C13.2539 8.8125 13.3945 8.08594 13.3945 7.3125C13.3945 6.53906 13.2539 5.82422 12.9727 5.16797C12.6914 4.48828 12.293 3.90234 11.7773 3.41016C11.2852 2.89453 10.6992 2.49609 10.0195 2.21484C9.36328 1.93359 8.64844 1.79297 7.875 1.79297C7.10156 1.79297 6.375 1.93359 5.69531 2.21484C5.03906 2.49609 4.45312 2.89453 3.9375 3.41016C3.44531 3.90234 3.05859 4.48828 2.77734 5.16797C2.49609 5.82422 2.35547 6.53906 2.35547 7.3125C2.35547 8.08594 2.49609 8.8125 2.77734 9.49219C3.05859 10.1484 3.44531 10.7344 3.9375 11.25C4.45312 11.7422 5.03906 12.1289 5.69531 12.4102C6.375 12.6914 7.10156 12.832 7.875 12.832Z"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="user-menu-avatar ">
+                    <a href="https://community.sap.com/plugins/common/feature/oidcss/sso_login_redirect/providerid/sap_ids_prompt?referer=https%3A%2F%2Fcommunity.sap.com%2Ft5%2Fhelp%2Ffaqpage" class="avatar">
+							<svg width="100%" height="100%" viewBox="0 0 18 18" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12.5684 8.50769C13.8809 8.99988 14.9355 9.83191 15.7324 11.0038C16.5527 12.1522 16.9629 13.4764 16.9629 14.9764V16.9803C16.9629 17.285 16.8691 17.5311 16.6816 17.7186C16.5176 17.9061 16.2832 17.9999 15.9785 17.9999H1.98633C1.68164 17.9999 1.43555 17.9061 1.24805 17.7186C1.08398 17.5311 1.00195 17.285 1.00195 16.9803V14.9764C1.00195 13.4764 1.40039 12.1522 2.19727 11.0038C3.01758 9.83191 4.08398 8.99988 5.39648 8.50769C4.45898 7.57019 3.99023 6.41003 3.99023 5.02722C3.99023 4.3241 4.11914 3.66785 4.37695 3.05847C4.63477 2.4491 4.98633 1.92175 5.43164 1.47644C5.90039 1.03113 6.42773 0.679565 7.01367 0.421753C7.62305 0.16394 8.2793 0.0350342 8.98242 0.0350342C9.68555 0.0350342 10.3418 0.16394 10.9512 0.421753C11.5605 0.679565 12.0879 1.03113 12.5332 1.47644C12.9785 1.92175 13.3301 2.4491 13.5879 3.05847C13.8457 3.66785 13.9746 4.3241 13.9746 5.02722C13.9746 6.41003 13.5059 7.57019 12.5684 8.50769ZM8.98242 2.00378C8.13867 2.00378 7.42383 2.29675 6.83789 2.88269C6.27539 3.44519 5.99414 4.16003 5.99414 5.02722C5.99414 5.87097 6.27539 6.58582 6.83789 7.17175C7.42383 7.73425 8.13867 8.0155 8.98242 8.0155C9.82617 8.0155 10.5293 7.73425 11.0918 7.17175C11.6777 6.58582 11.9707 5.87097 11.9707 5.02722C11.9707 4.16003 11.6777 3.44519 11.0918 2.88269C10.5293 2.29675 9.82617 2.00378 8.98242 2.00378ZM14.959 14.9764C14.959 14.2733 14.8301 13.6288 14.5723 13.0428C14.3145 12.4335 13.9629 11.9061 13.5176 11.4608C13.0723 10.9921 12.5449 10.6288 11.9355 10.371C11.3496 10.1132 10.7051 9.98425 10.002 9.98425H7.99805C7.29492 9.98425 6.63867 10.1132 6.0293 10.371C5.41992 10.6288 4.89258 10.9921 4.44727 11.4608C4.00195 11.9061 3.65039 12.4335 3.39258 13.0428C3.13477 13.6288 3.00586 14.2733 3.00586 14.9764V15.996H14.959V14.9764Z"></path>
+							</svg>
+
+                    </a>
+	<div class="sub-menu">
+		<div class="avatar-email">
+			<img src="https://community.sap.com/skins/images/B3306F7C80EA150B6C118BA721EE90DD/responsive_peak/images/icon_anonymous_message.png" title="" alt="Former Member">
+			<h2> </h2>
+			<p></p>
+		</div>
+		<div class="menu-body">
+			<h3><a href="https://profile.sap.com/">My SAP Profile</a></h3>
+			<ul>
+				<li><a href="https://community.sap.com/t5/user/myprofilepage/tab/personal-profile">Settings</a></li>
+				<li><a href="https://community.sap.com/t5/user/myprofilepage/tab/user-subscriptions">Subscriptions</a></li>
+				<li><a href="https://notify.sap.com/inbox/">Notification Center</a></li>
+			</ul>
+			<a class="lia-button lia-button-primary" href="https://community.sap.com/t5/community/page.logoutpage?t:cp=authentication/contributions/unticketedauthenticationactions&amp;dest_url=https%3A%2F%2Fcommunity.sap.com%2Ft5%2Fhelp%2Ffaqpage&amp;lia-action-token=maoFJSC15lrzI27TmI-FST0PU4hlYSZCH9yjKcUlKWU.&amp;lia-action-token-id=logoff">Logout</a>
+		</div>
+	</div>
+                </li>
+				<li class="user-menu-mobile">
+					<a href="#" class="mobile-menu-toggle">
+						<svg width="100%" height="100%" viewBox="0 0 18 18" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.125 4.40552C0.796875 4.40552 0.527344 4.31177 0.316406 4.12427C0.105469 3.91333 0 3.6438 0 3.31567C0 2.96411 0.105469 2.69458 0.316406 2.50708C0.527344 2.29614 0.796875 2.19067 1.125 2.19067H16.8398C17.5898 2.19067 17.9648 2.56567 17.9648 3.31567C17.9648 4.04224 17.5898 4.40552 16.8398 4.40552H1.125ZM16.8398 7.78052C17.1914 7.78052 17.4609 7.88599 17.6484 8.09692C17.8594 8.30786 17.9648 8.57739 17.9648 8.90552C17.9648 9.23364 17.8594 9.50317 17.6484 9.71411C17.4609 9.92505 17.1914 10.0305 16.8398 10.0305H1.125C0.796875 10.0305 0.527344 9.92505 0.316406 9.71411C0.105469 9.50317 0 9.23364 0 8.90552C0 8.57739 0.105469 8.30786 0.316406 8.09692C0.527344 7.88599 0.796875 7.78052 1.125 7.78052H16.8398ZM16.8398 13.4055C17.1914 13.4055 17.4609 13.511 17.6484 13.7219C17.8594 13.9329 17.9648 14.2024 17.9648 14.5305C17.9648 14.8586 17.8594 15.1282 17.6484 15.3391C17.4609 15.55 17.1914 15.6555 16.8398 15.6555H1.125C0.796875 15.6555 0.527344 15.55 0.316406 15.3391C0.105469 15.1282 0 14.8586 0 14.5305C0 14.2024 0.105469 13.9329 0.316406 13.7219C0.527344 13.511 0.796875 13.4055 1.125 13.4055H16.8398Z"></path>
+						</svg>
+					</a>
+					<div class="sub-menu-mobile">
+						<div class="user-menu-avatar has-submenu">
+	<div class="sub-menu">
+		<div class="avatar-email">
+			<img src="https://community.sap.com/skins/images/B3306F7C80EA150B6C118BA721EE90DD/responsive_peak/images/icon_anonymous_message.png" title="" alt="Former Member">
+			<h2> </h2>
+			<p></p>
+		</div>
+		<div class="menu-body">
+			<h3><a href="https://profile.sap.com/">My SAP Profile</a></h3>
+			<ul>
+				<li><a href="https://community.sap.com/t5/user/myprofilepage/tab/personal-profile">Settings</a></li>
+				<li><a href="https://community.sap.com/t5/user/myprofilepage/tab/user-subscriptions">Subscriptions</a></li>
+				<li><a href="https://notify.sap.com/inbox/">Notification Center</a></li>
+			</ul>
+			<a class="lia-button lia-button-primary" href="https://community.sap.com/t5/community/page.logoutpage?t:cp=authentication/contributions/unticketedauthenticationactions&amp;dest_url=https%3A%2F%2Fcommunity.sap.com%2Ft5%2Fhelp%2Ffaqpage&amp;lia-action-token=maoFJSC15lrzI27TmI-FST0PU4hlYSZCH9yjKcUlKWU.&amp;lia-action-token-id=logoff">Logout</a>
+		</div>
+	</div>
+						</div>
+						<div class="shadow-menu">
+							<ul>		<li class="">
+			<a class="has-submenu " data-id="1" href="#">Products and Technology</a>
+				<ul>
+					<li><a class="go-back" data-id="0" href="#"><span>Products and Technology</span></a></li>
+							<li>
+								<a class="has-submenu " href="#" data-id="2">By Category</a>
+								<ul>
+									<li><a class="go-back " data-id="1" href="#"><span>By Category</span></a></li>
+										<li>
+											<a data-id="3" href="/t5/crm-and-customer-experience/ct-p/crm">CRM and Customer Experience</a>
+										</li>
+										<li>
+											<a data-id="4" href="/t5/enterprise-resource-planning/ct-p/erp">Enterprise Resource Planning</a>
+										</li>
+										<li>
+											<a data-id="5" href="/t5/financial-management/ct-p/financial-management">Financial Management</a>
+										</li>
+										<li>
+											<a data-id="6" href="/t5/human-capital-management/ct-p/hcm">Human Capital Management</a>
+										</li>
+										<li>
+											<a data-id="7" href="/t5/product-lifecycle-management/ct-p/plm">Product Lifecycle Management</a>
+										</li>
+										<li>
+											<a data-id="8" href="/t5/spend-management/ct-p/spend-management">Spend Management</a>
+										</li>
+										<li>
+											<a data-id="9" href="/t5/supply-chain-management/ct-p/scm">Supply Chain Management</a>
+										</li>
+										<li>
+											<a data-id="10" href="/t5/technology/ct-p/technology">Technology</a>
+										</li>
+								</ul>
+							</li>
+							<li>
+								<a class="has-submenu " href="#" data-id="11">Related Content</a>
+								<ul>
+									<li><a class="go-back " data-id="1" href="#"><span>Related Content</span></a></li>
+										<li>
+											<a data-id="12" href="/t5/all-sap-community-blogs/ct-p/all-blogs">All Blogs</a>
+										</li>
+										<li>
+											<a data-id="13" href="/t5/questions-about-sap-websites/qa-p/website-questions">Questions about SAP Websites</a>
+										</li>
+										<li>
+											<a data-id="14" href="/t5/blogs-about-sap-websites/bg-p/website-blog">Blogs about SAP Websites</a>
+										</li>
+										<li>
+											<a data-id="15" href="/t5/all-sap-managed-tags/ct-p/managed-tags">All SAP Managed Tags</a>
+										</li>
+										<li>
+											<a data-id="16" href="/t5/archived-content/ct-p/archive">Archived Content</a>
+										</li>
+								</ul>
+							</li>
+				</ul>
+		</li>
+		<li class="">
+			<a class="has-submenu " data-id="17" href="#">Groups</a>
+				<ul>
+					<li><a class="go-back" data-id="0" href="#"><span>Groups</span></a></li>
+							<li>
+								<a class="has-submenu " href="#" data-id="18">Activity Groups</a>
+								<ul>
+									<li><a class="go-back " data-id="17" href="#"><span>Activity Groups</span></a></li>
+										<li>
+											<a data-id="19" href="https://community.sap.com/t5/devtoberfest/gh-p/Devtoberfest">Devtoberfest</a>
+										</li>
+										<li>
+											<a data-id="20" href="https://community.sap.com/t5/sap-codejam/gh-p/code-jam">SAP CodeJam</a>
+										</li>
+										<li>
+											<a data-id="21" href="https://community.sap.com/t5/sap-teched/gh-p/SAP-TechEd-Group">SAP TechEd</a>
+										</li>
+								</ul>
+							</li>
+							<li>
+								<a class="has-submenu " href="#" data-id="22">Industry Groups</a>
+								<ul>
+									<li><a class="go-back " data-id="17" href="#"><span>Industry Groups</span></a></li>
+										<li>
+											<a data-id="23" href="https://community.sap.com/t5/sap-for-oil-gas-and-energy/gh-p/oil-gas">Oil, Gas, and Energy</a>
+										</li>
+										<li>
+											<a data-id="24" href="https://community.sap.com/t5/sap-for-healthcare/gh-p/healthcare">SAP for Healthcare</a>
+										</li>
+										<li>
+											<a data-id="25" href="https://community.sap.com/t5/sap-for-utilities/gh-p/utilities">Utilities</a>
+										</li>
+								</ul>
+							</li>
+							<li>
+								<a class="has-submenu " href="#" data-id="26">Influence and Feedback Groups</a>
+								<ul>
+									<li><a class="go-back " data-id="17" href="#"><span>Influence and Feedback Groups</span></a></li>
+										<li>
+											<a data-id="27" href="https://pages.community.sap.com/resources//event-organizer">SAP Community Event Organizers</a>
+										</li>
+										<li>
+											<a data-id="28" href="https://community.sap.com/t5/sap-community-leaders-and-sap-advocates/ct-p/sap-influencers-and-advocates">SAP Community Leaders and Advocates</a>
+										</li>
+										<li>
+											<a data-id="29" href="https://community.sap.com/t5/sap-community-leaders-finder/bg-p/influencers-directory">Meet our SAP Champions and Mentors</a>
+										</li>
+								</ul>
+							</li>
+							<li>
+								<a class="has-submenu " href="#" data-id="30">Interest Groups</a>
+								<ul>
+									<li><a class="go-back " data-id="17" href="#"><span>Interest Groups</span></a></li>
+										<li>
+											<a data-id="31" href="https://community.sap.com/t5/business-transformation/gh-p/business-transformation-champions">Business Transformation</a>
+										</li>
+										<li>
+											<a data-id="32" href="https://community.sap.com/t5/community-corner/gh-p/Coffee-Corner">Community Corner</a>
+										</li>
+										<li>
+											<a data-id="33" href="https://community.sap.com/t5/data-professionals/gh-p/data-professionals">Data and AI Professionals</a>
+										</li>
+										<li>
+											<a data-id="34" href="https://community.sap.com/t5/enterprise-architecture/gh-p/Enterprise-Architecture">Enterprise Architecture</a>
+										</li>
+										<li>
+											<a data-id="35" href="https://community.sap.com/t5/sap-learning-groups/ct-p/SAP-Learning">SAP Learning Groups</a>
+										</li>
+										<li>
+											<a data-id="36" href="/t5/welcome-corner/gh-p/welcome-corner">Welcome Corner</a>
+										</li>
+										<li>
+											<a data-id="37" href="https://community.sap.com/t5/interest-groups/ct-p/interests">All Interest Groups</a>
+										</li>
+								</ul>
+							</li>
+							<li>
+								<a class="has-submenu " href="#" data-id="38">Location Groups</a>
+								<ul>
+									<li><a class="go-back " data-id="17" href="#"><span>Location Groups</span></a></li>
+										<li>
+											<a data-id="39" href="https://community.sap.com/t5/americas/ct-p/americas">Americas</a>
+										</li>
+										<li>
+											<a data-id="40" href="https://community.sap.com/t5/asia-pacific/ct-p/asia-pacific">Asia Pacific</a>
+										</li>
+										<li>
+											<a data-id="41" href="https://community.sap.com/t5/europe/ct-p/europe">Europe</a>
+										</li>
+										<li>
+											<a data-id="42" href="https://community.sap.com/t5/middle-east-and-africa/ct-p/middle-east-and-africa">Middle East and Africa</a>
+										</li>
+								</ul>
+							</li>
+							<li>
+								<a class="has-submenu " href="#" data-id="43">Customer Only Groups</a>
+								<ul>
+									<li><a class="go-back " data-id="17" href="#"><span>Customer Only Groups</span></a></li>
+										<li>
+											<a data-id="44" href="https://pages.community.sap.com/resources/enterprise-support-value-maps">SAP Enterprise Support Value Maps</a>
+										</li>
+										<li>
+											<a data-id="45" href="https://community.sap.com/t5/sap-successfactors-user-groups/ct-p/successfactors-user-groups">SAP SuccessFactors</a>
+										</li>
+								</ul>
+							</li>
+				</ul>
+		</li>
+		<li class="">
+			<a class="has-submenu " data-id="46" href="#">Developers</a>
+				<ul>
+					<li><a class="go-back" data-id="0" href="#"><span>Developers</span></a></li>
+							<li>
+								<a class="has-submenu " href="#" data-id="47">Forums</a>
+								<ul>
+									<li><a class="go-back " data-id="46" href="#"><span>Forums</span></a></li>
+										<li>
+											<a data-id="48" href="https://community.sap.com/t5/abap/gh-p/abap">ABAP</a>
+										</li>
+										<li>
+											<a data-id="49" href="https://community.sap.com/t5/artificial-intelligence-and-machine-learning/gh-p/ai">Artificial Intelligence</a>
+										</li>
+										<li>
+											<a data-id="50" href="https://community.sap.com/t5/sap-cap/gh-p/cap">CAP</a>
+										</li>
+										<li>
+											<a data-id="51" href="https://community.sap.com/t5/data-and-analytics/gh-p/data-analytics">Data and Analytics</a>
+										</li>
+										<li>
+											<a data-id="52" href="https://community.sap.com/t5/devops-and-system-administration/gh-p/devops-sysadmin">DevOps and System Administration</a>
+										</li>
+										<li>
+											<a data-id="53" href="https://community.sap.com/t5/frontend-ui5-sap-fiori/gh-p/frontend-ui5-fiori">Frontend / UI5 / Fiori</a>
+										</li>
+										<li>
+											<a data-id="54" href="https://community.sap.com/t5/integration/gh-p/integration">Integration</a>
+										</li>
+										<li>
+											<a data-id="55" href="https://community.sap.com/t5/tooling-build/gh-p/tooling">Tooling (+ Build)</a>
+										</li>
+										<li>
+											<a data-id="56" href="https://community.sap.com/t5/developer-news/bg-p/developer-news">Developer News</a>
+										</li>
+										<li>
+											<a data-id="57" href="https://community.sap.com/t5/developers/ct-p/developers">All Developer Forums</a>
+										</li>
+								</ul>
+							</li>
+							<li>
+								<a class="has-submenu " href="#" data-id="58">Related Resources</a>
+								<ul>
+									<li><a class="go-back " data-id="46" href="#"><span>Related Resources</span></a></li>
+										<li>
+											<a data-id="59" href="https://learning.sap.com/browse/roles/developer">Learning</a>
+										</li>
+										<li>
+											<a data-id="60" href="https://developers.sap.com/tutorial-navigator.html">Tutorials</a>
+										</li>
+								</ul>
+							</li>
+				</ul>
+		</li>
+		<li class="">
+			<a class=" " data-id="61" href="https://pages.community.sap.com/resources/partners">Partners</a>
+		</li>
+		<li class="">
+			<a class="has-submenu " data-id="62" href="#">Events</a>
+				<ul>
+					<li><a class="go-back" data-id="0" href="#"><span>Events</span></a></li>
+								<li>
+									<a data-id="64" href="https://pages.community.sap.com/resources/event-organizer">Become an Event Organizer</a>
+								</li>
+								<li>
+									<a data-id="65" href="/t5/application-lifecycle-management/eb-p/alm-events">Application Lifecycle Management</a>
+								</li>
+								<li>
+									<a data-id="66" href="/t5/devtoberfest/eb-p/devtoberfest-events">Devtoberfest</a>
+								</li>
+								<li>
+									<a data-id="67" href="/t5/industries/eb-p/industries">Industries</a>
+								</li>
+								<li>
+									<a data-id="68" href="/t5/sap-codejam/eb-p/codejam-events">SAP CodeJam</a>
+								</li>
+								<li>
+									<a data-id="69" href="/t5/sap-community/eb-p/community-events">SAP Community</a>
+								</li>
+								<li>
+									<a data-id="70" href="/t5/sap-successfactors/eb-p/successfactorsevents">SAP SuccessFactors</a>
+								</li>
+								<li>
+									<a data-id="71" href="/t5/user-groups/eb-p/user-groups">User Groups</a>
+								</li>
+								<li>
+									<a data-id="72" href="/t5/events/ct-p/events">All Location Events</a>
+								</li>
+				</ul>
+		</li>
+		<li class="">
+			<a class="has-submenu " data-id="73" href="#">Help Center</a>
+				<ul>
+					<li><a class="go-back" data-id="0" href="#"><span>Help Center</span></a></li>
+								<li>
+									<a data-id="75" href="/t5/what-s-new/bg-p/whats-new">What's New</a>
+								</li>
+								<li>
+									<a data-id="76" href="/t5/welcome-corner/gh-p/welcome-corner">Welcome Corner</a>
+								</li>
+								<li>
+									<a data-id="77" href="/t5/help/faqpage">FAQs</a>
+								</li>
+								<li>
+									<a data-id="78" href="/community/help/resources">Help Resources</a>
+								</li>
+								<li>
+									<a data-id="79" href="/community/help/legal-resources">Legal Resources</a>
+								</li>
+				</ul>
+		</li>
+		<li class="">
+			<a class=" " data-id="80" href="https://pages.community.sap.com/topics">Topic Pages</a>
+		</li>
+		<li class="custom-explore-menu">
+			<a class="has-submenu trigger-explore-menu" data-id="81" href="#">Explore SAP</a>
+				<ul>
+					<li><a class="go-back" data-id="0" href="#"><span>Explore SAP</span></a></li>
+							<li>
+								<a class="has-submenu trigger-explore-menu" href="#" data-id="82">Products</a>
+								<ul>
+									<li><a class="go-back trigger-explore-menu" data-id="81" href="#"><span>Products</span></a></li>
+										<li>
+											<a data-id="83" href="https://www.sap.com/products/business-suite.html">Autonomous Enterprise</a>
+										</li>
+										<li>
+											<a data-id="84" href="https://www.sap.com/products/artificial-intelligence.html">Artificial intelligence</a>
+										</li>
+										<li>
+											<a data-id="85" href="https://www.sap.com/products/data-cloud.html">Data and analytics</a>
+										</li>
+										<li>
+											<a data-id="86" href="https://www.sap.com/products/business-applications.html">Autonomous Suite</a>
+										</li>
+										<li>
+											<a data-id="87" href="https://www.sap.com/products/ai-platform.html">AI platform</a>
+										</li>
+										<li>
+											<a data-id="88" href="https://www.sap.com/products/business-transformation-management.html">Transformation management</a>
+										</li>
+										<li>
+											<a data-id="89" href="https://www.sap.com/products/erp/grow.html">Midsize business solutions</a>
+										</li>
+										<li>
+											<a data-id="90" href="https://www.sap.com/products/financial-management.html">Financial management</a>
+										</li>
+										<li>
+											<a data-id="91" href="https://www.sap.com/products/spend-management.html">Spend management</a>
+										</li>
+										<li>
+											<a data-id="92" href="https://www.sap.com/products/scm.html">Supply chain management</a>
+										</li>
+										<li>
+											<a data-id="93" href="https://www.sap.com/products/hcm.html">Human capital management</a>
+										</li>
+										<li>
+											<a data-id="94" href="https://www.sap.com/products/crm.html">Customer experience</a>
+										</li>
+										<li>
+											<a data-id="95" href="https://www.sap.com/products/erp.html">Enterprise resource planning</a>
+										</li>
+										<li>
+											<a data-id="96" href="https://www.sap.com/products/business-network.html">Business network</a>
+										</li>
+										<li>
+											<a data-id="97" href="https://www.sap.com/products/sustainability.html">Sustainability management</a>
+										</li>
+										<li>
+											<a data-id="98" href="https://www.sap.com/store.html">SAP Store</a>
+										</li>
+										<li>
+											<a data-id="99" href="https://www.sap.com/products/try-sap.html">Try SAP</a>
+										</li>
+										<li>
+											<a data-id="100" href="https://www.sap.com/industries.html">View all industries</a>
+										</li>
+										<li>
+											<a data-id="101" href="https://www.sap.com/partners.html">Partners</a>
+										</li>
+										<li>
+											<a data-id="102" href="https://www.sap.com/services-support.html">Services</a>
+										</li>
+								</ul>
+							</li>
+							<li>
+								<a class="has-submenu trigger-explore-menu" href="#" data-id="103">Learning and Support</a>
+								<ul>
+									<li><a class="go-back trigger-explore-menu" data-id="81" href="#"><span>Learning and Support</span></a></li>
+										<li>
+											<a data-id="104" href="https://learning.sap.com/">Learning and certification</a>
+										</li>
+										<li>
+											<a data-id="105" href="https://support.sap.com/">Support</a>
+										</li>
+										<li>
+											<a data-id="106" href="https://help.sap.com/">Documentation</a>
+										</li>
+										<li>
+											<a data-id="107" href="/community">Community</a>
+										</li>
+								</ul>
+							</li>
+							<li>
+								<a class="has-submenu trigger-explore-menu" href="#" data-id="108">About</a>
+								<ul>
+									<li><a class="go-back trigger-explore-menu" data-id="81" href="#"><span>About</span></a></li>
+										<li>
+											<a data-id="109" href="https://www.sap.com/about/company.html">Company Information</a>
+										</li>
+										<li>
+											<a data-id="110" href="https://jobs.sap.com/?utm_source=CareerSite&amp;utm_campaign=CorpSite_HD">Careers</a>
+										</li>
+										<li>
+											<a data-id="111" href="https://www.sap.com/about/customer-stories.html">Customer Stories</a>
+										</li>
+										<li>
+											<a data-id="112" href="https://www.sap.com/events.html">Events</a>
+										</li>
+										<li>
+											<a data-id="113" href="https://www.sap.com/investors/en.html">Investor Relations</a>
+										</li>
+										<li>
+											<a data-id="114" href="https://news.sap.com/">News Center</a>
+										</li>
+										<li>
+											<a data-id="115" href="https://www.sap.com/about/trust-center.html">SAP Trust Center</a>
+										</li>
+								</ul>
+							</li>
+				</ul>
+		</li>
+</ul>
+						</div>
+						<div class="visible-menu">
+							<div>
+								<div class="mobile-sap-search">
+	<input class="execute-search" placeholder="Search the SAP Community" aria-label="Search">
+	<button class="execute-search">
+		<svg viewBox="0 0 18 17" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+			<path d="M17.1914 15.3281C17.3555 15.4922 17.4375 15.7031 17.4375 15.9609C17.4375 16.2188 17.3438 16.4414 17.1562 16.6289C16.9922 16.793 16.7812 16.875 16.5234 16.875C16.2656 16.875 16.0547 16.793 15.8906 16.6289L12.375 13.1133C11.7656 13.582 11.0742 13.957 10.3008 14.2383C9.55078 14.4961 8.74219 14.625 7.875 14.625C6.84375 14.625 5.88281 14.4375 4.99219 14.0625C4.10156 13.6875 3.32812 13.1719 2.67188 12.5156C2.01562 11.8594 1.5 11.0859 1.125 10.1953C0.75 9.30469 0.5625 8.34375 0.5625 7.3125C0.5625 6.28125 0.75 5.32031 1.125 4.42969C1.5 3.53906 2.01562 2.76562 2.67188 2.10938C3.32812 1.45312 4.10156 0.9375 4.99219 0.5625C5.88281 0.1875 6.84375 0 7.875 0C8.90625 0 9.86719 0.1875 10.7578 0.5625C11.6484 0.9375 12.4219 1.45312 13.0781 2.10938C13.7344 2.76562 14.25 3.53906 14.625 4.42969C15 5.32031 15.1875 6.28125 15.1875 7.3125C15.1875 8.17969 15.0469 9 14.7656 9.77344C14.5078 10.5234 14.1445 11.2031 13.6758 11.8125L17.1914 15.3281ZM7.875 12.832C8.64844 12.832 9.36328 12.6914 10.0195 12.4102C10.6992 12.1289 11.2852 11.7422 11.7773 11.25C12.293 10.7344 12.6914 10.1484 12.9727 9.49219C13.2539 8.8125 13.3945 8.08594 13.3945 7.3125C13.3945 6.53906 13.2539 5.82422 12.9727 5.16797C12.6914 4.48828 12.293 3.90234 11.7773 3.41016C11.2852 2.89453 10.6992 2.49609 10.0195 2.21484C9.36328 1.93359 8.64844 1.79297 7.875 1.79297C7.10156 1.79297 6.375 1.93359 5.69531 2.21484C5.03906 2.49609 4.45312 2.89453 3.9375 3.41016C3.44531 3.90234 3.05859 4.48828 2.77734 5.16797C2.49609 5.82422 2.35547 6.53906 2.35547 7.3125C2.35547 8.08594 2.49609 8.8125 2.77734 9.49219C3.05859 10.1484 3.44531 10.7344 3.9375 11.25C4.45312 11.7422 5.03906 12.1289 5.69531 12.4102C6.375 12.6914 7.10156 12.832 7.875 12.832Z"></path>
+		</svg>
+	</button>
+								</div>
+								<ul></ul>
+							</div>
+							<div class="explore-sap">
+								<a href="#" class="mobile-explore-button">Explore SAP</a>
+							</div>
+						</div>
+					</div>
+
+				</li>
+				<li class="user-menu-close">
+					<a href="#" class="user-menu-close-button">
+						<svg width="100%" height="100%" viewBox="0 0 18 18" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+							<path d="M10.2656 9L14.3789 13.1133C14.543 13.2773 14.625 13.4883 14.625 13.7461C14.625 14.0039 14.5312 14.2148 14.3438 14.3789C14.1797 14.543 13.9688 14.625 13.7109 14.625C13.4531 14.625 13.2422 14.543 13.0781 14.3789L9 10.3008L4.92188 14.3789C4.75781 14.543 4.54688 14.625 4.28906 14.625C4.03125 14.625 3.80859 14.543 3.62109 14.3789C3.45703 14.2148 3.375 14.0039 3.375 13.7461C3.375 13.4883 3.45703 13.2773 3.62109 13.1133L7.73438 9L3.62109 4.92188C3.45703 4.75781 3.375 4.54688 3.375 4.28906C3.375 4.03125 3.45703 3.82031 3.62109 3.65625C3.80859 3.46875 4.03125 3.375 4.28906 3.375C4.52344 3.375 4.73438 3.46875 4.92188 3.65625L9 7.73438L13.0781 3.65625C13.2656 3.46875 13.4766 3.375 13.7109 3.375C13.9688 3.375 14.1797 3.46875 14.3438 3.65625C14.5312 3.82031 14.625 4.03125 14.625 4.28906C14.625 4.54688 14.543 4.75781 14.3789 4.92188L10.2656 9Z"></path>
+						</svg>
+					</a>
+				</li>
+            </ul>
+        </section>
+    </header>
+</div>
+
+    <style>
+        .lia-quilt-row-header .lia-quilt-layout-custom-community-header .lia-quilt-row-header-hero { background-color: #D1EFFF; }
+        .lia-quilt-row-header-hero .lia-node-header-title,
+        .lia-quilt-row-header-hero .lia-node-header-description {
+            color: #000;
+        }
+    </style>
+
+
+					
+	
+	<div class="MinimumWidthContainer">
+		<div class="min-width-wrapper">
+			<div class="min-width">		
+				
+						<div class="lia-content">
+                            
+							
+							
+							
+		
+	<div class="lia-quilt lia-quilt-faq-page lia-quilt-layout-one-column lia-top-quilt">
+	<div class="lia-quilt-row lia-quilt-row-header">
+		<div class="lia-quilt-column lia-quilt-column-24 lia-quilt-column-single lia-quilt-column-common-header">
+			<div class="lia-quilt-column-alley lia-quilt-column-alley-single">
+	
+		
+			<div class="lia-quilt lia-quilt-header lia-quilt-layout-custom-community-header lia-component-quilt-header">
+	<div class="lia-quilt-row lia-quilt-row-header-top">
+		<div class="lia-quilt-column lia-quilt-column-24 lia-quilt-column-single lia-quilt-column-header-top-content lia-mark-empty">
+			
+		</div>
+	</div><div class="lia-quilt-row lia-quilt-row-header-navigation">
+		<div class="lia-quilt-column lia-quilt-column-24 lia-quilt-column-single lia-quilt-column-header-navigation-content">
+			<div class="lia-quilt-column-alley lia-quilt-column-alley-single">
+	
+		<div class="custom-community-header-left">
+			
+		
+			<div aria-label="breadcrumbs" role="navigation" class="BreadCrumb crumb-line lia-breadcrumb lia-component-common-widget-breadcrumb">
+	<ul role="list" id="list" class="lia-list-standard-inline">
+	
+		
+			<li class="lia-breadcrumb-node crumb">
+				<a class="lia-link-navigation crumb-community lia-breadcrumb-community lia-breadcrumb-forum" id="link" href="/community">SAP Community</a>
+			</li>
+			
+				<li aria-hidden="true" class="lia-breadcrumb-seperator crumb-community lia-breadcrumb-community lia-breadcrumb-forum">
+				  
+           			 <span>
+           				 <span class="lia-img-icon-list-separator-breadcrumb lia-fa-icon lia-fa-list lia-fa-separator lia-fa-breadcrumb lia-fa" alt="" aria-label="" role="img" id="display"></span>
+  					</span>
+          		  
+       			 
+				</li>
+			
+		
+			<li class="lia-breadcrumb-node crumb final-crumb">
+				<span class="lia-link-navigation child-thread lia-link-disabled" aria-disabled="true" id="link_0">Help</span>
+			</li>
+			
+		
+	
+</ul>
+</div>
+		
+	
+		</div>
+	
+	
+
+	
+		<div class="custom-community-header-right lia-mark-empty">
+			
+		
+			
+		
+	
+		</div>
+	
+	
+</div>
+		</div>
+	</div><div class="lia-quilt-row lia-quilt-row-header-hero">
+		<div class="lia-quilt-column lia-quilt-column-24 lia-quilt-column-single lia-quilt-column-header-hero-content">
+			<div class="lia-quilt-column-alley lia-quilt-column-alley-single">
+	
+		
+			  
+   
+
+<style> 
+  .truste_cursor_pointer { 
+    display: none;
+  }
+</style>
+		
+	
+	
+
+	
+		<div class="header-hero-wrapper">
+			
+		
+			<h1 class="PageTitle lia-component-common-widget-page-title"><span class="lia-link-navigation lia-link-disabled" aria-disabled="true" id="link_5cfd000d242fec">Help</span></h1>
+
+
+		
+			<div id="lia-searchformV32" class="SearchForm lia-search-form-wrapper lia-mode-default lia-component-common-widget-search-form">
+	
+
+	
+		<div class="lia-inline-ajax-feedback">
+			<div class="AjaxFeedback" id="ajaxfeedback"></div>
+			
+	
+
+	
+
+		</div>
+
+	
+
+	
+		<div id="searchautocompletetoggle">	
+	
+		
+
+	
+		<div class="lia-inline-ajax-feedback">
+			<div class="AjaxFeedback" id="ajaxfeedback_0"></div>
+			
+	
+
+	
+
+		</div>
+
+	
+
+	
+			
+            <form enctype="multipart/form-data" class="lia-form lia-form-inline SearchForm" action="https://community.sap.com/t5/help/faqpage.searchformv32.form.form" method="post" id="form" name="form"><div class="t-invisible"><input value="search/contributions/page" name="t:cp" type="hidden"><input value="kuLsKXWeidzlWYszsF5rphVcltzJELLx61rVx_rn5TeCf6vAhUo2x2TRnUviXuVKZME0iTbcNZ3RcacnXJhswnU4cL2vHbzII-H5o8Iyq00FJfm_6tFet7F_4toUBl_2YXUC7n4fVTL_kNAoSNZ8AoXVgAkyk0r9yo2gaadR4VSYHi8Ijj0gUYdURvTj1_cVe_F17e2vSU6o0J03zGtZD72piPRZ1eAW8Vm2DQxwdOp0FptoFHdBVrgNrkb7ikZHro51NZj-Dso7y3IYj9L1Qi1vkzJhz58frAiStt57TR5uIfsVfML6lBjOz1Az0XESS0hLOUBpE_7MFppo1N3QuoGlOvhtRe8z4E0wtuSkUbhFQzcWeojxVxjTg3PtmkGtHB8JfMtNnbrxgo_-qxkwvygcXVjvmCE51T8ZK66z8aCqiysDNGRTg1JRCmj9_M5XxKKOSk9NApaM-UNdhRRCqHGklik_seq7kEhOG3PeLAGf6gTaMMoNE0M33_-JnIIPbr5RUARLA0EVmLFXf6QE8tngMyuIUitt24LAshxUgVEYHKpvIbGq0w1hN4eQLvvXwFWb1uxM8v4uXYIlIkY_h-zwCpppOv4mIsQHVMyJaS2swPdc0nPaD4US6To_y9h4Od1Or8jXkeCAxhtMrv2SJkvaqYq0ew7pm0QINnN2_QrAq7MC0bnvyWVTh-hV0Ci7yyODL0XCPPm_21ffQ5X_xLq4K3YgCh7mAejw-u1dpxd9toAqzCLNHXbsD684cEFE-oI1Dd_PRd3xSyJPQyld99ZWm4B3hmhZP2FHZExbXGu5UkFLCKmiT1ijSW7GsZmS6uS3EiGwi16tGDd-WcGeBbpzmDdaEHuX2HlL9LdyoB4YcgI0E9F1GnNnpdO5wvCJBq-eFJCCF6Gy6yMZLbxMt-c0QGJERAb5qaJyeoE6YY5Qlvh8XAi4TIqYqm2mOTLTdBlhgIv7-s1sc9ngZ8Y0SQjk_Rio-NEKrg-eH3BVtMt6wv_BGzKHdxq7WXCdH7GoIK3v-03MJmh4j9jHSyMfi0If5yGJbCMH5suAlfxKJ-2Nm9bk1eipoVjBL9bzsq_MpgiqOyQB_SGCdkAhPAtm_Ffec13DWkzQYICzqD2hIjczJ7AX6wrUXSkfOEbEo8j9PQykMYsD-5d9AYhEpzvsAuNL2kH8OoPDO_2GbYTOdyrFLV4U--ydCYFKq26kFdnzQ6tJy0EAxVb4zk_SaqTfxqGPseeUgSVRhtXikDC9KQs." name="lia-form-context" type="hidden"><input value="FaqPage::searchformv32.form:" name="liaFormContentKey" type="hidden"><input value="5DI9GWMef1Esyz275vuiiOExwpQ=:H4sIAAAAAAAAALVSTU7CQBR+krAixkj0BrptjcpCMSbERGKCSmxcm+kwlGrbqTOvFDYexRMYL8HCnXfwAG5dubDtFKxgYgu4mrzvm3w/M+/pHcphHQ4kI4L2dMo9FLYZoM09qbeJxQ4V0+XC7e/tamqyBPEChwgbh1JAjQtLIz6hPaYh8ZlEMaxplAvm2KZmEsm0hhmBhOKpzZzOlsEw8LevR5W3zZfPEqy0oJIYc+eCuAyh2rolfaI7xLN0I8rjWfWBj7CuzJvf5osmbxRN3hacMimNwHRtKSOr0XNnv/vx+FoCGPjhMRzljhNLYHrEt9kA5T08ACCsKvREoYuqxqLl8BLO84q4UcMITcG49y/QOGs1pYyESl5p6V6qwRW086rinVmoxMZsiZud/zBUTc6gmVc4kExkJafmcYG1GM9+wfIsCkf2OP54hal5EjnG54z8h0XhjfcF7wQUs5Kz0GTjU2rOjc/llTT4Au07pDOcBQAA" name="t:formdata" type="hidden"></div>
+	
+	
+
+	
+
+	
+
+	
+		<div class="lia-inline-ajax-feedback">
+			<div class="AjaxFeedback" id="feedback"></div>
+			
+	
+
+	
+
+		</div>
+
+	
+
+	
+
+	
+
+	
+
+
+	
+	<input value="UP1iofNYLVqb3dKoNAG64JFfl8V0ncmzO9DBSW4zZbE." name="lia-action-token" type="hidden">
+	
+	<input value="form" id="form_UIDform" name="form_UID" type="hidden">
+	<input value="" id="form_instance_keyform" name="form_instance_key" type="hidden">
+	
+                
+
+                
+                    
+                        <span class="lia-search-granularity-wrapper">
+                            <select title="Search Granularity" class="lia-search-form-granularity search-granularity loaded" aria-label="Search Granularity" id="searchGranularity" name="searchGranularity"><option title="All community" selected="selected" value="khhcw49343|community">All community</option><option title="Knowledge base" value="tkb|tkb">Knowledge base</option><option title="Users" value="user|user">Users</option><option title="Managed tags" value="product|product">Managed tags</option><option value="beta_search">AI Search</option></select>
+                        </span>
+                    
+                
+
+                <span class="lia-search-input-wrapper">
+                    <span class="lia-search-input-field">
+                        <span class="lia-button-wrapper lia-button-wrapper-secondary lia-button-wrapper-searchForm-action"><input value="searchForm" name="submitContextX" type="hidden"><input class="lia-button lia-button-secondary lia-button-searchForm-action" value="Search" id="submitContext" name="submitContext" type="submit"></span>
+
+                        <span class="lia-hidden-aria-visibile" id="autocompleteInstructionsText" aria-live="polite" aria-atomic="true"></span><input placeholder="Search" aria-label="Search" title="Search" class="lia-form-type-text lia-autocomplete-input search-input lia-search-input-message" value="" id="messageSearchField_0" name="messageSearchField" type="text" aria-autocomplete="both" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-controls="messageSearchField_0-listbox" aria-owns="messageSearchField_0-listbox" autocomplete="off"><div class="lia-autocomplete-container" style="display: none; position: absolute;"><div class="lia-autocomplete-header">Enter a search word</div><div class="lia-autocomplete-content"><ul></ul></div><div class="lia-autocomplete-footer"><a class="lia-link-navigation lia-autocomplete-toggle-off lia-link-ticket-post-action lia-component-search-action-disable-auto-complete" data-lia-action-token="-Vcx7jxufRpS9hZtIAa3h5WoZiPerXTgHwZ3fTigUhA." rel="nofollow" id="disableAutoComplete_5cfd000d492066" href="https://community.sap.com/t5/help/faqpage.disableautocomplete:disableautocomplete?t:cp=action/contributions/searchactions">Turn off suggestions</a></div></div>
+                        <span class="lia-hidden-aria-visibile" id="autocompleteInstructionsText_0" aria-live="polite" aria-atomic="true"></span><input placeholder="Search" aria-label="Search" title="Search" class="lia-form-type-text lia-autocomplete-input search-input lia-search-input-tkb-article lia-js-hidden" value="" id="messageSearchField_1" name="messageSearchField_0" type="text" aria-autocomplete="both" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-controls="messageSearchField_1-listbox" aria-owns="messageSearchField_1-listbox" autocomplete="off"><div class="lia-autocomplete-container" style="display: none; position: absolute;"><div class="lia-autocomplete-header">Enter a search word</div><div class="lia-autocomplete-content"><ul></ul></div><div class="lia-autocomplete-footer"><a class="lia-link-navigation lia-autocomplete-toggle-off lia-link-ticket-post-action lia-component-search-action-disable-auto-complete" data-lia-action-token="AaRehPlbfimksJFiUq79vHZgeNbEnz84xMoJmrU_Vkg." rel="nofollow" id="disableAutoComplete_5cfd000d72b14d" href="https://community.sap.com/t5/help/faqpage.disableautocomplete:disableautocomplete?t:cp=action/contributions/searchactions">Turn off suggestions</a></div></div>
+                        
+
+	
+		<span class="lia-hidden-aria-visibile" id="autocompleteInstructionsText_1" aria-live="polite" aria-atomic="true"></span><input placeholder="Search" ng-non-bindable="" title="Enter a user name or rank" class="lia-form-type-text UserSearchField lia-search-input-user search-input lia-js-hidden lia-autocomplete-input" aria-label="Enter a user name or rank" value="" id="userSearchField" name="userSearchField" type="text" aria-autocomplete="both" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-controls="userSearchField-listbox" aria-owns="userSearchField-listbox" autocomplete="off"><div class="lia-autocomplete-container" style="display: none; position: absolute;"><div class="lia-autocomplete-header">Enter a user name or rank</div><div class="lia-autocomplete-content"><ul></ul></div><div class="lia-autocomplete-footer"><a class="lia-link-navigation lia-autocomplete-toggle-off lia-link-ticket-post-action lia-component-search-action-disable-auto-complete" data-lia-action-token="9EFkipbd3V5g3xB74f318Ztx0Bkm71pmQVEcnNtguTw." rel="nofollow" id="disableAutoComplete_5cfd000d815547" href="https://community.sap.com/t5/help/faqpage.disableautocomplete:disableautocomplete?t:cp=action/contributions/searchactions">Turn off suggestions</a></div></div>
+	
+
+	
+
+
+                        <span class="lia-hidden-aria-visibile" id="autocompleteInstructionsText_2" aria-live="polite" aria-atomic="true"></span><input placeholder="Search" title="Enter a search word" class="lia-form-type-text NoteSearchField lia-search-input-note search-input lia-js-hidden lia-autocomplete-input" aria-label="Enter a search word" value="" id="noteSearchField_0" name="noteSearchField" type="text" aria-autocomplete="both" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-controls="noteSearchField_0-listbox" aria-owns="noteSearchField_0-listbox" autocomplete="off"><div class="lia-autocomplete-container" style="display: none; position: absolute;"><div class="lia-autocomplete-header">Enter a search word</div><div class="lia-autocomplete-content"><ul></ul></div><div class="lia-autocomplete-footer"><a class="lia-link-navigation lia-autocomplete-toggle-off lia-link-ticket-post-action lia-component-search-action-disable-auto-complete" data-lia-action-token="Z7ti5EVXTs-w9qN-KCjI6ljNg1U2GZmv8raRwXcNZCQ." rel="nofollow" id="disableAutoComplete_5cfd000d9bfe47" href="https://community.sap.com/t5/help/faqpage.disableautocomplete:disableautocomplete?t:cp=action/contributions/searchactions">Turn off suggestions</a></div></div>
+						<span class="lia-hidden-aria-visibile" id="autocompleteInstructionsText_3" aria-live="polite" aria-atomic="true"></span><input placeholder="Search" title="Enter a search word" class="lia-form-type-text ProductSearchField lia-search-input-product search-input lia-js-hidden lia-autocomplete-input" aria-label="Enter a search word" value="" id="productSearchField" name="productSearchField" type="text" aria-autocomplete="both" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-controls="productSearchField-listbox" aria-owns="productSearchField-listbox" autocomplete="off"><div class="lia-autocomplete-container" style="display: none; position: absolute;"><div class="lia-autocomplete-header">Enter a search word</div><div class="lia-autocomplete-content"><ul></ul></div><div class="lia-autocomplete-footer"><a class="lia-link-navigation lia-autocomplete-toggle-off lia-link-ticket-post-action lia-component-search-action-disable-auto-complete" data-lia-action-token="CKIYO3y7MPu5nPbSzWuNunFxTrFZ9AizVHpuDcTDmIw." rel="nofollow" id="disableAutoComplete_5cfd000dabddeb" href="https://community.sap.com/t5/help/faqpage.disableautocomplete:disableautocomplete?t:cp=action/contributions/searchactions">Turn off suggestions</a></div></div>
+                        <input class="lia-as-search-action-id" name="as-search-action-id" type="hidden">
+                    </span>
+                </span>
+                
+
+                <span class="lia-cancel-search">cancel</span>
+
+                
+            
+</form>
+		
+			<div class="search-autocomplete-toggle-link lia-js-hidden">
+				<span>
+					<a class="lia-link-navigation auto-complete-toggle-on lia-link-ticket-post-action lia-component-search-action-enable-auto-complete" data-lia-action-token="fJaO347WmU6jdy9osdcV9WMGOHjeRa7IypsAj7C_RsI." rel="nofollow" id="enableAutoComplete" href="https://community.sap.com/t5/help/faqpage.enableautocomplete:enableautocomplete?t:cp=action/contributions/searchactions">Turn on suggestions</a>					
+					<span class="HelpIcon">
+	<a class="lia-link-navigation help-icon lia-tooltip-trigger" role="button" aria-label="Help Icon" id="link_1" href="#"><span class="lia-img-icon-help lia-fa-icon lia-fa-help lia-fa" alt="Auto-suggest helps you quickly narrow down your search results by suggesting possible matches as you type." aria-label="Help Icon" id="display_0" aria-hidden="true"></span></a>
+</span>
+				</span>
+			</div>
+		
+
+	
+
+	
+
+	
+	
+	
+</div>
+		
+	<div class="spell-check-showing-result">
+		Showing results for&nbsp;<span class="lia-link-navigation show-results-for-link lia-link-disabled" aria-disabled="true" id="showingResult"></span>
+		
+
+	</div>
+	<div>
+		
+		<span class="spell-check-search-instead">
+			Search instead for&nbsp;<a class="lia-link-navigation search-instead-for-link" rel="nofollow" id="searchInstead" href="#"></a>
+		</span>
+
+	</div>
+	<div class="spell-check-do-you-mean lia-component-search-widget-spellcheck">
+		Did you mean:&nbsp;<a class="lia-link-navigation do-you-mean-link" rel="nofollow" id="doYouMean" href="#"></a>
+	</div>
+
+	
+
+	
+
+	
+
+
+	
+</div>
+		
+			
+		
+	
+		</div>
+	
+	
+
+	
+		
+			
+		
+	
+	
+</div>
+		</div>
+	</div><div class="lia-quilt-row lia-quilt-row-header-bottom">
+		<div class="lia-quilt-column lia-quilt-column-24 lia-quilt-column-single lia-quilt-column-header-bottom-content">
+			<div class="lia-quilt-column-alley lia-quilt-column-alley-single">
+	
+		
+			
+		
+			
+    
+
+		
+			<style>
+    .custom-announcement .lia-panel-feedback-banner-note:before {
+        display: none;
+    }
+    .custom-announcement .custom-global-announcement-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+</style>
+
+
+
+
+
+
+		
+	
+	
+</div>
+		</div>
+	</div><div class="lia-quilt-row lia-quilt-row-header-feedback">
+		<div class="lia-quilt-column lia-quilt-column-24 lia-quilt-column-single lia-quilt-column-feedback">
+			<div class="lia-quilt-column-alley lia-quilt-column-alley-single">
+	
+		
+			
+	
+
+	
+
+		
+			
+        
+        
+	
+
+	
+
+    
+		
+	
+	
+</div>
+		</div>
+	</div>
+</div>
+		
+	
+	
+
+	
+		<div class="lia-page-header">
+			
+		
+			
+		
+			<h1 class="PageTitle lia-component-common-widget-page-title"><span class="lia-link-navigation lia-link-disabled" aria-disabled="true" id="link_3">Help</span></h1>
+		
+	
+		</div>
+	
+	
+</div>
+		</div>
+	</div><div class="lia-quilt-row lia-quilt-row-main">
+		<div class="lia-quilt-column lia-quilt-column-24 lia-quilt-column-single lia-quilt-column-main-content">
+			<div class="lia-quilt-column-alley lia-quilt-column-alley-single">
+	
+		
+			
+			<ul role="list" id="list_3" class="lia-list-standard lia-faq-sections-top lia-component-faq-toggleable-contents">
+	
+				
+					<li class="lia-faq-section">
+						<section id="faqtoggleableitemdisplay">
+	<h2 class="lia-faq-section-title lia-faq-section-title-level-1">
+		<a class="lia-link-navigation lia-faq-section-title registration" role="button" aria-expanded="false" id="toggleLink" href="https://community.sap.com/t5/help/faqpage/title/registration">Getting Started</a>
+	</h2>
+	<div class="lia-js-hidden lia-faq-section-contents lia-registration lia-faq-section-contents-depth-1" id="toggleContainer">
+    
+        <ul role="list" id="list_0" class="lia-list-standard lia-faq-sections">
+	
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title howregister_email_verify_not_required" role="button" aria-expanded="false" id="toggleLink_0" href="https://community.sap.com/t5/help/faqpage/title/howregister_email_verify_not_required">How do I join?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-howregister_email_verify_not_required lia-faq-section-contents-depth-2" id="toggleContainer_0">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    Participation in SAP Community requires an SAP Universal ID. Learn more <a href="https://www.sap.com/account/universal-id.html"> here</a>.
+<br>
+<br>
+If you don't already have an SAP Universal ID.
+<ul>
+  <li>Start the registration process via <a ref="https://account.sap.com/core/create/register">SAP Universal ID registration</a>.</li>
+  <li> Add your SAP Community display name in the "Username" field.</li>
+  <li> Check your email for an activation link and complete registration.</li>
+</ul>
+<br>
+If you already have an SAP Universal ID, you can go directly to the SAP Universal ID account manager to add a username (if the field is blank) or change your username.
+<ul>
+  <li> Sign in to SAP Universal ID account manager at <a ref="https://account.sap.com/sam/my-account"> SAP Universal ID Sign In</a>.</li>
+  <li> Select [Edit].</li>
+  <li> Enter or change the display name in the ?Username? field, then click [Save].</li>
+</ul>
+<br>
+Please do not use your user ID, email address, your company name, the SAP name/brand, or a series of numbers or letters. However, we encourage SAP Community members to use their real names.
+<br>
+<br>
+We recommend that all new users take our <a href="https://developers.sap.com/tutorials/community-tour.html"> "Tour the SAP Community" tutorial </a>.
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_0">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title howlogin" role="button" aria-expanded="false" id="toggleLink_1" href="https://community.sap.com/t5/help/faqpage/title/howlogin">How do I sign in?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-howlogin lia-faq-section-contents-depth-2" id="toggleContainer_1">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <ul>
+  <li> Click on the avatar icon at the top of any page.</li>
+  <li> Enter your login name and password. </li>
+  <li> Click "Sign In" to access your account.</li>
+</ul>
+<br>
+Note: Single sign-on is enabled for SAP Community, so you may be automatically authenticated if you have already logged in on another SAP platform.
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_0" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_1">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title lostpassword" role="button" aria-expanded="false" id="toggleLink_2" href="https://community.sap.com/t5/help/faqpage/title/lostpassword">What do I do if I forget my login or password?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-lostpassword lia-faq-section-contents-depth-2" id="toggleContainer_2">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <ul>
+  <li> Click the avatar at the top right to open the sign-in page.</li>
+  <li> Select "Forgot password?" at the bottom. </li>
+  <li> Follow the instructions to reset your password.</li>
+</ul>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_1" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+        
+</ul>
+        
+    
+    
+</div>
+</section>
+					</li>
+				
+					<li class="lia-faq-section">
+						<section id="faqtoggleableitemdisplay_0">
+	<h2 class="lia-faq-section-title lia-faq-section-title-level-1">
+		<a class="lia-link-navigation lia-faq-section-title participation" role="button" aria-expanded="false" id="toggleLink_3" href="https://community.sap.com/t5/help/faqpage/title/participation">Groups Basics</a>
+	</h2>
+	<div class="lia-js-hidden lia-faq-section-contents lia-participation lia-faq-section-contents-depth-1" id="toggleContainer_3">
+    
+        <ul role="list" id="list_1" class="lia-list-standard lia-faq-sections">
+	
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_2">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title whatisagroup" role="button" aria-expanded="false" id="toggleLink_4" href="https://community.sap.com/t5/help/faqpage/title/whatisagroup">What is a Group?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-whatisagroup lia-faq-section-contents-depth-2" id="toggleContainer_4">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    A Group allows you to connect and conduct valuable conversations with people who share the same interests. Groups and their content focus on a single location, interest, industry, activity, program, and so on. They don't focus on specific products and partnerships, as these topics are covered elsewhere in SAP Community.<br>  
+Groups can include discussions, Q&amp;A, blog posts, and/or knowledges base, depending on their purpose, and some may be private.<br>
+Explore the various Groups available and join (or request to join) the ones that appeal to you!
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_3" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_3">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title Join" role="button" aria-expanded="false" id="toggleLink_5" href="https://community.sap.com/t5/help/faqpage/title/Join">Who may join a Group?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-Join lia-faq-section-contents-depth-2" id="toggleContainer_5">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    Any SAP Community member can join or participate in an <b>open (public) Group</b>. <b>Closed (private) Groups</b> are accessible either by 1) invitation by Group owner or 2) sending a request to join and having this approved by the Group owner. <br>
+<b>Partner Groups</b> are restricted to SAP Partners and SAP Employees, and therefore will only be visible to eligible users based on log in credentials.
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_4" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_4">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title whyregister" role="button" aria-expanded="false" id="toggleLink_6" href="https://community.sap.com/t5/help/faqpage/title/whyregister">Why should I join a Group?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-whyregister lia-faq-section-contents-depth-2" id="toggleContainer_6">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    When you join a Group, you may: 
+<ul> 
+<li>Get notified when someone responds to a specific post or topic.
+</li><li>Exchange private messages with other members.
+</li><li>Personalize your Group experience.
+</li><li>Start TKB (Tribal Knowledge Base) and edit own drafts, add comments to others', delete own TKB articles.
+</li><li>Nominate good community content to be converted into a knowledge base article. This permission must be set at the forum level for nested TKBs.
+</li><li>Submit own blog posts for publishing (and the Group curators will review for relevance). 
+ </li></ul> 
+If you don't join a Group, you cannot do the above or set customization preferences. <br>
+You can still browse, search for information, read posts, give likes, and add comments -- but we recommend to click on the "Join Group" button for a better user experience. In fact, we recommend that all members start by joining the <a href="/t5/welcome-corner/gh-p/welcome-corner">Welcome Corner</a> and taking a <a href="https://community.sap.com/t5/welcome-corner-blog-posts/welcome-all-sap-community-members-start-here/ba-p/5359">quick moment</a> to introduce themselves!
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_5" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_5">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title Public_Private" role="button" aria-expanded="false" id="toggleLink_7" href="https://community.sap.com/t5/help/faqpage/title/Public_Private">Are Group blogs and conversations public or private?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-Public_Private lia-faq-section-contents-depth-2" id="toggleContainer_7">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    In general, conversations occurring within an<b> open (public) Group</b> may be read by anyone, but you need to have a user profile set up to participate with comments or feedback. Conversations in a <b>closed (private) Group</b> will be visible to the members in that specific Group only. Conversations happening in Groups under<b> Partner Groups</b> are visible to SAP Partners and SAP Employees only.<br>
+In addition, the <b>Private Messenger</b> functionality is available. Please review the Private Messenger section for more information.
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_6" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_6">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title Group_launch" role="button" aria-expanded="false" id="toggleLink_8" href="https://community.sap.com/t5/help/faqpage/title/Group_launch">How is a Group launched and managed?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-Group_launch lia-faq-section-contents-depth-2" id="toggleContainer_8">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    This depends on the type of Group. Any SAP Community member can request a location Group for a city where they are based, or for an activity. This is subject to a scoping call. Please see the section below "May I start my own Group?" SAP also initiates the formation of new Groups, based on SAP Community readership and participation related to specific topics, interest areas, or activities. Groups are managed by SAP moderators with the support of Group owners and curators.
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_7" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_7">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title Start_Group" role="button" aria-expanded="false" id="toggleLink_9" href="https://community.sap.com/t5/help/faqpage/title/Start_Group">May I start my own Group?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-Start_Group lia-faq-section-contents-depth-2" id="toggleContainer_9">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    Some Group types are SAP initiated and some you can request on your own (For example: location, interest). To request a Group or further information, reach out to <a href="mailto:community@sap.com">community@sap.com</a>. The SAP Community team will reply or set up a scoping call with you to determine your requirements and next steps to proceed, based on approval.
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_8" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+        
+</ul>
+        
+    
+    
+</div>
+</section>
+					</li>
+				
+					<li class="lia-faq-section">
+						<section id="faqtoggleableitemdisplay_1">
+	<h2 class="lia-faq-section-title lia-faq-section-title-level-1">
+		<a class="lia-link-navigation lia-faq-section-title posting" role="button" aria-expanded="false" id="toggleLink_10" href="https://community.sap.com/t5/help/faqpage/title/posting">Discussions</a>
+	</h2>
+	<div class="lia-js-hidden lia-faq-section-contents lia-posting lia-faq-section-contents-depth-1" id="toggleContainer_10">
+    
+        <ul role="list" id="list_2" class="lia-list-standard lia-faq-sections">
+	
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_8">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title post" role="button" aria-expanded="false" id="toggleLink_11" href="https://community.sap.com/t5/help/faqpage/title/post">How do I start a discussion?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-post lia-faq-section-contents-depth-2" id="toggleContainer_11">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <p><b>To start a discussion:</b>
+</p><ol>
+<li>Go to the Group where you want to post.
+</li><li>Click <b>Start a Discussion</b>.
+</li><li>In the <b>Subject</b> field, enter your discussion title.
+<br><b>Tip:</b> Make your subject clear and concise, as it's the only part of the post that shows up on the discussion-listing page.
+</li><li>In the <b>Body</b> field, type the details of your discussion. Be sure to include all necessary details, especially for technical topics. 
+</li><li>Format and spell check your content, as needed.
+</li><li>Click <b>Post</b>.
+</li></ol>
+<br>
+<b>Please note:</b> <br>
+Not all Groups have a discussion board. It depends on the purpose and setup of the Group.<br>
+Some Groups have mandatory labels. You can choose the relevant label on the right-hand side.
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_9" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_9">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title reply" role="button" aria-expanded="false" id="toggleLink_12" href="https://community.sap.com/t5/help/faqpage/title/reply">How do I reply in a discussion?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-reply lia-faq-section-contents-depth-2" id="toggleContainer_12">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    Click the "Reply" button to respond to the discussion post. You'll also see a reply field at the bottom of the discussion thread, and if you type your response directly there, you'll be able to click the "Post Reply" button when you're finished.<br>
+In addition to replying to the primary discussion post, you can respond to other replies in the discussion thread by clicking the "Reply" button found in each reply.<br>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_10" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+        
+</ul>
+        
+    
+    
+</div>
+</section>
+					</li>
+				
+					<li class="lia-faq-section">
+						<section id="faqtoggleableitemdisplay_2">
+	<h2 class="lia-faq-section-title lia-faq-section-title-level-1">
+		<a class="lia-link-navigation lia-faq-section-title qa" role="button" aria-expanded="false" id="toggleLink_13" href="https://community.sap.com/t5/help/faqpage/title/qa">Q&amp;A</a>
+	</h2>
+	<div class="lia-js-hidden lia-faq-section-contents lia-qa lia-faq-section-contents-depth-1" id="toggleContainer_13">
+    
+        <ul role="list" id="list_4" class="lia-list-standard lia-faq-sections">
+	
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_10">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title qa_whatis" role="button" aria-expanded="false" id="toggleLink_14" href="https://community.sap.com/t5/help/faqpage/title/qa_whatis">What is a Q&amp;A?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-qa_whatis lia-faq-section-contents-depth-2" id="toggleContainer_14">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <p>A Q&amp;A is similar to a discussion, but focuses on specific questions and answers. 
+Use Q&amp;As to ask questions or find questions that community experts have already answered.
+</p><p>If you're an expert in an area, or just want to share what you know about a topic, Q&amp;As are a great way to answer someone else's question and track the questions that are still awaiting answers.
+<br>
+<b>Please note</b>: Not all SAP Community areas will have a Q&amp;A section -- it depends on the purpose and setup of the section.
+                </p></div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_11" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_11">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title qa_ask" role="button" aria-expanded="false" id="toggleLink_15" href="https://community.sap.com/t5/help/faqpage/title/qa_ask">How do I ask a question?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-qa_ask lia-faq-section-contents-depth-2" id="toggleContainer_15">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    Not all community areas contain a Q&amp;A section. It depends on the area's purpose and setup.<br>
+To get details about (and options for) submitting your questions to SAP Community, please see the <a href="https://community.sap.com/t5/what-s-new/asking-and-answering-questions-in-the-community-after-migration/ba-p/311224">Asking and Answering Questions in the Community After Migration</a> post in the <a href="/t5/what-s-new/bg-p/whats-new">What's New</a> section. You may also want to watch <a href="https://www.youtube.com/watch?v=1vNKo7klS-Y">How do I ask a question from a category page?</a>, as this <a href="https://pages.community.sap.com/resources/how-to-videos">how-to video</a> illustrates one approach for posting a question to SAP Community.<br>
+Before you ask a question, please browse the community in case this question has been answered already.<br>
+If you need to create a new question, start with a descriptive title that briefly outlines what your question is about. A clear question title will help community members gain a quick initial understanding of your question. It will also help community members find your question (and its answers) when they are searching for solutions to similar problems.<br>
+When writing your question, please share what steps you took that led you to your question. If you don't, community members might tell you to take actions you've already tried yourself.<br>
+Make sure that your question is very specific. Provide as many details as you can -- such as which product version you are using and what error message you're receiving. Include screenshots if possible.<br>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_12" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_12">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title solution_whatis" role="button" aria-expanded="false" id="toggleLink_16" href="https://community.sap.com/t5/help/faqpage/title/solution_whatis">What is an Accepted Solution?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-solution_whatis lia-faq-section-contents-depth-2" id="toggleContainer_16">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    An Accepted Solution is a way for you to choose the reply that best answers a question that you've posted. When you accept a solution, both the question and the solution get special icons and links that take you directly from the question to the answer.<br>
+The blue tick icon for an Accepted Solution also appears on boards and in search results so you can see which messages have solutions.<br>
+<p>You can mark a solution as accepted only for questions that you've posted (you started the thread). Group moderators can also mark one of the replies to a message as an accepted solution.<br>
+You can learn more by reading <a href="https://community.sap.com/t5/what-s-new/asking-and-answering-questions-in-the-community-after-migration/ba-p/311224">Asking and Answering Questions in the Community After Migration</a>.
+                </p></div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_13" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_13">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title qa_accept" role="button" aria-expanded="false" id="toggleLink_17" href="https://community.sap.com/t5/help/faqpage/title/qa_accept">How do I accept the answer to a question?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-qa_accept lia-faq-section-contents-depth-2" id="toggleContainer_17">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <p>When community members answer one of your questions, you can choose the answer you think are the most useful, helpful, or accurate and mark them as a solution. 
+
+</p><p><b>To accept an answer to a question:</b></p>
+<ol>
+<li>Go to the answer that you want to accept.
+</li><li>Click <b>Options &gt; Accept as Solution</b>.
+</li></ol>
+<p><b>To revoke an accepted solution</b>:
+</p><ol>
+<li>Go to the answer that you want to revoke.
+</li><li>Click <b>Options &gt; Not the Solution</b>.
+</li></ol>
+<p>You can choose another solution or leave the question unsolved.
+</p><p>
+You can learn more by reading <a href="https://community.sap.com/t5/what-s-new/asking-and-answering-questions-in-the-community-after-migration/ba-p/311224">Asking and Answering Questions in the Community After Migration</a>.
+                </p></div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_14" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_14">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title find_questions" role="button" aria-expanded="false" id="toggleLink_18" href="https://community.sap.com/t5/help/faqpage/title/find_questions">How do I find questions to answer?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-find_questions lia-faq-section-contents-depth-2" id="toggleContainer_18">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    These <a href="https://pages.community.sap.com/resources/how-to-videos">how-to videos</a> will help you find questions in need of answers:<br>
+<a href="https://www.youtube.com/watch?v=qea8aXakSNc">How do I find questions to answer in a Q&amp;A board?</a><br>
+<a href="https://www.youtube.com/watch?v=YlWeKRP4yQE">How do I use search to find unanswered questions related to tag topics?</a><br>
+<a href="https://www.youtube.com/watch?v=HqcpjwT-esI&quot;">How to search for unanswered questions with SAP Managed Tags?</a><br>
+You can also find unanswered questions on SAP Managed Tag pages. Choose a tag from the <a href="/t5/all-sap-managed-tags/ct-p/managed-tags">full list of SAP Managed Tags</a>. Then on the tag page, select "Q&amp;A Unanswered" from the "Content Type" dropdown.<br>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_15" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_15">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title qa_answer" role="button" aria-expanded="false" id="toggleLink_19" href="https://community.sap.com/t5/help/faqpage/title/qa_answer">How do I respond to a question?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-qa_answer lia-faq-section-contents-depth-2" id="toggleContainer_19">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    If you can provide a solution to a question, you should answer it. If you require more information, you should leave a comment requesting clarifications.<br>
+Please watch <a href="https://www.youtube.com/watch?v=nxT1pQpyF3c">How and when to answer or reply to a question?</a>, one of our <a href="https://pages.community.sap.com/resources/how-to-videos">how-to videos</a>, to learn more about participating in Q&amp;A threads.<br>
+When answering a question, we encourage you to share your personal knowledge and write in your unique voice. If you want to publish an answer that was helped/created by GenAI, you must include this statement: "GenAI was used to help generate this content."<br>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_16" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_16">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title qa_view" role="button" aria-expanded="false" id="toggleLink_20" href="https://community.sap.com/t5/help/faqpage/title/qa_view">How do I view my questions and answers?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-qa_view lia-faq-section-contents-depth-2" id="toggleContainer_20">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    You'll find your questions and answers -- as well as your Q&amp;A comments -- in your "My content" section. (If you aren't sure where to locate "My content," please read <a href="https://community.sap.com/t5/what-s-new/get-to-know-your-post-migration-profile/ba-p/308061">
+Get to Know Your Post-Migration Profile</a> in the <a href="/t5/what-s-new/bg-p/whats-new">What's New</a> section.)<br>
+On the "My content" landing page, you'll see tabs for "Posts" and "Replies." Your questions will appear in the "Posts" feed, while your questions and comments will appear in the "Replies" feed.<br>
+You can also find your questions and answers specific to an individual Q&amp;A board, as long as your content appears in that board. To learn how to locate questions and answers in a Q&amp;A board, please watch <a href="https://www.youtube.com/watch?v=rAdFl22wBnw">How do I find my questions and answers in a Q&amp;A board?</a>, one of our <a href="https://pages.community.sap.com/resources/how-to-videos">how-to videos</a>.<br>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_17" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_17">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title answer_deletion" role="button" aria-expanded="false" id="toggleLink_21" href="https://community.sap.com/t5/help/faqpage/title/answer_deletion">Can I edit or delete my answers and replies?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-answer_deletion lia-faq-section-contents-depth-2" id="toggleContainer_21">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    You can edit your answers and replies, but you can't delete them. Therefore, please review your content carefully before posting.<br>
+If you need one of your answers or replies removed, you must report it as inappropriate content so that the moderation team can review your request. Follow the steps in this <a href="https://www.youtube.com/watch?v=BfbIpG7ElIQ">video</a> to report your content, selecting "Something else" as the reason and using the "Details" field to explain why you need your answer or reply deleted.<p>
+                </p></div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_18" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+        
+</ul>
+        
+    
+    
+</div>
+</section>
+					</li>
+				
+					<li class="lia-faq-section">
+						<section id="faqtoggleableitemdisplay_3">
+	<h2 class="lia-faq-section-title lia-faq-section-title-level-1">
+		<a class="lia-link-navigation lia-faq-section-title blogs" role="button" aria-expanded="false" id="toggleLink_22" href="https://community.sap.com/t5/help/faqpage/title/blogs">Blogs</a>
+	</h2>
+	<div class="lia-js-hidden lia-faq-section-contents lia-blogs lia-faq-section-contents-depth-1" id="toggleContainer_22">
+    
+        <ul role="list" id="list_5" class="lia-list-standard lia-faq-sections">
+	
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_18">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title blogs_whatis" role="button" aria-expanded="false" id="toggleLink_23" href="https://community.sap.com/t5/help/faqpage/title/blogs_whatis">What is a blog?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-blogs_whatis lia-faq-section-contents-depth-2" id="toggleContainer_23">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    A blog is a collection of blog posts written by one or more authors. Blog posts usually appear in reverse-chronological order, so you see the most recent post first, followed by earlier posts. Some blog posts have comments from readers, which you can read by clicking the <b>Comments</b> link at the bottom of the post.
+<p>
+                </p></div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_19" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_19">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title blogs_postcomment" role="button" aria-expanded="false" id="toggleLink_24" href="https://community.sap.com/t5/help/faqpage/title/blogs_postcomment">How do I post a comment on a blog?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-blogs_postcomment lia-faq-section-contents-depth-2" id="toggleContainer_24">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    Click the "Comment" button or scroll to the end of the page to find the comment field.<br>
+After entering your comment in the field, click the "Post Your Comment" button.<br>
+Note that you can comment on a blog post but you can't comment on someone else's comment. If you'd like to notify a member that you're responding to his or her comment, you can @mention that member in your comment. (Simply type @, then the member's display name, and you'll be able to select his or her name so that it appears in your comment.)<br>
+The comment field gives you several options for formatting your text. You can use simple HTML as well.<br>
+Note: Unless you have special permissions, you can't edit or delete a comment after it's posted, so be sure to preview your comment and check it carefully before posting.<br>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_20" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_20">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title blogs_anoncomment" role="button" aria-expanded="false" id="toggleLink_25" href="https://community.sap.com/t5/help/faqpage/title/blogs_anoncomment">Can I post a blog comment without registering or logging in?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-blogs_anoncomment lia-faq-section-contents-depth-2" id="toggleContainer_25">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <p>No, you will be required to register or log in to post a blog comment.
+<br>
+<b>Please note</b>: You don't have to be a member in a Group to leave a blog post comment, but you do have to join a Group before you can write your own blog post there. We recommend that you "Join" Groups that you are interested in to receive notifications and get the best overall user experience.
+<br>
+
+</p><center>
+
+<img style="border:1px solid black;" img="" src="https://groups-stag.community.sap.com/html/assets/2309CanIpostablogcommentwithoutregisteringorloggingin.png">
+</center>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_21" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_21">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title blogs_editcomment" role="button" aria-expanded="false" id="toggleLink_26" href="https://community.sap.com/t5/help/faqpage/title/blogs_editcomment">Can I edit or delete my comments?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-blogs_editcomment lia-faq-section-contents-depth-2" id="toggleContainer_26">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    You can edit your comments, but you can't delete them. Therefore, please review your comments carefully before posting.<br>
+If you need one of your comments removed, you must report it as inappropriate content so that the moderation team can review your request. Follow the steps in this <a href="https://www.youtube.com/watch?v=BfbIpG7ElIQ">video</a> to report your comment, selecting "Something else" as the reason and using the "Details" field to explain why you need your comment deleted.<p>
+                </p></div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_22" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_22">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title blogs_subscribe" role="button" aria-expanded="false" id="toggleLink_27" href="https://community.sap.com/t5/help/faqpage/title/blogs_subscribe">Can I subscribe to a blog?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-blogs_subscribe lia-faq-section-contents-depth-2" id="toggleContainer_27">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    Yes. You can subscribe directly to a blog or a blog post, or you can subscribe to their RSS feeds. 
+If you subscribe to an RSS feed, you can use an RSS reader to view new content that's added to the blog. 
+If you subscribe directly to a blog or blog post, you receive an email alert when new articles or comments are posted. 
+<p>
+</p><table>
+<tbody><tr><th><b>To</b></th><th><b>Do this</b></th></tr>
+
+<tr><td>Subscribe to a blog</td>
+<td>Go to the blog page and click <b>Blog Options &gt; Subscribe</b>.
+</td></tr>
+<tr><td>Subscribe to an article</td>
+<td>Go to the article and click <b>Article Options &gt; Subscribe</b>.
+</td></tr>
+<tr><td>Subscribe to an RSS feed &nbsp;&nbsp;&nbsp;</td>
+<td>Go to the blog or article and click <b>Blog Options &gt; Subscribe to RSS Feed</b>.
+<br>Then, save the live bookmark or whatever you usually do to add an RSS feed. 
+</td></tr>
+</tbody></table>
+<p>
+                </p></div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_23" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_23">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title can_write_publish_own_blog_post" role="button" aria-expanded="false" id="toggleLink_28" href="https://community.sap.com/t5/help/faqpage/title/can_write_publish_own_blog_post">Can I write and publish my own blog post?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-can_write_publish_own_blog_post lia-faq-section-contents-depth-2" id="toggleContainer_28">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    Please see the What's New post <a href="https://community.sap.com/t5/what-s-new/what-you-need-to-know-about-blogging-post-migration/ba-p/309730">What You Need to Know About Blogging Post-Migration</a> to learn about the community's blogging tool and process.<br>
+
+These how-to videos may also help you prepare your post:<br>
+<a href="https://www.youtube.com/watch?v=XrYlsk-66Hw">How to create a blog post from a category area</a><br>
+<a href="https://youtu.be/sP9auNH3-II">How to create a post from the homepage</a><br>
+<a href="https://www.youtube.com/watch?v=f79J7QnvkyA">How to create a blog post in a group</a><br>
+<a href="https://www.youtube.com/watch?v=nFVaqSodm4Y">How to add Article User Tags and schedule your post for publication</a><br>
+
+Posts from new bloggers will need to go through <a href="https://pages.community.sap.com/resources/moderation">moderation</a> before they're published. To bypass moderation, members will need to move up the rank ladder (although posts submitted to a group will always need to go through moderation). You can learn more about the rank ladder in the What's New post <a href="https://community.sap.com/t5/what-s-new/let-the-gamification-begin/ba-p/311892">Let the Gamification Begin!</a>
+
+If your post needs to go through moderation, please note that the moderation team may require up to <b>five business days</b> to conduct each review.<br> 
+
+You should always keep the following rules in mind when writing for the SAP Community audience:<br>
+
+<b>Apply the right structure</b><br>
+We expect every blog post to consist of a beginning (introduction), a middle (main portion), and an end (a conclusion that wraps everything up). A collection of links or just a video with short text does not qualify as a blog post.<br>
+
+<b>Write with the proper style, in your unique voice</b><br>
+We recommend a conversational writing style that is clear and easily understood. Ideally, a blog post should reflect the author's unique voice.<br>
+If you want to publish content that was helped/created by GenAI, you must add the <a href="https://community.sap.com/t5/help/faqpage/title/tagging">user tag</a> GenAI Assisted Content.<br>
+
+<b>Share value and your personal knowledge</b><br>
+We remind all bloggers that they should put the reader first. One of the best ways to define a value statement is to actually write one. For example, "In this blog post you will learn" or "As a fellow administrator of XX product, I typically run into this problem. Next, I'll share the solution I've come up with..."<br>
+
+In their blog posts, authors should share their personal knowledge. They should not copy text from other sources, per our <a href="https://community.sap.com/resources/rules-of-engagement">Rules of Engagement</a>.<br>
+
+If you want to publish content that was helped/created by GenAI, you must add the <a href="https://community.sap.com/t5/help/faqpage/title/tagging">user tag</a> GenAI Assisted Content.<br>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_24" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_24">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title cover_photo" role="button" aria-expanded="false" id="toggleLink_29" href="https://community.sap.com/t5/help/faqpage/title/cover_photo">Do I need to include a cover photo?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-cover_photo lia-faq-section-contents-depth-2" id="toggleContainer_29">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    No. A cover photo is only required when a group or board owner decides to feature a blog post. It doesn't apply to most blog posts. (See the <a href="/t5/what-s-new/bg-p/whats-new">What's New</a> blog board as an example.) If you do decide to include a cover photo, please make sure that its dimensions are 600x420 pixels, as that size is the requirement for featured posts.<br>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_25" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_25">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title article_teaser" role="button" aria-expanded="false" id="toggleLink_30" href="https://community.sap.com/t5/help/faqpage/title/article_teaser">Do I need to include an "Article Teaser"?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-article_teaser lia-faq-section-contents-depth-2" id="toggleContainer_30">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    No. The teaser only appears when a group or board owner decides to feature a blog post, but it's still optional. (See the <a href="/t5/what-s-new/bg-p/whats-new">What's New</a> blog board as an example.) You can learn more about these teasers in <a href="https://developers.sap.com/tutorials/community-tour.html#fb0cbd5b-bd49-433d-a2fe-11f3eb85fda3">Step 11 of the Tour the SAP Community 2024 tutorial</a>.<br>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_26" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_26">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title coauthors" role="button" aria-expanded="false" id="toggleLink_31" href="https://community.sap.com/t5/help/faqpage/title/coauthors">How do I use the "Co-Authors" field?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-coauthors lia-faq-section-contents-depth-2" id="toggleContainer_31">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    The co-authors field is part of our platform's out-of-the-box blogging features.<br>
+The co-author functionality allows for other community members to assist during the edit and publishing process. 
+The co-authors do not show in the user interface of the published post.<br>
+If you want to mention co-authors please do so as part of the post content, for instance thanking them at the end of the post.<br>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_27" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_27">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title moderation_review" role="button" aria-expanded="false" id="toggleLink_32" href="https://community.sap.com/t5/help/faqpage/title/moderation_review">I submitted a blog post for review. How long does moderation take?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-moderation_review lia-faq-section-contents-depth-2" id="toggleContainer_32">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    If your blog post needs to go through <a href="https://pages.community.sap.com/resources/moderation">moderation</a>, please note that the moderation team may require up to <b>five business days</b> to conduct each review.
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_28" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_28">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title drafts" role="button" aria-expanded="false" id="toggleLink_33" href="https://community.sap.com/t5/help/faqpage/title/drafts">Where can I find the drafts of my blog posts?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-drafts lia-faq-section-contents-depth-2" id="toggleContainer_33">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    Each blog board includes a Blog Dashboard that links to the drafts of posts that you have prepared for that board. To learn how to find your drafts in a blog board, please read the <a href="https://community.sap.com/t5/what-s-new/what-you-need-to-know-about-blogging-post-migration/ba-p/309730">What You Need to Know About Blogging Post-Migration</a> post in the <a href="/t5/what-s-new/bg-p/whats-new">What's New</a> section.<br>
+You can also find the autosaved drafts of your blog posts in your "My content" section. To learn more, please watch <a href="https://www.youtube.com/watch?v=lsDN0_wXAz0">How do I view my autosaved drafts from "My content"?</a>, one of our <a href="https://pages.community.sap.com/resources/how-to-videos">how-to videos</a>.
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_29" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+        
+</ul>
+        
+    
+    
+</div>
+</section>
+					</li>
+				
+					<li class="lia-faq-section">
+						<section id="faqtoggleableitemdisplay_4">
+	<h2 class="lia-faq-section-title lia-faq-section-title-level-1">
+		<a class="lia-link-navigation lia-faq-section-title tkb" role="button" aria-expanded="false" id="toggleLink_34" href="https://community.sap.com/t5/help/faqpage/title/tkb">Knowledge Base</a>
+	</h2>
+	<div class="lia-js-hidden lia-faq-section-contents lia-tkb lia-faq-section-contents-depth-1" id="toggleContainer_34">
+    
+        <ul role="list" id="list_6" class="lia-list-standard lia-faq-sections">
+	
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_29">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title tkb_whatis" role="button" aria-expanded="false" id="toggleLink_35" href="https://community.sap.com/t5/help/faqpage/title/tkb_whatis">What is a knowledge base?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-tkb_whatis lia-faq-section-contents-depth-2" id="toggleContainer_35">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <p>A knowledge base is a collection of documents that captures and organizes helpful information. 
+Knowledge bases are great resources for several reasons: 
+</p><ul>
+<li>You can search for knowledge base documents.
+</li><li>After you find a document, you can add your comments and maybe even edit the document (if you have the right permission). If the document's publisher incorporates your comment into a later version of the article, you'll get credit as a contributor.
+</li><li>Knowledge base documents can contain images.
+</li><li>Each Knowledge base document contains lists of contributors and related links.
+</li></ul>
+<p>Contributors could be community members whose posts or comments are used in the document, authors who put the document together, or editors who reviewed or refined it.
+</p><p>
+                </p></div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_30" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+        
+</ul>
+        
+    
+    
+</div>
+</section>
+					</li>
+				
+					<li class="lia-faq-section">
+						<section id="faqtoggleableitemdisplay_5">
+	<h2 class="lia-faq-section-title lia-faq-section-title-level-1">
+		<a class="lia-link-navigation lia-faq-section-title search" role="button" aria-expanded="false" id="toggleLink_36" href="https://community.sap.com/t5/help/faqpage/title/search">Search</a>
+	</h2>
+	<div class="lia-js-hidden lia-faq-section-contents lia-search lia-faq-section-contents-depth-1" id="toggleContainer_36">
+    
+        <ul role="list" id="list_7" class="lia-list-standard lia-faq-sections">
+	
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_30">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title howinformation" role="button" aria-expanded="false" id="toggleLink_37" href="https://community.sap.com/t5/help/faqpage/title/howinformation">How do I search for content?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-howinformation lia-faq-section-contents-depth-2" id="toggleContainer_37">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <p>To search the SAP Community, enter your search in the search field and click <b>Search</b>. <br><br>
+When you type a search term, the system automatically searches at the current level. For example, if you're on the SAP Community front page, the system searches the entire SAP Community. <br>
+<br>
+</p><p>To perform a more in-depth search, click the <b>Advanced</b> link next to the Search Options on the Search Results page. Here, you can limit your query to a specific board, specific parts of the message (subject vs. body), and other advanced parameters.
+                </p></div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_31" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_31">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title srch_autosuggest" role="button" aria-expanded="false" id="toggleLink_38" href="https://community.sap.com/t5/help/faqpage/title/srch_autosuggest">How does auto-suggest work?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-srch_autosuggest lia-faq-section-contents-depth-2" id="toggleContainer_38">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <p>Auto-suggest accelerates your search by displaying results as you type search terms. When you see the post or user you're 
+looking for, just click it.
+</p><p>To turn auto-suggest off, click <b>Turn off suggestions</b> in the auto-suggest list. 
+</p><p>To turn auto-suggest on, click <b>Turn on suggestions</b> below the search entry area.
+                </p></div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_32" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_32">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title srch_filter" role="button" aria-expanded="false" id="toggleLink_39" href="https://community.sap.com/t5/help/faqpage/title/srch_filter">How do I filter search results?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-srch_filter lia-faq-section-contents-depth-2" id="toggleContainer_39">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    You can refine your search using one or more filters (location, author, date).
+<p>Want to limit your search results to accepted solutions? Click the <b>Solved</b> check box under the Metadata filter.
+Want only the most recent results? Use one for the date filters to see results for a day or a week ago. You can also filter your results by individual authors or members who have the same rank.
+</p><p>Most search filters work together to narrow the possible results. For example, you can search for accepted solutions in the last month. However, the filters for the type of post work a little differently. If you choose Forums and Blogs, you see results from either forums <i>or</i> blogs (not results that are both forum <i>and</i> blog posts).
+</p><p>Active filters appear at the top of the results list. To turn off a filter, click the <b>X</b> to the right of the filter.
+ 
+</p><p>
+                </p></div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_33" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_33">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title srch_results" role="button" aria-expanded="false" id="toggleLink_40" href="https://community.sap.com/t5/help/faqpage/title/srch_results">How can I customize search results?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-srch_results lia-faq-section-contents-depth-2" id="toggleContainer_40">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    You can customize your search results to make them more meaningful in several ways:
+<ul>
+<li>Use the interactive filters on the search results page  to refine the search results based on a variety of criteria: location, author, date, and others. 
+</li><li>See which filters are active at the top of the results list.
+</li><li>Turn an active filter off by clicking the <b>X</b> button to the right of the filter.
+</li></ul>
+<p>
+                </p></div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_34" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+        
+</ul>
+        
+    
+    
+</div>
+</section>
+					</li>
+				
+					<li class="lia-faq-section">
+						<section id="faqtoggleableitemdisplay_6">
+	<h2 class="lia-faq-section-title lia-faq-section-title-level-1">
+		<a class="lia-link-navigation lia-faq-section-title labels" role="button" aria-expanded="false" id="toggleLink_41" href="https://community.sap.com/t5/help/faqpage/title/labels">Labels</a>
+	</h2>
+	<div class="lia-js-hidden lia-faq-section-contents lia-labels lia-faq-section-contents-depth-1" id="toggleContainer_41">
+    
+        <ul role="list" id="list_8" class="lia-list-standard lia-faq-sections">
+	
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_34">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title labels_whatarelabels" role="button" aria-expanded="false" id="toggleLink_42" href="https://community.sap.com/t5/help/faqpage/title/labels_whatarelabels">What are labels?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-labels_whatarelabels lia-faq-section-contents-depth-2" id="toggleContainer_42">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <p>Labels are used within the SAP Community to help categorize content in discussions, blogs, Q&amp;As, and knowledge bases<br>
+Labels enable you to categorize the content you write based on the themes or content in the article. For example, you might apply labels like "Innovation Alert", "Localization", or "Configuration".</p>
+<p>Unlike tags, labels are created by the Admin and typically controlled for consistency.</p>
+<p>Some Groups have a pre-defined list of labels, depending on the purpose and setup of the Group. In which case authors can choose/apply labels from the pre-defined list in the Group in which the article appears. Some Groups allow members to add their own labels. Tags are more free-form and can be created by any author - therefore anyone writing content.</p>
+<p>It is also possible to subscribe to a label to get notifications of new content associated with this label. See the section: How do I subscribe to a label.</p>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_35" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_35">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title labels_addlabels" role="button" aria-expanded="false" id="toggleLink_43" href="https://community.sap.com/t5/help/faqpage/title/labels_addlabels">How do I add a label to my post?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-labels_addlabels lia-faq-section-contents-depth-2" id="toggleContainer_43">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <p>
+<b>To add a label when you're creating a new piece of content, whether in discussions, blogs, Q&amp;A, or the knowledge base:</b>
+</p><ol>
+<li>In the <b>Labels</b> field, start typing the label or choose one from the list.
+<p></p>
+</li><li>If you add multiple labels, you must separate them with commas.
+</li></ol><p>
+</p><p>
+</p><center>
+
+<img style="border:1px solid black;" img="" src="https://groups-stag.community.sap.com/html/assets/2309Labels_howdoiaddalabeltomypost.png" width="635" height="252">
+</center>
+<p></p>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_36" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_36">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title labels_subscribelabels" role="button" aria-expanded="false" id="toggleLink_44" href="https://community.sap.com/t5/help/faqpage/title/labels_subscribelabels">How do I subscribe to a label?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-labels_subscribelabels lia-faq-section-contents-depth-2" id="toggleContainer_44">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <p>When you subscribe to a label, you will be notified by email when a new post is created with the label.</p>
+<p><b>To subscribe to a label:</b></p>
+<ol>
+<li>From a particular post with a label, click on the label to filter by that label. (You can also do this from the labels component.)
+</li><li>Click <b>Subscribe</b>.
+</li></ol>
+<p><b>Note:</b>You can configure our own subscription settings under <b>My Content &gt; My Settings &gt; Subscriptions and Notifications &gt; My Subscriptions</b> and <b>My Content &gt; My Settings &gt; Subscriptions and Notifications &gt; Notification Settings</b>.</p><p>
+
+</p><p>One thing to note about labels is that they are applied at node level. Thus, predefined labels and subscriptions to labels exist only at the node at which they are applied. For example, if you subscribe to a label named 'contest' in one Group, it will not automatically subscribe you to an identically named label in another Group or board. You will have to subscribe twice, once at each Group or board level. This also applies if you add a labels component to your page to display the most popular labels, these are also designed to work at node level.</p>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_37" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+        
+</ul>
+        
+    
+    
+</div>
+</section>
+					</li>
+				
+					<li class="lia-faq-section">
+						<section id="faqtoggleableitemdisplay_7">
+	<h2 class="lia-faq-section-title lia-faq-section-title-level-1">
+		<a class="lia-link-navigation lia-faq-section-title Associated_Products" role="button" aria-expanded="false" id="toggleLink_45" href="https://community.sap.com/t5/help/faqpage/title/Associated_Products">SAP  Managed Tags</a>
+	</h2>
+	<div class="lia-js-hidden lia-faq-section-contents lia-Associated_Products lia-faq-section-contents-depth-1" id="toggleContainer_45">
+    
+        <ul role="list" id="list_9" class="lia-list-standard lia-faq-sections">
+	
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_37">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title What_are_associated_products" role="button" aria-expanded="false" id="toggleLink_46" href="https://community.sap.com/t5/help/faqpage/title/What_are_associated_products">What are SAP Managed Tags?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-What_are_associated_products lia-faq-section-contents-depth-2" id="toggleContainer_46">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    SAP Managed Tags are a type of tag derived from SAP's official list of products and solutions.<br>
+
+It is also possible to subscribe to an SAP Managed Tag so that you will receive notifications of new content about that product. Click on the SAP Managed Tag, for example at the bottom or a blog post, and choose to "Subscribe" in the Options drop-down menu. 
+
+<center>
+
+<img style="border:1px solid black;" img="" src="https://groups-stag.community.sap.com/html/assets/2309_Whatisassociatedproduct.png">
+</center>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_38" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_38">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title How_do_I_tag_a_post_with_a_product" role="button" aria-expanded="false" id="toggleLink_47" href="https://community.sap.com/t5/help/faqpage/title/How_do_I_tag_a_post_with_a_product">How do I tag a post with an SAP Managed Tag?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-How_do_I_tag_a_post_with_a_product lia-faq-section-contents-depth-2" id="toggleContainer_47">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <b>To add a product to a post or blog</b>:<br>
+<ol>
+<li>Begin by typing a hashtag before a product name in the message body. 
+</li><li>A search box will appear listing products with matching titles. 
+</li><li>Select the product you want to mention.
+</li></ol><br>
+
+<b>You can also use the SAP Managed Tag field on the post creation screen:</b>
+<ol>
+<li>Type a product name in the field.
+</li><li>A search box will appear listing products with matching titles.
+</li><li>Select the product you want to include as a tag.
+</li></ol>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_39" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_39">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title How_do_I_visit_a_Product_Page" role="button" aria-expanded="false" id="toggleLink_48" href="https://community.sap.com/t5/help/faqpage/title/How_do_I_visit_a_Product_Page">How do I view an SAP Managed Tag page?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-How_do_I_visit_a_Product_Page lia-faq-section-contents-depth-2" id="toggleContainer_48">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <b>To view the product page for a specific SAP Managed Tag:</b>
+<ol>
+<li> Click the hyperlink of the SAP Managed Tag on a specific post. 
+</li><li>This link will take you to a page in the community where you can view all the posts about the same product.
+</li></ol>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_40" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+        
+</ul>
+        
+    
+    
+</div>
+</section>
+					</li>
+				
+					<li class="lia-faq-section">
+						<section id="faqtoggleableitemdisplay_8">
+	<h2 class="lia-faq-section-title lia-faq-section-title-level-1">
+		<a class="lia-link-navigation lia-faq-section-title tagging" role="button" aria-expanded="false" id="toggleLink_49" href="https://community.sap.com/t5/help/faqpage/title/tagging">User Tags (Article, Question, Message)</a>
+	</h2>
+	<div class="lia-js-hidden lia-faq-section-contents lia-tagging lia-faq-section-contents-depth-1" id="toggleContainer_49">
+    
+        <ul role="list" id="list_10" class="lia-list-standard lia-faq-sections">
+	
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_40">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title tagging_what" role="button" aria-expanded="false" id="toggleLink_50" href="https://community.sap.com/t5/help/faqpage/title/tagging_what">What is a User Tag?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-tagging_what lia-faq-section-contents-depth-2" id="toggleContainer_50">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <p>A User Tag is a single keyword or phrase that further describes the topic, theme, or subject of content, complementing the SAP Managed Tag. They are also known as Article User Tags (in blog posts), Question User Tags (in Q&amp;A), and Message User Tags (in discussions).<br> 
+SAP Managed Tags are fixed, but members can create their own User Tags. For example, in a blog post about SAP S/4HANA Cloud, you might add these Article User Tags: implementation, guidance.<br>
+Be sure to use commas between tags.
+                </p></div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_41" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_41">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title tagging_whatido" role="button" aria-expanded="false" id="toggleLink_51" href="https://community.sap.com/t5/help/faqpage/title/tagging_whatido">What can I do with User Tags?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-tagging_whatido lia-faq-section-contents-depth-2" id="toggleContainer_51">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    User Tags -- also known as Article User Tags (in blog posts), Question User Tags (in Q&amp;A), and Message User Tags (in discussions) -- provide another way to help other users discover interesting posts. They also provide another way to organize content in the SAP Community that you think is related.<br>
+To see how User Tags can be applied (specifically, Article User Tags in this case), please watch this <a href="https://www.youtube.com/watch?v=nFVaqSodm4Y">how-to video</a>.
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_42" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_42">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title tagging_why" role="button" aria-expanded="false" id="toggleLink_52" href="https://community.sap.com/t5/help/faqpage/title/tagging_why">Why do people apply User Tags?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-tagging_why lia-faq-section-contents-depth-2" id="toggleContainer_52">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    Some users will tag posts for their own convenience in finding them later. Other users enjoy helping categorize interesting posts for the benefit of the SAP Community.
+<p>
+                </p></div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_43" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_43">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title tagging_how" role="button" aria-expanded="false" id="toggleLink_53" href="https://community.sap.com/t5/help/faqpage/title/tagging_how">How do I apply User Tags?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-tagging_how lia-faq-section-contents-depth-2" id="toggleContainer_53">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    User Tags are also known as Article User Tags (in blog posts), Question User Tags (in Q&amp;A), and Message User Tags (in discussions), and you'll find fields for these things depending on the type of content you're creating.<br> 
+To see how Article User Tags can be applied to a blog post (as an example), please watch this <a href="https://www.youtube.com/watch?v=nFVaqSodm4Y">how-to video</a>. The same approach also applies to discussions and questions.
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_44" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_44">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title tagging_where" role="button" aria-expanded="false" id="toggleLink_54" href="https://community.sap.com/t5/help/faqpage/title/tagging_where">Where are my User Tags?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-tagging_where lia-faq-section-contents-depth-2" id="toggleContainer_54">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    You'll find them in the <a href="https://community.sap.com/t5/user/myprofilepage/tab/user-tagging">Tagging</a> area of your settings. This <a href="https://www.youtube.com/watch?v=tW1OlCdUXf8">how-to video</a> shows you where to go.
+<p>
+                </p></div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_45" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+        
+</ul>
+        
+    
+    
+</div>
+</section>
+					</li>
+				
+					<li class="lia-faq-section">
+						<section id="faqtoggleableitemdisplay_9">
+	<h2 class="lia-faq-section-title lia-faq-section-title-level-1">
+		<a class="lia-link-navigation lia-faq-section-title kudos" role="button" aria-expanded="false" id="toggleLink_55" href="https://community.sap.com/t5/help/faqpage/title/kudos">Likes</a>
+	</h2>
+	<div class="lia-js-hidden lia-faq-section-contents lia-kudos lia-faq-section-contents-depth-1" id="toggleContainer_55">
+    
+        <ul role="list" id="list_11" class="lia-list-standard lia-faq-sections">
+	
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_45">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title kudos_whatis" role="button" aria-expanded="false" id="toggleLink_56" href="https://community.sap.com/t5/help/faqpage/title/kudos_whatis">What are likes?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-kudos_whatis lia-faq-section-contents-depth-2" id="toggleContainer_56">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <ul>
+  <li> Likes is a content rating system that lets you vote for useful or valuable posts.</li>
+  <li> Giving likes is a way to appreciate good content and recognize the author. </li>
+</ul>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_46" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_46">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title kudos_howdoi" role="button" aria-expanded="false" id="toggleLink_57" href="https://community.sap.com/t5/help/faqpage/title/kudos_howdoi">How do I give likes?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-kudos_howdoi lia-faq-section-contents-depth-2" id="toggleContainer_57">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <ul>
+  <li> Click the "Like" button on a post to appreciate its content and author. </li>
+  <li> Revoke likes by clicking the "Like" button again if you change your mind. </li>
+</ul>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_47" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_47">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title kudos_leaderboards" role="button" aria-expanded="false" id="toggleLink_58" href="https://community.sap.com/t5/help/faqpage/title/kudos_leaderboards">How can I see which posts or authors have received the most likes?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-kudos_leaderboards lia-faq-section-contents-depth-2" id="toggleContainer_58">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <ul>
+<li> The Community <a href="https://community.sap.com/t5/kudos/leaderboardpage/timerange/one_month/tab/authors"> Authors Like Leaderboard</a> displays users who have received the most likes in the last 30 days.  </li>
+<li> The Community <a href="https://community.sap.com/t5/kudos/leaderboardpage/timerange/one_month/tab/posts"> Posts Like Leaderboard</a> displays the most liked posts in the last 30 days. </li>
+<li> The Community <a href="https://community.sap.com/t5/kudos/leaderboardpage/timerange/one_month/tab/givers"> Givers Like Leaderboard</a> displays the top like givers in the last 30 days. </li>
+</ul>
+<br>
+Leaderboards are area-specific, counting likes within that section and its boards. <br>
+<br>
+The leaderboard sidebar widgets that you find throughout the community display activities within the last 7 days' time range.
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_48" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_48">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title kudos_whogave" role="button" aria-expanded="false" id="toggleLink_59" href="https://community.sap.com/t5/help/faqpage/title/kudos_whogave">How can I see who has given me likes?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-kudos_whogave lia-faq-section-contents-depth-2" id="toggleContainer_59">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <ul>
+  <li> Navigate to your profile page by clicking on the Community Profile icon in the white breadcrumb navigation bar, then "My content" to see your like activity details.</li>
+  <li> In the sidebar, look for the "Likes From" widget, to see which users have liked your content.</li>
+  <li> Clicking "View all" at the bottom of the Like widget, will take you to a Like page where you get an overview over all your Like activity: your most liked posts, which users have liked your content, posts you have liked, and which authors you have liked.</li>
+</ul>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_49" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+        
+</ul>
+        
+    
+    
+</div>
+</section>
+					</li>
+				
+					<li class="lia-faq-section">
+						<section id="faqtoggleableitemdisplay_10">
+	<h2 class="lia-faq-section-title lia-faq-section-title-level-1">
+		<a class="lia-link-navigation lia-faq-section-title personalization" role="button" aria-expanded="false" id="toggleLink_60" href="https://community.sap.com/t5/help/faqpage/title/personalization">My Settings</a>
+	</h2>
+	<div class="lia-js-hidden lia-faq-section-contents lia-personalization lia-faq-section-contents-depth-1" id="toggleContainer_60">
+    
+        <ul role="list" id="list_12" class="lia-list-standard lia-faq-sections">
+	
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_49">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title icon" role="button" aria-expanded="false" id="toggleLink_61" href="https://community.sap.com/t5/help/faqpage/title/icon">How do I change the avatar next to my name?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-icon lia-faq-section-contents-depth-2" id="toggleContainer_61">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    Changing your avatar is an easy way to personalize your SAP Community identity. You can change your avatar as often as you like. Your current avatar appears at the top of the Avatar page.
+<p><br><b>To change your avatar:</b> 
+</p><ol> 
+<li>Click on your avatar at the top of the page to sign in.
+</li><li>Go to <b>My Content</b>.
+</li><li>Click on the edit icon on the avatar at the top of the page
+</li><li>Click on <b>Upload new image</b>.
+</li><li>Browse for the image you would like to use.
+</li><li>Click on <b>Open</b> to preview your selection
+</li><li>Click on <b>Save</b> to save your selection.
+</li></ol>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_50" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_50">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title signature" role="button" aria-expanded="false" id="toggleLink_62" href="https://community.sap.com/t5/help/faqpage/title/signature">How do I create a signature for my posts?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-signature lia-faq-section-contents-depth-2" id="toggleContainer_62">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    Your signature is text that appears at the bottom of your posts.
+<p><br><b>To create your personal signature:</b> 
+</p><ol> 
+<li>Click on your avatar at the top of the page to sign in.
+</li><li>Go to <b>Settings</b> &gt; <b>Personal Information</b>. 
+</li><li>Enter your signature text in the <b>Signature</b> box. 
+</li><li>Click <b>Save</b>. 
+</li></ol>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_51" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_51">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title profile" role="button" aria-expanded="false" id="toggleLink_63" href="https://community.sap.com/t5/help/faqpage/title/profile">How do I tell other SAP Community members about me?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-profile lia-faq-section-contents-depth-2" id="toggleContainer_63">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <p>You can tell other SAP Community members as much or as little about yourself as you want. 
+You can enter a short biography, your location, your interests, or anything else (within the SAP Community Guidelines, of course).
+</p><p><b>To tell other Group members about yourself:</b>
+</p><ol> 
+<li>Click on your Avatar at the top of the page to sign in.
+</li><li>Go to <b>Settings &gt; Personal Information</b>. 
+</li><li>You can enter your name, location, personal web page link and any other information you want to share.
+</li><li>Click <b>Save</b>.
+</li></ol>
+<p><b>To display your info only to people on your Friends List:</b>  
+</p><ol>
+<li>Click <b>Preferences &gt; Privacy</b>.
+</li><li>Set <b>show private information in profile to</b> to <b>friends only</b>.
+</li><li>Click <b>Save</b>.  
+</li></ol>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_52" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_52">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title preferences" role="button" aria-expanded="false" id="toggleLink_64" href="https://community.sap.com/t5/help/faqpage/title/preferences">How do I set my viewing preferences?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-preferences lia-faq-section-contents-depth-2" id="toggleContainer_64">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    You can customize the look and behavior of the SAP Community in many ways, including time zone and language preference, text size, menu behavior, message order, and privacy settings. 
+<p><br><b>To set your viewing preferences:</b>
+</p><ol> 
+<li>Click on your Avatar at the top of the page to sign in.
+</li><li>Go to <b>Settings &gt; Preferences</b>. 
+</li><li>Click through the various preference tabs and make the changes you want.
+</li><li>Click <b>Save</b> on each tab where you make changes. 
+</li></ol>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_53" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_53">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title change_language" role="button" aria-expanded="false" id="toggleLink_65" href="https://community.sap.com/t5/help/faqpage/title/change_language">How do I change the language of the interface?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-change_language lia-faq-section-contents-depth-2" id="toggleContainer_65">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    You can change the language of the SAP Community interface to Chinese, French, Japanese and Spanish.
+<br>
+<b>To change the language of the interface: </b>
+<ol>
+<li>Click on your Avatar at the top of the page to sign in.</li>
+<li>Go to <b>Settings &gt; Preferences</b>.</li>
+<li>Select the relevant language.</li>
+<li>Click <b> Save</b>.</li>
+                </ol></div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_54" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_54">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title date" role="button" aria-expanded="false" id="toggleLink_66" href="https://community.sap.com/t5/help/faqpage/title/date">How do I change the format for date displays?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-date lia-faq-section-contents-depth-2" id="toggleContainer_66">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    The system defaults to displaying dates as yyyy MMM dd (e.g., 2024 Aug 27). You can change via the "Date display format" field found by going to My content from the avatar dropdown, selecting <a href="https://community.sap.com/t5/user/myprofilepage/tab/personal-profile">My settings</a>, then choosing <a href="https://community.sap.com/t5/user/myprofilepage/tab/user-preferences">Preferences</a>.<br>
+For example:<br>
+If you prefer to display the date as 2024 08 27, change to yyyy MM dd.<br>
+If you prefer to display the date as 27 Aug 2024, change to dd MMM yyyy.<br>
+Not that the month must always be in all caps (i.e., MMM for abbreviation, MM for numbers) or you will receive an error message.<br>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_55" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+        
+</ul>
+        
+    
+    
+</div>
+</section>
+					</li>
+				
+					<li class="lia-faq-section">
+						<section id="faqtoggleableitemdisplay_11">
+	<h2 class="lia-faq-section-title lia-faq-section-title-level-1">
+		<a class="lia-link-navigation lia-faq-section-title advanced" role="button" aria-expanded="false" id="toggleLink_67" href="https://community.sap.com/t5/help/faqpage/title/advanced">Bookmarks, Subscriptions, and RSS</a>
+	</h2>
+	<div class="lia-js-hidden lia-faq-section-contents lia-advanced lia-faq-section-contents-depth-1" id="toggleContainer_67">
+    
+        <ul role="list" id="list_13" class="lia-list-standard lia-faq-sections">
+	
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_55">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title subscriptions" role="button" aria-expanded="false" id="toggleLink_68" href="https://community.sap.com/t5/help/faqpage/title/subscriptions">How do I use subscriptions?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-subscriptions lia-faq-section-contents-depth-2" id="toggleContainer_68">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <p>Subscriptions let you get email updates whenever new content appears in an area of the SAP Community or for an SAP Managed tag that you're interested in. 
+You can subscribe to a board, any type of posts or an SAP Managed tag in the SAP Community. 
+
+</p><p><b>To subscribe a piece of content, board or SAP Managed tag:</b>
+</p><ol>
+<li>Go to the item you want to subscribe to. 
+</li><li>Click <b>Options &gt; Subscribe</b>.
+</li></ol> 
+<p><b>To view and manage your subscriptions:</b>
+</p><ol>
+<li>Go to <b>Settings &gt; Subscriptions &amp; Notifications</b>.
+</li><li>Click <b>My Subscriptions</b> to see a list of the items you've subscribed to. You can click a subscription to go to the item.
+</li><li>To delete a subscription, click the check box for the subscription and click <b>Email Subscription Options &gt; Delete Selected Subscriptions</b>.
+                </li></ol></div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_56" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_56">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title rss" role="button" aria-expanded="false" id="toggleLink_69" href="https://community.sap.com/t5/help/faqpage/title/rss">What is RSS and how do I use it?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-rss lia-faq-section-contents-depth-2" id="toggleContainer_69">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <p>RSS stands for "Really Simple Syndication." It is a way for you to get the latest content from the SAP Community, along with many other sites that you visit, all in one place. With an RSS feed reader, you subscribe to web sites, and those sites feed you new content so you can stay up to date.
+</p><p>To use RSS, you need a feed reader, such as Google Reader, MyYahoo, or the Live Bookmarks feature of Firefox. There are many free options. After you have your feed reader set up, you can find RSS feeds in the SAP Community by going to a board, blog, thread, or message and selecting <b>Subscribe to RSS Feed</b> from the options menu. There you will see a preview of the feed. Most RSS readers give you a button to click at this point. After you click it, the RSS feed appears in your reader as well as new content from that section of the SAP Community whenever it becomes available
+                </p></div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_57" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_57">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title bookmarks" role="button" aria-expanded="false" id="toggleLink_70" href="https://community.sap.com/t5/help/faqpage/title/bookmarks">How do I use bookmarks?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-bookmarks lia-faq-section-contents-depth-2" id="toggleContainer_70">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <p>Bookmarks enable you to list SAP Community content (boards, articles, topics, or individual posts) on a special page so you can easily find it again. 
+</p><p><b>To bookmark a piece of content:</b>
+</p><ol>
+<li>Go to the post or board you want to bookmark. 
+</li><li> Choose <b> Options &gt; Bookmark</b>.
+</li></ol> 
+<p><b>To view and manage your bookmarks:</b>
+</p><ol>
+<li>Go to <b>Settings &gt; Subscriptions &amp; Notifications</b>.
+</li><li>Click <b>My Bookmarks</b>. 
+</li><li>You can click a bookmark to go to the item.
+</li><li>To delete a bookmark, click the check box for the bookmark and click <b>Bookmark Options &gt; Delete Selected Bookmarks</b>.
+</li></ol>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_58" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+        
+</ul>
+        
+    
+    
+</div>
+</section>
+					</li>
+				
+					<li class="lia-faq-section">
+						<section id="faqtoggleableitemdisplay_12">
+	<h2 class="lia-faq-section-title lia-faq-section-title-level-1">
+		<a class="lia-link-navigation lia-faq-section-title Topics" role="button" aria-expanded="false" id="toggleLink_71" href="https://community.sap.com/t5/help/faqpage/title/Topics">Topic Pages</a>
+	</h2>
+	<div class="lia-js-hidden lia-faq-section-contents lia-Topics lia-faq-section-contents-depth-1" id="toggleContainer_71">
+    
+        <ul role="list" id="list_14" class="lia-list-standard lia-faq-sections">
+	
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_58">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title topic_pages" role="button" aria-expanded="false" id="toggleLink_72" href="https://community.sap.com/t5/help/faqpage/title/topic_pages">What are topic pages?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-topic_pages lia-faq-section-contents-depth-2" id="toggleContainer_72">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    An <a href="https://pages.community.sap.com/topics">SAP Community topic page</a> provides members with in-depth information and serves as a hub for exchanging knowledge with users, building relationships, and sharing expertise related to SAP products and more.<br>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_59" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_59">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title find_topics" role="button" aria-expanded="false" id="toggleLink_73" href="https://community.sap.com/t5/help/faqpage/title/find_topics">How do I find topic pages?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-find_topics lia-faq-section-contents-depth-2" id="toggleContainer_73">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    You can access the <a href="https://pages.community.sap.com/topics">full list of topic pages</a> from the the Topics link in the SAP Community navigation.<br>
+Once on the Topics page, you can browse the various topics to find the pages that interest you. To learn more, please watch <a href="https://www.youtube.com/watch?v=AQn4OivBUBA">How do I find a topic page?</a>, one of our <a href="https://pages.community.sap.com/resources/how-to-videos">how-to videos</a>.<br>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_60" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+        
+</ul>
+        
+    
+    
+</div>
+</section>
+					</li>
+				
+					<li class="lia-faq-section">
+						<section id="faqtoggleableitemdisplay_13">
+	<h2 class="lia-faq-section-title lia-faq-section-title-level-1">
+		<a class="lia-link-navigation lia-faq-section-title pm" role="button" aria-expanded="false" id="toggleLink_74" href="https://community.sap.com/t5/help/faqpage/title/pm">Private Messenger</a>
+	</h2>
+	<div class="lia-js-hidden lia-faq-section-contents lia-pm lia-faq-section-contents-depth-1" id="toggleContainer_74">
+    
+        <ul role="list" id="list_15" class="lia-list-standard lia-faq-sections">
+	
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_60">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title whatmessage" role="button" aria-expanded="false" id="toggleLink_75" href="https://community.sap.com/t5/help/faqpage/title/whatmessage">What is the Private Messenger?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-whatmessage lia-faq-section-contents-depth-2" id="toggleContainer_75">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <p>Private Messenger enables you to send private notes to other SAP Community members. Private Messenger has two big advantages over email:
+</p><ul>
+<li>You don't have to know the other member's email address to send the note. (Also, you don't have to reveal yours.)
+</li><li>You can read and send private messages without leaving the SAP Community, making it easy to a quick conversation with another SAP Community member.	
+</li></ul>
+<p>To use the Private Messenger, you must be registered and signed in. You'll see a Private Message icon at the top of your page. If you have any new messages, you'll see the number of unread messages next to the envelope icon.
+</p><p>Click the message count or envelope icon to go to your Private Messages Inbox.
+                </p></div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_61" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_61">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title sendmessage" role="button" aria-expanded="false" id="toggleLink_76" href="https://community.sap.com/t5/help/faqpage/title/sendmessage">How do I send a private message?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-sendmessage lia-faq-section-contents-depth-2" id="toggleContainer_76">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <p><b>To send a private message:</b>
+</p><ol> 
+<li>Click on your Avatar at the top of the page to sign in.
+</li><li>Click the message count or envelope icon to go to your Private Messages Inbox.
+</li><li>Click <b>Compose New Message</b>.
+</li><li>Enter the recipient's name in the <b>Send to</b> area. 
+</li><li>Enter the subject for the message in the <b>Message Subject</b> area.
+</li><li>Type the reply in the <b>Message Body</b> editor. 
+</li><li>Click <b>Send Message</b>. 
+<br>You can look for the messages you've sent in the <b>Sent</b> tab.
+</li></ol>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_62" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_62">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title readmessage" role="button" aria-expanded="false" id="toggleLink_77" href="https://community.sap.com/t5/help/faqpage/title/readmessage">How do I read a private message?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-readmessage lia-faq-section-contents-depth-2" id="toggleContainer_77">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <p><b>To read a private message:</b>
+</p><ol> 
+<li>Click on your Avatar at the top of the page to sign in.
+<br>If you have any new messages, you'll see the number of unread messages next to the envelope icon. 
+</li><li>Click the message count or envelope icon to go to your Private Messages Inbox.
+</li><li>To read a message, click the message subject.
+</li><li>To reply to a message, click <b>Reply</b>. Type the reply and click <b>Send Message</b>.
+</li></ol>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_63" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_63">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title replymessage" role="button" aria-expanded="false" id="toggleLink_78" href="https://community.sap.com/t5/help/faqpage/title/replymessage">How do I reply to a private message?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-replymessage lia-faq-section-contents-depth-2" id="toggleContainer_78">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <p><b>To reply to a private message:</b>
+</p><ol> 
+<li>Click on your Avatar at the top of the page to sign in.
+</li><li>Click the message count or envelope icon to go to your Private Messages Inbox.
+</li><li>To read a message, click the message subject.
+</li><li>To reply to a message, click <b>Reply</b>. 
+<br>The recipient and subject are automatically entered for you, but you can edit them.
+</li><li>Type the reply in the <b>Message Body</b> editor. 
+</li><li>Click <b>Send Message</b>. 
+</li></ol>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_64" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_64">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title deletemessage" role="button" aria-expanded="false" id="toggleLink_79" href="https://community.sap.com/t5/help/faqpage/title/deletemessage">How do I delete a private message?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-deletemessage lia-faq-section-contents-depth-2" id="toggleContainer_79">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <p>You can delete messages one at a time as you read them, or in bulk from your Inbox.  
+</p><p><b>To delete a private message:</b>
+</p><ol>
+<li>Click on your Avatar at the top of the page to sign in.
+</li><li>Click the message count or envelope icon to go to your Private Messages Inbox.
+</li><li>To delete a single message, click the message to view it and then click <b>Delete</b>.
+</li><li>To delete all messages, click the <b>Options</b> menu and click <b>Delete All</b>.
+</li></ol>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_65" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+                <li class="lia-faq-section">
+                    <section class="lia-component-help-widget-nested-toggleable-item" id="faqToggleableItemDisplay_65">
+	<h3 class="lia-faq-section-title lia-faq-section-title-level-2">
+		<a class="lia-link-navigation lia-faq-section-title outbox" role="button" aria-expanded="false" id="toggleLink_80" href="https://community.sap.com/t5/help/faqpage/title/outbox">How do I see private messages I've sent to others?</a>
+	</h3>
+	<div class="lia-js-hidden lia-faq-section-contents lia-outbox lia-faq-section-contents-depth-2" id="toggleContainer_80">
+    
+            
+			
+                <div class="lia-faq-answer">
+                    <p>To see the private messages you've sent:
+</p><ol>
+<li>Click on your Avatar at the top of the page to sign in.
+</li><li>Click the message count or envelope icon to go to your Private Messages Inbox.
+</li><li>Click <b>Sent Messages</b>.
+</li></ol>
+                </div>
+                
+        <div class="lia-faq-description-close">
+            <a class="lia-link-navigation lia-faq-section-close" role="button" id="closeLink_66" href="#">Close</a>
+         </div>
+    
+            
+        
+    
+</div>
+</section>
+                </li>
+            
+        
+</ul>
+        
+    
+    
+</div>
+</section>
+					</li>
+				
+			
+</ul>
+		
+		
+	
+	
+</div>
+		</div>
+	</div><div class="lia-quilt-row lia-quilt-row-footer">
+		<div class="lia-quilt-column lia-quilt-column-24 lia-quilt-column-single lia-quilt-column-common-footer">
+			<div class="lia-quilt-column-alley lia-quilt-column-alley-single">
+	
+		
+			<div class="lia-quilt lia-quilt-footer lia-quilt-layout-custom-community-footer lia-component-quilt-footer">
+	<div class="lia-quilt-row lia-quilt-row-footer-top">
+		<div class="lia-quilt-column lia-quilt-column-24 lia-quilt-column-single lia-quilt-column-footer-top-content">
+			<div class="lia-quilt-column-alley lia-quilt-column-alley-single lia-mark-empty">
+	
+		
+			
+		
+	
+	
+</div>
+		</div>
+	</div><div class="lia-quilt-row lia-quilt-row-footer-main">
+		<div class="lia-quilt-column lia-quilt-column-24 lia-quilt-column-single lia-quilt-column-footer-main-content lia-mark-empty">
+			
+		</div>
+	</div><div class="lia-quilt-row lia-quilt-row-footer-bottom">
+		<div class="lia-quilt-column lia-quilt-column-24 lia-quilt-column-single lia-quilt-column-footer-bottom-content lia-mark-empty">
+			
+		</div>
+	</div><div class="lia-quilt-row lia-quilt-row-footer-external">
+		<div class="lia-quilt-column lia-quilt-column-24 lia-quilt-column-single lia-quilt-column-footer-external-content">
+			<div class="lia-quilt-column-alley lia-quilt-column-alley-single">
+	
+		
+			    <footer class="ds-footer" data-mode="light">
+        <div class="ds-footer__container">
+            <section class="hydrated">
+                <ul class="ds-footer-navigation">
+                        <li class="ds-footer-navigation__item">
+                            <a class="ds-footer-navigation__link" href="https://pages.community.sap.com/resources/sap-community-privacy-statement" title="Privacy" target="_blank">Privacy
+                            </a>
+                        </li>
+                        <li class="ds-footer-navigation__item">
+                            <a class="ds-footer-navigation__link" href="https://www.sap.com/about/legal/terms-of-use.html" title="Terms of Use" target="_blank">Terms of Use
+                            </a>
+                        </li>
+                        <li class="ds-footer-navigation__item">
+                            <a class="ds-footer-navigation__link" href="https://www.sap.com/about/legal/copyright.html" title="Copyright" target="_blank">Copyright
+                            </a>
+                        </li>
+                        <li class="ds-footer-navigation__item">
+                            <a class="ds-footer-navigation__link" href="https://www.sap.com/about/legal/impressum.html" title="Legal Disclosure" target="_blank">Legal Disclosure
+                            </a>
+                        </li>
+                        <li class="ds-footer-navigation__item">
+                            <a class="ds-footer-navigation__link" href="https://www.sap.com/about/legal/trademark.html" title="Trademark" target="_blank">Trademark
+                            </a>
+                        </li>
+                        <li class="ds-footer-navigation__item">
+                            <a class="ds-footer-navigation__link" href="https://pages.community.sap.com/resources/moderation" title="Support" target="_blank">Support
+                            </a>
+                        </li>
+                    <li class="ds-footer-navigation__item">
+                        <a class="ds-footer-navigation__link cookiePreference" href="#">Cookie Preferences</a>
+                    </li>
+                </ul>
+            </section>
+            <div class="ds-footer__social-links">
+                <section class="hydrated">
+                    <div class="ds-social-links">
+                        <h4 class="ds-social-links__headline">Follow</h4>
+                        <ul class="ds-social-links__list">
+                                <li class="ds-social-links__item">
+                                    <a class="ds-social-link" href="https://www.facebook.com/sapcommunity" title="Visit the SAP Facebook page for SAP Community" target="_blank" rel="noopener noreferrer" data-share-channel="facebook" data-share-tracking-analytics="FOLLOW">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512">
+                                            <path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="ds-social-links__item">
+                                    <a class="ds-social-link" href="https://bsky.app/profile/sapcommunity.bsky.social" title="Follow SAP Community on Bluesky" target="_blank" rel="noopener noreferrer" data-share-channel="bluesky" data-share-tracking-analytics="FOLLOW">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568 501">
+                                            <path d="M123.121 33.6637C188.241 82.5526 258.281 181.681 284 234.873C309.719 181.681 379.759 82.5526 444.879 33.6637C491.866 -1.61183 568 -28.9064 568 57.9464C568 75.2916 558.055 203.659 552.222 224.501C531.947 296.954 458.067 315.434 392.347 304.249C507.222 323.8 536.444 388.56 473.333 453.32C353.473 576.312 301.061 422.461 287.631 383.039C285.169 375.812 284.017 372.431 284 375.306C283.983 372.431 282.831 375.812 280.369 383.039C266.939 422.461 214.527 576.312 94.6667 453.32C31.5556 388.56 60.7778 323.8 175.653 304.249C109.933 315.434 36.0535 296.954 15.7778 224.501C9.94525 203.659 0 75.2916 0 57.9464C0 -28.9064 76.1345 -1.61183 123.121 33.6637Z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="ds-social-links__item">
+                                    <a class="ds-social-link" href="https://www.youtube.com/@SAPCommunity" title="Subscribe to the SAP Community channel on YouTube" target="_blank" rel="noopener noreferrer" data-share-channel="youtube" data-share-tracking-analytics="FOLLOW">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="ds-social-links__item">
+                                    <a class="ds-social-link" href="https://www.linkedin.com/showcase/sap-developers" title="Follow SAP Developers on LinkedIn" target="_blank" rel="noopener noreferrer" data-share-channel="linkedin" data-share-tracking-analytics="FOLLOW">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.1 512">
+                                            <path d="M100.3 448H7.4V148.9h92.9V448zM53.8 108.1C24.1 108.1 0 83.5 0 53.8S24.1 0 53.8 0s53.8 24.1 53.8 53.8-24.1 54.3-53.8 54.3zM448 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448h-.1z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </footer>
+    
+
+
+
+
+		
+	
+	
+</div>
+		</div>
+	</div>
+</div>
+		
+	
+	
+</div>
+		</div>
+	</div>
+</div><div style="display: none;"><div></div></div>
+
+	
+						</div>
+					
+			</div>								
+		</div>
+	</div>
+
+				
+
+			
+		</center>
+	</div>

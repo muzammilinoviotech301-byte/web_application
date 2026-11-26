@@ -1,0 +1,26 @@
+/* scoped-for-clone v2 */
+
+	.interactiveInfographic:first-of-type:is(.captured-body, .captured-body *) {
+		min-height: initial !important;
+		/* position: absolute; */
+		width: 100%;
+	}	
+	/* moving image in front of gradient */
+	[data-component="HeroFixedHeight"]:is(.captured-body, .captured-body *) picture img {
+		z-index: 9;
+	}
+	/* setting hero fixed background color */
+	[data-component="HeroFixedHeight"]:is(.captured-body, .captured-body *) > div > div {
+		background: linear-gradient(90deg, var(--udexColorBlue10) 50%, var(--udexColorBlue8) 100%);
+    }
+	/* setting hero flex background color */
+	[data-component="HeroFlex"]:is(.captured-body, .captured-body *) > div > div {
+		background: linear-gradient(90deg, var(--udexColorBlue10) 50%, var(--udexColorBlue8) 100%);
+    }
+	/* for RTL languages */
+	html.rtl [data-component="HeroFixedHeight"] > div > div {
+		background: linear-gradient(270deg, var(--udexColorBlue10) 50%, var(--udexColorBlue8) 100%);
+    }
+	html.rtl [data-component="HeroFlex"] > div > div {
+		background: linear-gradient(270deg, var(--udexColorBlue10) 50%, var(--udexColorBlue8) 100%);
+    }

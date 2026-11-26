@@ -1,0 +1,224 @@
+/* scoped-for-clone v2 */
+
+	.interactiveInfographic:is(.captured-body, .captured-body *) {
+		min-height: initial !important;
+		position: absolute;
+		width: 100%;
+	}	
+	[data-component="Section"]:has(> section.Section__gray--iHg7w):is(.captured-body, .captured-body *) {
+		margin-block-start: 4rem;
+	} 
+	/* hero grid */ 
+	#hero-bkgd:is(.captured-body, .captured-body *) {
+		position:relative;
+		height:450px;
+		overflow: hidden;
+	}
+	.col:is(.captured-body, .captured-body *) {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 0 3rem;
+		max-width: 89.5rem;
+		width: 100%;
+		height: 100%;
+	}
+	.hero:is(.captured-body, .captured-body *) {
+		justify-items: center;
+	}
+	.hero:is(.captured-body, .captured-body *) .col {
+		align-items: center;
+		position:relative;
+	}
+	.span6:is(.captured-body, .captured-body *) {
+		grid-column: span 6;
+	}
+	.right:is(.captured-body, .captured-body *) {
+		grid-column-start: 7;
+		grid-column-end: 13;
+	}
+	.container:is(.captured-body, .captured-body *) {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 1fr auto;
+		height: 100vh;
+		margin: 0 auto;
+	}
+	@media screen and (min-width: 360px) {
+		.column:is(.captured-body, .captured-body *) {
+			padding: 0 1.5rem;
+		}
+	}
+	@media screen and (min-width: 640px) {
+		.column:is(.captured-body, .captured-body *) {
+			padding: 0 3rem;
+		}
+	}
+	@media screen and (min-width: 980px) {
+		.column:is(.captured-body, .captured-body *) {
+			padding: 0 4.5rem;
+		}
+	}
+	@media screen and (min-width: 1280px) {
+		.column:is(.captured-body, .captured-body *) {
+			padding: 0 4.5rem;
+		}
+	}
+	@media screen and (min-width: 1600px) {
+		.column:is(.captured-body, .captured-body *) {
+			padding: 0 5.25rem;
+		}
+	}
+	@media screen and (min-width: 1920px) {
+		.column:is(.captured-body, .captured-body *) {
+			display: grid;
+			justify-items: center;
+			padding: 0 14.875rem;
+		}
+	}
+	:root {
+		--sapContent-Shadow2: 0px 10px 30px 0px rgba(34, 54, 73, 0.25);
+	}
+	/* images and svg elements ----------------------------- */
+	.photo-frame:is(.captured-body, .captured-body *) {
+		position: relative;
+		display: grid;
+		align-content: center;
+		z-index:1;
+	}
+	.photo-frame:is(.captured-body, .captured-body *) > * {
+		grid-area: 1 / 1 / 2 / 2;
+	}
+	.photo-frame:is(.captured-body, .captured-body *) svg:first-of-type {
+		position: absolute;
+    	top: -12rem;
+    	left: 14rem;
+		width: 165px;
+		height: 165px;
+		border-radius:var(--udexRadiusL, 12px);
+		box-shadow: var(--sapContent-Shadow2);
+	}
+	.photo-frame:is(.captured-body, .captured-body *) svg:nth-of-type(2) {
+		position: absolute;
+		top: 0rem;
+    	left: 8rem;
+		width: 262px;
+		height: 181px;
+		border-radius:var(--udexRadiusL, 12px);
+		box-shadow: var(--sapContent-Shadow2);
+	}
+	.photo-frame:is(.captured-body, .captured-body *) svg:last-of-type {
+		position: absolute;
+		top: -12rem;
+		left: 26rem;
+		width: 226px;
+		height: 307px;
+		border-radius:var(--udexRadiusL, 12px);
+		box-shadow: var(--sapContent-Shadow2);
+	}
+	/* animations */
+	@keyframes rotate {
+		0% {
+			transform:rotate(-360deg);
+		}
+		100% {
+			transform:rotate(0);
+		}
+	}
+	@keyframes scale-right {
+		0% {
+			opacity:0;
+			transform:scale(0); 
+		}
+		100% {
+			opacity:1;
+			transform:scale(1); 
+		}
+	}
+	@keyframes wipeX-right {
+		0% {
+			opacity:0;
+			clip-path: inset(0 100% 0 0);
+		}
+		100% {
+			opacity:1;
+			clip-path: inset(0 0 0 0);
+		}
+	}
+	/* media queries ------------------------------------- */
+	@media screen and (max-width: 979px) {
+		.col:is(.captured-body, .captured-body *) {
+			grid-template-columns: 1fr;
+			gap: 2rem 0;
+		}
+		.photo-frame:is(.captured-body, .captured-body *) {
+			display: none;
+		}
+	}
+	@media screen and (max-width: 639px) {
+		.column.hero:is(.captured-body, .captured-body *) .col {
+			padding: 2.5rem 0;
+		}
+		.col:is(.captured-body, .captured-body *) {
+			gap: 1rem 0;
+		}
+	}
+	/* accessibility - only animates if visitor allows motion */
+	@media (prefers-reduced-motion: no-preference) {
+		.photo-frame:is(.captured-body, .captured-body *) svg:first-of-type {
+			transform-origin: bottom center;
+			animation: scale-right 1s 0.25s 1 cubic-bezier(0, 0, 0.22, 0.99) backwards;
+		}
+		#trend:is(.captured-body, .captured-body *) {
+			transform-origin: bottom left;
+			animation: scale-right 1s 0.5s 1 cubic-bezier(0, 0, 0.22, 0.99) backwards;
+		}
+		.photo-frame:is(.captured-body, .captured-body *) svg:nth-of-type(2) {
+			transform-origin: center right;
+			animation: scale-right 1s 0.5s 1 cubic-bezier(0, 0, 0.22, 0.99) backwards;
+		}
+		#donut-chart:is(.captured-body, .captured-body *) {
+			transform-origin: center right;
+			animation: scale-right 1s 1s 1 cubic-bezier(0, 0, 0.22, 0.99) backwards;
+		}
+		#donut:is(.captured-body, .captured-body *) {
+			transform-origin: 83px 101px;
+			animation: rotate 1s 1.25s 1 cubic-bezier(0, 0, 0.22, 0.99) backwards;
+		}
+		.photo-frame:is(.captured-body, .captured-body *) svg:last-of-type {
+			transform-origin: bottom center;
+			animation: scale-right 1s 1s 1 cubic-bezier(0, 0, 0.22, 0.99) backwards;
+		}
+		#line-chart:is(.captured-body, .captured-body *) {
+			transform-origin: bottom left;
+			animation: scale-right 1s 1s 1 cubic-bezier(0, 0, 0.22, 0.99) backwards;
+		}
+		#line1:is(.captured-body, .captured-body *) {
+			transform-origin: 39px 165px;
+			animation: wipeX-right 1s 1.5s 1 cubic-bezier(0, 0, 0.22, 0.99) backwards;
+		}
+		#line2:is(.captured-body, .captured-body *) {
+			transform-origin: 39px 195px;
+			animation: wipeX-right 1s 1.75s 1 cubic-bezier(0, 0, 0.22, 0.99) backwards;
+		}
+	}
+	/* replacing box shadows on Safari only */
+	@supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
+		.photo-frame:is(.captured-body, .captured-body *) svg:first-of-type,
+        .photo-frame:is(.captured-body, .captured-body *) svg:nth-of-type(2),
+        .photo-frame:is(.captured-body, .captured-body *) svg:last-of-type {
+			box-shadow: none; 
+		}
+		.photo-frame:is(.captured-body, .captured-body *) svg:first-of-type,
+        .photo-frame:is(.captured-body, .captured-body *) svg:nth-of-type(2),
+        .photo-frame:is(.captured-body, .captured-body *) svg:last-of-type {
+			transform: translate3d(0, 0, 0);
+			filter: drop-shadow(0px 10px 30px rgba(34, 54, 73, 0.25)); 
+		}
+	}
+
+	/* for RTL languages */
+	html.rtl .right {
+		grid-column-start: 1;
+		grid-column-end: 7;
+	}
+

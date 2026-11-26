@@ -1,0 +1,2 @@
+/* scoped-for-clone v2 */
+.hidden:is(.captured-body, .captured-body *){display:none}

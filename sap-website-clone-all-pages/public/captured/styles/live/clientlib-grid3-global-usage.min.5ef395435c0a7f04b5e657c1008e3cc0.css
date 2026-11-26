@@ -1,0 +1,29 @@
+/* scoped-for-clone v2 */
+@media only screen and (max-width:767px){.captured-body:not(.formEngineUniversalForm):not(.userFlowPage):not(.is-lightbox){background:#e9e9e9}
+}
+*:is(.captured-body, .captured-body *){max-height:1000000px}
+.v-center:is(.captured-body, .captured-body *){align-items:center}
+.accessibility:is(.captured-body, .captured-body *){display:block;position:relative;z-index:10}
+.accessibility:is(.captured-body, .captured-body *) a{position:absolute;left:-10000px;top:auto;width:0;height:0;overflow:hidden}
+.rtl:is(.captured-body, .captured-body *) .accessibility a{right:-10000px;left:0}
+.accessibility:is(.captured-body, .captured-body *) a:focus{position:static;width:auto;height:auto}
+.bp:is(.captured-body, .captured-body *) .is-publish-false #page{margin-top:40px}
+.nojs:is(.captured-body, .captured-body *),.blueprintResolverMessage:is(.captured-body, .captured-body *){padding:10px 0;text-align:center;font-weight:bold;color:red;position:absolute;right:0;left:0;top:0;height:40px;background:#fff}
+.nojs:is(.captured-body, .captured-body *) a,.blueprintResolverMessage:is(.captured-body, .captured-body *) a{color:red}
+.sidepanel:is(.captured-body, .captured-body *) .editor-ComponentBrowser-component-title{box-sizing:content-box}
+.link:is(.captured-body, .captured-body *){display:inline-block}
+.list-unstyled:is(.captured-body, .captured-body *){margin:0;padding-left:0;list-style:none}
+.rtl:is(.captured-body, .captured-body *) .list-unstyled{padding-right:0}
+.list-unstyled:is(.captured-body, .captured-body *)>li{padding:0}
+.list-inline:is(.captured-body, .captured-body *){padding-left:0;list-style:none}
+.list-inline:is(.captured-body, .captured-body *)>li{display:inline-block;padding-left:5px;padding-right:5px}
+.list-inline:is(.captured-body, .captured-body *)>li:first-child{padding-left:0}
+.hidden:is(.captured-body, .captured-body *),legend:is(.captured-body, .captured-body *) .hidden{position:absolute;top:auto;left:-9999px}
+.rtl:is(.captured-body, .captured-body *) .hidden,.rtl:is(.captured-body, .captured-body *) legend .hidden{left:auto;right:-9999px}
+.group:before:is(.captured-body, .captured-body *),.group:after:is(.captured-body, .captured-body *){content:'';display:table}
+.group:after:is(.captured-body, .captured-body *){clear:both}
+.white:is(.captured-body, .captured-body *) *{color:#fff}
+.black:is(.captured-body, .captured-body *) *{color:#000}
+.hidden:is(.captured-body, .captured-body *){display:none}
+.invisible:is(.captured-body, .captured-body *){visibility:hidden}
+.sreen-reader-only:is(.captured-body, .captured-body *){position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

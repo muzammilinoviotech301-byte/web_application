@@ -1,0 +1,2 @@
+/* scoped-for-clone v2 */
+.text-large:is(.captured-body, .captured-body *){font-size:var(--udexTypographyBodyMFontSize)}.text-large:is(.captured-body, .captured-body *) p{margin-block:var(--udexSpacer20) 0}.text-large:is(.captured-body, .captured-body *) p:first-child{margin-block-start:0}@media (width>=980px){.text-large:is(.captured-body, .captured-body *){font-size:var(--udexTypographyBodyLFontSize)}}

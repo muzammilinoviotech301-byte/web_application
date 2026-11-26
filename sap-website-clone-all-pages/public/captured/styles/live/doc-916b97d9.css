@@ -1,0 +1,11 @@
+/* scoped-for-clone v2 */
+
+      .udex-media-player-dimensions:is(.captured-body, .captured-body *) {
+        width: 640px;
+        height: 360px;
+      }
+
+      .udex-media-player-dimensions.vjs-fluid:not(.vjs-audio-only-mode):is(.captured-body, .captured-body *) {
+        padding-top: 56.25%;
+      }
+    
