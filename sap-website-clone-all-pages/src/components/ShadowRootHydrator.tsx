@@ -8,7 +8,7 @@ import { useEffect } from "react";
 // those into real shadow roots on a full page load, but content inserted
 // later (client-side navigation sets innerHTML, or the page body streams in
 // after this effect ran) keeps them inert. Attach leftover templates after
-// each navigation and whenever new content lands in <main>.
+// each navigation and whenever new content lands in the page.
 export default function ShadowRootHydrator() {
   const pathname = usePathname();
 
@@ -16,34 +16,44 @@ export default function ShadowRootHydrator() {
     // Templates for nested components sit inside their parent's shadow root,
     // so recurse into each root once it's attached.
     const attach = (scope: ParentNode) => {
-      scope.querySelectorAll<HTMLTemplateElement>("template[shadowrootmode]").forEach((template) => {
-        const host = template.parentElement;
-        if (!host) return;
-        if (!host.shadowRoot) {
-          const mode = template.getAttribute("shadowrootmode") === "closed" ? "closed" : "open";
-          try {
-            host.attachShadow({ mode }).appendChild(template.content.cloneNode(true));
-          } catch {
-            return; // this element can't host a shadow root
+      scope
+        .querySelectorAll<HTMLTemplateElement>(
+          "template[shadowrootmode], template[data-shadowrootmode]"
+        )
+        .forEach((template) => {
+          const host = template.parentElement;
+          if (!host) return;
+          if (!host.shadowRoot) {
+            const mode =
+              (template.getAttribute("shadowrootmode") ??
+                template.getAttribute("data-shadowrootmode")) === "closed"
+                ? "closed"
+                : "open";
+            try {
+              host.attachShadow({ mode }).appendChild(template.content.cloneNode(true));
+            } catch {
+              return; // this element can't host a shadow root
+            }
           }
-        }
-        template.remove();
-        if (host.shadowRoot) attach(host.shadowRoot);
-      });
+          template.remove();
+          if (host.shadowRoot) attach(host.shadowRoot);
+        });
     };
-    const main = document.querySelector("main");
-    if (!main) return;
-    attach(main);
+    // Page bodies can stream in after this effect runs, and React can replace
+    // the captured wrapper during hydration. Watch the body so templates added
+    // later are still attached.
+    const root = document.body;
+    attach(root);
     let queued = false;
     const observer = new MutationObserver(() => {
       if (queued) return;
       queued = true;
       requestAnimationFrame(() => {
         queued = false;
-        attach(main);
+        attach(root);
       });
     });
-    observer.observe(main, { childList: true, subtree: true });
+    observer.observe(root, { childList: true, subtree: true });
     return () => observer.disconnect();
   }, [pathname]);
 

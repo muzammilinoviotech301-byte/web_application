@@ -5,15 +5,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { MOBILE_NAV, SEARCH_INDEX } from "@/data/navigation";
-import {
-  EXPLORE_SAP_MENU,
-  MASTHEAD_MENUS,
-  type MastheadMenu,
-  type MenuColumn,
-} from "@/data/masthead-menu";
+import { EXPLORE_SAP_MENU, MASTHEAD_MENUS } from "@/data/masthead-menu";
 import { SITE_FOOTER_HTML } from "@/data/site-footer";
+import CapturedMastheadMenu from "@/components/CapturedMastheadMenu";
 import CapturedRuntimeEnhancer from "@/components/CapturedRuntimeEnhancer";
 import LoginDialog from "@/components/LoginDialog";
+import MastheadMenuPanel from "@/components/MastheadMenuPanel";
 import { useLocale } from "@/components/LocaleProvider";
 import ProfileMenu from "@/components/ProfileMenu";
 import RecentTracker from "@/components/RecentTracker";
@@ -21,101 +18,6 @@ import RegionSwitcher from "@/components/RegionSwitcher";
 import SecondaryNavSticky from "@/components/SecondaryNavSticky";
 import ShadowRootHydrator from "@/components/ShadowRootHydrator";
 import { useAuth } from "@/components/AuthProvider";
-
-// Columns per row in a masthead menu (Industries wraps onto a second row).
-function menuColumnCount(columns: MenuColumn[]) {
-  return columns.filter((column) => !column.row).length;
-}
-
-// Local routes use client navigation; sap.com and other sites open normally.
-function MenuAnchor({
-  href,
-  className,
-  children,
-}: {
-  href: string;
-  className: string;
-  children: ReactNode;
-}) {
-  if (href.startsWith("/")) {
-    return (
-      <Link className={className} href={href}>
-        {children}
-      </Link>
-    );
-  }
-  return (
-    <a className={className} href={href} target="_blank" rel="noopener noreferrer">
-      {children}
-    </a>
-  );
-}
-
-function MastheadMenuPanel({
-  menu,
-  onLinkClick,
-  tt,
-}: {
-  menu: MastheadMenu;
-  onLinkClick: () => void;
-  tt: (text: string) => string;
-}) {
-  return (
-    <div
-      className={`masthead-menu masthead-menu-${menu.layout}`}
-      onClick={(event) => {
-        if ((event.target as HTMLElement).closest("a")) onLinkClick();
-      }}
-    >
-      <div
-        className="masthead-menu-grid"
-        style={{ ["--menu-cols" as string]: String(menuColumnCount(menu.columns)) }}
-      >
-        {menu.title && <p className="masthead-menu-heading">{tt(menu.title)}</p>}
-        {menu.columns.map((column, index) => (
-          <div
-            key={column.title ?? index}
-            className="masthead-menu-column"
-            style={column.row ? { gridRow: column.row + 1 } : undefined}
-          >
-            {column.title &&
-              (column.titleHref ? (
-                <MenuAnchor className="masthead-menu-title" href={column.titleHref}>
-                  <span>{tt(column.title)}</span>
-                  <span className="masthead-menu-chevron" aria-hidden="true" />
-                </MenuAnchor>
-              ) : (
-                <span className="masthead-menu-title masthead-menu-title-plain">
-                  {tt(column.title)}
-                </span>
-              ))}
-            <ul className="masthead-menu-list">
-              {column.groups.map((group, groupIndex) => (
-                <li key={group.label ?? groupIndex}>
-                  {group.label && (
-                    <span className="masthead-menu-group">{tt(group.label)}</span>
-                  )}
-                  <ul className={group.label ? "masthead-menu-grouped" : undefined}>
-                    {group.links.map((link) => (
-                      <li key={link.label}>
-                        <MenuAnchor className="masthead-menu-link" href={link.href}>
-                          {tt(link.label)}
-                          {link.external && (
-                            <span className="masthead-menu-external" aria-hidden="true" />
-                          )}
-                        </MenuAnchor>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
 
 // Masthead icons use SAP's own UI5 16x16 icon paths (filled), as on sap.com.
 const ICONS = {
@@ -160,12 +62,14 @@ export default function SiteShell({ children }: { children: ReactNode }) {
     normalizedPath === "/community" ||
     normalizedPath.startsWith("/community/") ||
     normalizedPath.startsWith("/t5/");
-  // This route is rendered from the exact Canadian sap.com capture, including
-  // its own header, footer, and main landmark. The clone shell would duplicate
-  // them (and inject the MENA country banner), so it is omitted here.
-  const isExactCanadianSpendPage =
+  // These routes are rendered from their exact sap.com captures, including
+  // their own header, footer, and main landmark. The clone shell would
+  // duplicate them (and inject the MENA country banner), so it is omitted here.
+  const isExactCapturedPage =
     normalizedPath === "/products/spend-management" ||
-    normalizedPath === "/canada/products/spend-management";
+    normalizedPath === "/canada/products/spend-management" ||
+    normalizedPath === "/industries/autonomous-adaptive-production" ||
+    normalizedPath === "/industries/autonomous-asset-management";
   const [query, setQuery] = useState("");
   const [countryBannerVisible, setCountryBannerVisible] = useState(true);
 
@@ -547,11 +451,12 @@ export default function SiteShell({ children }: { children: ReactNode }) {
     };
   }, []);
 
-  if (isExactCanadianSpendPage) {
+  if (isExactCapturedPage) {
     return (
       <>
         <ShadowRootHydrator />
         <CapturedRuntimeEnhancer />
+        <CapturedMastheadMenu />
         <SecondaryNavSticky />
         <RecentTracker />
         {children}
@@ -563,6 +468,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
     return (
       <main id="main">
         <ShadowRootHydrator />
+        <CapturedMastheadMenu />
         <SecondaryNavSticky />
         <RecentTracker />
         {children}
@@ -573,6 +479,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
   return (
     <>
       <a className="skip-link" href="#main">{t("skipToContent")}</a>
+      <CapturedMastheadMenu />
 
       <header className="site-header">
         <div className="container masthead">
@@ -838,4 +745,11 @@ export default function SiteShell({ children }: { children: ReactNode }) {
             event.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
           } else if (link.getAttribute("href") === "#") {
-            event.preventDefault()
+            event.preventDefault();
+          }
+        }}
+        dangerouslySetInnerHTML={{ __html: SITE_FOOTER_HTML }}
+      />
+    </>
+  );
+}

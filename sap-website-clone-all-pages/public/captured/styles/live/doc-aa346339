@@ -1,0 +1,2 @@
+/* scoped-for-clone v2 */
+.truste_cursor_pointer:is(.captured-body, .captured-body *) {cursor: pointer;}.truste_border_none:is(.captured-body, .captured-body *) {border: none;}

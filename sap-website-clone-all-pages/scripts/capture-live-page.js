@@ -64,11 +64,14 @@ function __cloneRunner() {
 
   const capOne = async (fr, slug, url) => {
     await new Promise((res) => { fr.onload = res; fr.src = url; setTimeout(res, 20000); });
-    await sleep(2500);
+    // SAP hydrates images and embedded media well after DOMContentLoaded.
+    // Capturing earlier serializes base64 placeholders instead of the real
+    // <picture>/video thumbnail markup.
+    await sleep(9000);
     const w = fr.contentWindow; const d = fr.contentDocument;
     if (!d || /Access Denied/i.test(d.title)) return { slug, error: "denied" };
     for (let y = 0; y < d.documentElement.scrollHeight; y += 600) { w.scrollTo(0, y); await sleep(220); }
-    w.scrollTo(0, d.documentElement.scrollHeight); await sleep(1200); w.scrollTo(0, 0); await sleep(400);
+    w.scrollTo(0, d.documentElement.scrollHeight); await sleep(1400); w.scrollTo(0, 0); await sleep(800);
     const main = d.querySelector("main");
     if (!main) return { slug, error: `nomain:${d.title}` };
     const shadowCss = {};

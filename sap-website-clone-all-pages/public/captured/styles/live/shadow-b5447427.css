@@ -1,0 +1,36 @@
+:host { --udex-masthead-country-selector-desktop-max-height: 375px; --udex-masthead-country-selector-title-border-color: var(--udexColorGrey2, #EAECEE); --udex-masthead-country-selector-title-color: var(--udexColorNeutralBlack, #000000); }
+.udex-masthead-country-selector__title { font-family: var(--sapFontFamily); font-weight: var(--udexTypographyFontWeightMedium); font-size: var(--udexTypographyBodyXSFontSize); line-height: var(--udexTypographyHeadingLineHeight); color: var(--sapTitleColor); padding: var(--udexSpacer16) 0; display: block; text-align: center; }
+:host(:not([_is-active-region-open])) .udex-masthead-country-selector__title { border-bottom: 1px solid var(--udex-masthead-country-selector-title-border-color); }
+.udex-masthead-country-selector__list { list-style: none; margin: 0px; padding: 0px; }
+.udex-masthead-country-selector__search { margin: var(--udexSpacer2) 0 var(--udexSpacer16); }
+.udex-masthead-country-selector__region-back-item::part(menu-item-button) { font-weight: var(--udexTypographyFontWeightMedium, 500); color: var(--udex-masthead-country-selector-title-color); justify-content: space-between; }
+.udex-masthead-country-selector__region-back-item::part(left) { margin-inline-end: var(--udexSpacer4); margin-inline-start: 0px; }
+.udex-masthead-country-selector__region-back-item::part(menu-item-button)::after { content: ""; }
+.udex-masthead-country-selector__region-back-item, .udex-masthead-country-selector__item { --udex-masthead-menu-item-padding-block-desktop: var(--udexSpacer16); --udex-masthead-menu-item-padding-inline-desktop: var(--udexSpacer8) var(--udexSpacer12); }
+.udex-masthead-country-selector__item::part(menu-item-link), .udex-masthead-country-selector__item_countries { --udex-masthead-menu-item-padding-block-desktop: var(--udexSpacer8); --udex-masthead-menu-item-padding-inline-desktop: var(--udexSpacer8) var(--udexSpacer12); }
+.udex-masthead-country-selector__item::part(menu-item-link) { width: 100%; }
+[_is-active-country].udex-masthead-country-selector__item::part(menu-item-link) { font-weight: var(--udexTypographyFontWeightMedium, 500); }
+.udex-masthead-country-selector__list-wrap { max-height: var(--udex-masthead-country-selector-desktop-max-height); overflow: auto; }
+:host([_is-mobile-mode]) .udex-masthead-country-selector__list-wrap { max-height: initial; }
+.hidden { position: absolute; width: 0px; height: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); border: 0px; padding: 0px; }
+:host([_is-mobile-mode]) .udex-masthead-country-selector__item::part(menu-item-link) { --udex-masthead-menu-item-padding-block-desktop: var(--udexSpacer16); --udex-masthead-menu-item-padding-inline-desktop: var(--udexSpacer8) var(--udexSpacer12); }
+:host([_is-mobile-mode]) .udex-masthead-country-selector__list-container { height: 100%; overflow: auto; }
+:host([_is-mobile-mode]) .udex-masthead-country-selector__list-wrap { height: 100%; overflow: auto; max-height: initial; }
+:host([_is-mobile-mode]) .udex-masthead-country-selector { height: 100%; box-sizing: border-box; display: flex; flex-direction: column; padding-bottom: var(--udexSpacer24); }
+:host([_is-mobile-mode]) .udex-masthead-country-selector__item_countries { --udex-masthead-menu-item-padding-block-desktop: var(--udexSpacer16); --udex-masthead-menu-item-padding-inline-desktop: var(--udexSpacer8) var(--udexSpacer12); border-bottom: 1px solid var(--udex-masthead-menu-item-border-color); max-height: initial; overflow: initial; }
+:host([_is-mobile-mode]) .udex-masthead-country-selector { min-height: 100%; box-sizing: border-box; }
+.udex-masthead-country-selector__list-container { position: relative; }
+:host(:dir(rtl)) .udex-masthead-country-selector__list-wrap_scrollable::before { left: 0px; right: 0px; }
+.udex-masthead-country-selector__list-wrap_scrollable::before { content: ""; position: absolute; left: 0px; right: 0px; bottom: 0px; height: 40px; z-index: 1; background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%); }
+:host([desktop]) .udex-masthead-country-selector__list-wrap_scrollable::before { right: 15px; }
+:host([desktop]:dir(rtl)) .udex-masthead-country-selector__list-wrap_scrollable::before { left: 15px; right: 0px; }
+@media (max-width: 1279px) {
+  .udex-masthead-country-selector__list-wrap { height: 100%; overflow: auto; max-height: initial; }
+  .udex-masthead-country-selector { height: 100%; box-sizing: border-box; display: flex; flex-direction: column; }
+  .udex-masthead-country-selector__item_countries { --udex-masthead-menu-item-padding-block-desktop: var(--udexSpacer16); --udex-masthead-menu-item-padding-inline-desktop: var(--udexSpacer8) var(--udexSpacer12); border-bottom: 1px solid var(--udex-masthead-menu-item-border-color); }
+  .udex-masthead-country-selector__list-container { height: 100%; overflow: auto; padding-bottom: var(--udexSpacer24); }
+  .udex-masthead-country-selector__list-wrap_scrollable::before { bottom: 24px; }
+}
+@media (max-height: 550px) {
+  .udex-masthead-country-selector__list-container { min-height: 100px; }
+}

@@ -276,6 +276,9 @@ ul, ol { margin: 0 0 1rem; padding-left: 1.2rem; }
   position: absolute; top: 59px; z-index: 110;
   background: #fff; box-shadow: 0 10px 30px rgba(34, 54, 73, .25);
 }
+/* Captured pages reuse the same menu panel, portalled above the captured DOM. */
+.captured-masthead-menu-layer { position: fixed; inset: 0; z-index: 1000; pointer-events: none; }
+.captured-masthead-menu-layer > .masthead-menu { pointer-events: auto; }
 .masthead-menu-mega:not(.captured-page *) { left: 0; right: 0; top: 60px; padding: 32px 72px 40px; }
 .masthead-menu-mega:not(.captured-page *) .masthead-menu-grid {
   display: grid; grid-template-columns: repeat(var(--menu-cols), minmax(0, 1fr));
@@ -472,11 +475,11 @@ a.masthead-menu-title:hover { color: #0057d2; text-decoration: none; }
   .stats:not(.captured-page *) { grid-template-columns: 1fr; }
 }
 
-/* Older scraped pages have no SAP runtime, so their lazy-loader placeholders
-   must be forced visible. Fresh live captures do have SAP's own CSS and DOM,
-   including the hydrated <picture> and overlay-scrollbar animations, so leave
-   those pages alone. */
-.captured-page:not(:has(.captured-body)) .Image__placeholder--Oj7M3 {
+/* Scraped pages have no SAP runtime, so their lazy-loader placeholders must be
+   forced visible. The two spend-management routes use a fully hydrated live
+   capture with real <picture> elements, so they keep SAP's own hidden state. */
+.captured-page:not(.page-products-spend-management):not(.page-canada-products-spend-management)
+  .Image__placeholder--Oj7M3 {
   opacity: 1 !important;
   padding-top: 0 !important;
   height: auto !important;
@@ -1252,16 +1255,14 @@ body:has(.captured-page ds-secondary-navigation) .sap-country-banner { top: 132p
   .account-form-actions .btn { flex: 1 1 auto; }
 }
 
-/* Exact Canadian spend-management capture: sap.com renders the masthead as an
+/* Canadian spend-management capture: sap.com renders the masthead as an
    empty 60px bar once its web components hydrate; the captured light DOM is
-   hidden, so keep the bar and color without exposing those raw menu labels. */
-.page-products-spend-management #header,
+   hidden, so keep the bar and color without exposing those raw menu labels.
+   The MENA capture on /products/spend-management keeps SAP's real masthead. */
 .page-canada-products-spend-management #header {
   height: 60px;
   background: #f5f6f7;
 }
-.page-products-spend-management #header > *,
 .page-canada-products-spend-management #header > * {
   display: none !important;
 }
-                                       
