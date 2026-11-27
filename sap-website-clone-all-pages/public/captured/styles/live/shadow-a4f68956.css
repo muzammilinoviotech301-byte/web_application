@@ -1,0 +1,23 @@
+:host { --udex-masthead-mobile-menu-padding-m: var(--udexSpacer24); --udex-masthead-mobile-menu-padding-s: var(--udexSpacer24) var(--udexSpacer48); --udex-masthead-mobile-menu-padding-xs: var(--udexSpacer24); --udex-masthead-mobile-menu-background: var(--sapShell_Navigation_Background, #FFF); --udex-masthead-mobile-search-margin-bottom: var(--udexSpacer16, 16); --udex-masthead-mobile-explore-btn-position: sticky; --udex-masthead-menu-sub-category-font-size: var(--udexTypographyBodyXSFontSize, 14px); --udex-masthead-menu-sub-category-color: var(--udexColorGrey9, #223548); --udex-masthead-menu-sub-category-text-transform: none; --udex-masthead-menu-sub-category-font-weight: var(--udexTypographyFontWeightRegular, 400); --udex-masthead-menu-sub-category-line-height: var(--udexTypographyHeadingLineHeight, 1.1); --udex-masthead-menu-sub-category-padding-block: var(--udexSpacer16); --udex-masthead-menu-sub-category-padding-inline: var(--udexSpacer8) var(--udexSpacer12); --udex-masthead-menu-sub-list-item-spacing: 0; --udex-masthead-menu-sub-list-indent: var(--udexSpacer12, 12px); }
+.udex-masthead-mobile-menu__list-search { margin-bottom: var(--udex-masthead-mobile-search-margin-bottom); }
+.udex-masthead-mobile-menu { background: var(--udex-masthead-mobile-menu-background); box-sizing: border-box; overflow: auto; display: flex; flex-direction: column; height: 100%; }
+.udex-masthead-mobile-menu__nav-holder { padding: var(--udex-masthead-mobile-menu-padding-m); height: 100%; overflow: auto; }
+.udex-masthead-mobile-menu__explore-btn { --udex-masthead-menu-item-font-weight: var(--udexTypographyFontWeightMedium, 500); position: var(--udex-masthead-mobile-explore-btn-position); margin-block-start: auto; inset-block-end: 0px; inline-size: 100%; }
+.udex-masthead-mobile-menu__list { margin: 0px; padding: 0px; list-style: none; }
+[udex-masthead-menu-item] { --udex-masthead-menu-item-padding-block-desktop: var(--udexSpacer16); --udex-masthead-menu-item-padding-inline-desktop: var(--udexSpacer8) var(--udexSpacer12); }
+[udex-masthead-menu-item]::part(menu-item), [udex-masthead-menu-item]::part(menu-item-link) { width: 100%; }
+.udex-masthead-mobile-menu__back-item::part(menu-item-button) { font-weight: var(--udexTypographyFontWeightMedium, 500); justify-content: space-between; }
+.udex-masthead-mobile-menu__heading::part(menu-item) { justify-content: center; }
+.udex-masthead-mobile-menu__back-item::part(menu-item-button)::after { content: ""; }
+.udex-masthead-mobile-menu__back-item::part(left) { margin-inline-end: var(--udexSpacer4); margin-inline-start: 0px; }
+span.udex-masthead-mobile-menu__sub-category { display: block; font-family: var(--sapFontFamily, sans-serif); font-size: var(--udex-masthead-menu-sub-category-font-size); line-height: var(--udex-masthead-menu-sub-category-line-height); font-weight: var(--udex-masthead-menu-sub-category-font-weight); text-transform: var(--udex-masthead-menu-sub-category-text-transform); color: var(--udex-masthead-menu-sub-category-color); padding-block: var(--udex-masthead-menu-sub-category-padding-block); padding-inline: var(--udex-masthead-menu-sub-category-padding-inline); box-sizing: border-box; width: 100%; }
+[udex-masthead-menu-item].udex-masthead-mobile-menu__sub-category { --udex-masthead-menu-item-color: var(--udex-masthead-menu-sub-category-color); --udex-masthead-menu-item-font-size: var(--udex-masthead-menu-sub-category-font-size); --udex-masthead-menu-item-line-height: var(--udex-masthead-menu-sub-category-line-height); --udex-masthead-menu-item-font-weight: var(--udex-masthead-menu-sub-category-font-weight); text-transform: var(--udex-masthead-menu-sub-category-text-transform); }
+.udex-masthead-mobile-menu__sub-list { list-style: none; margin: 0px; padding: 0px; padding-inline-start: var(--udex-masthead-menu-sub-list-indent); }
+.udex-masthead-mobile-menu__sub-list [udex-masthead-menu-item] { --udex-masthead-menu-item-padding-block-mobile: var(--udexSpacer16); --udex-masthead-menu-item-padding-inline-mobile: var(--udexSpacer12); }
+.udex-masthead-mobile-menu__sub-list li { margin-bottom: var(--udex-masthead-menu-sub-list-item-spacing); }
+@media (max-width: 979px) {
+  .udex-masthead-mobile-menu__nav-holder { padding: var(--udex-masthead-mobile-menu-padding-s); }
+}
+@media (max-width: 639px) {
+  .udex-masthead-mobile-menu__nav-holder { padding: var(--udex-masthead-mobile-menu-padding-xs); }
+}

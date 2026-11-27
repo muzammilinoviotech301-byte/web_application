@@ -1,2 +1,1 @@
-/* scoped-for-clone v2 */
-.ta-display-none:is(.captured-body, .captured-body *) { display: none; }
+.ta-display-none { display: none; }

@@ -1,2 +1,1 @@
-/* scoped-for-clone v2 */
- iframe#cvc-frame:is(.captured-body, .captured-body *) { border-radius: 8px 8px 0 0 !important; } iframe#cvc-frame:dir(rtl):is(.captured-body, .captured-body *) {right: unset !important; left: 1%; }
+ iframe#cvc-frame { border-radius: 8px 8px 0 0 !important; } iframe#cvc-frame:dir(rtl) {right: unset !important; left: 1%; }

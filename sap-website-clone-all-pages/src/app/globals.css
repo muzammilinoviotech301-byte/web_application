@@ -478,7 +478,7 @@ a.masthead-menu-title:hover { color: #0057d2; text-decoration: none; }
 /* Scraped pages have no SAP runtime, so their lazy-loader placeholders must be
    forced visible. The two spend-management routes use a fully hydrated live
    capture with real <picture> elements, so they keep SAP's own hidden state. */
-.captured-page:not(.page-products-spend-management):not(.page-canada-products-spend-management)
+.captured-page:not(.page-products-spend-management):not(.page-canada-products-spend-management):not(.page-industries-autonomous-commodity-management)
   .Image__placeholder--Oj7M3 {
   opacity: 1 !important;
   padding-top: 0 !important;

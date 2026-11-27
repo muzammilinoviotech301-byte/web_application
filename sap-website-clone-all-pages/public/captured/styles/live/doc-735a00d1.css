@@ -1,2 +1,1 @@
-/* scoped-for-clone v2 */
- div#cvc-container:is(.captured-body, .captured-body *) iframe:first-child { display: none; } 
+ div#cvc-container iframe:first-child { display: none; } 

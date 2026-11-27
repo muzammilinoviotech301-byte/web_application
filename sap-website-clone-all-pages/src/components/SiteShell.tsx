@@ -69,7 +69,8 @@ export default function SiteShell({ children }: { children: ReactNode }) {
     normalizedPath === "/products/spend-management" ||
     normalizedPath === "/canada/products/spend-management" ||
     normalizedPath === "/industries/autonomous-adaptive-production" ||
-    normalizedPath === "/industries/autonomous-asset-management";
+    normalizedPath === "/industries/autonomous-asset-management" ||
+    normalizedPath === "/industries/autonomous-commodity-management";
   const [query, setQuery] = useState("");
   const [countryBannerVisible, setCountryBannerVisible] = useState(true);
 

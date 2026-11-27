@@ -1,2 +1,1 @@
-/* scoped-for-clone v2 */
-.truste_caIcon_display:is(.captured-body, .captured-body *) {display: block !important;}
+.truste_caIcon_display {display: block !important;}
